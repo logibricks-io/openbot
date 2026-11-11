@@ -4,11 +4,11 @@
 // The shapes come from `@openbot/brand`, and the layout of the logo with its name from the Figma
 // "Logo" board. No JSX and no DOM here: the Worker imports this module.
 
-import { APP_LOGO_CORNER, APP_LOGO_EYE_POINTS, APP_LOGO_SIZE } from "@openbot/brand/app-logo-shape";
-import { WORDMARK_PATHS, WORDMARK_WIDTH } from "@openbot/brand/wordmark-shape";
+import { APP_LOGO_MODULES, APP_LOGO_VIEWBOX_SIZE } from "@openbot/brand/app-logo-shape";
+import { WORDMARK_STACKED_PATHS } from "@openbot/brand/wordmark-shape";
 import { BRAND_ROUTE } from "./brand-page";
 
-export const BRAND_ZIP_FILE = "openbot-brand.zip";
+export const BRAND_ZIP_FILE = "logibricks-workspace-brand.zip";
 
 type IconColor = "lilac" | "white" | "black";
 type IconShape = "rounded" | "square";
@@ -16,10 +16,9 @@ type Ink = "dark" | "light";
 export type BrandSpace = "tight" | "safe";
 
 // The colors of the brand tokens in `@openbot/brand/tokens.css`. A file must not depend on a page's CSS.
-const FILL: Record<IconColor, string> = { lilac: "#d6adf2", white: "#ffffff", black: "#040007" };
-const EYE: Record<IconColor, string> = { lilac: "#040007", white: "#040007", black: "#ffffff" };
-const INK: Record<Ink, string> = { dark: "#040007", light: "#ffffff" };
-const COLOR_NAME: Record<IconColor, string> = { lilac: "Lilac", white: "White", black: "Black" };
+const FILL: Record<IconColor, string> = { lilac: "#18181b", white: "#f6f3ed", black: "#18181b" };
+const INK: Record<Ink, string> = { dark: "#18181b", light: "#f6f3ed" };
+const COLOR_NAME: Record<IconColor, string> = { lilac: "Color", white: "White", black: "Black" };
 
 export interface BrandAsset {
   /** The file name without its extension. */
@@ -32,29 +31,22 @@ export interface BrandAsset {
   readonly surface: "dark" | "light";
 }
 
-// Measured on the Figma board: the name starts a little more than a third of a mark after the mark,
-// and its baseline is at 195 of the mark's 240. Clear space is half a mark on each side.
-const LOCKUP_GAP = 84;
-const LOCKUP_BASELINE = 195;
-const CLEAR_SPACE = APP_LOGO_SIZE / 2;
+// The approved primary lockup is 318 by 80, with the wordmark starting at x = 112.
+const APP_LOGO_SIZE = APP_LOGO_VIEWBOX_SIZE;
+const LOCKUP_GAP = 32;
+const WORDMARK_WIDTH = 206;
+const CLEAR_SPACE = 40;
 
-function mark(color: IconColor, shape: IconShape, x: number, y: number): string {
-  const corner = shape === "rounded" ? APP_LOGO_CORNER : 0;
-  return [
-    `<g transform="translate(${x} ${y})">`,
-    `<rect width="${APP_LOGO_SIZE}" height="${APP_LOGO_SIZE}" rx="${corner}" fill="${FILL[color]}"/>`,
-    `<g fill="none" stroke="${EYE[color]}" stroke-width="9.5" stroke-linecap="round" stroke-linejoin="round">`,
-    `<polyline points="${APP_LOGO_EYE_POINTS.left}"/><polyline points="${APP_LOGO_EYE_POINTS.right}"/>`,
-    "</g></g>",
-  ].join("");
+function mark(color: IconColor, _shape: IconShape, x: number, y: number, inverse = false): string {
+  return `<g transform="translate(${x} ${y})">${APP_LOGO_MODULES.map(
+    (module) =>
+      `<rect x="${module.x}" y="${module.y}" width="${module.width}" height="${module.height}" rx="${module.radius}" fill="${color === "lilac" && module.accent ? "#d97757" : inverse ? INK.light : FILL[color]}"/>`,
+  ).join("")}</g>`;
 }
 
-function wordmark(ink: Ink, x: number, y: number): string {
-  return [
-    `<g transform="translate(${x} ${y})" fill="${INK[ink]}">`,
-    `<path d="${WORDMARK_PATHS.light}"/><path d="${WORDMARK_PATHS.medium}"/>`,
-    "</g>",
-  ].join("");
+function wordmark(ink: Ink, x: number, y: number, monochrome = false): string {
+  const descriptor = monochrome ? INK[ink] : ink === "dark" ? "#696a70" : "#b5b3ae";
+  return `<g transform="translate(${x} ${y})" fill="${INK[ink]}"><path d="${WORDMARK_STACKED_PATHS.name}"/><path fill="${descriptor}" d="${WORDMARK_STACKED_PATHS.descriptor}"/></g>`;
 }
 
 function svgDocument(width: number, height: number, body: string): string {
@@ -63,12 +55,12 @@ function svgDocument(width: number, height: number, body: string): string {
 
 function iconAsset(color: IconColor, shape: IconShape): BrandAsset {
   return {
-    file: shape === "rounded" ? `openbot-icon-${color}` : `openbot-icon-square-${color}`,
+    file: shape === "rounded" ? `logibricks-symbol-${color}` : `logibricks-symbol-square-${color}`,
     label: shape === "rounded" ? `${COLOR_NAME[color]} icon` : `${COLOR_NAME[color]} square`,
     svg: svgDocument(APP_LOGO_SIZE, APP_LOGO_SIZE, mark(color, shape, 0, 0)),
     width: APP_LOGO_SIZE,
     height: APP_LOGO_SIZE,
-    surface: color === "black" ? "light" : "dark",
+    surface: color === "white" ? "dark" : "light",
   };
 }
 
@@ -77,12 +69,13 @@ function lockupAsset(color: IconColor, ink: Ink, space: BrandSpace): BrandAsset 
   const width = APP_LOGO_SIZE + LOCKUP_GAP + WORDMARK_WIDTH + pad * 2;
   const height = APP_LOGO_SIZE + pad * 2;
   return {
-    file: `openbot-logo-${color}-${ink}${space === "safe" ? "-clear-space" : ""}`,
+    file: `logibricks-logo-${color}-${ink}${space === "safe" ? "-clear-space" : ""}`,
     label: `${COLOR_NAME[color]} icon, ${ink} name`,
     svg: svgDocument(
       width,
       height,
-      mark(color, "rounded", pad, pad) + wordmark(ink, pad + APP_LOGO_SIZE + LOCKUP_GAP, pad + LOCKUP_BASELINE),
+      mark(color, "rounded", pad, pad, ink === "light") +
+        wordmark(ink, pad + APP_LOGO_SIZE + LOCKUP_GAP, pad, color !== "lilac"),
     ),
     width,
     height,

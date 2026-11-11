@@ -1,10 +1,9 @@
 import { isNotFound } from "@tanstack/solid-router";
 import {
+  COMPANY_SOCIAL_IMAGE,
   OPENBOT_SOCIAL_IMAGE_ALT,
-  OPENBOT_SOCIAL_IMAGE_META,
   OPENBOT_SOCIAL_IMAGE_URL,
-  OPENBOT_X_HANDLE,
-  type PageSocialImage,
+  openBotSocialImageMeta,
   pageSocialImageMeta,
 } from "../../lib/site-metadata";
 import { isMarketplaceMissingData } from "./MarketplaceMissingPage";
@@ -23,22 +22,19 @@ function pageMeta(url: string, text: MarketplaceHeadText) {
     { title: text.title },
     { name: "description", content: text.description },
     { property: "og:type", content: "website" },
-    { property: "og:site_name", content: "OpenBot" },
+    { property: "og:site_name", content: "LogiBricks Workspace" },
     { property: "og:url", content: url },
     { property: "og:title", content: text.title },
     { property: "og:description", content: text.description },
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:site", content: OPENBOT_X_HANDLE },
+
     { name: "twitter:title", content: text.title },
     { name: "twitter:description", content: text.description },
   ];
 }
 
 /** The social card of the three index tabs. A listing has its own card. */
-const MARKETPLACE_SOCIAL_IMAGE: PageSocialImage = {
-  path: "/social/marketplace.jpg",
-  alt: "Your kind of team. Four OpenBot agents in front of a rainbow",
-};
+const MARKETPLACE_SOCIAL_IMAGE = COMPANY_SOCIAL_IMAGE;
 
 /** `/marketplace`, `/marketplace/skills` and `/marketplace/apps`, with the Marketplace card. */
 export function marketplaceIndexHead(route: string, siteUrl: string, text: MarketplaceHeadText | undefined) {
@@ -80,8 +76,8 @@ export async function marketplaceListingHead(input: MarketplaceListingHeadInput,
         { name: "twitter:image:alt", content: input.text.imageAlt },
       ]
     : [
-        ...OPENBOT_SOCIAL_IMAGE_META,
-        { name: "twitter:image", content: OPENBOT_SOCIAL_IMAGE_URL },
+        ...openBotSocialImageMeta(url),
+        { name: "twitter:image", content: new URL(OPENBOT_SOCIAL_IMAGE_URL, url).toString() },
         { name: "twitter:image:alt", content: OPENBOT_SOCIAL_IMAGE_ALT },
       ];
   return {

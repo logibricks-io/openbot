@@ -1,4 +1,4 @@
-import { APP_LOGO_CORNER, APP_LOGO_EYE_POINTS, APP_LOGO_SIZE } from "@openbot/brand/app-logo-shape";
+import { APP_LOGO_MODULES, APP_LOGO_VIEWBOX_SIZE } from "@openbot/brand/app-logo-shape";
 import { heatLevel, heatmapMonths, heatmapWeeks, type ProfileStats } from "@openbot/team-client/profile-stats";
 import {
   ClipOp,
@@ -9,8 +9,6 @@ import {
   type SkFont,
   type SkFontMgr,
   Skia,
-  StrokeCap,
-  StrokeJoin,
 } from "@shopify/react-native-skia";
 import { File, Paths } from "expo-file-system";
 import { APP_FONT } from "@/shared/lib/app-font";
@@ -92,34 +90,17 @@ async function loadPhoto(url: string) {
   }
 }
 
-function eyePath(points: string) {
-  const values = points.split(" ").map(Number);
-  const path = Skia.PathBuilder.Make();
-  for (let index = 0; index + 1 < values.length; index += 2) {
-    const x = values[index] ?? 0;
-    const y = values[index + 1] ?? 0;
-    if (index === 0) path.moveTo(x, y);
-    else path.lineTo(x, y);
-  }
-  return path.build();
-}
-
 function drawLogo(canvas: SkCanvas, x: number, y: number, colors: ProfileShareColors): void {
-  const scale = LOGO / APP_LOGO_SIZE;
+  const scale = LOGO / APP_LOGO_VIEWBOX_SIZE;
   canvas.save();
   canvas.translate(x, y);
   canvas.scale(scale, scale);
-  canvas.drawRRect(
-    Skia.RRectXY(Skia.XYWHRect(0, 0, APP_LOGO_SIZE, APP_LOGO_SIZE), APP_LOGO_CORNER, APP_LOGO_CORNER),
-    fill(colors.logo),
-  );
-  const stroke = fill(colors.logoEye);
-  stroke.setStyle(PaintStyle.Stroke);
-  stroke.setStrokeWidth(9.5);
-  stroke.setStrokeCap(StrokeCap.Round);
-  stroke.setStrokeJoin(StrokeJoin.Round);
-  canvas.drawPath(eyePath(APP_LOGO_EYE_POINTS.left), stroke);
-  canvas.drawPath(eyePath(APP_LOGO_EYE_POINTS.right), stroke);
+  for (const module of APP_LOGO_MODULES) {
+    canvas.drawRRect(
+      Skia.RRectXY(Skia.XYWHRect(module.x, module.y, module.width, module.height), module.radius, module.radius),
+      fill(module.accent ? colors.logoEye : colors.logo),
+    );
+  }
   canvas.restore();
 }
 

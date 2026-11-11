@@ -1,5 +1,5 @@
 import { PRIVACY_POLICY_META, PRIVACY_POLICY_ROUTE } from "./privacy-policy";
-import { OPENBOT_LEGAL_SOCIAL_IMAGE, OPENBOT_X_HANDLE, pageSocialImageMeta } from "./site-metadata";
+import { OPENBOT_LEGAL_SOCIAL_IMAGE, pageSocialImageMeta } from "./site-metadata";
 
 /** The head of the privacy policy at /privacy-policy and /privacy. The canonical link is /privacy-policy on both. */
 export function privacyPolicyHead(siteUrl: string) {
@@ -11,14 +11,14 @@ export function privacyPolicyHead(siteUrl: string) {
       { title },
       { name: "description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "OpenBot" },
+      { property: "og:site_name", content: "LogiBricks Workspace" },
       { property: "og:locale", content: "en_US" },
       { property: "og:url", content: url },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       ...image.openGraph,
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: OPENBOT_X_HANDLE },
+
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       ...image.twitter,

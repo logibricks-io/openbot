@@ -22,6 +22,8 @@ export interface WorkerBindings {
   /** Checked by the bug report route only, so a Worker without it keeps its other routes. */
   FEEDBACK_RATE_LIMITER?: RateLimit;
   AUTH_EXPOSE_DEVELOPMENT_CODE?: string;
+  /** Public HTTPS base containing company electron-builder manifests and installers. */
+  LOGIBRICKS_RELEASES_URL?: string;
   EMAIL_SMTP_HOST?: string;
   EMAIL_SMTP_PORT?: string;
   EMAIL_SMTP_USERNAME?: string;

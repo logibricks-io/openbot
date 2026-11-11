@@ -204,7 +204,7 @@ export function HostedServerSetupScreen() {
       keyboardShouldPersistTaps="handled"
     >
       <View className="items-center gap-3 px-4" accessibilityLiveRegion="polite">
-        <AppLogo animation="blink" interactive size={72} />
+        <AppLogo size={72} />
         <Typography.Heading type="h3" align="center" className="pt-1" accessibilityRole="header">
           {title}
         </Typography.Heading>

@@ -17,10 +17,10 @@ export const messages = {
   "error.remote.sessionCapacity": "호스트에 이미 활성 세션이 4개 있어요.",
   "error.remote.linuxNeedsX11": "Linux의 원격 데스크톱에는 X11 세션이 필요해요. Wayland는 지원하지 않아요.",
   "error.remote.runtimeMissing":
-    "Sunshine 및 Moonlight Web 런타임이 없거나 이 호스트에서 지원되지 않아요. Mac, Windows x64 호스트 또는 Linux x64 호스트에 전체 OpenBot 릴리스를 설치한 다음 OpenBot을 다시 시작해 주세요.",
+    "Sunshine 및 Moonlight Web 런타임이 없거나 이 호스트에서 지원되지 않아요. Mac, Windows x64 호스트 또는 Linux x64 호스트에 전체 LogiBricks Workspace 릴리스를 설치한 다음 LogiBricks Workspace를 다시 시작해 주세요.",
   "error.remote.testActive": "원격 데스크톱 테스트가 진행 중이에요. 테스트가 끝난 후에 다시 시도해 주세요.",
   "error.remote.screenRecordingDenied":
-    "호스트에서 OpenBot의 화면 녹화를 허용하지 않았어요. 호스트에서 화면 녹화 권한을 허용한 다음 다시 시도해 주세요.",
+    "호스트에서 LogiBricks Workspace의 화면 녹화를 허용하지 않았어요. 호스트에서 화면 녹화 권한을 허용한 다음 다시 시도해 주세요.",
   "error.remote.teamSessionExpired": "팀 세션이 만료되었어요.",
   "error.remote.finishTestBeforeSwitch": "디스플레이를 전환하기 전에 원격 데스크톱 테스트를 끝내 주세요.",
   "error.remote.displayNotFound": "원격 디스플레이를 찾을 수 없어요.",
@@ -33,7 +33,7 @@ export const messages = {
   "error.remote.moonlightStartFailed":
     "호스트에서 Moonlight Web이 시작되지 않았어요. 호스트의 원격 데스크톱 로그를 확인한 다음 다시 시도해 주세요.",
   "error.remote.pairingFailed":
-    "Moonlight이 호스트의 Sunshine과 페어링되지 않았어요. 다시 시도해 주세요. 문제가 계속되면 호스트에서 OpenBot을 다시 시작해 주세요.",
+    "Moonlight이 호스트의 Sunshine과 페어링되지 않았어요. 다시 시도해 주세요. 문제가 계속되면 호스트에서 LogiBricks Workspace를 다시 시작해 주세요.",
   "error.remote.runtimeStartFailed":
     "호스트에서 원격 데스크톱 런타임이 시작되지 않았어요. 호스트의 원격 데스크톱 로그를 확인한 다음 다시 시도해 주세요.",
   "error.remote.hostUnreachable": "호스트에 연결할 수 없어요.",
@@ -41,7 +41,7 @@ export const messages = {
   "error.remote.invalidData": "호스트가 잘못된 데이터를 반환했어요.",
   "error.remote.unsafeData": "호스트가 이 앱에서 안전하게 사용할 수 없는 데이터를 반환했어요.",
   "error.remote.requestFailedStatus": "원격 서버 요청에 실패했어요({status}).",
-  "error.remote.appUpdateRequired": "호스트에 연결하기 전에 이 OpenBot 앱을 업데이트해 주세요.",
+  "error.remote.appUpdateRequired": "호스트에 연결하기 전에 이 LogiBricks Workspace 앱을 업데이트해 주세요.",
   "error.remote.identityNotVerified": "서버 ID를 확인할 수 없어요.",
   "error.remote.webRtcUnavailable": "WebRTC 전송을 사용할 수 없어요.",
   "error.remote.invalidCompatibility": "호스트가 잘못된 호환성 정보를 반환했어요.",
@@ -59,8 +59,10 @@ export const messages = {
   "error.remote.inviteAcceptedOtherHost": "계정 서비스가 다른 호스트를 수락했어요.",
   "error.remote.inviteIdentityChanged": "초대를 수락하는 동안 초대 호스트 ID가 변경되었어요.",
   "error.remote.localServerRemove": "로컬 서버는 삭제할 수 없어요.",
-  "error.remote.desktopSetupHostUpdate": "원격 데스크톱 설정을 확인하려면 호스트의 OpenBot을 업데이트해 주세요.",
-  "error.remote.desktopTestHostUpdate": "원격 데스크톱 설정을 테스트하려면 호스트의 OpenBot을 업데이트해 주세요.",
+  "error.remote.desktopSetupHostUpdate":
+    "원격 데스크톱 설정을 확인하려면 호스트의 LogiBricks Workspace를 업데이트해 주세요.",
+  "error.remote.desktopTestHostUpdate":
+    "원격 데스크톱 설정을 테스트하려면 호스트의 LogiBricks Workspace를 업데이트해 주세요.",
   "error.remote.viewerProxyUnavailable": "로컬 원격 뷰어 프록시를 사용할 수 없어요.",
   "error.remote.viewerTransportInvalid": "원격 뷰어 전송이 올바르지 않아요.",
   "error.remote.viewerProxyNoPort": "로컬 원격 뷰어 프록시가 포트를 받지 못했어요.",
@@ -158,7 +160,8 @@ export const messages = {
   "error.remote.signalInvalidMessage": "Signal이 잘못된 메시지를 반환했어요.",
   "error.remote.sessionInvalid": "원격 세션이 올바르지 않아요.",
   "error.remote.ticketInvalid": "연결 티켓이 올바르지 않아요.",
-  "error.remote.mobileUpdateRequired": "연결하기 전에 OpenBot 모바일 또는 데스크톱 앱을 업데이트해 주세요.",
+  "error.remote.mobileUpdateRequired":
+    "연결하기 전에 LogiBricks Workspace 모바일 또는 데스크톱 앱을 업데이트해 주세요.",
   "error.remote.connectionStepFailed": "이 연결 단계를 완료할 수 없었어요.",
   "error.remote.signalNotConnected": "Signal에 연결되어 있지 않아요.",
   "error.remote.signalFrameUnreadable": "Signal이 이 피어가 읽을 수 없는 프레임을 보냈어요.",
@@ -167,16 +170,17 @@ export const messages = {
   "error.remote.hostBusy": "호스트가 다른 연결을 처리하는 중이에요. 잠시 후 다시 시도해 주세요.",
   "error.remote.signalPermissionDenied":
     "내 계정에는 이 호스트에 대한 접근 권한이 없어요. 소유자에게 접근 권한을 요청해 주세요.",
-  "error.remote.signalRateLimited": "연결 시도가 너무 많아요. OpenBot이 {seconds}초 후에 다시 시도해요.",
+  "error.remote.signalRateLimited": "연결 시도가 너무 많아요. LogiBricks Workspace가 {seconds}초 후에 다시 시도해요.",
   "error.remote.signalProtocolError":
-    "Signal과 이 앱의 연결 프로토콜이 서로 맞지 않아요. OpenBot을 업데이트한 다음 다시 시도해 주세요.",
+    "Signal과 이 앱의 연결 프로토콜이 서로 맞지 않아요. LogiBricks Workspace를 업데이트한 다음 다시 시도해 주세요.",
   "error.remote.signalRefused": "Signal이 연결을 거부했어요.",
   "error.remote.signalClosed": "호스트가 응답하기 전에 Signal 연결이 닫혔어요.",
   "error.remote.relayUnavailable":
     "Signal이 이 연결에 사용할 릴레이 서버를 보내지 않았어요. 나중에 다시 시도해 주세요.",
   "error.remote.iceFailed": "호스트에 직접 연결할 수 없어요. 방화벽, VPN 또는 프록시가 연결을 막고 있을 수 있어요.",
   "error.remote.iceDisconnected": "호스트와의 직접 연결이 끊어졌어요.",
-  "error.remote.directoryUnreachable": "OpenBot이 OpenBot 서비스에 연결할 수 없어요. 연결 상태를 확인해 주세요.",
+  "error.remote.directoryUnreachable":
+    "LogiBricks Workspace가 OpenBot 서비스에 연결할 수 없어요. 연결 상태를 확인해 주세요.",
   "error.remote.directoryTimeout": "OpenBot 서비스가 제때 응답하지 않았어요. 다시 시도해 주세요.",
   "error.remote.inviteAlreadyUsed": "이미 사용된 초대예요. 새 초대를 요청해 주세요.",
   "error.remote.inviteNotFound": "초대가 없거나 만료되었어요. 새 초대를 요청해 주세요.",

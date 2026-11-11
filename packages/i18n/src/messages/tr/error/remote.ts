@@ -18,10 +18,10 @@ export const messages = {
   "error.remote.sessionCapacity": "Ana makinede zaten dört etkin oturum var.",
   "error.remote.linuxNeedsX11": "Linux'ta uzak masaüstü bir X11 oturumuna ihtiyaç duyar. Wayland desteklenmez.",
   "error.remote.runtimeMissing":
-    "Sunshine ve Moonlight Web çalışma zamanı eksik veya bu ana makinede desteklenmiyor. Mac, Windows x64 veya Linux x64 ana makinesine tam OpenBot sürümünü yükleyin, ardından OpenBot'u yeniden başlatın.",
+    "Sunshine ve Moonlight Web çalışma zamanı eksik veya bu ana makinede desteklenmiyor. Mac, Windows x64 veya Linux x64 ana makinesine tam LogiBricks Workspace sürümünü yükleyin, ardından LogiBricks Workspace'i yeniden başlatın.",
   "error.remote.testActive": "Bir uzak masaüstü testi etkin. Bittiğinde tekrar deneyin.",
   "error.remote.screenRecordingDenied":
-    "Ana makine OpenBot'un ekranını kaydetmesine izin vermedi. Ana makinede ekran kaydı izni verin, ardından tekrar deneyin.",
+    "Ana makine LogiBricks Workspace'in ekranını kaydetmesine izin vermedi. Ana makinede ekran kaydı izni verin, ardından tekrar deneyin.",
   "error.remote.teamSessionExpired": "Ekip oturumunun süresi doldu.",
   "error.remote.finishTestBeforeSwitch": "Ekranları değiştirmeden önce uzak masaüstü testini tamamlayın.",
   "error.remote.displayNotFound": "Uzak ekran bulunamadı.",
@@ -34,7 +34,7 @@ export const messages = {
   "error.remote.moonlightStartFailed":
     "Moonlight Web ana makinede başlamadı. Ana makinedeki uzak masaüstü günlüklerini kontrol edin, ardından tekrar deneyin.",
   "error.remote.pairingFailed":
-    "Moonlight, ana makinedeki Sunshine ile eşleşemedi. Tekrar deneyin. Sorun devam ederse ana makinede OpenBot'u yeniden başlatın.",
+    "Moonlight, ana makinedeki Sunshine ile eşleşemedi. Tekrar deneyin. Sorun devam ederse ana makinede LogiBricks Workspace'i yeniden başlatın.",
   "error.remote.runtimeStartFailed":
     "Uzak masaüstü çalışma zamanı ana makinede başlamadı. Ana makinedeki uzak masaüstü günlüklerini kontrol edin, ardından tekrar deneyin.",
   "error.remote.hostUnreachable": "Ana makineye ulaşılamıyor.",
@@ -42,7 +42,7 @@ export const messages = {
   "error.remote.invalidData": "Ana makine geçersiz veri döndürdü.",
   "error.remote.unsafeData": "Ana makine bu uygulamanın güvenle kullanamayacağı veri döndürdü.",
   "error.remote.requestFailedStatus": "Uzak sunucu isteği başarısız oldu ({status}).",
-  "error.remote.appUpdateRequired": "Ana makineye bağlanmadan önce bu OpenBot uygulamasını güncelleyin.",
+  "error.remote.appUpdateRequired": "Ana makineye bağlanmadan önce bu LogiBricks Workspace uygulamasını güncelleyin.",
   "error.remote.identityNotVerified": "Sunucu kimliği doğrulanamadı.",
   "error.remote.webRtcUnavailable": "WebRTC iletimi kullanılamıyor.",
   "error.remote.invalidCompatibility": "Ana makine geçersiz uyumluluk bilgisi döndürdü.",
@@ -61,9 +61,9 @@ export const messages = {
   "error.remote.inviteIdentityChanged": "Davet ana makine kimliği kabul edilirken değişti.",
   "error.remote.localServerRemove": "Yerel sunucu kaldırılamaz.",
   "error.remote.desktopSetupHostUpdate":
-    "Uzak masaüstü kurulumunu kontrol etmek için ana makinedeki OpenBot'u güncelleyin.",
+    "Uzak masaüstü kurulumunu kontrol etmek için ana makinedeki LogiBricks Workspace'i güncelleyin.",
   "error.remote.desktopTestHostUpdate":
-    "Uzak masaüstü kurulumunu test etmek için ana makinedeki OpenBot'u güncelleyin.",
+    "Uzak masaüstü kurulumunu test etmek için ana makinedeki LogiBricks Workspace'i güncelleyin.",
   "error.remote.viewerProxyUnavailable": "Yerel uzak görüntüleyici vekili kullanılamıyor.",
   "error.remote.viewerTransportInvalid": "Uzak görüntüleyici iletimi geçersiz.",
   "error.remote.viewerProxyNoPort": "Yerel uzak görüntüleyici vekili bir bağlantı noktası alamadı.",
@@ -161,7 +161,8 @@ export const messages = {
   "error.remote.signalInvalidMessage": "Signal geçersiz bir mesaj döndürdü.",
   "error.remote.sessionInvalid": "Uzak oturum geçersiz.",
   "error.remote.ticketInvalid": "Bağlantı bileti geçersiz.",
-  "error.remote.mobileUpdateRequired": "Bağlanmadan önce OpenBot Mobile veya masaüstü uygulamasını güncelleyin.",
+  "error.remote.mobileUpdateRequired":
+    "Bağlanmadan önce LogiBricks Workspace Mobile veya masaüstü uygulamasını güncelleyin.",
   "error.remote.connectionStepFailed": "Bu bağlantı adımı tamamlanamadı.",
   "error.remote.signalNotConnected": "Signal bağlı değil.",
   "error.remote.signalFrameUnreadable": "Signal, bu eşin okuyamayacağı bir çerçeve gönderdi.",
@@ -169,16 +170,17 @@ export const messages = {
   "error.remote.dataChannelFailed": "{kind} kanalı başarısız oldu.",
   "error.remote.hostBusy": "Ana makine başka bir bağlantıyla meşgul. Biraz sonra tekrar deneyin.",
   "error.remote.signalPermissionDenied": "Hesabınızın bu ana makineye erişimi yok. Sahibinden erişim isteyin.",
-  "error.remote.signalRateLimited": "Çok fazla bağlantı denemesi. OpenBot {seconds} saniye içinde tekrar deneyecek.",
+  "error.remote.signalRateLimited":
+    "Çok fazla bağlantı denemesi. LogiBricks Workspace {seconds} saniye içinde tekrar deneyecek.",
   "error.remote.signalProtocolError":
-    "Signal ve bu uygulama bağlantı protokolünde uyuşmuyor. OpenBot'u güncelleyin, ardından tekrar deneyin.",
+    "Signal ve bu uygulama bağlantı protokolünde uyuşmuyor. LogiBricks Workspace'i güncelleyin, ardından tekrar deneyin.",
   "error.remote.signalRefused": "Signal bağlantıyı reddetti.",
   "error.remote.signalClosed": "Signal ile bağlantı, ana makine yanıt vermeden kapandı.",
   "error.remote.relayUnavailable": "Signal bu bağlantı için aktarma sunucusu göndermedi. Daha sonra tekrar deneyin.",
   "error.remote.iceFailed":
     "Ana makineyle doğrudan bağlantı kurulamadı. Bir güvenlik duvarı, VPN veya proxy bunu engelleyebilir.",
   "error.remote.iceDisconnected": "Ana makineyle doğrudan bağlantı kesildi.",
-  "error.remote.directoryUnreachable": "OpenBot, OpenBot hizmetine ulaşamadı. Bağlantınızı kontrol edin.",
+  "error.remote.directoryUnreachable": "LogiBricks Workspace, OpenBot hizmetine ulaşamadı. Bağlantınızı kontrol edin.",
   "error.remote.directoryTimeout": "OpenBot hizmeti zamanında yanıt vermedi. Tekrar deneyin.",
   "error.remote.inviteAlreadyUsed": "Bu davet zaten kullanıldı. Yeni bir davet isteyin.",
   "error.remote.inviteNotFound": "Bu davet yok veya süresi doldu. Yeni bir davet isteyin.",

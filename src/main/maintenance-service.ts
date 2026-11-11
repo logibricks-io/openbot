@@ -4,6 +4,7 @@ import { copyFile, mkdir, mkdtemp, rename, rm, writeFile } from "node:fs/promise
 import { arch, release as osRelease, tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { promisify } from "node:util";
+import { PRODUCT_NAME } from "@openbot/brand/product-identity";
 import type { AgentSummary, ExportResult } from "@openbot/contracts/ipc";
 import type { AppTranslate } from "@openbot/i18n";
 import { Effect } from "effect";
@@ -69,7 +70,7 @@ export const exportOpenBotData = Effect.fn("Archive.exportOpenBotData")(function
           // hands a reader the wrong shape under a version that promised the old one.
           schemaVersion: 4,
           exportedAt: new Date().toISOString(),
-          application: { name: "OpenBot", version: app.getVersion() },
+          application: { name: PRODUCT_NAME, version: app.getVersion() },
           scope: {
             includes: ["agent profiles", "agent memories", "conversation snapshots", "queues", "attachments"],
             excludes: [

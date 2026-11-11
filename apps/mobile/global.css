@@ -48,6 +48,13 @@
 
 @layer theme {
   :root {
+    @variant light {
+      --background: var(--openbot-bg-native-canvas);
+      --overlay: var(--openbot-bg-surface-raised);
+    }
+  }
+
+  :root {
     color-scheme: light dark;
 
     /* uniwind reads theme values only from @variant blocks, so a plain :root alias
@@ -78,7 +85,7 @@
     --warning: var(--openbot-warning);
     --warning-foreground: var(--openbot-text-on-status);
     --danger: var(--openbot-danger);
-    --danger-foreground: var(--openbot-text-on-accent);
+    --danger-foreground: var(--openbot-text-on-status);
     --border: var(--openbot-border);
     --separator: var(--openbot-border-strong);
     --focus: var(--openbot-accent);

@@ -16,7 +16,7 @@ const SEND_MESSAGE_INTENT = "INSendMessageIntent";
  */
 
 /** @param {NotificationServiceProps} props */
-function infoPlist({ targetName, groupIdentifier }) {
+function infoPlist({ groupIdentifier }) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -24,7 +24,7 @@ function infoPlist({ targetName, groupIdentifier }) {
   <key>CFBundleDevelopmentRegion</key>
   <string>$(DEVELOPMENT_LANGUAGE)</string>
   <key>CFBundleDisplayName</key>
-  <string>${targetName}</string>
+  <string>LogiBricks Workspace</string>
   <key>CFBundleExecutable</key>
   <string>$(EXECUTABLE_NAME)</string>
   <key>CFBundleIdentifier</key>

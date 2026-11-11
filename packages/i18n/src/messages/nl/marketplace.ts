@@ -43,7 +43,8 @@ export const messages = {
     "Gedeeld door de maker voordat OpenBot hem beoordeelde. Na het toevoegen kan hij namens jou handelen.",
   "marketplace.agents.source.pending": "Nog niet beoordeeld",
   "marketplace.skill.loading": "Vaardigheid laden",
-  "marketplace.try.readFailed": "OpenBot kan de vaardigheden van deze agent niet lezen. Probeer het opnieuw.",
+  "marketplace.try.readFailed":
+    "LogiBricks Workspace kan de vaardigheden van deze agent niet lezen. Probeer het opnieuw.",
   "marketplace.try.enable": "Schakel deze vaardigheid in bij de agentinstellingen om haar te proberen.",
   "marketplace.try.repair": "Herstel deze vaardigheid bij de agentinstellingen om haar te proberen.",
   "marketplace.try.update": "Werk deze vaardigheid bij om deze versie te proberen.",
@@ -114,24 +115,25 @@ export const messages = {
   "marketplace.app.setup.account": "Log via de browser in met je {name}-account.",
   "marketplace.app.setup.key": "Vereist een API-sleutel van je {name}-account.",
   "marketplace.app.setup.keySaved": "{field} opgeslagen op {host}.",
-  "marketplace.app.account.removeDescription": "OpenBot verwijdert de inloggegevens van dit account op {host}.",
+  "marketplace.app.account.removeDescription":
+    "LogiBricks Workspace verwijdert de inloggegevens van dit account op {host}.",
   "marketplace.app.setup.desktop": "Draait in de desktop-app van {name} op {address}.",
   "marketplace.app.setup.desktopConnected": "Verbonden met {address}.",
   "marketplace.app.setup.open": "Geen login of sleutel nodig.",
   "marketplace.app.blocked.update":
-    "{host} draait een oudere OpenBot-versie die geen apps kan koppelen. Werk OpenBot op {host} bij, of vraag de eigenaar dat te doen.",
+    "{host} draait een oudere LogiBricks Workspace-versie die geen apps kan koppelen. Werk LogiBricks Workspace op {host} bij, of vraag de eigenaar dat te doen.",
   "marketplace.app.blocked.member":
-    "Alleen een eigenaar of beheerder van {host} kan daar apps koppelen. Vraag een van hen om {name} te koppelen, of om OpenBot op {host} bij te werken zodat leden apps kunnen koppelen.",
+    "Alleen een eigenaar of beheerder van {host} kan daar apps koppelen. Vraag een van hen om {name} te koppelen, of om LogiBricks Workspace op {host} bij te werken zodat leden apps kunnen koppelen.",
   "marketplace.app.connectAgain": "Opnieuw koppelen",
   "marketplace.app.automation.askOnInstall": "Bij installatie macOS om toegang vragen",
   "marketplace.app.automation.title": "Toegang tot Apple-apps",
   "marketplace.app.automation.description":
     "macOS toont voor elke app één vraag. Een gesloten app opent even en stopt daarna.",
   "marketplace.app.automation.request": "Toegang vragen",
-  "marketplace.app.automation.allowed": "OpenBot kan nu alle Apple-apps besturen.",
+  "marketplace.app.automation.allowed": "LogiBricks Workspace kan nu alle Apple-apps besturen.",
   "marketplace.app.automation.refused":
-    "macOS heeft geen toegang gegeven tot {apps}. Sta OpenBot toe in Systeeminstellingen › Privacy en beveiliging › Automatisering.",
-  "marketplace.app.automation.failed": "OpenBot kon macOS niet vragen naar {apps}. Probeer het opnieuw.",
+    "macOS heeft geen toegang gegeven tot {apps}. Sta LogiBricks Workspace toe in Systeeminstellingen › Privacy en beveiliging › Automatisering.",
+  "marketplace.app.automation.failed": "LogiBricks Workspace kon macOS niet vragen naar {apps}. Probeer het opnieuw.",
   "marketplace.app.automation.app.calendar": "Agenda",
   "marketplace.app.automation.app.contacts": "Contacten",
   "marketplace.app.automation.app.mail": "Mail",
@@ -190,7 +192,7 @@ export const messages = {
     "Sla een notitie op in Cobrain met wat we vandaag hebben gedaan en wat er nog moet.",
   "marketplace.plugin.honcho.tagline": "Je geheugen in al je AI-tools",
   "marketplace.plugin.honcho.description":
-    "Honcho van Plastic Labs geeft agents een langetermijngeheugen over jou dat andere gekoppelde AI-tools kunnen delen. Agents slaan op wat ze leren, en Honcho redeneert erover om een model te maken van je voorkeuren, doelen en manier van werken. Agents stellen het vragen voordat ze beginnen. OpenBot-agents hebben ook hun eigen geheugen; Honcho is het geheugen dat je naar andere tools volgt. Berichten die agents opslaan, gaan naar je Honcho-account.",
+    "Honcho van Plastic Labs geeft agents een langetermijngeheugen over jou dat andere gekoppelde AI-tools kunnen delen. Agents slaan op wat ze leren, en Honcho redeneert erover om een model te maken van je voorkeuren, doelen en manier van werken. Agents stellen het vragen voordat ze beginnen. LogiBricks Workspace-agents hebben ook hun eigen geheugen; Honcho is het geheugen dat je naar andere tools volgt. Berichten die agents opslaan, gaan naar je Honcho-account.",
   "marketplace.plugin.honcho.app":
     "Langetermijngeheugen in je Honcho-werkruimten opslaan en bevragen via één MCP-server.",
   "marketplace.plugin.honcho.prompt.recall": "Vraag Honcho voordat we beginnen wat het weet over hoe ik graag werk.",
@@ -200,7 +202,7 @@ export const messages = {
   "marketplace.plugin.honcho.hint.apiKey": "Maak een sleutel op app.honcho.dev.",
   "marketplace.plugin.hindsight.tagline": "Geheugen dat leert met de tijd",
   "marketplace.plugin.hindsight.description":
-    "Hindsight van Vectorize geeft agents een langetermijngeheugen in Hindsight Cloud. Agents onthouden feiten en gebeurtenissen, halen ze op naar betekenis, tijd en entiteit, en denken erover na om mentale modellen te vormen. Herinneringen staan in banken, en agents kunnen een bank maken voor elk project of elke persoon. OpenBot-agents hebben ook hun eigen geheugen; Hindsight is het geheugen dat andere gekoppelde AI-tools kunnen delen. Wat agents onthouden, gaat naar je Hindsight Cloud-account.",
+    "Hindsight van Vectorize geeft agents een langetermijngeheugen in Hindsight Cloud. Agents onthouden feiten en gebeurtenissen, halen ze op naar betekenis, tijd en entiteit, en denken erover na om mentale modellen te vormen. Herinneringen staan in banken, en agents kunnen een bank maken voor elk project of elke persoon. LogiBricks Workspace-agents hebben ook hun eigen geheugen; Hindsight is het geheugen dat andere gekoppelde AI-tools kunnen delen. Wat agents onthouden, gaat naar je Hindsight Cloud-account.",
   "marketplace.plugin.hindsight.app":
     "Herinneringen in je Hindsight Cloud-banken onthouden, ophalen en overdenken via één MCP-server.",
   "marketplace.plugin.hindsight.prompt.recall":
@@ -219,7 +221,7 @@ export const messages = {
   "marketplace.plugin.figma.prompt.assets": "Exporteer de marketingiconen op 2x voor de app-bundel.",
   "marketplace.plugin.paper.tagline": "Ontwerpcanvas op basis van HTML en CSS",
   "marketplace.plugin.paper.description":
-    "Met Paper kunnen agents het ontwerpbestand lezen en schrijven dat open is in Paper Desktop: artboards, selecties, berekende stijlen, JSX en tokens inspecteren, en frames, tekst en stijlen maken of wijzigen. Installeer Paper Desktop, open het één keer en open een bestand voordat je begint. OpenBot start de Paper CLI die Paper Desktop installeert. Paper heeft geen sleutel nodig. Schrijftools wijzigen het open bestand, dus controleer elke wijziging voordat je die goedkeurt.",
+    "Met Paper kunnen agents het ontwerpbestand lezen en schrijven dat open is in Paper Desktop: artboards, selecties, berekende stijlen, JSX en tokens inspecteren, en frames, tekst en stijlen maken of wijzigen. Installeer Paper Desktop, open het één keer en open een bestand voordat je begint. LogiBricks Workspace start de Paper CLI die Paper Desktop installeert. Paper heeft geen sleutel nodig. Schrijftools wijzigen het open bestand, dus controleer elke wijziging voordat je die goedkeurt.",
   "marketplace.plugin.paper.app":
     "Leest en schrijft het open Paper Desktop-bestand, via de lokale MCP-server die de Paper CLI doorgeeft. Vereist Paper Desktop met een open bestand.",
   "marketplace.plugin.paper.prompt.implement":
@@ -250,7 +252,7 @@ export const messages = {
     "Vat de laatste tien gesprekken van mijn spraakagent voor support samen.",
   "marketplace.plugin.appleApps.tagline": "Mail, Agenda en meer op je Mac",
   "marketplace.plugin.appleApps.description":
-    "Met Apple-apps kunnen agents Mail, Agenda, Contacten, Herinneringen, Notities, Berichten en Safari op deze Mac gebruiken. Het werkt alleen op macOS. OpenBot start mcp-icloud, een communityserver die niet van Apple of OpenBot is. De server bestuurt de apps via AppleScript op deze computer en heeft geen account en geen sleutel nodig. Bij de installatie kan OpenBot macOS in één keer om toegang tot al deze apps vragen, met één vraag per app. Anders vraagt macOS het de eerste keer dat een agent een app gebruikt. Om dit later te wijzigen, open je Systeeminstellingen › Privacy en beveiliging › Automatisering. Agents kunnen e-mail en iMessages versturen en afspraken, contacten en herinneringen wijzigen of verwijderen, dus controleer elke wijziging voordat je die goedkeurt. Wat de tools lezen, zoals de tekst van e-mails, gaat naar de modelaanbieder van de agent.",
+    "Met Apple-apps kunnen agents Mail, Agenda, Contacten, Herinneringen, Notities, Berichten en Safari op deze Mac gebruiken. Het werkt alleen op macOS. LogiBricks Workspace start mcp-icloud, een communityserver die niet van Apple of LogiBricks Workspace is. De server bestuurt de apps via AppleScript op deze computer en heeft geen account en geen sleutel nodig. Bij de installatie kan LogiBricks Workspace macOS in één keer om toegang tot al deze apps vragen, met één vraag per app. Anders vraagt macOS het de eerste keer dat een agent een app gebruikt. Om dit later te wijzigen, open je Systeeminstellingen › Privacy en beveiliging › Automatisering. Agents kunnen e-mail en iMessages versturen en afspraken, contacten en herinneringen wijzigen of verwijderen, dus controleer elke wijziging voordat je die goedkeurt. Wat de tools lezen, zoals de tekst van e-mails, gaat naar de modelaanbieder van de agent.",
   "marketplace.plugin.appleApps.app":
     "Mail, Agenda, Contacten, Herinneringen, Notities, Berichten en Safari, via de lokale mcp-icloud-server. Vereist macOS en toegang tot Automatisering.",
   "marketplace.plugin.appleApps.prompt.unread": "Vat mijn ongelezen e-mail van vandaag in Apple Mail samen.",

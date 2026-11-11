@@ -1,2 +1,2 @@
-/** The Google Play listing of the Android app. */
-export const ANDROID_PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=run.openbot.mobile";
+/** Set this only when the LogiBricks Android listing is published and verified. */
+export const ANDROID_PLAY_STORE_URL: string | undefined = undefined;

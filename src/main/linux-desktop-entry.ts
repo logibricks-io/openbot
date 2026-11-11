@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { homedir } from "node:os";
 import { join } from "node:path";
+import { PRODUCT_NAME } from "@openbot/brand/product-identity";
 import { createOpenBotLogger, toLogValue } from "@openbot/logging";
 import { Effect, Schema } from "effect";
 import { causeHelpers } from "../backend/effect-boundary";
@@ -26,7 +27,7 @@ function linuxDesktopEntry(appImagePath: string, iconPath: string): string {
   return `${[
     "[Desktop Entry]",
     "Type=Application",
-    "Name=OpenBot",
+    `Name=${PRODUCT_NAME}`,
     "Comment=A local-first multi-agent desktop workspace.",
     `Exec=${quoteExecutable(appImagePath)} %U`,
     `Icon=${iconPath}`,

@@ -274,7 +274,7 @@ const STARTUP_SERVER_WAIT_MS = 4_000;
 const FIRST_CONNECTION_WAIT_MS = 5_000;
 const EMPTY_SERVER: MobileServer = {
   id: "unavailable",
-  name: "OpenBot",
+  name: currentText().t("common.productName"),
   logoKey: null,
   kind: "local",
   state: "connecting",

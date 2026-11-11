@@ -32,4 +32,5 @@ export const messages = {
   "common.download": "下载",
   "common.removing": "移除中…",
   "common.sending": "发送中…",
+  "common.productName": "LogiBricks Workspace",
 } as const satisfies PartialTranslation<typeof source>;

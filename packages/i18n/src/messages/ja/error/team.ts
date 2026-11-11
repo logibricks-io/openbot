@@ -9,7 +9,7 @@ export const messages = {
   "error.team.alreadyConfigured": "チームのサーバーはすでに設定されています。",
   "error.team.identityCreateFailed": "チームの ID を作成できませんでした。",
   "error.team.accountChangedDuringCreate": "このサーバーの作成中に、サインイン中のアカウントが変わりました。",
-  "error.team.notConfigured": "この OpenBot はまだ設定されていません。",
+  "error.team.notConfigured": "この LogiBricks Workspace はまだ設定されていません。",
   "error.team.keyRotationMissing": "保留中のサーバーキー変更はありません。",
   "error.team.serverNotActive": "このサーバーは、サインイン中のアカウントの有効なサーバーではなくなりました。",
   "error.team.logoInvalid": "512 KB 以下の有効な PNG、JPEG、または WebP 画像を選択してください。",
@@ -45,17 +45,18 @@ export const messages = {
   "error.team.usernameInvalid": "ユーザー名は 3〜32 文字の英字、数字、ドット、ハイフン、アンダースコアにしてください。",
   "error.team.passwordLength": "パスワードは 12〜256 文字にしてください。",
   "error.team.bindFailed": "チーム API をバインドできませんでした。",
-  "error.team.signInRequired": "OpenBot へのサインインが必要です。",
+  "error.team.signInRequired": "LogiBricks Workspace へのサインインが必要です。",
   "error.team.authenticationRequired": "認証が必要です。",
   "error.team.agentNotFound": "エージェントが見つかりません。",
   "error.team.routeNotFound": "ルートが見つかりません。",
   "error.team.requestFailed": "リクエストに失敗しました。",
   "error.team.tooManySignInAttempts": "サインインの試行回数が多すぎます。しばらくしてから再試行してください。",
-  "error.team.clientUpdateRequired": "このホストに接続する前に、この OpenBot クライアントを更新してください。",
-  "error.team.hostUpdateRequired": "接続する前に、ホストの OpenBot を更新してください。",
+  "error.team.clientUpdateRequired":
+    "このホストに接続する前に、この LogiBricks Workspace クライアントを更新してください。",
+  "error.team.hostUpdateRequired": "接続する前に、ホストの LogiBricks Workspace を更新してください。",
   "error.team.sidebarLayoutUnavailable": "サイドバーのレイアウトを利用できません。",
   "error.team.providersUnsupported": "この接続ではプロバイダーの設定を利用できません。",
-  "error.team.providerNotManaged": "OpenBot はこのプロバイダーの CLI を管理していません。",
+  "error.team.providerNotManaged": "LogiBricks Workspace はこのプロバイダーの CLI を管理していません。",
   "error.team.channelsUnsupported": "この接続ではチャンネルのチャットを利用できません。",
   "error.team.channelContextUnsupported": "この接続はチャンネルでの新しい会話と圧縮に対応していません。",
   "error.team.channelPictureUnsupported": "この接続ではチャンネル画像を使用できません。",
@@ -80,9 +81,9 @@ export const messages = {
   "error.team.providerDetectionUnsupported": "この接続ではサーバーのモデルサーバーとエージェントを検出できません。",
   "error.team.sidebarFoldersUnsupported": "この接続ではフォルダー内のフォルダーを使用できません。",
   "error.team.agentNotificationLevelsUnsupported":
-    "このサーバーはエージェントごとの通知レベルを保存できません。サーバーを実行しているコンピューターで OpenBot を更新してください。",
+    "このサーバーはエージェントごとの通知レベルを保存できません。サーバーを実行しているコンピューターで LogiBricks Workspace を更新してください。",
   "error.team.sidebarPinsUnsupported":
-    "このサーバーは、ピン留めしたチャットをすべてのデバイスで共有できません。サーバーを実行しているコンピューターの OpenBot を更新してください。",
+    "このサーバーは、ピン留めしたチャットをすべてのデバイスで共有できません。サーバーを実行しているコンピューターの LogiBricks Workspace を更新してください。",
   "error.team.agentInstructionsUnsupported": "この接続ではエージェントの指示を編集できません。",
   "error.team.agentPublishUnsupported": "この接続ではエージェントを公開できません。",
   "error.team.agentUpdateUnsupported": "この接続ではエージェントを更新できません。",
@@ -94,9 +95,9 @@ export const messages = {
   "error.team.threadMessageSearchUnsupported": "この接続ではサイドスレッドを検索できません。",
   "error.team.sideQuestionUnsupported": "この接続ではサイド質問を使えません。",
   "error.team.liveVoiceUnsupported":
-    "このサーバーは Codex ライブ音声に対応していません。サーバーを実行しているコンピューターの OpenBot を更新してください。",
+    "このサーバーは Codex ライブ音声に対応していません。サーバーを実行しているコンピューターの LogiBricks Workspace を更新してください。",
   "error.team.routineFlowsUnsupported":
-    "このサーバーはルーティンフローに対応していません。サーバーを実行しているコンピューターの OpenBot を更新してください。",
+    "このサーバーはルーティンフローに対応していません。サーバーを実行しているコンピューターの LogiBricks Workspace を更新してください。",
   "error.team.routineCanvasTooLarge":
     "このルーティンキャンバスは大きすぎるため、このデバイスに送信できません。サーバーを実行しているコンピューターでルーティンの指示を短くしてください。",
   "error.team.conversationPageTooLarge":
@@ -133,7 +134,7 @@ export const messages = {
   "error.team.browserSessionNotFound": "ブラウザービューのセッションが見つかりません。",
   "error.team.mcpUnsupported": "この接続では MCP サーバーを利用できません。",
   "error.team.mcpServerListNeedsUpdate":
-    "このサーバーで {limit} 個を超える MCP サーバーを使うには、このデバイスの OpenBot を更新してください。",
+    "このサーバーで {limit} 個を超える MCP サーバーを使うには、このデバイスの LogiBricks Workspace を更新してください。",
   "error.team.storageUnsupported": "この接続ではストレージを利用できません。",
   "error.team.machineResourcesUnsupported": "この接続ではマシンの使用状況を利用できません。",
   "error.team.machineAlertMemberInvalid":
@@ -163,12 +164,12 @@ export const messages = {
   "error.team.ownerRequired": "この操作ができるのはこのサーバーのオーナーだけです。",
   "error.team.requestTooLarge": "リクエストの本文が大きすぎます。",
   "error.team.signInRelayUnsupported":
-    "このサーバーはサインインを中継できません。ホストの OpenBot を更新してください。",
+    "このサーバーはサインインを中継できません。ホストの LogiBricks Workspace を更新してください。",
   "error.team.connectorsUnsupported":
-    "このサーバーの接続はここから管理できません。ホストの OpenBot を更新してください。",
+    "このサーバーの接続はここから管理できません。ホストの LogiBricks Workspace を更新してください。",
   "error.team.discordAccessUnsupported":
-    "このサーバーでは Discord のロールを設定できません。サーバーの OpenBot を更新してください。",
-  "error.team.connectorPageRefused": "サーバーが OpenBot で開かないページを送信しました。",
+    "このサーバーでは Discord のロールを設定できません。サーバーの LogiBricks Workspace を更新してください。",
+  "error.team.connectorPageRefused": "サーバーが LogiBricks Workspace で開かないページを送信しました。",
   "error.team.signInRelayUnknown": "このサインインは終了したか、存在しません。",
   "error.team.signInRelayUsed": "このサインインはすでに送信されています。",
   "error.team.signInRelayMismatch": "このアドレスはこのサインインのものではありません。",

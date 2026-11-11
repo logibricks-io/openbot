@@ -1,6 +1,7 @@
 import { PlatformLogo } from "@openbot/brand";
 import { Link } from "@tanstack/solid-router";
 import { createSignal, onCleanup } from "solid-js";
+import { createCompanyReleaseAvailability } from "../../lib/company-release-availability";
 import { DOWNLOAD_PAGES, type DownloadInstaller, type DownloadPagePlatform } from "../../lib/download-pages";
 import { EXTERNAL_LINK_REL } from "../../lib/landing-links";
 import { LandingIcon } from "../landing/LandingIcon";
@@ -18,17 +19,23 @@ export interface InstallerButtonProps {
  * because the link answers with a redirect to a file and the router must not try to render it.
  */
 export function InstallerButton(props: InstallerButtonProps) {
+  const available = createCompanyReleaseAvailability();
   return (
     <a
       class="download-installer-button"
       data-variant={props.primary ? "primary" : "secondary"}
-      href={props.installer.href}
+      href={available() && !props.installer.external ? props.installer.href : undefined}
+      aria-disabled={!available() || props.installer.external ? "true" : undefined}
       target={props.installer.external ? "_blank" : undefined}
       rel={props.installer.external ? EXTERNAL_LINK_REL : undefined}
       aria-label={props.short ? props.installer.label : undefined}
     >
       <LandingIcon name="download" class="download-installer-icon" />
-      {props.short ? props.installer.shortLabel : props.installer.label}
+      {available() && !props.installer.external
+        ? props.short
+          ? props.installer.shortLabel
+          : props.installer.label
+        : "Release not published"}
     </a>
   );
 }

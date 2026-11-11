@@ -8,7 +8,7 @@ export const messages = {
   "error.team.alreadyConfigured": "El servidor del equipo ya está configurado.",
   "error.team.identityCreateFailed": "No se pudo crear la identidad del equipo.",
   "error.team.accountChangedDuringCreate": "La cuenta con sesión iniciada cambió mientras se creaba este servidor.",
-  "error.team.notConfigured": "Este OpenBot no se ha configurado.",
+  "error.team.notConfigured": "Este LogiBricks Workspace no se ha configurado.",
   "error.team.keyRotationMissing": "No hay ningún cambio de clave del servidor pendiente.",
   "error.team.serverNotActive": "Este servidor ya no es el activo para la cuenta con sesión iniciada.",
   "error.team.logoInvalid": "Elige una imagen PNG, JPEG o WebP válida de hasta 512 KB.",
@@ -46,17 +46,17 @@ export const messages = {
     "El nombre de usuario debe contener entre 3 y 32 letras, números, puntos, guiones o guiones bajos.",
   "error.team.passwordLength": "La contraseña debe contener entre 12 y 256 caracteres.",
   "error.team.bindFailed": "No se pudo enlazar la API del equipo.",
-  "error.team.signInRequired": "Es necesario iniciar sesión en OpenBot.",
+  "error.team.signInRequired": "Es necesario iniciar sesión en LogiBricks Workspace.",
   "error.team.authenticationRequired": "Se requiere autenticación.",
   "error.team.agentNotFound": "No se encontró el agente.",
   "error.team.routeNotFound": "No se encontró la ruta.",
   "error.team.requestFailed": "La solicitud falló.",
   "error.team.tooManySignInAttempts": "Demasiados intentos de inicio de sesión. Inténtalo más tarde.",
-  "error.team.clientUpdateRequired": "Actualiza este cliente de OpenBot antes de conectarte a este host.",
-  "error.team.hostUpdateRequired": "Actualiza OpenBot en el host antes de conectarte.",
+  "error.team.clientUpdateRequired": "Actualiza este cliente de LogiBricks Workspace antes de conectarte a este host.",
+  "error.team.hostUpdateRequired": "Actualiza LogiBricks Workspace en el host antes de conectarte.",
   "error.team.sidebarLayoutUnavailable": "La distribución de la barra lateral no está disponible.",
   "error.team.providersUnsupported": "Esta conexión no admite los ajustes de proveedores.",
-  "error.team.providerNotManaged": "OpenBot no gestiona la CLI de este proveedor.",
+  "error.team.providerNotManaged": "LogiBricks Workspace no gestiona la CLI de este proveedor.",
   "error.team.channelsUnsupported": "Esta conexión no admite chats de canal.",
   "error.team.channelContextUnsupported":
     "Esta conexión no admite una nueva conversación ni la compactación en un canal.",
@@ -83,9 +83,9 @@ export const messages = {
     "Esta conexión no puede encontrar los servidores de modelos y los agentes del servidor.",
   "error.team.sidebarFoldersUnsupported": "Esta conexión no permite carpetas dentro de carpetas.",
   "error.team.agentNotificationLevelsUnsupported":
-    "Este servidor no puede guardar tu propio nivel de notificaciones para cada agente. Actualiza OpenBot en el ordenador que lo ejecuta.",
+    "Este servidor no puede guardar tu propio nivel de notificaciones para cada agente. Actualiza LogiBricks Workspace en el ordenador que lo ejecuta.",
   "error.team.sidebarPinsUnsupported":
-    "Este servidor no puede guardar tus chats fijados para todos tus dispositivos. Actualiza OpenBot en el ordenador que lo ejecuta.",
+    "Este servidor no puede guardar tus chats fijados para todos tus dispositivos. Actualiza LogiBricks Workspace en el ordenador que lo ejecuta.",
   "error.team.agentInstructionsUnsupported": "Esta conexión no permite editar las instrucciones de los agentes.",
   "error.team.agentPublishUnsupported": "Esta conexión no permite publicar agentes.",
   "error.team.agentUpdateUnsupported": "Esta conexión no permite actualizar agentes.",
@@ -97,9 +97,9 @@ export const messages = {
   "error.team.threadMessageSearchUnsupported": "Esta conexión no permite buscar en los hilos laterales.",
   "error.team.sideQuestionUnsupported": "Esta conexión no permite preguntas aparte.",
   "error.team.liveVoiceUnsupported":
-    "Este servidor no admite la voz en directo de Codex. Actualiza OpenBot en el equipo que lo ejecuta.",
+    "Este servidor no admite la voz en directo de Codex. Actualiza LogiBricks Workspace en el equipo que lo ejecuta.",
   "error.team.routineFlowsUnsupported":
-    "Este servidor no admite flujos de rutinas. Actualiza OpenBot en el equipo que lo ejecuta.",
+    "Este servidor no admite flujos de rutinas. Actualiza LogiBricks Workspace en el equipo que lo ejecuta.",
   "error.team.routineCanvasTooLarge":
     "Este lienzo de rutinas es demasiado grande para enviarlo a este dispositivo. Acorta las instrucciones de las rutinas en el equipo que ejecuta el servidor.",
   "error.team.conversationPageTooLarge":
@@ -136,7 +136,7 @@ export const messages = {
   "error.team.browserSessionNotFound": "No se encontró la sesión de vista del navegador.",
   "error.team.mcpUnsupported": "Esta conexión no admite servidores MCP.",
   "error.team.mcpServerListNeedsUpdate":
-    "Actualiza OpenBot en este dispositivo para usar más de {limit} servidores MCP en este servidor.",
+    "Actualiza LogiBricks Workspace en este dispositivo para usar más de {limit} servidores MCP en este servidor.",
   "error.team.storageUnsupported": "Esta conexión no admite almacenamiento.",
   "error.team.machineResourcesUnsupported": "Esta conexión no admite el uso de la máquina.",
   "error.team.machineAlertMemberInvalid":
@@ -166,11 +166,12 @@ export const messages = {
   "error.team.ownerRequired": "Solo el propietario de este servidor puede hacer esto.",
   "error.team.requestTooLarge": "El cuerpo de la solicitud es demasiado grande.",
   "error.team.signInRelayUnsupported":
-    "Este servidor no puede retransmitir inicios de sesión. Actualiza OpenBot en el host.",
+    "Este servidor no puede retransmitir inicios de sesión. Actualiza LogiBricks Workspace en el host.",
   "error.team.connectorsUnsupported":
-    "Las conexiones de este servidor no se pueden gestionar desde aquí. Actualiza OpenBot en el host.",
-  "error.team.discordAccessUnsupported": "Este servidor no puede configurar roles de Discord. Actualiza OpenBot en él.",
-  "error.team.connectorPageRefused": "El servidor envió una página que OpenBot no abre.",
+    "Las conexiones de este servidor no se pueden gestionar desde aquí. Actualiza LogiBricks Workspace en el host.",
+  "error.team.discordAccessUnsupported":
+    "Este servidor no puede configurar roles de Discord. Actualiza LogiBricks Workspace en él.",
+  "error.team.connectorPageRefused": "El servidor envió una página que LogiBricks Workspace no abre.",
   "error.team.signInRelayUnknown": "Este inicio de sesión terminó o no existe.",
   "error.team.signInRelayUsed": "Este inicio de sesión ya se envió.",
   "error.team.signInRelayMismatch": "Esta dirección no es de este inicio de sesión.",

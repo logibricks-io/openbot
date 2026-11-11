@@ -701,6 +701,12 @@ function renderMobileModule(plugins: PluginDetail[]): string {
     const { iconUrl: _iconUrl, updatedAt: _updatedAt, apps, ...detail } = plugin;
     return {
       ...detail,
+      // These bundled descriptions refer to the running app. Keep vendor identities and
+      // versioned upstream snapshots intact; only the phone's display copy is branded.
+      description:
+        plugin.slug === "paper" || plugin.slug === "apple-apps"
+          ? detail.description.replaceAll("OpenBot", "LogiBricks Workspace")
+          : detail.description,
       apps: apps.map(({ iconUrl: _appIconUrl, macAutomation: _macAutomation, ...app }) => app),
     };
   });

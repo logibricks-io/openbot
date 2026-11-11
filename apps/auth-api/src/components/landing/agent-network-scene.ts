@@ -9,7 +9,7 @@
 // frame at second `t`. Playback, pause and reduced motion are only a choice of
 // `t`, so they cannot drift apart.
 
-import { APP_LOGO_CORNER, APP_LOGO_EYE_POINTS, APP_LOGO_SIZE } from "@openbot/brand/app-logo-shape";
+import { APP_LOGO_MODULES, APP_LOGO_VIEWBOX_SIZE } from "@openbot/brand/app-logo-shape";
 
 /** A node with no avatar is the OpenBot mark at the centre. */
 const HUB = -1;
@@ -884,25 +884,18 @@ function drawNetwork(
 
     if (node.avatar === HUB) {
       const side = radius * 2;
-      const unit = side / APP_LOGO_SIZE;
-      context.fillStyle = assets.colors.hub;
-      context.beginPath();
-      context.roundRect(x - radius, y - radius, side, side, APP_LOGO_CORNER * unit);
-      context.fill();
-      context.strokeStyle = assets.colors.hubEye;
-      context.lineWidth = 9.5 * unit;
-      context.lineCap = "round";
-      context.lineJoin = "round";
-      for (const points of [APP_LOGO_EYE_POINTS.left, APP_LOGO_EYE_POINTS.right]) {
-        const values = points.split(" ").map(Number);
+      const unit = side / APP_LOGO_VIEWBOX_SIZE;
+      for (const module of APP_LOGO_MODULES) {
+        context.fillStyle = module.accent ? "#d97757" : "#f6f3ed";
         context.beginPath();
-        for (let index = 0; index < values.length; index += 2) {
-          const px = x - radius + (values[index] ?? 0) * unit;
-          const py = y - radius + (values[index + 1] ?? 0) * unit;
-          if (index === 0) context.moveTo(px, py);
-          else context.lineTo(px, py);
-        }
-        context.stroke();
+        context.roundRect(
+          x - radius + module.x * unit,
+          y - radius + module.y * unit,
+          module.width * unit,
+          module.height * unit,
+          module.radius * unit,
+        );
+        context.fill();
       }
     } else {
       const image = assets.avatars[node.avatar];
@@ -968,7 +961,7 @@ function drawNetwork(
       context.lineWidth = Math.max(1, 2.5 * cam.scale);
       context.beginPath();
       if (node.avatar === HUB) {
-        context.roundRect(x - halo, y - halo, halo * 2, halo * 2, (APP_LOGO_CORNER / APP_LOGO_SIZE) * halo * 2);
+        context.roundRect(x - halo, y - halo, halo * 2, halo * 2, 0.05 * halo * 2);
       } else {
         context.arc(x, y, halo, 0, Math.PI * 2);
       }

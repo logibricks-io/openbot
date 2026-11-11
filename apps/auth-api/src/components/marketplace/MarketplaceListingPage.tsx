@@ -20,7 +20,7 @@ import { PluginOpenButtons, type PluginOpenButtonsText } from "../plugins/Plugin
 import { AgentMark, CopyLinkButton, ListingLink, MarketplaceFrame, SkillIcon, VerifiedMark } from "./MarketplaceParts";
 
 /**
- * How far OpenBot checked a listing. Every listing in a list was reviewed before it went live; an
+ * How far LogiBricks Workspace checked a listing. Every listing in a list was reviewed before it went live; an
  * agent that waits for its first review is reached only through the link its creator shared.
  */
 type Trust = "verified" | "reviewed" | "pending";
@@ -161,7 +161,7 @@ function listingFacts(
 }
 
 /**
- * Add to OpenBot opens the app at the listing, which shows what it brings and asks before it adds
+ * Add to LogiBricks Workspace opens the app at the listing, which shows what it brings and asks before it adds
  * anything; the browser button opens the web app at the same place. Both links come from the shared
  * helpers, never from listing data.
  */

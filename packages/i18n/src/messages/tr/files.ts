@@ -78,7 +78,7 @@ export const messages = {
   "files.storage.allFiles": "Tüm dosyalar",
   "files.storage.allFilesOn": "{host} üzerindeki tüm dosyalar",
   "files.storage.allFilesDescription": "Tüm ajanların ve sohbetlerin dosyaları",
-  "files.storage.openBotOn": "{host} üzerinde OpenBot",
+  "files.storage.openBotOn": "{host} üzerinde LogiBricks Workspace",
   "files.storage.measuring": "Ölçülüyor…",
   "files.storage.measureAgain": "Tekrar ölç",
   "files.storage.measuringStorage": "Depolama alanı ölçülüyor",
@@ -87,7 +87,7 @@ export const messages = {
   "files.storage.byType": "Türe göre depolama",
   "files.storage.emptyTitle": "Henüz depolanan bir şey yok",
   "files.storage.emptyDescription":
-    "OpenBot'u kullanmaya başladığınızda ajan çalışma alanları, sohbet dosyaları ve sohbet geçmişi burada gösterilir.",
+    "LogiBricks Workspace'i kullanmaya başladığınızda ajan çalışma alanları, sohbet dosyaları ve sohbet geçmişi burada gösterilir.",
   "files.storage.agents": "Ajanlar",
   "files.storage.largestChats": "En büyük sohbetler",
   "files.storage.files": "Dosyalar",
@@ -98,7 +98,7 @@ export const messages = {
   "files.storage.justNow": "az önce",
   "files.storage.minutesAgo": "{minutes} dk önce",
   "files.storage.hoursAgo": "{hours} sa önce",
-  "files.storage.updateServer": "Depolamasını görmek için bu sunucudaki OpenBot'u güncelleyin.",
+  "files.storage.updateServer": "Depolamasını görmek için bu sunucudaki LogiBricks Workspace'i güncelleyin.",
   "files.storage.openFailed": "“{name}” açılamadı",
   "files.storage.tryAgain": "Tekrar deneyin.",
   "files.machine.title": "Makine",
@@ -127,12 +127,13 @@ export const messages = {
   "files.machine.saveFailed": "Uyarı ayarları kaydedilemedi.",
   "files.cleanup.title": "Temizle",
   "files.cleanup.canBeCleared": "{size} temizlenebilir",
-  "files.cleanup.description.caches": "Sunucu dosyalarının kopyaları. OpenBot açtığınızda bunları tekrar indirir.",
+  "files.cleanup.description.caches":
+    "Sunucu dosyalarının kopyaları. LogiBricks Workspace açtığınızda bunları tekrar indirir.",
   "files.cleanup.description.logs": "Tanılama günlükleri. Yeni günlükler hemen başlar.",
   "files.cleanup.description.runtimes":
-    "Hiçbir ajanın kullanmadığı eski sağlayıcı CLI sürümleri. OpenBot kullanılan sürümü tutar.",
+    "Hiçbir ajanın kullanmadığı eski sağlayıcı CLI sürümleri. LogiBricks Workspace kullanılan sürümü tutar.",
   "files.cleanup.description.runtimeDownloads":
-    "Şu sağlayıcıların CLI indirmeleri: {providers}; varsa eski CLI sürümleri de. Hiçbir ajan bunları kullanmıyor: bu sağlayıcılar kapalı ya da yüklediğiniz CLI'yi kullanıyor. Bir sağlayıcı ihtiyaç duyduğunda OpenBot CLI'yi yeniden indirir.",
+    "Şu sağlayıcıların CLI indirmeleri: {providers}; varsa eski CLI sürümleri de. Hiçbir ajan bunları kullanmıyor: bu sağlayıcılar kapalı ya da yüklediğiniz CLI'yi kullanıyor. Bir sağlayıcı ihtiyaç duyduğunda LogiBricks Workspace CLI'yi yeniden indirir.",
   "files.cleanup.clear": "Temizle",
   "files.cleanup.clearCategory": "Temizle: {category}",
   "files.cleanup.confirm.caches": "Önbelleğe alınan sunucu dosyaları temizlensin mi?",

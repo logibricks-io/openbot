@@ -65,7 +65,7 @@ export function ProviderArticlePage(props: ProviderArticlePageProps) {
       <RevealSection class="provider-setup" titleId="provider-setup-title" title="How to set it up">
         <ol class="provider-steps">
           <li class="provider-step">
-            <h3 class="provider-step-title">Download OpenBot</h3>
+            <h3 class="provider-step-title">Release availability</h3>
             <p class="provider-step-text">
               For macOS 13 or later on Apple silicon or Intel, Windows 10 or later on x64, or x64 or arm64 Linux.
             </p>

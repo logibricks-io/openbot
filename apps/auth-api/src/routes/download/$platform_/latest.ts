@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/solid-router";
+import { companyReleaseSetting } from "../../../server/company-release-setting";
 import { runApiEffect } from "../../../server/effect-runtime";
 import {
   downloadArchitecture,
@@ -15,7 +16,7 @@ export const Route = createFileRoute("/download/$platform_/latest")({
       GET: async ({ request, params }) => {
         if (!isAvailableDownloadPlatform(params.platform)) return new Response("Not found", { status: 404 });
         const architecture = downloadArchitecture(params.platform, new URL(request.url).searchParams.get("arch"));
-        return runApiEffect(latestDownloadResponse(params.platform, fetch, architecture));
+        return runApiEffect(latestDownloadResponse(params.platform, fetch, architecture, companyReleaseSetting()));
       },
     },
   },

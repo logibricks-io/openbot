@@ -1,3 +1,4 @@
+import { companyReleaseUrl } from "@openbot/brand/release-url";
 import { isManagedRuntimeProvider, type ManagedProviderId } from "@openbot/contracts/agent-providers";
 import { ANALYTICS_GENERATIONS, openPanelTransport, ReportQueue } from "@openbot/telemetry";
 import { fileReportStorage } from "@openbot/telemetry/node";
@@ -38,12 +39,7 @@ import {
 } from "./browser-profile-service";
 import { feedbackFacts, feedbackSender } from "./feedback";
 import { HostReleaseService, readInstallationMode } from "./host-release-service";
-import {
-  CONTAINER_UPDATE_PATHS,
-  CONTAINER_UPDATE_TRIGGER,
-  HOSTED_UPDATE_TRIGGER,
-  HostedUpdateAdapter,
-} from "./hosted-update-adapter";
+import { CONTAINER_UPDATE_TRIGGER, HOSTED_UPDATE_TRIGGER } from "./hosted-update-adapter";
 import { LicenseDesktopService } from "./license-service";
 import { LocalSignInWindows } from "./local-sign-in-window";
 import { localSkillLearner } from "./local-skill-learner";
@@ -3846,11 +3842,17 @@ export async function createApplicationServices({
       (process.env.OPENBOT_HOSTED_SERVER === "1" || (serverModeEnvironment !== null && installationMode === "self")) &&
       existsSync(HOSTED_UPDATE_TRIGGER));
   // A local server is the same application as its parent, which installs the update for both.
+  const companyFeed = companyReleaseUrl(process.env.LOGIBRICKS_RELEASES_URL);
+  // Root-managed Host installers require their own company distribution migration.
+  // A company desktop cannot use an upstream package feed or a legacy Host installer.
   const updatesEnabled =
+    companyFeed !== null &&
+    !hostedInstaller &&
     !localServerChild &&
     app.isPackaged &&
     !isNixStoreInstall() &&
-    (hostedInstaller || (supportsInstalledUpdates(process.platform) && updateMetadataAvailable)) &&
+    supportsInstalledUpdates(process.platform) &&
+    updateMetadataAvailable &&
     isValidSemver(currentVersion);
   if (app.isPackaged && updateMetadataAvailable && !isValidSemver(currentVersion)) {
     logger.warn(`OpenBot updates are disabled because the application version is not valid SemVer: ${currentVersion}`);
@@ -3858,13 +3860,7 @@ export async function createApplicationServices({
   let updateAdapter: UpdateAdapter = createDisabledUpdateAdapter();
   let updaterEnabled = updatesEnabled;
   let updaterCacheDirectory: string | undefined;
-  if (updatesEnabled && hostedInstaller) {
-    updateAdapter = new HostedUpdateAdapter({
-      currentVersion,
-      arch: process.arch,
-      ...(containerInstaller ? { paths: CONTAINER_UPDATE_PATHS } : {}),
-    });
-  } else if (updatesEnabled) {
+  if (updatesEnabled && companyFeed) {
     const realAdapter = await loadElectronUpdater();
     if (realAdapter) {
       updateAdapter = realAdapter;

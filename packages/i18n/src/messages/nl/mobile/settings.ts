@@ -8,28 +8,28 @@ export const messages = {
   "mobile.settings.language.system": "Systeemstandaard",
   "mobile.settings.language.footer":
     "Systeemstandaard volgt de eerste taal in de instellingen van je telefoon. Tekst die nog niet is vertaald, wordt in het Engels getoond.",
-  "mobile.settings.language.restartTitle": "OpenBot opnieuw starten?",
+  "mobile.settings.language.restartTitle": "LogiBricks Workspace opnieuw starten?",
   "mobile.settings.language.restartBody":
-    "Deze taal lees je in de andere richting. De schermen draaien om wanneer OpenBot opnieuw start. Zien de schermen er na de herstart nog verkeerd uit, sluit OpenBot dan in de appkiezer en open het opnieuw.",
+    "Deze taal lees je in de andere richting. De schermen draaien om wanneer LogiBricks Workspace opnieuw start. Zien de schermen er na de herstart nog verkeerd uit, sluit LogiBricks Workspace dan in de appkiezer en open het opnieuw.",
   "mobile.settings.language.restartNow": "Nu opnieuw starten",
   "mobile.settings.language.restartFailed":
-    "OpenBot kon niet opnieuw starten. De schermen draaien om wanneer je OpenBot de volgende keer opent.",
+    "LogiBricks Workspace kon niet opnieuw starten. De schermen draaien om wanneer je LogiBricks Workspace de volgende keer opent.",
   "mobile.settings.dictation.language": "Dicteertaal",
   "mobile.settings.about.development": "Ontwikkeling",
   "mobile.settings.about.openFailed": "Kan de link niet openen. Probeer het opnieuw.",
   "mobile.settings.about.resources": "Bronnen",
-  "mobile.settings.about.website": "Website",
-  "mobile.settings.about.privacy": "Privacybeleid",
+  "mobile.settings.about.website": "OpenBot-website (oorspronkelijk project)",
+  "mobile.settings.about.privacy": "Privacybeleid van OpenBot",
   "mobile.settings.home.profile": "Profiel",
   "mobile.settings.home.preferences": "Voorkeuren",
-  "mobile.settings.home.about": "Over OpenBot",
+  "mobile.settings.home.about": "Over LogiBricks",
   "mobile.settings.home.support": "Ondersteuning",
   "mobile.settings.home.supportHint": "Krijg hulp en sla een ondersteuningslog op",
   "mobile.settings.support.help": "Hulp krijgen",
   "mobile.settings.support.discord": "Open een ticket op Discord",
   "mobile.settings.support.discordHint": "De snelste weg naar hulp",
-  "mobile.settings.support.message": "Stuur ons een bericht op X",
-  "mobile.settings.support.issues": "Meld een probleem op GitHub",
+  "mobile.settings.support.message": "OpenBot op X",
+  "mobile.settings.support.issues": "OpenBot-problemen op GitHub",
   "mobile.settings.support.helpFooter":
     "Vertel ons wat er gebeurde en wanneer. Voeg het ondersteuningslogbestand toe aan je Discord-ticket of GitHub-issue.",
   "mobile.settings.support.log": "Ondersteuningslog",
@@ -40,7 +40,7 @@ export const messages = {
   "mobile.settings.support.clearTitle": "Ondersteuningslog wissen?",
   "mobile.settings.support.clearBody": "Hiermee verwijder je alle gebeurtenissen uit het log op deze telefoon.",
   "mobile.settings.support.logFooter":
-    "Het log blijft op deze telefoon en OpenBot verstuurt het niet. Het legt verbindingsstappen, verzoeken en fouten vast. Het legt geen berichten of bestanden vast en het maskeert wachtwoorden en tokens. Lees het bestand voordat je het deelt.",
+    "Het log blijft op deze telefoon en LogiBricks Workspace verstuurt het niet. Het legt verbindingsstappen, verzoeken en fouten vast. Het legt geen berichten of bestanden vast en het maskeert wachtwoorden en tokens. Lees het bestand voordat je het deelt.",
   "mobile.settings.support.saveFailed": "Kan het logbestand niet opslaan. Probeer het opnieuw.",
   "mobile.settings.support.sharingUnavailable": "Delen is niet beschikbaar op deze telefoon.",
   "mobile.settings.support.newestFirst": "Nieuwste eerst.",
@@ -108,17 +108,18 @@ export const messages = {
   "mobile.settings.feedback.retry": "Opslaan van haptische instelling opnieuw proberen",
   "mobile.settings.liveActivities.title": "Live activiteiten",
   "mobile.settings.liveActivities.footer":
-    "Toont werk van agents, berichten, vragen en goedkeuringen op het toegangsscherm en in het Dynamic Island terwijl OpenBot actief is.",
+    "Toont werk van agents, berichten, vragen en goedkeuringen op het toegangsscherm en in het Dynamic Island terwijl LogiBricks Workspace actief is.",
   "mobile.settings.liveActivities.toggle": "Agentactiviteit tonen",
   "mobile.settings.liveActivities.retry": "Opslaan van instelling voor live activiteiten opnieuw proberen",
   "mobile.settings.notifications.title": "Meldingen",
   "mobile.settings.notifications.toggle": "Meldingen toestaan",
   "mobile.settings.notifications.footer":
-    "Agents laten je weten wanneer ze klaar zijn, stoppen met een fout of je invoer, een goedkeuring of een stap in de browser nodig hebben. Er komt niets binnen terwijl OpenBot hier of in de desktop-app in gebruik is. Zolang de live activiteit zichtbaar is, toont die de gebeurtenis in plaats daarvan.",
+    "Agents laten je weten wanneer ze klaar zijn, stoppen met een fout of je invoer, een goedkeuring of een stap in de browser nodig hebben. Er komt niets binnen terwijl LogiBricks Workspace hier of in de desktop-app in gebruik is. Zolang de live activiteit zichtbaar is, toont die de gebeurtenis in plaats daarvan.",
   "mobile.settings.notifications.footerAndroid":
-    "Agents laten je weten wanneer ze klaar zijn, stoppen met een fout of je invoer, een goedkeuring of een stap in de browser nodig hebben. Er komt niets binnen terwijl OpenBot hier of in de desktop-app in gebruik is.",
-  "mobile.settings.notifications.denied": "Meldingen voor OpenBot staan uit in iOS-instellingen.",
-  "mobile.settings.notifications.deniedAndroid": "Meldingen voor OpenBot staan uit in Android-instellingen.",
+    "Agents laten je weten wanneer ze klaar zijn, stoppen met een fout of je invoer, een goedkeuring of een stap in de browser nodig hebben. Er komt niets binnen terwijl LogiBricks Workspace hier of in de desktop-app in gebruik is.",
+  "mobile.settings.notifications.denied": "Meldingen voor LogiBricks Workspace staan uit in iOS-instellingen.",
+  "mobile.settings.notifications.deniedAndroid":
+    "Meldingen voor LogiBricks Workspace staan uit in Android-instellingen.",
   "mobile.settings.notifications.openSettings": "Open iOS-instellingen",
   "mobile.settings.notifications.openSettingsAndroid": "Open Android-instellingen",
   "mobile.settings.notifications.preview": "Voorvertoning van antwoord tonen",
@@ -131,7 +132,7 @@ export const messages = {
     "Antwoorden in threads laten je weten wanneer een agent in een thread klaar is of stopt met een fout. Zonder deze meldingen laat een thread je nog steeds weten wanneer je invoer of een goedkeuring nodig is.",
   "mobile.settings.notifications.sound": "Geluid",
   "mobile.settings.notifications.playSound": "Geluid afspelen",
-  "mobile.settings.notifications.sound.openbot": "OpenBot",
+  "mobile.settings.notifications.sound.openbot": "LogiBricks",
   "mobile.settings.notifications.sound.warm": "Warm",
   "mobile.settings.notifications.sound.mech": "Mechanisch",
   "mobile.settings.notifications.sound.bubble": "Bubbelend",
@@ -139,9 +140,9 @@ export const messages = {
   "mobile.settings.notifications.sound.default": "iOS-standaard",
   "mobile.settings.notifications.sound.defaultAndroid": "Android-standaard",
   "mobile.settings.notifications.soundFooter":
-    "Meldingen en de live activiteit spelen dit geluid af. De live activiteit laat ook het scherm oplichten. Het OpenBot-geluid is het geluid dat de desktop-app afspeelt als een taak klaar is. De vier geluiden daarna zijn de geluiden van de geluidsthema’s van de desktop-app.",
+    "Meldingen en de live activiteit spelen dit geluid af. De live activiteit laat ook het scherm oplichten. Het LogiBricks Workspace-geluid is het geluid dat de desktop-app afspeelt als een taak klaar is. De vier geluiden daarna zijn de geluiden van de geluidsthema’s van de desktop-app.",
   "mobile.settings.notifications.soundFooterAndroid":
-    "Meldingen spelen dit geluid af. Het OpenBot-geluid is het geluid dat de desktop-app afspeelt als een taak klaar is. De vier geluiden daarna zijn de geluiden van de geluidsthema’s van de desktop-app.",
+    "Meldingen spelen dit geluid af. Het LogiBricks Workspace-geluid is het geluid dat de desktop-app afspeelt als een taak klaar is. De vier geluiden daarna zijn de geluiden van de geluidsthema’s van de desktop-app.",
   "mobile.settings.notifications.level.all": "Alle activiteit",
   "mobile.settings.notifications.level.needsMe": "Alleen als het mij nodig heeft",
   "mobile.settings.notifications.level.nothing": "Niets",
@@ -157,7 +158,7 @@ export const messages = {
   "mobile.settings.notifications.serverFooter":
     "De gebeurtenissen van deze server die deze telefoon melden. De desktop-app heeft eigen instellingen.",
   "mobile.settings.notifications.serverUnsupported":
-    "Deze server kan geen meldingen versturen. Werk OpenBot bij op de computer waarop de server draait.",
+    "Deze server kan geen meldingen versturen. Werk LogiBricks Workspace bij op de computer waarop de server draait.",
   "mobile.settings.notifications.thisPhone": "Deze telefoon",
   "mobile.settings.notifications.whatYouHear": "Waarover je hoort",
   "mobile.settings.notifications.wholeServer": "Hele server",
@@ -171,7 +172,8 @@ export const messages = {
   "mobile.settings.notifications.chooseAgent": "Kies voor één agent",
   "mobile.settings.notifications.chooseAnotherAgent": "Kies een andere agent",
   "mobile.settings.notifications.levelsFooter": "Tik nog eens op het niveau van een agent om de server te volgen.",
-  "mobile.settings.notifications.agentsUnsupported": "Werk OpenBot bij op deze server om agents te kiezen.",
+  "mobile.settings.notifications.agentsUnsupported":
+    "Werk LogiBricks Workspace bij op deze server om agents te kiezen.",
   "mobile.settings.notifications.agentsOffline": "Agents verschijnen als deze server online is.",
   "mobile.settings.notifications.scopeFooter":
     "Je keuzes gelden op al je apparaten. Dempen geldt alleen voor deze telefoon.",
@@ -200,7 +202,7 @@ export const messages = {
   "mobile.settings.profile.accountSessions": "Accountsessies",
   "mobile.settings.profile.signOutTitle": "Uitloggen?",
   "mobile.settings.profile.signOutBody":
-    "Maak opnieuw verbinding door een nieuwe code te scannen in OpenBot op je desktop.",
+    "Maak opnieuw verbinding door een nieuwe code te scannen in LogiBricks Workspace op je desktop.",
   "mobile.settings.profile.signOut": "Uitloggen",
   "mobile.settings.profile.options": "Profielopties",
   "mobile.settings.profile.activity.title": "Activiteit op {server}",
@@ -238,7 +240,7 @@ export const messages = {
   "mobile.settings.profile.models.title": "Modelgebruik",
   "mobile.settings.profile.share": "Delen",
   "mobile.settings.profile.shareTitle": "Deel je activiteit",
-  "mobile.settings.profile.share.caption": "Mijn laatste zes maanden met OpenBot",
+  "mobile.settings.profile.share.caption": "Mijn laatste zes maanden met LogiBricks Workspace",
   "mobile.settings.profile.share.createFailed": "Kan de afbeelding niet maken.",
   "mobile.settings.profile.share.fileName": "openbot-activiteit.png",
   "mobile.settings.voice.elevenLabs.keyPlaceholder": "sk_…",
@@ -247,13 +249,14 @@ export const messages = {
   "mobile.settings.voice.pause.title": "Pauze voor verzenden",
   "mobile.settings.voice.pause.label": "Wachten op nieuwe woorden",
   "mobile.settings.voice.pause.footer":
-    "In een spraakgesprek verstuurt OpenBot je woorden als het zo lang geen nieuwe woorden herkent. Geluid zonder woorden houdt het luisteren niet open. Kies een langere pauze als je langzaam spreekt of stopt om na te denken.",
+    "In een spraakgesprek verstuurt LogiBricks Workspace je woorden als het zo lang geen nieuwe woorden herkent. Geluid zonder woorden houdt het luisteren niet open. Kies een langere pauze als je langzaam spreekt of stopt om na te denken.",
   "mobile.settings.voice.pause.seconds": "{seconds} s",
   "mobile.settings.voice.speed.title": "Snelheid antwoorden",
-  "mobile.settings.voice.speed.footer": "De snelheid van antwoorden die OpenBot voorleest, ook in een spraakgesprek.",
+  "mobile.settings.voice.speed.footer":
+    "De snelheid van antwoorden die LogiBricks Workspace voorleest, ook in een spraakgesprek.",
   "mobile.settings.voice.speed.value": "{speed}×",
   "mobile.settings.voice.elevenLabs.recognitionFooter":
-    "OpenBot streamt je spraak met een eenmalige token naar ElevenLabs, en ElevenLabs brengt het in rekening op je account. De sleutel blijft op deze telefoon.",
+    "LogiBricks Workspace streamt je spraak met een eenmalige token naar ElevenLabs, en ElevenLabs brengt het in rekening op je account. De sleutel blijft op deze telefoon.",
   "mobile.settings.voice.elevenLabs.model.title": "Model",
   "mobile.settings.voice.elevenLabs.model.footer":
     "Elk model heeft bij ElevenLabs een eigen prijs. De wijziging geldt vanaf het volgende antwoord.",
@@ -262,4 +265,5 @@ export const messages = {
   "mobile.settings.voice.elevenLabs.model.v3": "Expressief · traag",
   "mobile.settings.voice.elevenLabs.model.v4Turbo": "Meer dan 90 talen · snel",
   "mobile.settings.voice.elevenLabs.model.v4": "Beste kwaliteit · meer dan 90 talen · traag",
+  "mobile.settings.about.attribution": "Gebaseerd op OpenBot. PolyForm Noncommercial 1.0.0.",
 } as const satisfies PartialTranslation<typeof source>;

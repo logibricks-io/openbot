@@ -31,7 +31,7 @@ export const messages = {
   "provider.status.checking": "Verificando",
   "provider.status.off": "Desligado",
   "provider.gemini.hostSignIn":
-    "Para conectar o Gemini, abra o OpenBot no computador anfitrião e selecione Conectar em Configurações do servidor > Provedores. O login do Google precisa de um navegador nesse computador anfitrião. Login remoto não é suportado.",
+    "Para conectar o Gemini, abra o LogiBricks Workspace no computador anfitrião e selecione Conectar em Configurações do servidor > Provedores. O login do Google precisa de um navegador nesse computador anfitrião. Login remoto não é suportado.",
   "provider.key.free": "Grátis",
   "provider.action.connect": "Conectar",
   "provider.action.reconnect": "Reconectar",
@@ -57,19 +57,20 @@ export const messages = {
   "provider.aria.cancelSignIn": "Cancelar o login em {name}",
   "provider.aria.apiKey": "Chave de API do {name}",
   "provider.connecting.browserHint": "Conclua o login se uma página do navegador abrir.",
-  "provider.connecting.cancelFailed": "O OpenBot não conseguiu cancelar o login em {name}. Tente novamente.",
+  "provider.connecting.cancelFailed":
+    "O LogiBricks Workspace não conseguiu cancelar o login em {name}. Tente novamente.",
   "provider.aria.install": "Instalar {name}",
   "provider.aria.signIn": "Entrar em {name}",
   "provider.aria.codeFallback": "Entrar em {name} com um código",
   "provider.aria.moreActions": "Mais ações para {name}",
-  "provider.aria.use": "Usar {name} no OpenBot",
+  "provider.aria.use": "Usar {name} no LogiBricks Workspace",
   "provider.use.inUseOne": "{agent} usa {name}. Mude o modelo deste agente e depois desligue {name}.",
   "provider.use.inUse": {
     one: "{count} agente usa {name}. Mude o modelo deste agente e depois desligue {name}.",
     other: "{count} agentes usam {name}. Mude o modelo destes agentes e depois desligue {name}.",
   },
   "provider.codeLogin.title": "Entrar em {name} com um código",
-  "provider.codeLogin.description": "Conclua no celular ou em outro navegador. O OpenBot aguarda aqui.",
+  "provider.codeLogin.description": "Conclua no celular ou em outro navegador. O LogiBricks Workspace aguarda aqui.",
   "provider.codeLogin.starting": "Obtendo um código de {name}…",
   "provider.codeLogin.qrLabel": "Código QR da página de login de {name}",
   "provider.codeLogin.open": "Abrir",
@@ -90,12 +91,12 @@ export const messages = {
   "provider.codeLogin.pageDescription": "Esta página está aberta no navegador de {host}. Entre aqui.",
   "provider.codeLogin.relayStarting": "Iniciando o login de {name} em {host}…",
   "provider.codeLogin.pageOpening": "Abrindo a página de login de {name} em {host}…",
-  "provider.codeLogin.linkStep": "Entre em {name}. O OpenBot continua sozinho.",
+  "provider.codeLogin.linkStep": "Entre em {name}. O LogiBricks Workspace continua sozinho.",
   "provider.codeLogin.chatgptDeviceSetting":
     "No ChatGPT em um computador, abra as configurações de segurança e ative o login com código de dispositivo para o Codex. Em uma conta de trabalho, o administrador do workspace ativa isso.",
-  "provider.useApp.title": "Conecte {name} no app OpenBot",
+  "provider.useApp.title": "Conecte {name} no app LogiBricks Workspace",
   "provider.useApp.description":
-    "O login em {name} volta para o computador que o iniciou, e uma aba do navegador não consegue recebê-lo. Conecte {name} no app OpenBot. O app conclui o login sozinho.",
+    "O login em {name} volta para o computador que o iniciou, e uma aba do navegador não consegue recebê-lo. Conecte {name} no app LogiBricks Workspace. O app conclui o login sozinho.",
   "provider.useApp.download": "Baixar o app",
   "provider.picker.noEndpoints": "Nenhum endpoint ainda",
   "provider.picker.customCounts": "{endpoints} · {agents}",
@@ -105,7 +106,7 @@ export const messages = {
   "provider.picker.providers": "Provedores de modelos",
   "provider.picker.downloading": "Baixando {percent}",
   "provider.picker.unavailable": "{name} está indisponível.",
-  "provider.picker.updateToUse": "Atualize o OpenBot para usar {name}",
+  "provider.picker.updateToUse": "Atualize o LogiBricks para usar {name}",
   "provider.picker.models": "Modelos de {name}",
   "provider.picker.addProvider": "Adicionar provedor",
   "provider.picker.download": "Download de {name}",
@@ -167,15 +168,15 @@ export const messages = {
   "provider.claudeKey.label": "Chave de API da Anthropic",
   "provider.inceptionKey.title": "Chave de API da Inception",
   "provider.inceptionKey.description":
-    "Salve uma chave de API da Inception neste computador para usar os modelos Mercury. O OpenBot os executa na CLI do Pi que ele baixa.",
+    "Salve uma chave de API da Inception neste computador para usar os modelos Mercury. O LogiBricks Workspace os executa na CLI do Pi que ele baixa.",
   "provider.inceptionKey.label": "Chave de API da Inception",
   "provider.deepseekKey.title": "Chave de API da DeepSeek",
   "provider.deepseekKey.description":
-    "Salve uma chave de API da DeepSeek neste computador para usar os modelos da DeepSeek. O OpenBot os executa na CLI do Pi que ele baixa.",
+    "Salve uma chave de API da DeepSeek neste computador para usar os modelos da DeepSeek. O LogiBricks Workspace os executa na CLI do Pi que ele baixa.",
   "provider.deepseekKey.label": "Chave de API da DeepSeek",
   "provider.openrouterKey.title": "Chave de API do OpenRouter",
   "provider.openrouterKey.description":
-    "Salve uma chave de API do OpenRouter neste computador para usar os modelos do OpenRouter. O OpenBot os executa na CLI do Pi que ele baixa.",
+    "Salve uma chave de API do OpenRouter neste computador para usar os modelos do OpenRouter. O LogiBricks Workspace os executa na CLI do Pi que ele baixa.",
   "provider.openrouterKey.label": "Chave de API do OpenRouter",
   "provider.openCodeKey.title": "Entrar no OpenCode Go",
   "provider.openCodeKey.description":
@@ -223,10 +224,10 @@ export const messages = {
   "provider.settings.disconnectOthers":
     "As outras contas do {provider} esperam até você conectar o {provider} de novo.",
   "provider.settings.disconnectLocal":
-    "O OpenBot sai do {provider} neste computador. A CLI do {provider} no seu terminal também sai.",
-  "provider.settings.disconnectHost": "O OpenBot sai do {provider} no servidor.",
+    "O LogiBricks Workspace sai do {provider} neste computador. A CLI do {provider} no seu terminal também sai.",
+  "provider.settings.disconnectHost": "O LogiBricks Workspace sai do {provider} no servidor.",
   "provider.settings.versionInstalledByUser": "{version} · instalada por você",
-  "provider.settings.versionDownloaded": "{version} · baixada pelo OpenBot",
+  "provider.settings.versionDownloaded": "{version} · baixada pelo LogiBricks Workspace",
   "provider.settings.cache": "Cache",
   "provider.settings.promptCache": "Cache de prompts",
   "provider.settings.promptCacheDescription":
@@ -262,8 +263,8 @@ export const messages = {
   "provider.settings.modelsLoadFailed": "Não foi possível carregar os modelos deste servidor.",
   "provider.settings.deleteTitle": "Excluir {name}",
   "provider.settings.deleteOn":
-    "Desativa {name} e exclui a CLI que o OpenBot baixou. Contas, logins e agentes continuam.",
+    "Desativa {name} e exclui a CLI que o LogiBricks Workspace baixou. Contas, logins e agentes continuam.",
   "provider.settings.deleteOff":
-    "Exclui a CLI que o OpenBot baixou para {name} ({size}). Contas, logins e agentes continuam.",
+    "Exclui a CLI que o LogiBricks Workspace baixou para {name} ({size}). Contas, logins e agentes continuam.",
   "provider.settings.removeDownloadFailed": "Não foi possível remover o download.",
 } as const satisfies PartialTranslation<typeof source>;

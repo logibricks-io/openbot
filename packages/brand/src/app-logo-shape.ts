@@ -1,5 +1,25 @@
-// The OpenBot mark as plain data, so that a canvas can draw the same mark that
-// `AppLogo` draws as SVG: the social cards in apps/auth-api do.
+// Approved v2 Open Workbench geometry. The source is
+// design/brand/logibricks-workspace/v2/exports/svg/logibricks-workspace-symbol-color.svg.
+
+export const APP_LOGO_VIEWBOX_SIZE = 80;
+
+export const APP_LOGO_MODULES = [
+  { x: 0, y: 0, width: 24, height: 48, radius: 4, accent: false },
+  { x: 0, y: 56, width: 48, height: 24, radius: 4, accent: false },
+  { x: 56, y: 56, width: 24, height: 24, radius: 4, accent: false },
+  { x: 56, y: 0, width: 24, height: 24, radius: 4, accent: true },
+] as const;
+
+// Pixel-aligned artwork from the v2 micro-16 master; the inset is part of the design.
+export const APP_LOGO_MICRO_16_MODULES = [
+  { x: 2, y: 2, width: 4, height: 7, radius: 1, accent: false },
+  { x: 2, y: 10, width: 7, height: 4, radius: 1, accent: false },
+  { x: 10, y: 10, width: 4, height: 4, radius: 1, accent: false },
+  { x: 10, y: 2, width: 4, height: 4, radius: 1, accent: true },
+] as const;
+
+// Keep these legacy shape exports for canvas consumers that have not moved to the module data.
+// New brand surfaces must use APP_LOGO_MODULES and APP_LOGO_VIEWBOX_SIZE.
 
 /** The mark is a square of this side, in its own units. */
 export const APP_LOGO_SIZE = 240;

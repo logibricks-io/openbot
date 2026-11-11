@@ -7,28 +7,29 @@ export const messages = {
   "error.update.restartFailed": "アップデートをインストールするための再起動ができませんでした。",
   "error.update.downloadStalled": "アップデートのダウンロードが応答しなくなりました。もう一度お試しください。",
   "error.update.installFailed":
-    "アップデートをインストールできませんでした。OpenBot を終了してから開き直し、もう一度お試しください。",
+    "アップデートをインストールできませんでした。LogiBricks Workspace を終了してから開き直し、もう一度お試しください。",
   "error.update.downloadFailed": "アップデートをダウンロードできませんでした。もう一度お試しください。",
   "error.update.checkFailed": "アップデートを確認できませんでした。もう一度お試しください。",
   "error.update.checkStalled": "アップデートの確認が応答しなくなりました。もう一度お試しください。",
   "error.update.checkOffline":
     "アップデートサービスに接続できませんでした。インターネット接続を確認してから、もう一度お試しください。",
   "error.update.checkUnavailable":
-    "アップデートサービスから応答がありませんでした。数分後に OpenBot が自動でもう一度試します。",
+    "アップデートサービスから応答がありませんでした。数分後に LogiBricks Workspace が自動でもう一度試します。",
   "error.update.checkNoRelease":
-    "このプラットフォーム向けに公開されたアップデートは見つかりませんでした。数分後に OpenBot が自動でもう一度試します。",
-  "error.update.managedByNix": "この OpenBot のアップデートは Nix がインストールします。Nix で更新してください。",
+    "このプラットフォーム向けに公開されたアップデートは見つかりませんでした。数分後に LogiBricks Workspace が自動でもう一度試します。",
+  "error.update.managedByNix":
+    "この LogiBricks Workspace のアップデートは Nix がインストールします。Nix で更新してください。",
   "error.update.managedByHost":
     "この Mac のアップデートはホストがインストールします。ホストのメンテナンスが実行されるまで、アップデートは準備済みのままです。",
   "error.update.siblingSession":
-    "このアプリケーションから別の OpenBot セッションがまだ実行中です。先に他のすべての macOS ユーザーアカウントで OpenBot を終了してから、アップデートをもう一度インストールしてください。",
+    "このアプリケーションから別の LogiBricks Workspace セッションがまだ実行中です。先に他のすべての macOS ユーザーアカウントで LogiBricks Workspace を終了してから、アップデートをもう一度インストールしてください。",
   "error.update.siblingSessionSameAccount":
-    "このユーザーアカウントで別の OpenBot プロセスがまだ実行中です。それを終了してから、もう一度アップデートをインストールしてください。",
+    "このユーザーアカウントで別の LogiBricks Workspace プロセスがまだ実行中です。それを終了してから、もう一度アップデートをインストールしてください。",
   "error.update.siblingCheckFailed":
-    "他の OpenBot セッションを確認できませんでした。インストールする前にもう一度お試しください。",
+    "他の LogiBricks Workspace セッションを確認できませんでした。インストールする前にもう一度お試しください。",
   "error.update.readOnlyLocation":
-    "この場所からは OpenBot のアップデートをインストールできません。OpenBot を終了してください。Finder で OpenBot を「アプリケーション」フォルダにドラッグします（すでにそこにある場合は、一度外に出してから戻します）。その後 OpenBot を開き、もう一度アップデートをインストールしてください。",
+    "この場所からは LogiBricks Workspace のアップデートをインストールできません。LogiBricks Workspace を終了してください。Finder で LogiBricks Workspace を「アプリケーション」フォルダにドラッグします（すでにそこにある場合は、一度外に出してから戻します）。その後 LogiBricks Workspace を開き、もう一度アップデートをインストールしてください。",
   "error.update.remoteDisabled": "このコンピューターでは、サーバー管理者からのアップデートはオフになっています。",
-  "error.update.restartStarted": "OpenBot はアップデートをインストールするため、すでに再起動しています。",
-  "error.update.alreadyRestarting": "OpenBot はすでに再起動しています。",
+  "error.update.restartStarted": "LogiBricks Workspace はアップデートをインストールするため、すでに再起動しています。",
+  "error.update.alreadyRestarting": "LogiBricks Workspace はすでに再起動しています。",
 } as const satisfies PartialTranslation<typeof source>;

@@ -1,17 +1,17 @@
 /**
- * What the stage shows. One lilac block covers the screen, or its lower edge stops at `bottom` as a
- * header, or it fades away so a camera below it shows. The eyes always stay on the stage.
+ * What the stage shows. One neutral block covers the screen, or its lower edge stops at `bottom` as a
+ * header, or it fades away so a camera below it shows. The mark or scanner frame stays on the stage.
  */
 type BloubShape = { kind: "cover" } | { kind: "header"; bottom: number } | { kind: "clear" };
 
 /**
- * How the eyes behave. `think` looks around while the app works; `frame` and `found` turn the
- * eyes into the corners of a scanner frame.
+ * The stage state. `frame` and `found` show the scanner guide; all other states retain
+ * the unchanged brand mark.
  */
-export type BloubMood = "idle" | "think" | "down" | "sad" | "happy" | "frame" | "found";
+export type BloubMood = "idle" | "think" | "happy" | "frame" | "found";
 
 interface BloubCaption {
-  /** A title under the eyes. Without one, the text is a status line at the bottom of the screen. */
+  /** A title under the mark. Without one, the text is a status line at the bottom of the screen. */
   title?: string;
   text: string;
 }

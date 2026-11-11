@@ -41,8 +41,8 @@ export function ProfileSettingsScreen() {
     muted: String(useCSSVariable("--openbot-paper-text-muted")),
     border: String(useCSSVariable("--openbot-paper-border")),
     accent: String(useCSSVariable("--openbot-accent")),
-    logo: String(useCSSVariable("--openbot-logo-production")),
-    logoEye: String(useCSSVariable("--openbot-logo-eye")),
+    logo: String(useCSSVariable("--openbot-paper-text")),
+    logoEye: String(useCSSVariable("--openbot-brand-accent")),
   };
   const shareFonts = useFonts({ [APP_FONT]: [interMedium, interSemiBold] });
   if (!session) return null;

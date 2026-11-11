@@ -1,12 +1,12 @@
 appId: app.openbot.desktop
-productName: OpenBot
+productName: LogiBricks Workspace
 copyright: Copyright © 2026 Synthetify Labs spółka z ograniczoną odpowiedzialnością
 protocols:
-  - name: OpenBot invitations
+  - name: LogiBricks Workspace invitations
     schemes:
       - openbot
 asar: true
-artifactName: ${productName}-${version}-${arch}.${ext}
+artifactName: LogiBricks-Workspace-${version}-${arch}.${ext}
 electronUpdaterCompatibility: ">=2.16"
 electronFuses:
   resetAdHocDarwinSignature: true
@@ -18,10 +18,8 @@ electronFuses:
   onlyLoadAppFromAsar: true
   loadBrowserProcessSpecificV8Snapshot: false
   grantFileProtocolExtraPrivileges: false
-publish:
-  provider: github
-  owner: nightly-labs
-  repo: openbot
+# Company signing and feeds are configured in T09 before distributing a release.
+publish: null
 files:
   - out/**/*
   - package.json
@@ -143,12 +141,12 @@ mac:
   extendInfo:
     CFBundleIconName: Icon
     ElectronTeamID: ZTRDTUL87R
-    NSMicrophoneUsageDescription: OpenBot uses the microphone to transcribe voice prompts locally on this Mac.
+    NSMicrophoneUsageDescription: LogiBricks Workspace uses the microphone to transcribe voice prompts locally on this Mac.
     # Computer Use runs the driver as a child process, so macOS asks for both grants in OpenBot's
     # name and shows these sentences. Under the hardened runtime, macOS shows the Automation prompt
     # only when the app has `com.apple.security.automation.apple-events` in its entitlements.
-    NSScreenCaptureUsageDescription: OpenBot captures the screen so an agent can see the app windows you ask it to control.
-    NSAppleEventsUsageDescription: OpenBot sends Automation events so an agent can control the apps you ask it to control.
+    NSScreenCaptureUsageDescription: LogiBricks Workspace captures the screen so an agent can see the app windows you ask it to control.
+    NSAppleEventsUsageDescription: LogiBricks Workspace sends Automation events so an agent can control the apps you ask it to control.
     NSUserActivityTypes:
       - NSUserActivityTypeBrowsingWeb
   # No `arch` here: a target's own `arch` list replaces the one given on the command line, so

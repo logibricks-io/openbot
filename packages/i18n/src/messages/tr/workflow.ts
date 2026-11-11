@@ -164,7 +164,7 @@ export const messages = {
 
   "workflow.output.title": "Çıktı",
   "workflow.output.name": "çıktı",
-  "workflow.output.channel.openbot": "OpenBot",
+  "workflow.output.channel.openbot": "LogiBricks Workspace",
   "workflow.output.channel.search": "Kanal ara",
   "workflow.output.postsAs": "Şu şekilde paylaşır",
   "workflow.output.postsAsNote": "Not; görev başlamaz",
@@ -260,15 +260,16 @@ export const messages = {
   "workflow.github.filter.branch": "Temel dal",
   "workflow.github.filter.titleValue": "Başlık “{text}” içerir",
   "workflow.github.filter.branchValue": "Temel dal: {branch}",
-  "workflow.github.alert.missing": "OpenBot, GitHub'da {repository} deposunu göremiyor.",
-  "workflow.github.alert.readOnly": "OpenBot, {repository} deposundaki sorunları ve çekme isteklerini değiştiremez.",
+  "workflow.github.alert.missing": "LogiBricks Workspace, GitHub'da {repository} deposunu göremiyor.",
+  "workflow.github.alert.readOnly":
+    "LogiBricks Workspace, {repository} deposundaki sorunları ve çekme isteklerini değiştiremez.",
   "workflow.github.alert.eventsOff": "GitHub henüz {repository} deposundan olay göndermiyor.",
   "workflow.github.alert.noEvent": "Tetikleyici bir GitHub olayı değil. Bir depo seçin ve numarayı girdiden alın.",
   "workflow.github.alert.pullRequestOnly":
     "“{action}” yalnızca çekme isteklerinde çalışır. Tetikleyici sorunlarda başlar.",
   "workflow.github.history.name": "Olaylar",
   "workflow.github.history.none": "Yok",
-  "workflow.github.history.offline": "OpenBot çevrimdışıydı",
+  "workflow.github.history.offline": "LogiBricks Workspace çevrimdışıydı",
   "workflow.github.history.waitingGroup": "Bekleyenler",
   "workflow.github.history.startedGroup": "Başlatanlar",
   "workflow.github.history.skippedGroup": "Atlananlar",
@@ -479,9 +480,9 @@ export const messages = {
   "workflow.canvas.version.run": "Çalıştırmadan önce",
   "workflow.canvas.deleteUndo.title": "{name} silindi",
   "workflow.canvas.deleteUndo.action": "Geri al",
-  "workflow.page.failed": "OpenBot bunu yapamadı. Tekrar deneyin.",
+  "workflow.page.failed": "LogiBricks Workspace bunu yapamadı. Tekrar deneyin.",
   "workflow.page.conflict": "Başka bir cihazda değiştirildi. Düzenlemelerinizi geri almak için Geri Al'ı kullanın.",
   "workflow.page.needsNewerApp":
-    "Bu iş akışında daha yeni bir OpenBot sürümünden adımlar var. Değiştirmek için OpenBot'u güncelleyin.",
+    "Bu iş akışında daha yeni bir LogiBricks Workspace sürümünden adımlar var. Değiştirmek için LogiBricks Workspace'i güncelleyin.",
   "workflow.page.manageOnly": "Bu iş akışını değiştirmek için her bir ajanı üzerinde Yönetme erişiminiz olmalı.",
 } as const satisfies PartialTranslation<typeof source>;

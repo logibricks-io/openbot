@@ -1,5 +1,5 @@
 import { Effect, Schema } from "effect";
-import { OPENBOT_LINKS } from "../lib/landing-links";
+import { companyReleaseUrl } from "../lib/company-release";
 
 export type AvailableDownloadPlatform = "linux" | "macos" | "windows";
 
@@ -19,8 +19,6 @@ interface DownloadManifestConfig {
   extension: ".appimage" | ".dmg" | ".exe";
   manifest: "latest-linux-arm64.yml" | "latest-linux.yml" | "latest-mac.yml" | "latest.yml";
 }
-
-const RELEASES_BASE_URL = "https://github.com/nightly-labs/openbot/releases";
 
 const DOWNLOAD_PLATFORMS = ["linux", "macos", "windows"] as const satisfies readonly AvailableDownloadPlatform[];
 
@@ -76,14 +74,13 @@ function findInstaller(
   return undefined;
 }
 
-/**
- * The releases page is a working answer but not the one that was asked for, so each fallback says
- * why. Written to the Worker log rather than to analytics: a server event has no session, and the
- * landing reports are defined on sessions. Platform and reason only, never a URL or a response body.
- */
-function fallbackToReleases(platform: AvailableDownloadPlatform, reason: string): Response {
-  console.warn(`latest-download: serving the releases page for ${platform} (${reason})`);
-  return redirect(OPENBOT_LINKS.releases);
+/** No manifest error may redirect a company download to upstream releases. */
+function unavailableDownload(platform: AvailableDownloadPlatform, reason: string): Response {
+  console.warn(`latest-download: installer unavailable for ${platform} (${reason})`);
+  return new Response("LogiBricks Workspace installers are not available from this deployment.", {
+    status: 503,
+    headers: { "Cache-Control": "no-store", "Content-Type": "text/plain; charset=utf-8" },
+  });
 }
 
 class DownloadManifestError extends Schema.TaggedError<DownloadManifestError>()("DownloadManifestError", {}) {}
@@ -92,9 +89,10 @@ const latestDownload = Effect.fn("LatestDownload.resolve")(function* (
   platform: AvailableDownloadPlatform,
   fetcher: typeof fetch,
   architecture: DownloadArchitecture,
+  releasesBase: string,
 ) {
   const config = downloadManifest(platform, architecture);
-  const manifestUrl = `${RELEASES_BASE_URL}/latest/download/${config.manifest}`;
+  const manifestUrl = `${releasesBase}/${config.manifest}`;
   const response = yield* Effect.tryPromise({
     try: (signal) =>
       fetcher(manifestUrl, {
@@ -103,23 +101,26 @@ const latestDownload = Effect.fn("LatestDownload.resolve")(function* (
       }),
     catch: () => new DownloadManifestError({}),
   });
-  if (!response.ok) return fallbackToReleases(platform, `manifest status ${response.status}`);
+  if (!response.ok) return unavailableDownload(platform, `manifest status ${response.status}`);
   const manifest = yield* Effect.tryPromise({
     try: () => response.text(),
     catch: () => new DownloadManifestError({}),
   });
   // Only the macOS manifest lists two architectures.
   const installer = findInstaller(manifest, config.extension, platform === "macos" ? architecture : undefined);
-  if (!installer) return fallbackToReleases(platform, `no ${config.extension} asset in the manifest`);
-  return redirect(`${RELEASES_BASE_URL}/latest/download/${encodeURIComponent(installer)}`);
+  if (!installer) return unavailableDownload(platform, `no ${config.extension} asset in the manifest`);
+  return redirect(`${releasesBase}/${encodeURIComponent(installer)}`);
 });
 
 export function latestDownloadResponse(
   platform: AvailableDownloadPlatform,
   fetcher: typeof fetch = fetch,
   architecture: DownloadArchitecture = downloadArchitecture(platform, null),
+  configuredReleaseUrl?: string,
 ) {
-  return latestDownload(platform, fetcher, architecture).pipe(
-    Effect.catch(() => Effect.sync(() => fallbackToReleases(platform, "the manifest request failed"))),
+  const releasesBase = companyReleaseUrl(configuredReleaseUrl);
+  if (!releasesBase) return Effect.sync(() => unavailableDownload(platform, "company release base is not configured"));
+  return latestDownload(platform, fetcher, architecture, releasesBase).pipe(
+    Effect.catch(() => Effect.sync(() => unavailableDownload(platform, "the manifest request failed"))),
   );
 }

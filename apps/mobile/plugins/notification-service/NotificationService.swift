@@ -29,6 +29,8 @@ final class NotificationService: UNNotificationServiceExtension {
     var userInfo = content.userInfo
     let sealed = userInfo.removeValue(forKey: "sealed") as? String
     content.userInfo = userInfo
+    // Older hosts can still send the upstream name before the phone opens the sealed content.
+    if sealed != nil { content.title = "LogiBricks Workspace" }
     if let sealed, let notification = SealedNotification.open(sealed) {
       content.title = notification.title
       content.body = notification.body

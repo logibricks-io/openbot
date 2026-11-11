@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { createReadStream, existsSync } from "node:fs";
 import { readdir, readFile, stat } from "node:fs/promises";
 import { basename, join, resolve } from "node:path";
+import { PRODUCT_NAME } from "@openbot/brand/product-identity";
 import { isDynamicRecord, isNumber, isString } from "@openbot/contracts/runtime-values";
 import { createOpenBotLogger } from "@openbot/logging";
 import { parse } from "yaml";
@@ -33,11 +34,25 @@ const [artifact, ...extraArtifacts] = (await readdir(distRoot)).filter((name) =>
 if (artifact === undefined || extraArtifacts.length > 0)
   throw new Error(`Expected one ${artifactExtension} update artifact.`);
 
+const packageJson = JSON.parse(await readFile("package.json", "utf8"));
+if (!isDynamicRecord(packageJson) || !isString(packageJson.version))
+  throw new Error("package.json version is missing.");
+const artifactArch = {
+  linux: "x86_64",
+  "linux-arm64": "arm64",
+  macos: process.arch,
+  windows: "x64",
+}[platform];
+const artifactStem = `LogiBricks-Workspace-${packageJson.version}-${artifactArch}`;
+if (artifact !== `${artifactStem}${artifactExtension}`) {
+  throw new Error(`Unexpected update artifact ${artifact}. Expected ${artifactStem}${artifactExtension}.`);
+}
 const artifactPath = join(distRoot, artifact);
 await verifyMaximumSize(artifactPath, 700 * MIB);
 if (platform === "macos") {
   const [dmg, ...extraDmgs] = (await readdir(distRoot)).filter((name) => name.endsWith(".dmg"));
   if (dmg === undefined || extraDmgs.length > 0) throw new Error("Expected one DMG artifact.");
+  if (dmg !== `${artifactStem}.dmg`) throw new Error(`Unexpected DMG ${dmg}. Expected ${artifactStem}.dmg.`);
   await verifyMaximumSize(join(distRoot, dmg), 750 * MIB);
 }
 const embeddedBlockMapBytes = await verifyManifest(manifestPath, artifactPath);
@@ -54,7 +69,7 @@ if (platform === "linux" || platform === "linux-arm64") {
 // Each macOS job builds its own architecture, and electron-builder writes x64 to `dist/mac`.
 const resourcesRoot =
   platform === "macos"
-    ? join(distRoot, process.arch === "arm64" ? "mac-arm64" : "mac", "OpenBot.app", "Contents", "Resources")
+    ? join(distRoot, process.arch === "arm64" ? "mac-arm64" : "mac", `${PRODUCT_NAME}.app`, "Contents", "Resources")
     : join(distRoot, platform === "windows" ? "win-unpacked" : `${platform}-unpacked`, "resources");
 // Every platform ships the voice runtime and downloads the model on first use.
 if (!existsSync(join(resourcesRoot, "voice", "runtime", "sherpa-onnx.node"))) {

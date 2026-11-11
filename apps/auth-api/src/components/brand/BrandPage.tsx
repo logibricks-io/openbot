@@ -33,7 +33,7 @@ export function BrandPage() {
             <div class="brand-hero-text">
               <h1 class="post-article-title brand-hero-title">Brand</h1>
               <p class="post-article-standfirst brand-hero-intro">
-                The OpenBot logo in each shape and color. Right-click a logo to save or copy it.
+                The LogiBricks Workspace logo in each shape and color. Right-click a logo to save or copy it.
               </p>
             </div>
             <DownloadAllButton />
@@ -46,15 +46,11 @@ export function BrandPage() {
   );
 }
 
-/**
- * The face of the mark on a lilac panel. The eyes follow the pointer anywhere on the panel, a click
- * on it winks, and five fast clicks make the whole panel flash the brand colors.
- */
+/** Static approved mark: no legacy face animation or pointer effect. */
 function BrandStage() {
-  const [panel, setPanel] = createSignal<HTMLDivElement>();
   return (
-    <div ref={setPanel} class="brand-stage">
-      <AppLogo variant="production" animation="blink" interactive pointerArea={panel()} class="brand-stage-logo" />
+    <div class="brand-stage">
+      <AppLogo variant="production" class="brand-stage-logo" />
     </div>
   );
 }
@@ -141,7 +137,7 @@ function BrandAssetCard(props: { asset: BrandAsset }) {
         <img
           class="brand-card-image"
           src={brandAssetPath(props.asset)}
-          alt={`OpenBot ${props.asset.label}`}
+          alt={`LogiBricks Workspace ${props.asset.label}`}
           width={props.asset.width}
           height={props.asset.height}
         />

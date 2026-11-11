@@ -122,7 +122,7 @@ const GENERATED_DIRECTORY_PATTERN =
 const SHOWCASE_IMAGE_PATH = resolve(process.cwd(), "src", "renderer", "src", "assets", "openbot-logo-dev.png");
 
 function previewPdf(): string {
-  const stream = "BT /F1 18 Tf 24 150 Td (OpenBot file preview) Tj ET";
+  const stream = "BT /F1 18 Tf 24 150 Td (LogiBricks Workspace file preview) Tj ET";
   const objects = [
     "<< /Type /Catalog /Pages 2 0 R >>",
     "<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
@@ -427,7 +427,7 @@ function seedMemories(agentStore: AgentStore): void {
     },
     {
       agentId: "chief",
-      text: "The current priority is a traceable OpenBot launch plan.",
+      text: "The current priority is a traceable LogiBricks Workspace launch plan.",
       origin: "automatic" as const,
       sourceTurnId: "dev-seed-turn-chief-plan",
     },
@@ -908,7 +908,7 @@ async function seedConversations(
             `| Evidence | ${mention("research")} | In review |`,
             `| Release | ${mention("launch")} | Ready |`,
             "",
-            "Next: review the [OpenBot documentation](https://openbot.run/docs), then run:",
+            "Next: review the [upstream OpenBot documentation](https://openbot.run/docs), then run:",
             "",
             "```bash",
             "bun run check",
@@ -935,7 +935,7 @@ async function seedConversations(
         itemType: "image_generation",
         attachments: [attachments.image],
         imageGeneration: {
-          prompt: "A calm OpenBot launch command center at blue hour",
+          prompt: "A calm LogiBricks Workspace launch command center at blue hour",
           resolution: "1024 × 1024",
           aspectRatio: "square",
         },
@@ -1213,7 +1213,7 @@ async function seedLaunchRoom(
     {
       ...store.create(channelId, {
         name: "Launch room",
-        title: "Ship OpenBot 1.0",
+        title: "Ship LogiBricks Workspace",
         instructions:
           "Keep every decision traceable. Name the owner and the evidence in each result, and leave an unverified claim out.",
         members: [{ agentId: "chief" }, { agentId: "research" }, { agentId: "builder" }, { agentId: "launch" }],
@@ -1234,7 +1234,7 @@ async function seedLaunchRoom(
       mimeType: "text/markdown",
       bytes: bytes(
         [
-          "# OpenBot 1.0 release note (draft)",
+          "# LogiBricks Workspace release note (draft)",
           "",
           "## What is new",
           "- Channels: several agents share one chat and one task list.",
@@ -1290,7 +1290,7 @@ async function seedLaunchRoom(
   const taskStandup = "channel-launch-task-standup";
   const taskRollback = "channel-launch-task-rollback";
   const releaseNoteText =
-    "Draft the release note for OpenBot 1.0. Keep the evidence with every claim and name an owner for each section.";
+    "Draft the release note for LogiBricks Workspace. Keep the evidence with every claim and name an owner for each section.";
   const evidenceText = "Verify the two performance claims in the draft and name a primary source for each.";
   const rollbackText = `Add the rollback owner to the release note. ${mentionAgent(agents, "builder")} should confirm the steps.`;
   const message = (input: SeedChannelMessage): ChannelMessage => channelMessage(channelId, clock, input);
@@ -1587,7 +1587,7 @@ async function seedTeam(profilePath: string, agentStore: AgentStore, clock: Seed
     name: "Dev Owner",
     avatarUrl: null,
   };
-  const teamIdentity = await runCauseEffect(team.configureWithAccount("OpenBot Dev Team", owner));
+  const teamIdentity = await runCauseEffect(team.configureWithAccount("LogiBricks Workspace", owner));
   const joined = [];
   for (const member of [
     { id: "openbot-dev-alice", email: "alice@example.com", name: "Alice Chen", role: "admin" as const },

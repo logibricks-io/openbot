@@ -1,9 +1,10 @@
-import { AppLogo, ProviderLogo } from "@openbot/brand";
+import { ProviderLogo } from "@openbot/brand";
 import type { JSX } from "@solidjs/web";
 import { For, Show } from "solid-js";
 import type { ComparePage, OpenBotPlan, RoundupApp } from "../../content/compare/comparison";
 import { formatArticleDate } from "../../lib/content-collection";
 import { EXTERNAL_LINK_REL } from "../../lib/landing-links";
+import { UpstreamLogo } from "../brand/UpstreamLogo";
 import { createLandingReveal } from "../landing/createLandingReveal";
 import { LandingIcon } from "../landing/LandingIcon";
 import { RivalMark, type RivalMarkName } from "./RivalMark";
@@ -48,10 +49,7 @@ export interface SideProps {
 /** The mark of one side: OpenBot's logo, or the compared product's mark. */
 export function SideMark(props: { mark?: RivalMarkName | undefined; class: string; blink?: boolean }) {
   return (
-    <Show
-      when={props.mark}
-      fallback={<AppLogo variant="production" animation={props.blink ? "blink" : "none"} class={props.class} />}
-    >
+    <Show when={props.mark} fallback={<UpstreamLogo class={props.class} />}>
       {(mark) => <RivalMark name={mark()} class={`${props.class} compare-mark-rival`} />}
     </Show>
   );

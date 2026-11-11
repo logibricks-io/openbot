@@ -158,9 +158,9 @@ export const messages = defineMessages("billing", {
   // {percent} is a whole number, such as 20.
   "billing.order.yearlySaving": "−{percent}% yearly",
   "billing.order.server.title": "Hosted server",
-  "billing.order.server.summary": "We run OpenBot for your team.",
+  "billing.order.server.summary": "Hosted server for your team.",
   "billing.order.server.none": "No server",
-  "billing.order.server.noneDetail": "Run OpenBot on your own computer",
+  "billing.order.server.noneDetail": "Run LogiBricks Workspace on your own computer",
   "billing.order.server.bestValue": "Best value",
   "billing.order.server.bestFor.starter": "Best for one person",
   "billing.order.server.bestFor.standard": "Best for a small team",

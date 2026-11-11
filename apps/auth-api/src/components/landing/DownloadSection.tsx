@@ -1,8 +1,8 @@
 import { type MobilePlatformLogoVariant, PlatformLogo, type PlatformLogoVariant } from "@openbot/brand";
 import { Link } from "@tanstack/solid-router";
 import { For, Show } from "solid-js";
+import { createCompanyReleaseAvailability } from "../../lib/company-release-availability";
 import { DOWNLOAD_PLATFORM_ORDER, DOWNLOAD_PLATFORMS } from "../../lib/download-platforms";
-import { EXTERNAL_LINK_REL } from "../../lib/landing-links";
 import { MOBILE_APP_ORDER, MOBILE_APPS } from "../../lib/mobile-apps";
 import { createLandingReveal } from "./createLandingReveal";
 import { LandingIcon } from "./LandingIcon";
@@ -38,6 +38,7 @@ function DownloadCardContent(props: DownloadCardContentProps) {
 }
 
 export function DownloadSection() {
+  const available = createCompanyReleaseAvailability();
   let sectionRef: HTMLElement | undefined;
   const revealed = createLandingReveal(() => sectionRef);
   const revealState = () => (revealed() ? "true" : "false");
@@ -58,33 +59,35 @@ export function DownloadSection() {
         <div class="landing-download-grid">
           <a
             class="landing-download-card"
-            href={macos.href}
+            href={available() ? macos.href : undefined}
+            aria-disabled={!available() ? "true" : undefined}
             data-download-platform="macos"
-            data-state="available"
+            data-state={available() ? "available" : "unavailable"}
             data-revealed={revealState()}
           >
             <DownloadCardContent
               platform="macos"
-              status={text().available}
+              status={available() ? text().available : text().unpublished}
               title={macos.label}
               description={macos.description}
-              action={text().desktop.macos}
+              action={available() ? text().desktop.macos : undefined}
             />
           </a>
 
           <a
             class="landing-download-card"
-            href={windows.href}
+            href={available() ? windows.href : undefined}
+            aria-disabled={!available() ? "true" : undefined}
             data-download-platform="windows"
-            data-state="available"
+            data-state={available() ? "available" : "unavailable"}
             data-revealed={revealState()}
           >
             <DownloadCardContent
               platform="windows"
-              status={text().available}
+              status={available() ? text().available : text().unpublished}
               title={windows.label}
               description={windows.description}
-              action={text().desktop.windows}
+              action={available() ? text().desktop.windows : undefined}
             />
           </a>
 
@@ -92,17 +95,18 @@ export function DownloadSection() {
               card is the same link the other two are. A non-clickable card here contradicted both. */}
           <a
             class="landing-download-card"
-            href={linux.href}
+            href={available() ? linux.href : undefined}
+            aria-disabled={!available() ? "true" : undefined}
             data-download-platform="linux"
-            data-state="available"
+            data-state={available() ? "available" : "unavailable"}
             data-revealed={revealState()}
           >
             <DownloadCardContent
               platform="linux"
-              status={text().available}
+              status={available() ? text().available : text().unpublished}
               title={linux.label}
               description={linux.description}
-              action={text().desktop.linux}
+              action={available() ? text().desktop.linux : undefined}
             />
           </a>
         </div>
@@ -115,18 +119,15 @@ export function DownloadSection() {
                 <a
                   class="landing-download-card"
                   href={app.href}
-                  target="_blank"
-                  rel={EXTERNAL_LINK_REL}
                   data-download-platform={platform}
-                  data-state="available"
+                  data-state="unavailable"
                   data-revealed={revealState()}
                 >
                   <DownloadCardContent
                     platform={platform}
-                    status={text().available}
+                    status={text().unpublished}
                     title={app.label}
-                    description={text().phone[platform].description}
-                    action={text().phone[platform].action}
+                    description={app.description}
                   />
                 </a>
               );

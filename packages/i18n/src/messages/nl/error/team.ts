@@ -8,7 +8,7 @@ export const messages = {
   "error.team.alreadyConfigured": "De teamserver is al geconfigureerd.",
   "error.team.identityCreateFailed": "De teamidentiteit kon niet worden gemaakt.",
   "error.team.accountChangedDuringCreate": "Het ingelogde account is gewijzigd terwijl deze server werd gemaakt.",
-  "error.team.notConfigured": "Deze OpenBot is niet geconfigureerd.",
+  "error.team.notConfigured": "Deze LogiBricks Workspace is niet geconfigureerd.",
   "error.team.keyRotationMissing": "Er wacht geen wijziging van de serversleutel.",
   "error.team.serverNotActive": "Deze server is niet meer de actieve server voor het ingelogde account.",
   "error.team.logoInvalid": "Kies een geldige PNG-, JPEG- of WebP-afbeelding van maximaal 512 KB.",
@@ -46,17 +46,18 @@ export const messages = {
     "De gebruikersnaam moet 3 tot 32 letters, cijfers, punten, streepjes of underscores bevatten.",
   "error.team.passwordLength": "Het wachtwoord moet 12 tot 256 tekens bevatten.",
   "error.team.bindFailed": "Kan de team-API niet binden.",
-  "error.team.signInRequired": "Inloggen bij OpenBot is verplicht.",
+  "error.team.signInRequired": "Inloggen bij LogiBricks Workspace is verplicht.",
   "error.team.authenticationRequired": "Verificatie is verplicht.",
   "error.team.agentNotFound": "Agent niet gevonden.",
   "error.team.routeNotFound": "Route niet gevonden.",
   "error.team.requestFailed": "Verzoek mislukt.",
   "error.team.tooManySignInAttempts": "Te veel inlogpogingen. Probeer het later opnieuw.",
-  "error.team.clientUpdateRequired": "Werk deze OpenBot-client bij voordat je verbinding maakt met deze host.",
-  "error.team.hostUpdateRequired": "Werk OpenBot bij op de host voordat je verbinding maakt.",
+  "error.team.clientUpdateRequired":
+    "Werk deze LogiBricks Workspace-client bij voordat je verbinding maakt met deze host.",
+  "error.team.hostUpdateRequired": "Werk LogiBricks Workspace bij op de host voordat je verbinding maakt.",
   "error.team.sidebarLayoutUnavailable": "De indeling van de zijbalk is niet beschikbaar.",
   "error.team.providersUnsupported": "Deze verbinding ondersteunt geen instellingen voor aanbieders.",
-  "error.team.providerNotManaged": "OpenBot beheert de CLI van deze aanbieder niet.",
+  "error.team.providerNotManaged": "LogiBricks Workspace beheert de CLI van deze aanbieder niet.",
   "error.team.channelsUnsupported": "Deze verbinding ondersteunt geen kanaalchats.",
   "error.team.channelContextUnsupported":
     "Deze verbinding ondersteunt geen nieuw gesprek of comprimeren in een kanaal.",
@@ -82,9 +83,9 @@ export const messages = {
   "error.team.providerDetectionUnsupported": "Deze verbinding kan de modelservers en agents van de server niet vinden.",
   "error.team.sidebarFoldersUnsupported": "Deze verbinding ondersteunt geen mappen in mappen.",
   "error.team.agentNotificationLevelsUnsupported":
-    "Deze server kan geen eigen meldingsniveau per agent bewaren. Werk OpenBot bij op de computer waarop de server draait.",
+    "Deze server kan geen eigen meldingsniveau per agent bewaren. Werk LogiBricks Workspace bij op de computer waarop de server draait.",
   "error.team.sidebarPinsUnsupported":
-    "Deze server kan je vastgezette chats niet voor al je apparaten bewaren. Werk OpenBot bij op de computer waarop hij draait.",
+    "Deze server kan je vastgezette chats niet voor al je apparaten bewaren. Werk LogiBricks Workspace bij op de computer waarop hij draait.",
   "error.team.agentInstructionsUnsupported": "Deze verbinding ondersteunt het bewerken van agentinstructies niet.",
   "error.team.agentPublishUnsupported": "Deze verbinding ondersteunt het publiceren van agents niet.",
   "error.team.agentUpdateUnsupported": "Deze verbinding ondersteunt het bijwerken van agents niet.",
@@ -96,9 +97,9 @@ export const messages = {
   "error.team.threadMessageSearchUnsupported": "Deze verbinding ondersteunt het zoeken in zijthreads niet.",
   "error.team.sideQuestionUnsupported": "Deze verbinding ondersteunt geen zijvragen.",
   "error.team.liveVoiceUnsupported":
-    "Deze server ondersteunt geen Codex live spraak. Werk OpenBot bij op de computer waarop de server draait.",
+    "Deze server ondersteunt geen Codex live spraak. Werk LogiBricks Workspace bij op de computer waarop de server draait.",
   "error.team.routineFlowsUnsupported":
-    "Deze server ondersteunt geen routineflows. Werk OpenBot bij op de computer waarop de server draait.",
+    "Deze server ondersteunt geen routineflows. Werk LogiBricks Workspace bij op de computer waarop de server draait.",
   "error.team.routineCanvasTooLarge":
     "Dit routinecanvas is te groot om naar dit apparaat te sturen. Maak de instructies van de routine korter op de computer waarop de server draait.",
   "error.team.conversationPageTooLarge":
@@ -141,7 +142,7 @@ export const messages = {
   "error.team.browserSessionNotFound": "Sessie van de browserweergave niet gevonden.",
   "error.team.mcpUnsupported": "Deze verbinding ondersteunt geen MCP-servers.",
   "error.team.mcpServerListNeedsUpdate":
-    "Werk OpenBot op dit apparaat bij om meer dan {limit} MCP-servers op deze server te gebruiken.",
+    "Werk LogiBricks Workspace op dit apparaat bij om meer dan {limit} MCP-servers op deze server te gebruiken.",
   "error.team.storageUnsupported": "Deze verbinding ondersteunt geen opslag.",
   "error.team.machineResourcesUnsupported": "Deze verbinding ondersteunt geen machinegebruik.",
   "error.team.machineAlertMemberInvalid":
@@ -171,13 +172,16 @@ export const messages = {
     "Alleen de persoon die deze MCP-server heeft toegevoegd, of een beheerder, kan hem wijzigen.",
   "error.team.ownerRequired": "Alleen de eigenaar van deze server kan dit doen.",
   "error.team.requestTooLarge": "De inhoud van het verzoek is te groot.",
-  "error.team.signInRelayUnsupported": "Deze server kan geen inlogs doorgeven. Werk OpenBot bij op de host.",
+  "error.team.signInRelayUnsupported":
+    "Deze server kan geen inlogs doorgeven. Werk LogiBricks Workspace bij op de host.",
   "error.team.connectorsUnsupported":
-    "Deze server kan de verbindingen niet vanaf hier beheren. Werk OpenBot bij op de host.",
-  "error.team.vaultUnsupported": "Deze server kan zijn kluis niet vanaf hier openen. Werk OpenBot bij op de host.",
+    "Deze server kan de verbindingen niet vanaf hier beheren. Werk LogiBricks Workspace bij op de host.",
+  "error.team.vaultUnsupported":
+    "Deze server kan zijn kluis niet vanaf hier openen. Werk LogiBricks Workspace bij op de host.",
   "error.team.vaultResetReadable": "De kluis op deze server is leesbaar en is daarom niet gereset.",
-  "error.team.discordAccessUnsupported": "Deze server kan geen Discord-rollen instellen. Werk OpenBot erop bij.",
-  "error.team.connectorPageRefused": "De server stuurde een pagina die OpenBot niet opent.",
+  "error.team.discordAccessUnsupported":
+    "Deze server kan geen Discord-rollen instellen. Werk LogiBricks Workspace erop bij.",
+  "error.team.connectorPageRefused": "De server stuurde een pagina die LogiBricks Workspace niet opent.",
   "error.team.signInRelayUnknown": "Deze inlog is afgelopen of bestaat niet.",
   "error.team.signInRelayUsed": "Deze inlog is al verstuurd.",
   "error.team.signInRelayMismatch": "Dit adres hoort niet bij deze inlog.",

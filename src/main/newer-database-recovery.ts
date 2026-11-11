@@ -94,6 +94,7 @@ async function createRecoveryUpdater(
     ...(typeof process.getuid === "function" ? { currentUid: process.getuid() } : {}),
     platform: process.platform,
     logDirectory: join(app.getPath("userData"), "logs", "update"),
+    ...(process.platform === "darwin" ? { appBundlePath: join(app.getPath("exe"), "..", "..", "..") } : {}),
     updaterCacheDirectory: electronUpdaterCacheDirectory(),
   });
 }
@@ -180,13 +181,13 @@ async function showUpdateRequired(translate: AppTranslate): Promise<void> {
     message: translate("startup.newerDataTitle"),
     detail: translate("startup.newerDataBody", { version: app.getVersion() }),
     buttons: [
-      translate("startup.newerDataDownload"),
+      ...(DOWNLOAD_URL ? [translate("startup.newerDataDownload")] : []),
       translate("startup.newerDataGuide"),
       translate("startup.newerDataQuit"),
     ],
     defaultId: 0,
-    cancelId: 2,
+    cancelId: DOWNLOAD_URL ? 2 : 1,
   });
-  if (response === 0) await shell.openExternal(DOWNLOAD_URL);
-  if (response === 1) await shell.openExternal(GUIDE_URL);
+  if (response === 0 && DOWNLOAD_URL) await shell.openExternal(DOWNLOAD_URL);
+  if (response === (DOWNLOAD_URL ? 1 : 0)) await shell.openExternal(GUIDE_URL);
 }

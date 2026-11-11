@@ -5,6 +5,8 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
+    "./release-url": "./src/release-url.ts",
+    "./product-identity": "./src/product-identity.ts",
     "./bloub-avatar": "./src/bloub-avatar.ts",
     "./bloub-avatar-motion": "./src/bloub-avatar-motion.ts",
     "./chat-colors": "./src/chat-colors.ts",

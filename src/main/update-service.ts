@@ -3,6 +3,7 @@ import { constants } from "node:fs";
 import { access, appendFile, mkdir, readdir, readFile, rename, rm, stat } from "node:fs/promises";
 import { homedir } from "node:os";
 import { basename, join } from "node:path";
+import { companyReleaseUrl } from "@openbot/brand/release-url";
 import type {
   IdleRestart,
   ScheduledUpdateRestart,
@@ -77,12 +78,17 @@ export function createDisabledUpdateAdapter(): UpdateAdapter {
   };
 }
 
-/** electron-updater's updater, or `null` when the module does not load. */
+/** The company updater, or `null` when no company feed is configured or the module does not load. */
 export async function loadElectronUpdater(): Promise<UpdateAdapter | null> {
+  const companyFeed = companyReleaseUrl(process.env.LOGIBRICKS_RELEASES_URL);
+  if (!companyFeed) return null;
   try {
     const updaterModule = await import("electron-updater");
     const adapter = updaterModule.autoUpdater ?? updaterModule.default?.autoUpdater ?? updaterModule.default;
-    if (adapter) return adapter;
+    if (adapter) {
+      adapter.setFeedURL({ provider: "generic", url: companyFeed });
+      return adapter;
+    }
     logger.warn("OpenBot updates are disabled: electron-updater did not export autoUpdater");
   } catch {
     logger.warn("OpenBot updates are disabled: electron-updater failed to load");

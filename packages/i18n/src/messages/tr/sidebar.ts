@@ -116,7 +116,7 @@ export const messages = {
   "sidebar.delete.pending": "Siliniyor…",
   "sidebar.delete.title": "{name} silinsin mi?",
   "sidebar.delete.agentDescription":
-    "Bu işlem ajanı ve OpenBot konuşmasını uygulamadan kaldırır. Kuyruğu, bellekleri, rutinleri ve çalışma alanı silinir. Bağlı CLI sağlayıcısı tarafından ayrı depolanan geçmiş silinmez.",
+    "Bu işlem ajanı ve LogiBricks Workspace konuşmasını uygulamadan kaldırır. Kuyruğu, bellekleri, rutinleri ve çalışma alanı silinir. Bağlı CLI sağlayıcısı tarafından ayrı depolanan geçmiş silinmez.",
   "sidebar.delete.channelDescription":
     "Bu işlem kanalı durdurur. Geçmişi yalnızca önizleme amacıyla Silinen kanallar bölümünde kalır. Oradan geri yükleyebilirsiniz. Üye ajanlar korunur.",
   "sidebar.delete.sectionDescription":
@@ -130,7 +130,7 @@ export const messages = {
   "sidebar.announce.movedPinned": "Sabitlenen sohbet {position}/{total} konumuna taşındı.",
   "sidebar.announce.personFallback": "kişi",
   "sidebar.announce.chatFallback": "sohbet",
-  "sidebar.mobileApp.title": "Mobil için OpenBot",
+  "sidebar.mobileApp.title": "Mobil için LogiBricks",
   "sidebar.mobileApp.body": "Uygulama artık iPhone ve Android'de.",
   "sidebar.mobileApp.howToInstall": "Nasıl yüklenir",
   "sidebar.mobileApp.dismiss": "Mobil uygulama duyurusunu kapat",
@@ -155,6 +155,6 @@ export const messages = {
   "sidebar.community.title": "Bir sandalye çek.",
   "sidebar.community.body": "Yapay zekâ geleceğinde senin için de bir yer var. Discord ve X’teki topluluğa katıl.",
   "sidebar.community.joinDiscord": "Discord’a katıl",
-  "sidebar.community.followX": "X’te OpenBot’u takip et",
+  "sidebar.community.followX": "X’te LogiBricks Workspace’i takip et",
   "sidebar.community.dismiss": "Topluluk davetini kapat",
 } as const satisfies PartialTranslation<typeof source>;

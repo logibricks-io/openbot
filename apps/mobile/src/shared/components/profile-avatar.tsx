@@ -13,8 +13,9 @@ interface ProfileAvatarProps {
 }
 
 export function ProfileAvatar({ name, imageUrl, accent, size = 48, neutral = false }: ProfileAvatarProps) {
-  const brandBackground = String(useCSSVariable("--openbot-logo-production"));
-  const brandForeground = String(useCSSVariable("--openbot-text-on-light"));
+  const brandBackground = String(useCSSVariable("--openbot-action"));
+  const brandForeground = String(useCSSVariable("--openbot-action-foreground"));
+  const customForeground = String(useCSSVariable("--openbot-text-on-status"));
   const neutralBackground = String(useCSSVariable("--openbot-border-grouped"));
   const neutralForeground = String(useCSSVariable("--openbot-text-grouped-secondary"));
   const [failedImageUrl, setFailedImageUrl] = useState<string | null>(null);
@@ -45,10 +46,10 @@ export function ProfileAvatar({ name, imageUrl, accent, size = 48, neutral = fal
         style={{
           fontSize: Math.max(12, size * 0.3),
           lineHeight: size * 0.4,
-          color: neutral ? neutralForeground : brandForeground,
+          color: neutral ? neutralForeground : accent ? customForeground : brandForeground,
         }}
       >
-        {initials || "O"}
+        {initials || "L"}
       </Typography>
       {imageUrl && !imageFailed ? (
         <Image

@@ -1,4 +1,5 @@
 import type { MessageCatalog } from "../../message";
+import { englishSourceDisplay } from "../../source-display-en";
 import { messages as mobileAgent } from "./mobile/agent";
 import { messages as mobileApp } from "./mobile/app";
 import { messages as mobileAppLock } from "./mobile/appLock";
@@ -18,12 +19,11 @@ import { messages as mobileShared } from "./mobile/shared";
 import { messages as mobileWorkflow } from "./mobile/workflow";
 import { messages as mobileWorkspace } from "./mobile/workspace";
 import { shared } from "./shared";
-import { source } from "./source";
 
 /** The mobile catalog: shared keys, source text, and the mobile areas only. */
 export const enMobile = {
   ...shared,
-  ...source,
+  ...englishSourceDisplay,
   ...mobileApp,
   ...mobileAppLock,
   ...mobileChat,

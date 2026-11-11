@@ -1,6 +1,7 @@
 import type { CentralAuthUser } from "@openbot/contracts/ipc";
 import type { JSX } from "@solidjs/web";
 import { createEffect, createMemo, createSignal, Show } from "solid-js";
+import { currentText } from "./text";
 
 export interface UserAvatarProps {
   user: Pick<CentralAuthUser, "name" | "email" | "avatarUrl">;
@@ -10,7 +11,7 @@ export interface UserAvatarProps {
 
 /** The two letters an avatar shows when the account has no photo. */
 export function userInitials(user: Pick<CentralAuthUser, "name" | "email">): string {
-  const accountName = user.name?.trim() || user.email.split("@")[0] || "OpenBot";
+  const accountName = user.name?.trim() || user.email.split("@")[0] || currentText().t("common.productName");
   const parts = accountName.split(/[._\-\s]+/).filter(Boolean);
   return (parts.length > 1 ? `${parts[0]?.[0]}${parts[1]?.[0]}` : accountName.slice(0, 2)).toUpperCase();
 }

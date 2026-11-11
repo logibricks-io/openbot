@@ -75,8 +75,8 @@ function shareColors(): ShareColors {
     border: token("--openbot-paper-border"),
     accent: token("--openbot-accent"),
     accentSoft: token("--openbot-accent-soft"),
-    logo: token("--openbot-logo-production"),
-    logoEye: token("--openbot-logo-production-eye"),
+    logo: token("--openbot-paper-text"),
+    logoEye: token("--openbot-brand-accent"),
   };
 }
 

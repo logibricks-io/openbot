@@ -9,13 +9,14 @@ import { createHash } from "node:crypto";
 import { closeSync, type FSWatcher, fstatSync, openSync, readSync, watch } from "node:fs";
 import { join } from "node:path";
 import { promisify } from "node:util";
+import { companyReleaseUrl } from "@openbot/brand/release-url";
 import type { AppTranslate } from "@openbot/i18n";
 import { createOpenBotLogger, toLogValue } from "@openbot/logging";
 import { Option, Schema } from "effect";
 import { dialog, shell } from "electron";
 
 const logger = createOpenBotLogger("app-archive");
-export const DOWNLOAD_URL = "https://openbot.run/download";
+export const DOWNLOAD_URL = companyReleaseUrl(process.env.LOGIBRICKS_RELEASES_URL);
 // A copy of the archive writes for some seconds. Check once the writes stop.
 const SETTLE_MS = 2_000;
 
@@ -77,11 +78,13 @@ async function showArchiveChanged(translate: AppTranslate): Promise<void> {
     type: "warning",
     message: translate("startup.archiveChangedTitle"),
     detail: translate("startup.archiveChangedBody"),
-    buttons: [translate("startup.archiveChangedDownload"), translate("common.close")],
+    buttons: DOWNLOAD_URL
+      ? [translate("startup.archiveChangedDownload"), translate("common.close")]
+      : [translate("common.close")],
     defaultId: 0,
-    cancelId: 1,
+    cancelId: DOWNLOAD_URL ? 1 : 0,
   });
-  if (response === 0) await shell.openExternal(DOWNLOAD_URL);
+  if (response === 0 && DOWNLOAD_URL) await shell.openExternal(DOWNLOAD_URL);
 }
 
 /**

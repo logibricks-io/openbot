@@ -300,6 +300,8 @@ export function landingPageText(t: AppTranslate) {
       title: t("sitePage.landing.download.title"),
       description: t("sitePage.landing.download.description"),
       available: t("sitePage.landing.download.available"),
+      unpublished: t("sitePage.landing.download.unpublished"),
+      releaseUnavailable: t("sitePage.landing.download.releaseUnavailable"),
       desktop: {
         macos: downloadFor("macos"),
         windows: downloadFor("windows"),

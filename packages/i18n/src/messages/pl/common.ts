@@ -27,4 +27,5 @@ export const messages = {
   "common.download": "Pobierz",
   "common.removing": "Usuwanie…",
   "common.sending": "Wysyłanie…",
+  "common.productName": "LogiBricks Workspace",
 } as const satisfies PartialTranslation<typeof source>;

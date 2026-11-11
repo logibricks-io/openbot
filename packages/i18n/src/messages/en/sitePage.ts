@@ -11,59 +11,61 @@ export const messages = defineMessages("sitePage", {
     "Check your connection and reload the page. If it still does not load, go back to the home page.",
   "sitePage.error.reload": "Reload page",
   "sitePage.error.home": "Back to home",
-  "sitePage.join.title": "Join an OpenBot server",
-  "sitePage.join.description": "Open a private server invitation in OpenBot.",
+  "sitePage.join.title": "Join a LogiBricks Workspace server",
+  "sitePage.join.description": "Open a private server invitation in LogiBricks Workspace.",
   "sitePage.join.eyebrow": "Private invitation",
   "sitePage.join.intro":
-    "Open this invitation in OpenBot. The app checks the server and asks you to confirm before it connects.",
+    "Open this invitation in LogiBricks Workspace. The app checks the server and asks you to confirm before it connects.",
   "sitePage.join.invalid":
     "This invitation link is not valid or is not complete. Ask the server owner for a new invitation.",
-  "sitePage.join.open": "Open OpenBot",
+  "sitePage.join.open": "Open LogiBricks",
   "sitePage.join.browser": "Open in browser",
   // {browser} and {download} are links. Their text is browserLink and downloadLink.
   "sitePage.join.noApp": "No app? {browser} or {download}.",
   "sitePage.join.noAppMobile": "No app? {browser}.",
   "sitePage.join.browserLink": "Join in this browser",
-  "sitePage.join.downloadLink": "download OpenBot",
+  "sitePage.join.downloadLink": "download LogiBricks",
   // {open} is the label of the button that did not open OpenBot.
   "sitePage.join.notOpened":
-    "If OpenBot is on this computer, start it, then press {open} again. If it is not, download it first.",
+    "If LogiBricks Workspace is on this computer, start it, then press {open} again. If it is not, download it first.",
   // {open} is the label of the button above this note.
   "sitePage.join.mobile":
-    "If OpenBot is installed, tap {open}. You can also paste this link into Add server in the app.",
-  "sitePage.join.email": "If the invitation came by email, sign in to OpenBot with that email address.",
+    "If LogiBricks Workspace is installed, tap {open}. You can also paste this link into Add server in the app.",
+  "sitePage.join.email": "If the invitation came by email, sign in to LogiBricks Workspace with that email address.",
   // {name} is Slack or Discord on all the connect keys.
-  "sitePage.connect.title": "Return to OpenBot",
+  "sitePage.connect.title": "Return to LogiBricks Workspace",
   "sitePage.connect.failedTitle": "The connection did not finish",
-  "sitePage.connect.openApp": "Open OpenBot",
-  "sitePage.connect.tryAgainApp": "Try again in OpenBot",
+  "sitePage.connect.openApp": "Open LogiBricks",
+  "sitePage.connect.tryAgainApp": "Try again in LogiBricks",
   "sitePage.connect.tryAgainBrowser": "Try again in browser",
-  "sitePage.connect.doneInWebClient": "Your OpenBot tab finishes the {name} connection. You can close this tab.",
-  "sitePage.connect.doneInApp": "OpenBot finishes the {name} connection on your computer.",
+  "sitePage.connect.doneInWebClient":
+    "Your LogiBricks Workspace tab finishes the {name} connection. You can close this tab.",
+  "sitePage.connect.doneInApp": "LogiBricks Workspace finishes the {name} connection on your computer.",
   "sitePage.connect.failure.cancelled": "The {name} connection was cancelled. Nothing changed.",
   "sitePage.connect.failure.expired": "The {name} sign-in expired. Start the connection again.",
   "sitePage.connect.failure.exchange": "{name} did not confirm the connection. Try again.",
   "sitePage.connect.failure.enterprise": "Connect one Slack workspace, not a whole organization.",
   "sitePage.connect.failure.takenSlack":
-    "Another OpenBot server already answers this Slack workspace. Disconnect it on that server, then try again.",
+    "Another LogiBricks Workspace server already answers this Slack workspace. Disconnect it on that server, then try again.",
   "sitePage.connect.failure.takenDiscord":
-    "Another OpenBot server already answers this Discord server. Disconnect it on that server, then try again.",
-  "sitePage.connect.failure.unavailable": "OpenBot cannot connect to {name} now. Try again later.",
+    "Another LogiBricks Workspace server already answers this Discord server. Disconnect it on that server, then try again.",
+  "sitePage.connect.failure.unavailable": "LogiBricks Workspace cannot connect to {name} now. Try again later.",
   "sitePage.connect.failure.tabClosed":
-    "The OpenBot tab that started the {name} connection did not answer. Open OpenBot in your browser and connect {name} again.",
+    "The LogiBricks Workspace tab that started the {name} connection did not answer. Open LogiBricks Workspace in your browser and connect {name} again.",
   "sitePage.connect.failure.failed": "{name} did not finish the connection. Try again.",
   // {marketplace}, {apps} and {connect} are the names of these screens and that button in the app.
-  "sitePage.connect.restartHint": "In OpenBot, open {marketplace}, then {apps}, then {name}, and select {connect}.",
+  "sitePage.connect.restartHint":
+    "In LogiBricks Workspace, open {marketplace}, then {apps}, then {name}, and select {connect}.",
   "sitePage.connect.notOpened":
-    "Start OpenBot, then try again. If OpenBot is not on this computer, download it and connect {name} from the app.",
+    "Start LogiBricks Workspace, then try again. If LogiBricks Workspace is not on this computer, download it and connect {name} from the app.",
   "sitePage.openApp.title": "Nothing opened?",
   "sitePage.openApp.dismiss": "Not now",
-  "sitePage.billing.pageTitle": "OpenBot billing",
+  "sitePage.billing.pageTitle": "LogiBricks Workspace billing",
   "sitePage.billing.updatedTitle": "Billing updated",
-  "sitePage.billing.updatedBody": "Go back to OpenBot. You can close this page.",
+  "sitePage.billing.updatedBody": "Go back to LogiBricks Workspace. You can close this page.",
   "sitePage.billing.cancelledTitle": "Checkout cancelled",
-  "sitePage.billing.cancelledBody": "Nothing was charged. Go back to OpenBot.",
-  "sitePage.report.pageTitle": "Report a hosted site — OpenBot",
+  "sitePage.billing.cancelledBody": "Nothing was charged. Go back to LogiBricks Workspace.",
+  "sitePage.report.pageTitle": "Report a hosted site — LogiBricks Workspace",
   "sitePage.report.title": "Report a hosted site",
   "sitePage.report.intro": "Send a report about harmful or unlawful content on an openbot.site address.",
   "sitePage.report.hostnameLabel": "Site address",
@@ -86,10 +88,10 @@ export const messages = defineMessages("sitePage", {
   "sitePage.report.sentTitle": "Report sent",
   "sitePage.report.sentBody": "Thanks. We received your report.",
   "sitePage.report.home": "Go to the home page",
-  "sitePage.pricing.title": "OpenBot pricing",
+  "sitePage.pricing.title": "LogiBricks Workspace deployment",
   "sitePage.pricing.description":
-    "Hosted servers and a license for teams. OpenBot is free for personal use on your own computer.",
-  "sitePage.pricing.imageAlt": "Small team. Bright ideas. Three OpenBot agents under a glass dome",
+    "No LogiBricks hosted plan or commercial offer is configured in this preview. Contact your administrator about deployment.",
+  "sitePage.pricing.imageAlt": "Small team. Bright ideas. Three LogiBricks Workspace agents under a glass dome",
   "sitePage.pricing.heading": "Pricing",
   // The first block of the pricing page, above the order form.
   "sitePage.pricing.personal.title": "Personal use is free",
@@ -106,11 +108,11 @@ export const messages = defineMessages("sitePage", {
   "sitePage.pricing.consent.policy": "policy",
   "sitePage.pricing.consent.terms": "terms and right of withdrawal",
   // The /teams page for companies.
-  "sitePage.teams.title": "OpenBot for Teams",
+  "sitePage.teams.title": "Company workspaces",
   "sitePage.teams.description":
-    "Run OpenBot on managed infrastructure or let us design a custom deployment around your team, workflows and existing systems.",
+    "Connect to a company-managed workspace. This preview does not sell a managed hosting service.",
   // The text of the social image is English. Keep it as it is.
-  "sitePage.teams.imageAlt": "Big plans. Better together. Two OpenBot agents joined by a paper bridge",
+  "sitePage.teams.imageAlt": "Big plans. Better together. Two LogiBricks Workspace agents joined by a paper bridge",
   // {team} is a row of agent avatars. The word before {team} stays on one line with the avatars.
   "sitePage.teams.hero.heading": "Bring a team of {team} AI coworkers into your company",
   "sitePage.teams.setups.heading": "Choose the setup that fits your team",
@@ -119,18 +121,18 @@ export const messages = defineMessages("sitePage", {
   "sitePage.teams.setups.local.label": "Local",
   "sitePage.teams.setups.local.title": "Run it locally",
   "sitePage.teams.setups.local.description":
-    "Best for individual users who want to run OpenBot directly on their own infrastructure.",
+    "Best for individual users who want to run LogiBricks Workspace directly on their own infrastructure.",
   "sitePage.teams.setups.managed.label": "Managed server",
   "sitePage.teams.setups.managed.title": "Use a managed server",
   "sitePage.teams.setups.managed.description":
-    "Keep OpenBot available without relying on a personal computer. We provide and maintain the server, so you can focus on your agents and workflows.",
+    "Keep LogiBricks Workspace available without relying on a personal computer. We provide and maintain the server, so you can focus on your agents and workflows.",
   "sitePage.teams.setups.custom.label": "Custom deployment",
   "sitePage.teams.setups.custom.title": "Build a company-wide setup",
   "sitePage.teams.setups.custom.description":
     "We help configure your environments, agents, permissions and integrations around the way your organization already works.",
   "sitePage.teams.benefits.alwaysOn.title": "Your agents work 24/7",
   "sitePage.teams.benefits.alwaysOn.description":
-    "Run OpenBot on managed infrastructure and give your team a shared environment where people, agents and automations work together.",
+    "Run LogiBricks Workspace on managed infrastructure and give your team a shared environment where people, agents and automations work together.",
   "sitePage.teams.benefits.automations.title": "Automations that never stop",
   "sitePage.teams.benefits.automations.description":
     "Run scheduled routines and recurring workflows 24/7 – even at night, on weekends or when your team is offline.",
@@ -139,10 +141,10 @@ export const messages = defineMessages("sitePage", {
     "Bring people and AI coworkers into one shared server. Team members can work with agents, coordinate tasks and collaborate in the same environment.",
   "sitePage.teams.benefits.anywhere.title": "Access from anywhere",
   "sitePage.teams.benefits.anywhere.description":
-    "Connect to your OpenBot environment remotely and continue working from supported desktop or mobile devices.",
-  "sitePage.teams.custom.heading": "OpenBot, adapted to your business",
+    "Connect to your LogiBricks Workspace environment remotely and continue working from supported desktop or mobile devices.",
+  "sitePage.teams.custom.heading": "LogiBricks Workspace, adapted to your business",
   "sitePage.teams.custom.intro":
-    "Getting a server is only the beginning. If your company needs a complete solution, we can help design and implement OpenBot around your actual processes.",
+    "Getting a server is only the beginning. If your company needs a complete solution, we can help design and implement LogiBricks Workspace around your actual processes.",
   // The five steps of a custom project, in order.
   "sitePage.teams.custom.infrastructure": "Infrastructure setup and configuration",
   "sitePage.teams.custom.agents": "Initial agent configuration",
@@ -162,13 +164,13 @@ export const messages = defineMessages("sitePage", {
   "sitePage.teams.closing.accent": "AI coworkers",
   "sitePage.teams.closing.action": "Discuss your setup",
   // The /contact page and its form.
-  "sitePage.contact.title": "Contact the OpenBot team",
+  "sitePage.contact.title": "Contact your workspace administrator",
   "sitePage.contact.description":
-    "Send the OpenBot team a message about a custom setup, a partnership or the press. A person reads each message.",
+    "This preview has no company support channel configured. Contact your workspace administrator for access and support.",
   // The text of the social image is English. Keep it as it is.
-  "sitePage.contact.imageAlt": "Small team. Always on it. OpenBot agents around a paper planet",
+  "sitePage.contact.imageAlt": "Small team. Always on it. LogiBricks Workspace agents around a paper planet",
   "sitePage.contact.heading": "Talk to the team",
-  "sitePage.contact.intro": "Tell us what you need. A person on the OpenBot team reads each message.",
+  "sitePage.contact.intro": "Tell us what you need. A person on the LogiBricks Workspace team reads each message.",
   // The other ways to reach the team. Discord, GitHub and X are names.
   "sitePage.contact.channel.discord": "Community and help",
   "sitePage.contact.channel.github": "Bugs and source code",
@@ -201,20 +203,21 @@ export const messages = defineMessages("sitePage", {
   "sitePage.contact.sentBody": "We will answer at {email}.",
   "sitePage.contact.sendAnother": "Send another message",
   // The public Marketplace on openbot.run. The tab and category names are the app's `marketplace.*` keys.
-  "sitePage.marketplace.agents.title": "Agents — OpenBot Marketplace",
+  "sitePage.marketplace.agents.title": "Agents — LogiBricks Workspace Marketplace",
   "sitePage.marketplace.agents.description":
-    "Agents that people made in OpenBot. Add one to OpenBot with its skills and routines.",
-  "sitePage.marketplace.skills.title": "Skills — OpenBot Marketplace",
-  "sitePage.marketplace.skills.description": "Skills that an OpenBot agent can use. Add one to OpenBot.",
-  "sitePage.marketplace.apps.title": "Apps — OpenBot Marketplace",
+    "Agents that people made in OpenBot. Add one to LogiBricks Workspace with its skills and routines.",
+  "sitePage.marketplace.skills.title": "Skills — LogiBricks Workspace Marketplace",
+  "sitePage.marketplace.skills.description":
+    "Skills that a LogiBricks Workspace agent can use. Add one to LogiBricks Workspace.",
+  "sitePage.marketplace.apps.title": "Apps — LogiBricks Workspace Marketplace",
   "sitePage.marketplace.apps.description":
-    "Apps and tools that an OpenBot agent can use. Open an app in OpenBot, and decide there what it connects to.",
+    "Apps and tools that a LogiBricks Workspace agent can use. Open an app in LogiBricks Workspace, and decide there what it connects to.",
   // {name} is the name of an agent or a skill.
-  "sitePage.marketplace.agentTitle": "{name} — OpenBot agent",
-  "sitePage.marketplace.skillTitle": "{name} — OpenBot skill",
+  "sitePage.marketplace.agentTitle": "{name} — LogiBricks Workspace agent",
+  "sitePage.marketplace.skillTitle": "{name} — LogiBricks Workspace skill",
   // The text of the share image for screen readers. {creator} is the name of the person who made it.
-  "sitePage.marketplace.agentImageAlt": "{name}, an OpenBot agent by {creator}",
-  "sitePage.marketplace.skillImageAlt": "{name}, an OpenBot skill by {creator}",
+  "sitePage.marketplace.agentImageAlt": "{name}, a LogiBricks Workspace agent by {creator}",
+  "sitePage.marketplace.skillImageAlt": "{name}, a LogiBricks Workspace skill by {creator}",
   "sitePage.marketplace.categories": "Categories",
   "sitePage.marketplace.allCategories": "All",
   "sitePage.marketplace.searchAgents": "Search agents",
@@ -239,9 +242,10 @@ export const messages = defineMessages("sitePage", {
   "sitePage.marketplace.emptySkillsQuery": "No skills match “{query}”.",
   "sitePage.marketplace.emptyApps": "No app matches.",
   "sitePage.marketplace.breadcrumb": "Breadcrumb",
-  "sitePage.marketplace.addToOpenBot": "Add to OpenBot",
+  "sitePage.marketplace.addToOpenBot": "Add to LogiBricks",
   // Shows after "Add to OpenBot" did not open the app.
-  "sitePage.marketplace.addFromApp": "{name} is added from inside OpenBot. Get the app, then open this link again.",
+  "sitePage.marketplace.addFromApp":
+    "{name} is added from inside LogiBricks Workspace. Get the app, then open this link again.",
   // {platform} is macOS, Windows or Linux.
   "sitePage.marketplace.downloadFor": "Download for {platform}",
   "sitePage.marketplace.copyLink": "Copy link",
@@ -268,13 +272,13 @@ export const messages = defineMessages("sitePage", {
   "sitePage.marketplace.missing.body": "The creator removed it, OpenBot did not approve it, or the link is wrong.",
   "sitePage.marketplace.missing.open": "Open the Marketplace",
   // The home page. The title and the description are also the text of a search result and a link preview.
-  "sitePage.landing.title": "OpenBot: Run a team of AI agents on your computer",
+  "sitePage.landing.title": "LogiBricks Workspace: Run a team of AI agents on your computer",
   "sitePage.landing.description":
     "A free desktop app that runs AI agents as a team on your own computer, with the ChatGPT, Claude, Gemini or Grok plan you already pay for, or your own model.",
   // A badge before "Available on". Keep it short and in capitals.
-  "sitePage.landing.hero.new": "NEW",
+  "sitePage.landing.hero.new": "PREVIEW",
   // Platform logos and names follow: macOS, Windows, Linux, iOS, Android.
-  "sitePage.landing.hero.availableOn": "Available on",
+  "sitePage.landing.hero.availableOn": "Source targets",
   // The page heading. {name} is the OpenBot logo and the name OpenBot.
   "sitePage.landing.hero.title": "Meet {name}",
   // {codex}, {claude}, {gemini} and {grok} are provider names with their logos.
@@ -284,8 +288,8 @@ export const messages = defineMessages("sitePage", {
   "sitePage.landing.hero.choosePlatform": "Choose download platform",
   "sitePage.landing.hero.platforms": "Download platforms",
   "sitePage.landing.hero.phoneApps": "Phone apps",
-  "sitePage.landing.preview.title": "Interactive OpenBot application preview",
-  "sitePage.landing.preview.loading": "Loading OpenBot preview",
+  "sitePage.landing.preview.title": "Interactive LogiBricks Workspace application preview",
+  "sitePage.landing.preview.loading": "Loading LogiBricks Workspace preview",
   // The words of this heading appear one at a time.
   "sitePage.landing.network.title": "Your agents work together.",
   "sitePage.landing.network.description":
@@ -319,7 +323,7 @@ export const messages = defineMessages("sitePage", {
   // An agent under a pointer that does not move.
   "sitePage.landing.network.eggs.hover":
     "I only look busy.\nAsk me about the Safari task.\nI read the whole repository. Twice.\nMy context window has room for you.\nPlease do not close this tab.\nI fixed one bug and found three.\nI run on your computer, not in a cloud.",
-  "sitePage.landing.features.title": "What OpenBot does",
+  "sitePage.landing.features.title": "What LogiBricks Workspace does",
   "sitePage.landing.features.description":
     "One app for a team of AI agents that work on a server or your computer. Running on a subscription you already have.",
   "sitePage.landing.features.team.title": "Agents work as a team",
@@ -334,10 +338,10 @@ export const messages = defineMessages("sitePage", {
   "sitePage.landing.features.providers.localLink": "Ollama or LM Studio",
   "sitePage.landing.features.local.title": "Stored on your computer",
   "sitePage.landing.features.local.description":
-    "Workspaces, conversations, files and browser data stay on the computer that runs OpenBot, not on our servers.",
+    "Workspaces, conversations, files and browser data stay on the computer that runs LogiBricks Workspace, not on our servers.",
   "sitePage.landing.features.multiplayer.title": "Multiplayer mode",
   "sitePage.landing.features.multiplayer.description":
-    "Invite your teammates to OpenBot. People and AI agents collaborate in shared channels and work on the same projects.",
+    "Invite your teammates to LogiBricks Workspace. People and AI agents collaborate in shared channels and work on the same projects.",
   "sitePage.landing.features.workflows.title": "Workflows",
   "sitePage.landing.features.workflows.description":
     "Combine agents, models and approval steps into clear, multi-step workflows. Reuse the process and update it as your work changes.",
@@ -388,9 +392,10 @@ export const messages = defineMessages("sitePage", {
   "sitePage.landing.pricing.yourPlans": "Uses the AI plans you already pay for",
   "sitePage.landing.pricing.download": "Download",
   "sitePage.landing.pricing.license": "License for work",
-  "sitePage.landing.teams.title": "OpenBot for Teams",
+  "sitePage.landing.teams.title": "LogiBricks Workspace for Teams",
   "sitePage.landing.teams.statement": "AI coworkers for your whole company.",
-  "sitePage.landing.teams.description": "We run OpenBot on managed servers and set it up around your team and tools.",
+  "sitePage.landing.teams.description":
+    "We run LogiBricks Workspace on managed servers and set it up around your team and tools.",
   "sitePage.landing.teams.contact": "Contact us",
   "sitePage.landing.teams.learn": "Learn about Teams",
   "sitePage.landing.teams.servers.label": "Managed servers",
@@ -401,24 +406,25 @@ export const messages = defineMessages("sitePage", {
   "sitePage.landing.teams.environments.description": "One company server, one per employee, or both.",
   "sitePage.landing.teams.integrations.label": "Custom integrations",
   "sitePage.landing.teams.integrations.title": "Your tools",
-  "sitePage.landing.teams.integrations.description": "We connect OpenBot to your systems, APIs and workflows.",
+  "sitePage.landing.teams.integrations.description":
+    "We connect LogiBricks Workspace to your systems, APIs and workflows.",
   "sitePage.landing.teams.support.label": "Implementation and support",
   "sitePage.landing.teams.support.title": "We launch it with you",
   "sitePage.landing.teams.support.description": "Setup, testing, onboarding and ongoing support.",
   "sitePage.landing.faq.title": "Questions",
   "sitePage.landing.faq.description": "Short answers about price, setup, providers and your data.",
   "sitePage.landing.faq.contact": "Ask us something else",
-  "sitePage.landing.faq.free.question": "Is OpenBot free?",
+  "sitePage.landing.faq.free.question": "Is LogiBricks Workspace free?",
   "sitePage.landing.faq.free.answer":
-    "Yes, for personal and other noncommercial use. OpenBot costs $0, with no locked features. You pay only your AI provider, through the plan or API key you already have. Commercial use needs a license.",
-  "sitePage.landing.faq.source.question": "Is OpenBot's source code open?",
+    "The underlying OpenBot code remains under PolyForm Noncommercial 1.0.0. This preview does not grant additional commercial rights or publish a paid LogiBricks service. Provider subscriptions are separate.",
+  "sitePage.landing.faq.source.question": "Is LogiBricks Workspace's source code open?",
   "sitePage.landing.faq.source.answer":
-    "Yes. All of the source code is open on GitHub, so you can check what OpenBot does. You can change and run it for free for noncommercial use, such as personal projects, study or research. Commercial use needs a separate license. The license is PolyForm Noncommercial 1.0.0.",
-  "sitePage.landing.faq.source.link": "See the source code on GitHub",
+    "LogiBricks Workspace is based on OpenBot. The linked repository is the original upstream project. Its PolyForm Noncommercial 1.0.0 license and source notices remain applicable.",
+  "sitePage.landing.faq.source.link": "View upstream OpenBot source",
   "sitePage.landing.faq.plans.question": "Can I use my ChatGPT or Claude plan?",
   "sitePage.landing.faq.plans.answer":
     "Yes. Codex signs in with your ChatGPT plan, and Claude Code with your Claude plan. Gemini uses a Google AI Pro or Ultra plan. OpenCode has free models that need no account.",
-  "sitePage.landing.faq.models.question": "Which AI models can OpenBot use?",
+  "sitePage.landing.faq.models.question": "Which AI models can LogiBricks Workspace use?",
   "sitePage.landing.faq.models.answer":
     "Codex, Claude Code, Gemini, Grok, OpenCode, Cursor, Cline, Muse Code and Pi, and Inception's Mercury models. You can also run any agent that speaks the Agent Client Protocol, such as Goose or Qwen Code, connect any OpenAI-compatible endpoint, and use local models in Ollama or LM Studio.",
   "sitePage.landing.faq.limit.question": "What happens when my plan reaches its limit?",
@@ -426,18 +432,18 @@ export const messages = defineMessages("sitePage", {
     "An agent can move to a backup model on another provider when its plan reaches its limit, or when its provider is overloaded or down. It keeps its chat and workspace, and a note in the chat shows the switch.",
   "sitePage.landing.faq.start.question": "How do I start?",
   "sitePage.landing.faq.start.answer":
-    "Download OpenBot and connect a provider. Then describe the agent you want in one prompt, check its instructions and save it. You can send it work at once: messages wait in a queue until it is free.",
+    "Open the local development app or your organization’s browser workspace, connect the intended host, then configure a provider. Company installers and store listings have not been published.",
   "sitePage.landing.faq.data.question": "Where does my data go?",
   "sitePage.landing.faq.data.answer":
-    "Workspaces, conversations, attachments and browser data stay on the computer that runs OpenBot. The AI provider you choose receives the prompts that your agents send to it, and the pages that agents open use the network.",
-  "sitePage.landing.faq.computers.question": "Which computers can run OpenBot?",
+    "Workspaces, conversations, attachments and browser data stay on the computer that runs LogiBricks Workspace. The AI provider you choose receives the prompts that your agents send to it, and the pages that agents open use the network.",
+  "sitePage.landing.faq.computers.question": "Which computers can run LogiBricks Workspace?",
   "sitePage.landing.faq.computers.answer":
     "macOS 13 or newer on Apple silicon or Intel, Windows 10 or newer on x64, and Linux on x64 or arm64 as an AppImage.",
   "sitePage.landing.faq.safety.question": "Is it safe to let agents work on my computer?",
   "sitePage.landing.faq.safety.answer":
-    "Agents can read and change files, run commands, use the network and control the built-in browser without asking each time. Give them only tasks you trust, and keep backups.",
+    "LogiBricks Workspace is a development preview. Agents can read and change files, run commands, use the network and control the built-in browser without asking each time. Give them only tasks you trust, and keep backups.",
   "sitePage.landing.faq.compare": "Compare OpenBot",
-  "sitePage.landing.download.title": "Download OpenBot",
+  "sitePage.landing.download.title": "Download LogiBricks Workspace",
   "sitePage.landing.download.description":
     "Choose your platform. Run Codex, Claude, Gemini, Grok, OpenCode, Muse Code, Pi or your own model from one desktop app, and talk to your agents from your phone.",
   // The badge on a download card.
@@ -461,7 +467,7 @@ export const messages = defineMessages("sitePage", {
   "sitePage.site.language.current": "Language: {language}",
   // A badge on the newest article in the menu.
   "sitePage.site.latest": "Latest",
-  "sitePage.site.home": "OpenBot home",
+  "sitePage.site.home": "LogiBricks Workspace home",
   "sitePage.site.logo.menu": "Logo",
   "sitePage.site.logo.copyIcon": "Copy logo as SVG",
   "sitePage.site.logo.copyLockup": "Copy logo with name as SVG",
@@ -471,34 +477,34 @@ export const messages = defineMessages("sitePage", {
   "sitePage.site.news.summary": "What shipped, and why it matters.",
   "sitePage.site.news.index": "All news",
   "sitePage.site.guides": "Guides",
-  "sitePage.site.guides.summary": "Learn OpenBot one step at a time.",
+  "sitePage.site.guides.summary": "Learn LogiBricks Workspace one step at a time.",
   "sitePage.site.guides.index": "All guides",
   "sitePage.site.compare": "Compare",
-  "sitePage.site.compare.summary": "How OpenBot differs from other agent apps.",
+  "sitePage.site.compare.summary": "How LogiBricks Workspace differs from other agent apps.",
   "sitePage.site.compare.index": "All comparisons",
   "sitePage.site.plugins": "Plugins",
   "sitePage.site.plugins.summary": "Apps and skills an agent can use.",
   "sitePage.site.plugins.index": "Browse plugins",
   "sitePage.site.resources": "Resources",
-  "sitePage.site.resources.summary": "The source code of OpenBot is open.",
-  "sitePage.site.sourceCode": "Source code",
+  "sitePage.site.resources.summary": "Resources for the upstream OpenBot project.",
+  "sitePage.site.sourceCode": "OpenBot · Source code",
   "sitePage.site.download.description": "macOS, Windows and Linux",
   "sitePage.site.changelog": "Changelog",
   "sitePage.site.changelog.description": "What changed in each version",
-  "sitePage.site.community": "Community",
-  "sitePage.site.community.description": "Talk with us on Discord",
-  "sitePage.site.documentation": "Documentation",
+  "sitePage.site.community": "OpenBot · Community",
+  "sitePage.site.community.description": "OpenBot · Talk with us on Discord",
+  "sitePage.site.documentation": "OpenBot · Documentation",
   "sitePage.site.documentation.description": "Set up and use OpenBot",
   "sitePage.site.brand": "Brand",
   "sitePage.site.brand.description": "The logo as SVG and PNG",
-  "sitePage.site.status": "Status",
-  "sitePage.site.status.description": "Is the service up",
+  "sitePage.site.status": "OpenBot · Status",
+  "sitePage.site.status.description": "OpenBot · Is the service up",
   "sitePage.site.forTeams": "For Teams",
   "sitePage.site.pricing": "Pricing",
   "sitePage.site.cta.title": "Meet your first teammate",
   "sitePage.site.cta.description":
     "Run Codex, Claude, Gemini, Grok or your own model with the plans you already pay for, each with its own workspace and context. Your work stays on your computer.",
-  "sitePage.site.downloadOpenBot": "Download OpenBot",
+  "sitePage.site.downloadOpenBot": "Download LogiBricks Workspace",
   "sitePage.site.contact": "Contact",
   "sitePage.site.footer.description":
     "Persistent AI teammates on your own computer. Run Codex, Claude, Gemini, Grok, Muse Code, Pi or your own model with the plans you already pay for.",
@@ -507,21 +513,24 @@ export const messages = defineMessages("sitePage", {
   "sitePage.site.footer.providers": "Providers",
   "sitePage.site.footer.marketplace": "Marketplace",
   "sitePage.site.footer.teams": "Teams",
-  "sitePage.site.footer.license": "License",
+  "sitePage.site.footer.license": "OpenBot · License",
   "sitePage.site.footer.privacy": "Privacy policy",
   "sitePage.site.footer.terms": "Terms",
-  "sitePage.site.footer.commercialLicense": "Commercial license",
-  "sitePage.site.footer.troubleshooting": "Troubleshooting",
-  "sitePage.site.footer.selfHosted": "Self-hosted server",
-  "sitePage.site.footer.architecture": "Architecture",
-  "sitePage.site.footer.contributing": "Contributing",
+  "sitePage.site.footer.commercialLicense": "OpenBot · Commercial license",
+  "sitePage.site.footer.troubleshooting": "OpenBot · Troubleshooting",
+  "sitePage.site.footer.selfHosted": "OpenBot · Self-hosted server",
+  "sitePage.site.footer.architecture": "OpenBot · Architecture",
+  "sitePage.site.footer.contributing": "OpenBot · Contributing",
   "sitePage.site.footer.localModels": "Ollama and LM Studio",
   "sitePage.site.footer.allProviders": "All providers",
   "sitePage.site.footer.bestApps": "Best AI agent apps",
   // {year} is the current year. Synthetify Labs is a company name.
-  "sitePage.site.footer.rights": "© {year} Synthetify Labs, All rights reserved.",
-  "sitePage.site.footer.available": "Available for macOS, Windows, Linux, iOS and Android",
+  "sitePage.site.footer.rights":
+    "Built on OpenBot. © {year} Synthetify Labs. PolyForm Noncommercial 1.0.0 and source notices remain applicable.",
+  "sitePage.site.footer.available": "Company installers and store listings have not been published.",
   // {love} is a heart icon. Its spoken name is the love key.
   "sitePage.site.footer.made": "Made with {love} in Poland",
   "sitePage.site.footer.love": "love",
+  "sitePage.landing.download.unpublished": "Not published",
+  "sitePage.landing.download.releaseUnavailable": "Release not published",
 });

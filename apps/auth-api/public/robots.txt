@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://openbot.run/sitemap.xml
+# The sitemap is served at /sitemap.xml on this deployment.

@@ -1,4 +1,5 @@
 import type { MessageCatalog } from "../../message";
+import { englishSourceDisplay } from "../../source-display-en";
 import { messages as account } from "./account";
 import { messages as agent } from "./agent";
 import { messages as agentSettings } from "./agentSettings";
@@ -40,7 +41,6 @@ import { messages as sharedTable } from "./sharedTable";
 import { messages as sidebar } from "./sidebar";
 import { messages as sitePage } from "./sitePage";
 import { messages as skill } from "./skill";
-import { source } from "./source";
 import { messages as startup } from "./startup";
 import { messages as team } from "./team";
 import { messages as uiBlock } from "./uiBlock";
@@ -64,7 +64,7 @@ import { messages as workflow } from "./workflow";
  */
 export const en = {
   ...shared,
-  ...source,
+  ...englishSourceDisplay,
   ...menu,
   ...notification,
   ...dialog,

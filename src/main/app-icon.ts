@@ -1,5 +1,5 @@
 import { join } from "node:path";
-import { type AppLogoColor, type AppVariant, DEFAULT_APP_LOGO_COLOR } from "@openbot/contracts/ipc";
+import type { AppLogoColor, AppVariant } from "@openbot/contracts/ipc";
 
 const APP_VARIANTS = ["production", "dev", "preview"] as const satisfies readonly AppVariant[];
 
@@ -39,8 +39,7 @@ export function resolveMenuBarIconPath(options: {
 }
 
 /**
- * The icon for a logo color. The default color is the release icon itself, so it has no file in
- * `build/logo-colors/`.
+ * Retain saved color preferences for compatibility, while every choice uses the company identity.
  */
 export function resolveLogoColorIconPath(options: {
   color: AppLogoColor;
@@ -49,12 +48,7 @@ export function resolveLogoColorIconPath(options: {
   resourcesPath: string;
   sourceRoot: string;
 }): string {
-  const { color, ...location } = options;
-  if (color === DEFAULT_APP_LOGO_COLOR) return resolveAppIconPath({ ...location, variant: "production" });
-  const fileName = options.platform === "darwin" ? `icon-${color}-macos-safe-area.png` : `icon-${color}.png`;
-  return options.isPackaged
-    ? join(options.resourcesPath, "icons", "logo-colors", fileName)
-    : join(options.sourceRoot, "build", "logo-colors", fileName);
+  return resolveAppIconPath({ ...options, variant: "production" });
 }
 
 function isAppVariant(value: string | undefined): value is AppVariant {

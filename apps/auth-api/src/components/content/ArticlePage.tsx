@@ -62,6 +62,10 @@ export function ArticlePage(props: ArticlePageProps) {
             <Link class="post-article-back" to={props.collection.indexRoute}>
               {props.collection.backLabel}
             </Link>
+            <p class="post-meta">
+              Archived OpenBot article. Original authorship, dates and product claims are preserved; they do not
+              describe a LogiBricks release.
+            </p>
             <h1 class="post-article-title">{props.article.title}</h1>
             <p class="post-article-standfirst">{props.article.description}</p>
             <p class="post-meta post-article-byline">

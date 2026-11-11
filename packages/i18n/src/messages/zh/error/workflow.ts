@@ -9,11 +9,11 @@ export const messages = {
   "error.workflow.branch": "只有条件可以有“是”和“否”连接。",
   "error.workflow.conditionBranch": "条件发出的每个连接都必须是“是”或“否”。",
   "error.workflow.duplicateEdge": "这两个步骤之间已经有该连接。",
-  "error.workflow.serverTooOld": "该服务器不支持工作流，请更新运行它的电脑上的 OpenBot。",
-  "error.workflow.nodeUnsupported": "该版本的 OpenBot 暂时无法运行图片、文件和消息步骤。",
-  "error.workflow.interrupted": "该步骤运行时 OpenBot 停止了，请再次运行。",
+  "error.workflow.serverTooOld": "该服务器不支持工作流，请更新运行它的电脑上的 LogiBricks Workspace。",
+  "error.workflow.nodeUnsupported": "该版本的 LogiBricks Workspace 暂时无法运行图片、文件和消息步骤。",
+  "error.workflow.interrupted": "该步骤运行时 LogiBricks Workspace 停止了，请再次运行。",
   "error.workflow.agentMissing": "为该步骤选择一个助手。",
-  "error.workflow.handoffFailed": "OpenBot 无法把该步骤发送给它的助手。",
+  "error.workflow.handoffFailed": "LogiBricks Workspace 无法把该步骤发送给它的助手。",
   "error.workflow.agentStepEnded": "该步骤的助手消息在助手回答之前已被移除。",
   "error.workflow.conditionUnclear": "模型没有回答“是”或“否”。",
   "error.workflow.modelFailed": "模型无法回答，请再次运行该步骤。",
@@ -25,7 +25,7 @@ export const messages = {
   "error.workflow.noDecision": "该步骤不等待决定。",
   "error.workflow.outputPlaceMissing": "为该输出选择一个消息发送位置。",
   "error.workflow.outputChannelMissing": "为此输出选择一个频道。",
-  "error.workflow.outputChannelFailed": "OpenBot 无法将结果发布到频道。请再次运行此步骤。",
+  "error.workflow.outputChannelFailed": "LogiBricks Workspace 无法将结果发布到频道。请再次运行此步骤。",
   "error.workflow.discordNoMessage":
     "此输出作用于启动本次运行的 Discord 消息。请从 Discord 提及启动运行，或选择“在频道中发布”。",
   "error.workflow.slackNoMessage":
@@ -52,7 +52,7 @@ export const messages = {
   "error.workflow.githubNoWrite": "OpenBot GitHub App 无法更改该仓库。打开 GitHub 并为它授予访问权限。",
   "error.workflow.githubLocked": "该对话已在 GitHub 上锁定。",
   "error.workflow.githubRefused": "GitHub 拒绝了该更改：{detail}",
-  "error.workflow.githubUnreachable": "OpenBot 无法连接 GitHub。再次运行该步骤。",
+  "error.workflow.githubUnreachable": "LogiBricks Workspace 无法连接 GitHub。再次运行该步骤。",
   "error.workflow.githubUncertain":
     "更改在途中停止，可能已经出现在 GitHub 上。再次运行该步骤之前，先在 GitHub 上查看。",
   "error.workflow.githubNoEvent": "GitHub 上没有该触发器可以启动的议题或拉取请求。",

@@ -39,7 +39,7 @@ const LINK_VISIBLE_SECONDS = 60;
 interface PhoneApp {
   platform: MobilePlatformLogoVariant;
   label: string;
-  url: string;
+  url: string | undefined;
   qrLabel: AppTextKey;
   tag: AppTextKey;
 }
@@ -61,6 +61,7 @@ const PHONE_APPS: readonly PhoneApp[] = [
     tag: "settings.mobileConnect.qr.playStore",
   },
 ];
+const STORE_DOWNLOAD_AVAILABLE = PHONE_APPS.some((phone) => Boolean(phone.url));
 
 function countdown(seconds: number) {
   return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
@@ -233,15 +234,25 @@ export function MobileConnectAddPhoneDialog(props: {
                     type="button"
                     variant="outline"
                     class="settings-mobile-choice"
+                    disabled={!STORE_DOWNLOAD_AVAILABLE}
                     onClick={() => setScreen("install")}
                   >
                     <Download aria-hidden="true" />
                     <span class="settings-mobile-choice-text">
                       <span class="settings-mobile-choice-title">{t("settings.mobileConnect.add.install.title")}</span>
-                      <span class="settings-mobile-choice-hint">{t("settings.mobileConnect.add.install.hint")}</span>
+                      <span class="settings-mobile-choice-hint">
+                        {STORE_DOWNLOAD_AVAILABLE
+                          ? t("settings.mobileConnect.add.install.hint")
+                          : t("settings.mobileConnect.add.install.unavailable")}
+                      </span>
                     </span>
                   </Button>
                 </div>
+                <Show when={!STORE_DOWNLOAD_AVAILABLE}>
+                  <Text variant="caption" tone="muted" class="settings-mobile-dialog-note">
+                    {t("settings.mobileConnect.add.install.unavailableNote")}
+                  </Text>
+                </Show>
               </Match>
               <Match when={current === "install"}>
                 <SlidingTabs.Root
@@ -263,16 +274,31 @@ export function MobileConnectAddPhoneDialog(props: {
                 </SlidingTabs.Root>
                 <Show when={app()} keyed>
                   {(phone) => (
-                    <div class="settings-mobile-qr">
-                      <QrCode class="settings-mobile-qr-code" value={phone.url} size={QR_SIZE} label={t(phone.qrLabel)}>
-                        <PlatformLogo platform={phone.platform} class="settings-mobile-app-qr-platform" />
-                      </QrCode>
-                      <QrTag kind="store">{t(phone.tag)}</QrTag>
-                    </div>
+                    <Show
+                      when={phone.url}
+                      fallback={
+                        <CodeSlot>
+                          <Text variant="caption" tone="muted">
+                            {t("settings.mobileConnect.add.install.unavailable")}
+                          </Text>
+                        </CodeSlot>
+                      }
+                    >
+                      {(url) => (
+                        <div class="settings-mobile-qr">
+                          <QrCode class="settings-mobile-qr-code" value={url()} size={QR_SIZE} label={t(phone.qrLabel)}>
+                            <PlatformLogo platform={phone.platform} class="settings-mobile-app-qr-platform" />
+                          </QrCode>
+                          <QrTag kind="store">{t(phone.tag)}</QrTag>
+                        </div>
+                      )}
+                    </Show>
                   )}
                 </Show>
                 <Text variant="caption" tone="muted" class="settings-mobile-dialog-note">
-                  {t("settings.mobileConnect.add.install.note")}
+                  {app()?.url
+                    ? t("settings.mobileConnect.add.install.note")
+                    : t("settings.mobileConnect.add.install.unavailableNote")}
                 </Text>
               </Match>
               <Match when={current === "signin"}>

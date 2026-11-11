@@ -1,3 +1,4 @@
+import { AppLogo } from "@openbot/brand";
 import {
   APP_INTERFACE_SIZES,
   type AppInterfaceSize,
@@ -30,7 +31,6 @@ import { ChatBackgroundSetting } from "@openbot/ui/features/settings/ChatBackgro
 import { OwnChatColorTrigger } from "@openbot/ui/features/settings/ChatColorSetting";
 import { FontSelect } from "@openbot/ui/features/settings/FontSelect";
 import { LanguageSelect } from "@openbot/ui/features/settings/LanguageSelect";
-import { LogoColorPicker } from "@openbot/ui/features/settings/LogoColorPicker";
 import { SendShortcutSelect } from "@openbot/ui/features/settings/SendShortcutSelect";
 import { useText } from "@openbot/ui/text";
 import { createUniqueId, Show } from "solid-js";
@@ -38,7 +38,6 @@ import { useInstalledFonts } from "../../app-fonts";
 import { useAppearanceChoice } from "../../appearance-choice";
 import { useI18n } from "../../i18n-context";
 import { useInterfaceSizeChoice } from "../../interface-size";
-import { useLogoColorChoice } from "../../logo-color";
 import { ExternalLinkSelect } from "./ExternalLinkSelect";
 
 const interfaceSizeOptions = [...APP_INTERFACE_SIZES];
@@ -67,7 +66,6 @@ interface SettingsGeneralTabProps {
 export function SettingsGeneralTab(props: SettingsGeneralTabProps) {
   const i18n = useI18n();
   const appearance = useAppearanceChoice();
-  const logoColor = useLogoColorChoice();
   const interfaceSize = useInterfaceSizeChoice();
   const installedFonts = useInstalledFonts();
   const interfaceFontTitleId = `settings-interface-font-${createUniqueId()}`;
@@ -186,7 +184,10 @@ export function SettingsGeneralTab(props: SettingsGeneralTabProps) {
                 <ItemDescription>{i18n.t("settings.logoColor.buildNote")}</ItemDescription>
               </Show>
             </ItemContent>
-            <LogoColorPicker value={logoColor.color()} onChange={logoColor.changeColor} />
+            <ItemActions class="settings-brand-value">
+              <AppLogo variant={props.variant} opticalSize={16} class="settings-company-mark" />
+              {i18n.t("common.productName")}
+            </ItemActions>
           </Item>
           <Item data-settings-row="settings.chatColor.title" class="settings-modal-row">
             <ItemContent>

@@ -1,3 +1,6 @@
+// Archive-only artwork renderer. Its OpenBot comparisons keep the named upstream mark and
+// original titles. Current LogiBricks social artwork is public/logibricks-social.svg, rendered
+// from the approved v2 outlines. Do not substitute a company logo into upstream comparison claims.
 // Runs inside a throwaway Electron page during `vite build`. Bundled to a single
 // classic script by content-images.ts and injected with `executeJavaScript`, so
 // it must not rely on module loading, the network, or anything on the page.
@@ -23,8 +26,8 @@ const TITLE_MAX_LINES = 3;
 /** Under a lockup or a row of marks there is room for two lines. */
 const TITLE_MAX_LINES_WITH_LOCKUP = 2;
 /** `--openbot-logo-production` and `--openbot-logo-eye`. */
-const LOGO_BACKGROUND = "#d6adf2";
-const LOGO_EYE = "#040007";
+const UPSTREAM_LOGO_BACKGROUND = "#d6adf2";
+const UPSTREAM_LOGO_EYE = "#040007";
 const FONT_FAMILY = '"Inter Variable", Inter, system-ui, sans-serif';
 
 window.openBotContentImage = { render: renderContentImage };
@@ -249,20 +252,20 @@ function drawPlate(
 }
 
 function drawMark(context: CanvasRenderingContext2D, mark: ContentImageMark, x: number, y: number, size: number): void {
-  if (mark === "openbot") drawOpenBotMark(context, x, y, size);
+  if (mark === "openbot") drawUpstreamOpenBotMark(context, x, y, size);
   else drawRivalMark(context, mark, x, y, size);
 }
 
-/** `AppLogo`: the rounded square and the two scribbled eyes. */
-function drawOpenBotMark(context: CanvasRenderingContext2D, x: number, y: number, size: number): void {
+/** The original upstream OpenBot mark, only for its archived comparison and roundup images. */
+function drawUpstreamOpenBotMark(context: CanvasRenderingContext2D, x: number, y: number, size: number): void {
   context.save();
   context.translate(x, y);
   context.scale(size / APP_LOGO_SIZE, size / APP_LOGO_SIZE);
   roundedRect(context, 0, 0, APP_LOGO_SIZE, APP_LOGO_SIZE, APP_LOGO_CORNER);
-  context.fillStyle = LOGO_BACKGROUND;
+  context.fillStyle = UPSTREAM_LOGO_BACKGROUND;
   context.fill();
   context.clip();
-  context.strokeStyle = LOGO_EYE;
+  context.strokeStyle = UPSTREAM_LOGO_EYE;
   context.lineWidth = 9.5;
   context.lineCap = "round";
   context.lineJoin = "round";

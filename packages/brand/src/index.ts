@@ -6,3 +6,4 @@ export {
   type PlatformLogoVariant,
 } from "./PlatformLogo";
 export { ProviderLogo, type ProviderLogoProps, type ProviderLogoVariant } from "./ProviderLogo";
+export { Wordmark, type WordmarkProps } from "./Wordmark";

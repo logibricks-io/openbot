@@ -1,22 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-  <title>OpenBot</title>
-  <defs>
-    <linearGradient id="background" x1="160" y1="96" x2="864" y2="928" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#202426"/>
-      <stop offset="1" stop-color="#090b0c"/>
-    </linearGradient>
-    <linearGradient id="mark" x1="300" y1="260" x2="742" y2="778" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ffb04d"/>
-      <stop offset="1" stop-color="#e98427"/>
-    </linearGradient>
-    <filter id="shadow" x="190" y="190" width="660" height="680" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#000" flood-opacity=".38"/>
-    </filter>
-  </defs>
-  <rect x="52" y="52" width="920" height="920" rx="214" fill="url(#background)"/>
-  <rect x="53" y="53" width="918" height="918" rx="213" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="2"/>
-  <g filter="url(#shadow)">
-    <path d="M494 238c133-6 249 83 271 220 25 152-77 288-230 310-156 22-288-80-295-231-7-145 104-292 254-299Z" fill="url(#mark)"/>
-  </g>
-  <path d="M398 415c25 25 38 51 44 83M568 398c25 25 38 51 44 83" fill="none" stroke="#1b1d1e" stroke-linecap="round" stroke-width="34"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="LogiBricks Workspace"><title>LogiBricks Workspace</title><defs>
+      <linearGradient id="darkdbg" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#393A3D"/><stop offset="1" stop-color="#17181A"/></linearGradient>
+      <linearGradient id="darkdfg" x2=".35" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#D7D4CD"/></linearGradient>
+      <linearGradient id="darkdclay" x2=".3" y2="1"><stop stop-color="#F1A084"/><stop offset=".38" stop-color="#DF8262"/><stop offset="1" stop-color="#C26446"/></linearGradient>
+      <linearGradient id="darkdrim" x2=".8" y2="1"><stop stop-color="#FFFFFF" stop-opacity=".24"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".04"/><stop offset="1" stop-color="#000000" stop-opacity=".16"/></linearGradient>
+      <filter id="darkdtile" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#080A0B" flood-opacity=".22"/></filter>
+      <filter id="darkdlift" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.1" flood-color="#000000" flood-opacity=".38"/></filter>
+    </defs><rect x="64" y="64" width="896" height="896" rx="192" fill="url(#darkdbg)" filter="url(#darkdtile)"/><rect x="66" y="66" width="892" height="892" rx="190" fill="none" stroke="url(#darkdrim)" stroke-width="4"/><g transform="translate(224 220) scale(7.2)"><g filter="url(#darkdlift)"><rect x="0" y="1.05" width="24" height="48" rx="4" fill="#A7A49D"/><rect x="0" y="0" width="24" height="48" rx="4" fill="url(#darkdfg)"/><rect x="0.15" y="0.15" width="23.7" height="47.7" rx="3.85" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width=".3"/></g><g filter="url(#darkdlift)"><rect x="0" y="57.05" width="48" height="24" rx="4" fill="#A7A49D"/><rect x="0" y="56" width="48" height="24" rx="4" fill="url(#darkdfg)"/><rect x="0.15" y="56.15" width="47.7" height="23.7" rx="3.85" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width=".3"/></g><g filter="url(#darkdlift)"><rect x="56" y="57.05" width="24" height="24" rx="4" fill="#A7A49D"/><rect x="56" y="56" width="24" height="24" rx="4" fill="url(#darkdfg)"/><rect x="56.15" y="56.15" width="23.7" height="23.7" rx="3.85" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width=".3"/></g><g filter="url(#darkdlift)"><rect x="56" y="1.05" width="24" height="24" rx="4" fill="#A95239"/><rect x="56" y="0" width="24" height="24" rx="4" fill="url(#darkdclay)"/><rect x="56.15" y="0.15" width="23.7" height="23.7" rx="3.85" fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width=".3"/></g></g></svg>

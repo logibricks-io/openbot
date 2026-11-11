@@ -18,31 +18,24 @@ import { scheduleOnRN } from "react-native-worklets";
 import { showFailureAlert } from "@/features/analytics/failure-reports";
 import { AppUpdateNotes } from "@/features/app-update/components/app-update-notes";
 import { type AppUpdate, dismissAppUpdate, installAppUpdate } from "@/features/app-update/model/app-update";
-import { BloubEyes, EYES_HEIGHT, EYES_WIDTH } from "@/shared/components/bloub-stage/bloub-eyes";
 import { BLOUB_MOVE, BLOUB_RADIUS, bloubGradient, useBloubColors } from "@/shared/components/bloub-stage/bloub-look";
-import type { BloubMood } from "@/shared/components/bloub-stage/bloub-stage-store";
+import { MARK_HEIGHT, MARK_WIDTH, StageMark } from "@/shared/components/bloub-stage/stage-mark";
 import type { LargeTitleScroll } from "@/shared/components/large-title";
 import { haptics } from "@/shared/lib/haptics";
 import { useReducedMotion } from "@/shared/lib/motion";
 import { useBarTop } from "@/shared/lib/native-bar";
-import { SPLASH_EASE_OUT } from "@/shared/lib/splash-motion";
 import { currentText, useText } from "@/shared/lib/text";
 
-// The eyes sit under the status bar, between the bar buttons, and the text sits under them.
-const EYES_SCALE = 0.55;
-const EYES_TOP = 6;
+// The mark sits under the status bar, between the bar buttons, and the text sits under them.
+const MARK_SCALE = 0.55;
+const MARK_TOP = 6;
 const CAPTION_GAP = 10;
 const BOTTOM_PADDING = 26;
 /** The space between the edge of the block and the big title under it. */
 const TITLE_GAP = 12;
-// The block drops after the list has come in. Later lets the eyes look down before it rolls up.
+// The block drops after the list has come in. Later waits briefly before it rolls up.
 const DROP_DELAY_MS = 400;
 const LATER_DELAY_MS = 140;
-const HAPPY_MS = 1400;
-const LATER_FILL = "rgba(4, 0, 7, 0.09)";
-// While the notes show, the eyes look down at them.
-const READ_GAZE_Y = 10;
-const GAZE = { duration: 240, easing: SPLASH_EASE_OUT };
 
 export interface AppUpdateHeader {
   /** The update on the block. It stays while the block rolls up. */
@@ -62,7 +55,7 @@ export interface AppUpdateHeader {
 }
 
 /**
- * The state of the update header on home: the lilac block of the splash and the sign-in header,
+ * The state of the update header on home: the neutral block of the splash and the sign-in header,
  * which drops to a short header when an update comes and rolls up again when it goes.
  */
 export function useAppUpdateHeader(update: AppUpdate | null): AppUpdateHeader {
@@ -78,7 +71,7 @@ export function useAppUpdateHeader(update: AppUpdate | null): AppUpdateHeader {
   latest.current = update;
   const updateId = update?.id ?? null;
   const rest =
-    captionHeight > 0 ? barTop + EYES_TOP + EYES_HEIGHT * EYES_SCALE + CAPTION_GAP + captionHeight + BOTTOM_PADDING : 0;
+    captionHeight > 0 ? barTop + MARK_TOP + MARK_HEIGHT * MARK_SCALE + CAPTION_GAP + captionHeight + BOTTOM_PADDING : 0;
 
   useEffect(() => {
     if (updateId) setShown(latest.current);
@@ -144,7 +137,7 @@ export function AppUpdateSpacer({ header, headerHeight }: { header: AppUpdateHea
 }
 
 /**
- * The lilac block with the eyes, the text and the two actions. It draws above the scroll edge effect
+ * The neutral block with the mark, the text and the two actions. It draws above the scroll edge effect
  * and under the native bar buttons. The list scrolls it away, and a pull past the top stretches it.
  * Touches on the block go to the list below; only the buttons take them. What's new brings the edge
  * back to its rest, and the release notes slide down from behind it over the list.
@@ -166,31 +159,21 @@ export function AppUpdateBlock({
   const [size, setSize] = useState({ width: window.width, height: window.height });
   const reduced = useReducedMotion();
   const colors = useBloubColors();
-  const gazeX = useSharedValue(0);
-  const gazeY = useSharedValue(0);
-  const [mood, setMood] = useState<BloubMood>("idle");
+  const [leaving, setLeaving] = useState(false);
   const [underStatusBar, setUnderStatusBar] = useState(false);
   const { shown, drop, rest, measure, expanded, setExpanded } = header;
   const open = useSharedValue(0);
   const { scrolled, headerHeight, barTop } = scroll;
   const span = size.height + BLOUB_RADIUS;
-  const leaving = shown !== null && mood === "down";
-
-  useEffect(() => {
-    if (mood !== "happy") return;
-    const timer = setTimeout(() => setMood("idle"), HAPPY_MS);
-    return () => clearTimeout(timer);
-  }, [mood]);
-  // Another update starts with eyes that look ahead.
+  // A new update starts with its actions enabled.
   const shownId = shown?.id;
   useEffect(() => {
-    if (shownId) setMood("idle");
+    if (shownId) setLeaving(false);
   }, [shownId]);
 
   useEffect(() => {
     open.set(reduced ? (expanded ? 1 : 0) : withTiming(expanded ? 1 : 0, BLOUB_MOVE));
-    gazeY.set(withTiming(expanded ? READ_GAZE_Y : 0, GAZE));
-  }, [expanded, gazeY, open, reduced]);
+  }, [expanded, open, reduced]);
   // Android Back closes What's new before it leaves home.
   useEffect(() => {
     if (!expanded) return;
@@ -237,7 +220,6 @@ export function AppUpdateBlock({
   const ready = update.kind === "ready";
   const install = () => {
     void haptics.impact("light");
-    setMood("happy");
     // The reload screen has the color of the splash, so the restart reads as the app opening.
     installAppUpdate(update, colors.dark ? colors.dimBody : colors.body).catch((error: unknown) => {
       const { t: text } = currentText();
@@ -252,11 +234,11 @@ export function AppUpdateBlock({
   const later = () => {
     void haptics.impact("soft");
     setExpanded(false);
-    setMood("down");
+    setLeaving(true);
     void dismissAppUpdate(update).catch(() => undefined);
   };
-  const eyesTop = barTop + EYES_TOP + (EYES_HEIGHT * EYES_SCALE - EYES_HEIGHT) / 2;
-  const captionTop = barTop + EYES_TOP + EYES_HEIGHT * EYES_SCALE + CAPTION_GAP;
+  const markTop = barTop + MARK_TOP + (MARK_HEIGHT * MARK_SCALE - MARK_HEIGHT) / 2;
+  const captionTop = barTop + MARK_TOP + MARK_HEIGHT * MARK_SCALE + CAPTION_GAP;
   const toggleNotes = () => {
     void haptics.impact("soft");
     setExpanded(!expanded);
@@ -277,7 +259,7 @@ export function AppUpdateBlock({
         )
       }
     >
-      {underStatusBar && !hidden ? <StatusBar style="dark" /> : null}
+      {underStatusBar && !hidden ? <StatusBar style={colors.dark ? "light" : "dark"} /> : null}
       {/* Under the block, so the notes slide out from behind its edge. */}
       {ready || rest === 0 ? null : (
         <AppUpdateNotes
@@ -305,15 +287,15 @@ export function AppUpdateBlock({
           accessibilityElementsHidden
           importantForAccessibility="no-hide-descendants"
           style={[
-            styles.eyes,
+            styles.mark,
             {
-              top: eyesTop,
-              left: (size.width - EYES_WIDTH) / 2,
-              transform: [{ scale: EYES_SCALE }],
+              top: markTop,
+              left: (size.width - MARK_WIDTH) / 2,
+              transform: [{ scale: MARK_SCALE }],
             },
           ]}
         >
-          <BloubEyes mood={mood} active={!hidden} reduced={reduced} gazeX={gazeX} gazeY={gazeY} eyeColor={colors.eye} />
+          <StageMark mood="idle" />
         </View>
         <View
           pointerEvents="box-none"
@@ -338,10 +320,10 @@ export function AppUpdateBlock({
               size="sm"
               variant="ghost"
               feedbackVariant="scale"
-              style={[styles.action, { backgroundColor: colors.eye }]}
+              style={[styles.action, { backgroundColor: colors.action }]}
               onPress={install}
             >
-              <Button.Label className="font-sans font-semibold" style={{ color: colors.body }}>
+              <Button.Label className="font-sans font-semibold" style={{ color: colors.onAction }}>
                 {t("mobile.app.update.install")}
               </Button.Label>
             </Button>
@@ -349,7 +331,7 @@ export function AppUpdateBlock({
               size="sm"
               variant="ghost"
               feedbackVariant="scale"
-              style={[styles.action, { backgroundColor: LATER_FILL }]}
+              style={[styles.action, { backgroundColor: colors.control }]}
               onPress={later}
             >
               <Button.Label className="font-sans font-semibold" style={{ color: colors.eye }}>
@@ -390,6 +372,6 @@ const styles = StyleSheet.create({
     borderCurve: "continuous",
   },
   glow: { position: "absolute", left: 0, right: 0, top: 0 },
-  eyes: { position: "absolute", width: EYES_WIDTH, height: EYES_HEIGHT },
+  mark: { position: "absolute", width: MARK_WIDTH, height: MARK_HEIGHT },
   action: { height: 40, borderRadius: 999, paddingHorizontal: 18 },
 });

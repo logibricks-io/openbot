@@ -164,7 +164,7 @@ export const messages = {
 
   "workflow.output.title": "出力",
   "workflow.output.name": "出力",
-  "workflow.output.channel.openbot": "OpenBot",
+  "workflow.output.channel.openbot": "LogiBricks Workspace",
   "workflow.output.channel.search": "チャンネルを検索",
   "workflow.output.postsAs": "投稿の形式",
   "workflow.output.postsAsNote": "メモ（タスクは開始されません）",
@@ -260,8 +260,8 @@ export const messages = {
   "workflow.github.filter.branch": "ベースブランチを指定",
   "workflow.github.filter.titleValue": "タイトルに「{text}」を含む",
   "workflow.github.filter.branchValue": "ベースブランチが {branch}",
-  "workflow.github.alert.missing": "OpenBot は GitHub 上の {repository} を参照できません。",
-  "workflow.github.alert.readOnly": "OpenBot は {repository} の Issue とプルリクエストを変更できません。",
+  "workflow.github.alert.missing": "LogiBricks Workspace は GitHub 上の {repository} を参照できません。",
+  "workflow.github.alert.readOnly": "LogiBricks Workspace は {repository} の Issue とプルリクエストを変更できません。",
   "workflow.github.alert.eventsOff": "GitHub はまだ {repository} のイベントを送信していません。",
   "workflow.github.alert.noEvent":
     "トリガーが GitHub イベントではありません。リポジトリを選択し、番号は入力から取得してください。",
@@ -269,7 +269,7 @@ export const messages = {
     "{action} はプルリクエストでのみ使えます。このトリガーは Issue で開始します。",
   "workflow.github.history.name": "イベント",
   "workflow.github.history.none": "なし",
-  "workflow.github.history.offline": "OpenBot はオフラインでした",
+  "workflow.github.history.offline": "LogiBricks Workspace はオフラインでした",
   "workflow.github.history.waitingGroup": "待機中",
   "workflow.github.history.startedGroup": "開始した実行",
   "workflow.github.history.skippedGroup": "スキップ",
@@ -479,9 +479,9 @@ export const messages = {
   "workflow.canvas.version.run": "実行前",
   "workflow.canvas.deleteUndo.title": "{name} を削除しました",
   "workflow.canvas.deleteUndo.action": "元に戻す",
-  "workflow.page.failed": "OpenBot で実行できませんでした。もう一度お試しください。",
+  "workflow.page.failed": "LogiBricks Workspace で実行できませんでした。もう一度お試しください。",
   "workflow.page.conflict": "別のデバイスで変更されました。元に戻すと編集内容を復元できます。",
   "workflow.page.needsNewerApp":
-    "このワークフローには新しいバージョンの OpenBot のステップがあります。変更するには OpenBot を更新してください。",
+    "このワークフローには新しいバージョンの LogiBricks Workspace のステップがあります。変更するには LogiBricks Workspace を更新してください。",
   "workflow.page.manageOnly": "このワークフローを変更するには、各エージェントの管理アクセスが必要です。",
 } as const satisfies PartialTranslation<typeof source>;

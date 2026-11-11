@@ -2,7 +2,8 @@ import type { PartialTranslation } from "../../../message";
 import type { messages as source } from "../../en/mobile/workflow";
 
 export const messages = {
-  "mobile.workflow.unsupported": "Actualiza OpenBot en este servidor para usar flujos de trabajo en tu teléfono.",
+  "mobile.workflow.unsupported":
+    "Actualiza LogiBricks Workspace en este servidor para usar flujos de trabajo en tu teléfono.",
   "mobile.workflow.offline": "El servidor está sin conexión. Los flujos de trabajo aparecen cuando se conecta.",
   "mobile.workflow.list.loading": "Cargando…",
   "mobile.workflow.list.loadFailed": "No se pudieron cargar los flujos de trabajo.",
@@ -21,7 +22,7 @@ export const messages = {
   "mobile.workflow.action.edit": "Editar",
   "mobile.workflow.alert.runFailedTitle": "No se pudo iniciar el flujo de trabajo",
   "mobile.workflow.alert.runFailedBody": "El servidor no inició la ejecución. Inténtalo de nuevo.",
-  "mobile.workflow.alert.tryAgain": "OpenBot no pudo hacerlo. Inténtalo de nuevo.",
+  "mobile.workflow.alert.tryAgain": "LogiBricks Workspace no pudo hacerlo. Inténtalo de nuevo.",
   "mobile.workflow.drawer.needYou": { one: "{count} te necesita", other: "{count} te necesitan" },
   "mobile.workflow.drawer.running": { one: "{count} en ejecución", other: "{count} en ejecución" },
   "mobile.workflow.drawer.review": "Te necesita · toca para revisar",
@@ -33,7 +34,7 @@ export const messages = {
   "mobile.workflow.detail.loadFailed": "No se pudo cargar el flujo de trabajo.",
   "mobile.workflow.detail.starting": "Iniciando…",
   "mobile.workflow.detail.newerApp":
-    "Este flujo de trabajo tiene pasos de una versión más reciente de OpenBot. Actualiza OpenBot en tu teléfono para cambiarlo.",
+    "Este flujo de trabajo tiene pasos de una versión más reciente de LogiBricks Workspace. Actualiza LogiBricks Workspace en tu teléfono para cambiarlo.",
   "mobile.workflow.detail.waits": "La ejecución {number} te espera. Revisar",
   "mobile.workflow.detail.canvasOrder": "Los pasos se muestran de izquierda a derecha, como en el lienzo.",
   "mobile.workflow.detail.trigger": "Activador",
@@ -69,7 +70,7 @@ export const messages = {
   "mobile.workflow.trigger.webhook": "Webhook",
   "mobile.workflow.trigger.webhookHint": "Se ejecuta cuando su dirección recibe una solicitud.",
   "mobile.workflow.trigger.message": "Mensaje",
-  "mobile.workflow.trigger.messageHint": "Cambia este activador en OpenBot en tu ordenador.",
+  "mobile.workflow.trigger.messageHint": "Cambia este activador en LogiBricks Workspace en tu ordenador.",
   "mobile.workflow.trigger.github": "GitHub",
   "mobile.workflow.trigger.githubHint": "Se ejecuta cuando ocurre algo en un repositorio de GitHub.",
   "mobile.workflow.trigger.discord": "Discord",
@@ -94,7 +95,7 @@ export const messages = {
   "mobile.workflow.webhook.secretFailed": "No se pudo crear un secreto",
   "mobile.workflow.output.notify": "Notificación",
   "mobile.workflow.output.channel": "Lugar de mensajería",
-  "mobile.workflow.output.chatChannel": "Canal de OpenBot",
+  "mobile.workflow.output.chatChannel": "Canal de LogiBricks Workspace",
   "mobile.workflow.output.file": "Archivo",
   "mobile.workflow.status.running": "En ejecución",
   "mobile.workflow.status.approval": "Te espera",
@@ -115,7 +116,7 @@ export const messages = {
   "mobile.workflow.step.questionDefault": "Aprueba para continuar.",
   "mobile.workflow.step.textEmpty": "Sin texto",
   "mobile.workflow.step.textPlaceholder": "Texto para el paso siguiente",
-  "mobile.workflow.step.computerOnly": "Cambia este paso en OpenBot en tu ordenador.",
+  "mobile.workflow.step.computerOnly": "Cambia este paso en LogiBricks Workspace en tu ordenador.",
   "mobile.workflow.step.gone": "Este paso ya no está en el flujo de trabajo.",
   "mobile.workflow.step.agent": "Agente",
   "mobile.workflow.step.agentHint": "El agente hace la tarea con la salida del paso anterior.",
@@ -134,8 +135,9 @@ export const messages = {
   "mobile.workflow.step.text": "Texto",
   "mobile.workflow.step.sendTo": "Enviar a",
   "mobile.workflow.step.channelHint":
-    "Un propietario o administrador elige el lugar de mensajería en OpenBot en el ordenador.",
-  "mobile.workflow.step.chatChannelHint": "Un propietario o administrador elige el canal en OpenBot en el ordenador.",
+    "Un propietario o administrador elige el lugar de mensajería en LogiBricks Workspace en el ordenador.",
+  "mobile.workflow.step.chatChannelHint":
+    "Un propietario o administrador elige el canal en LogiBricks Workspace en el ordenador.",
   "mobile.workflow.problem.noTitle": "Escribe un nombre.",
   "mobile.workflow.problem.noAgent": "Elige un agente",
   "mobile.workflow.problem.agentGone": "El agente no está disponible. Elige un agente",
@@ -156,7 +158,7 @@ export const messages = {
   "mobile.workflow.add.prompt": "Texto fijo para el paso siguiente.",
   "mobile.workflow.add.output": "Te envía el resultado.",
   "mobile.workflow.add.oneCondition":
-    "En el teléfono, un flujo de trabajo tiene una condición. Para más rutas, usa OpenBot en tu ordenador.",
+    "En el teléfono, un flujo de trabajo tiene una condición. Para más rutas, usa LogiBricks Workspace en tu ordenador.",
   "mobile.workflow.editor.title": "Editar flujo",
   "mobile.workflow.editor.newTitle": "Nuevo flujo",
   "mobile.workflow.editor.step": "Paso",
@@ -165,7 +167,7 @@ export const messages = {
   "mobile.workflow.editor.create": "Crear flujo",
   "mobile.workflow.editor.saveFailed": "No se pudo guardar el flujo de trabajo.",
   "mobile.workflow.editor.fieldsOnly":
-    "Este flujo de trabajo tiene una forma que el teléfono no puede mostrar como lista. Aquí puedes cambiar cada paso. Para añadir, mover o eliminar pasos, usa OpenBot en tu ordenador.",
+    "Este flujo de trabajo tiene una forma que el teléfono no puede mostrar como lista. Aquí puedes cambiar cada paso. Para añadir, mover o eliminar pasos, usa LogiBricks Workspace en tu ordenador.",
   "mobile.workflow.editor.annotationsKept": "Las notas y los dibujos del lienzo se mantienen como están.",
   "mobile.workflow.editor.addStep": "Añadir paso",
   "mobile.workflow.editor.addAfter": "Añadir paso después",
@@ -241,7 +243,7 @@ export const messages = {
     "El flujo de trabajo cambia a esta versión para cada miembro. El servidor guarda el flujo actual como una versión.",
   "mobile.workflow.version.restoreFailed": "No se pudo restaurar la versión",
   "mobile.workflow.github.unsupported":
-    "Actualiza OpenBot en este servidor para usar GitHub en flujos de trabajo en tu teléfono.",
+    "Actualiza LogiBricks Workspace en este servidor para usar GitHub en flujos de trabajo en tu teléfono.",
   "mobile.workflow.github.summary": "{repository} · {event}",
   "mobile.workflow.github.adminOnly": "Un propietario o administrador del servidor cambia los pasos de GitHub.",
   "mobile.workflow.github.catalogFailed": "No se pudieron cargar los repositorios de GitHub del servidor.",
@@ -276,8 +278,9 @@ export const messages = {
   "mobile.workflow.github.filter.firstTime": "Primera contribución",
   "mobile.workflow.github.filter.title": "Título contiene",
   "mobile.workflow.github.filter.branch": "Rama base es",
-  "mobile.workflow.github.alert.missing": "OpenBot no puede ver {repository} en GitHub.",
-  "mobile.workflow.github.alert.readOnly": "OpenBot no puede cambiar incidencias ni pull requests en {repository}.",
+  "mobile.workflow.github.alert.missing": "LogiBricks Workspace no puede ver {repository} en GitHub.",
+  "mobile.workflow.github.alert.readOnly":
+    "LogiBricks Workspace no puede cambiar incidencias ni pull requests en {repository}.",
   "mobile.workflow.github.alert.eventsOff": "GitHub aún no envía eventos de {repository}.",
   "mobile.workflow.github.alert.noEvent":
     "El activador no es un evento de GitHub. Elige un repositorio y toma el número de la entrada.",
@@ -292,7 +295,7 @@ export const messages = {
   "mobile.workflow.github.history.all": "Ver todos los eventos",
   "mobile.workflow.github.history.none": "Aún no hay eventos.",
   "mobile.workflow.github.history.loadFailed": "No se pudieron cargar los eventos de GitHub.",
-  "mobile.workflow.github.history.offline": "OpenBot estaba sin conexión",
+  "mobile.workflow.github.history.offline": "LogiBricks Workspace estaba sin conexión",
   "mobile.workflow.github.history.waitingGroup": "En espera",
   "mobile.workflow.github.history.startedGroup": "Ejecuciones iniciadas",
   "mobile.workflow.github.history.skippedGroup": "Omitidos",
@@ -335,8 +338,9 @@ export const messages = {
   "mobile.workflow.github.reason.completed": "Como completada",
   "mobile.workflow.github.reason.notPlanned": "Como no planificada",
   "mobile.workflow.discord.hostOnly":
-    "Solo el ordenador que ejecuta OpenBot tiene los servidores de Discord. Cambia este paso en OpenBot en ese ordenador.",
-  "mobile.workflow.discord.triggerComputerOnly": "Cambia este disparador en OpenBot en el ordenador que lo ejecuta.",
+    "Solo el ordenador que ejecuta LogiBricks Workspace tiene los servidores de Discord. Cambia este paso en LogiBricks Workspace en ese ordenador.",
+  "mobile.workflow.discord.triggerComputerOnly":
+    "Cambia este disparador en LogiBricks Workspace en el ordenador que lo ejecuta.",
   "mobile.workflow.discord.outputSummary": "Discord · {action}",
   "mobile.workflow.discord.server": "Servidor",
   "mobile.workflow.discord.event": "Evento",
@@ -362,7 +366,7 @@ export const messages = {
   "mobile.workflow.slack.outputSummary": "Slack · {action}",
   "mobile.workflow.slack.action.reply": "Responder en el hilo",
   "mobile.workflow.telegram.hostOnly":
-    "Solo el ordenador que ejecuta OpenBot tiene los chats de Telegram. Cambia este paso en OpenBot en ese ordenador.",
+    "Solo el ordenador que ejecuta LogiBricks Workspace tiene los chats de Telegram. Cambia este paso en LogiBricks Workspace en ese ordenador.",
   "mobile.workflow.telegram.outputSummary": "Telegram · {action}",
   "mobile.workflow.telegram.chat": "Chat",
   "mobile.workflow.telegram.anyChat": "Cualquier chat vinculado",
@@ -382,7 +386,7 @@ export const messages = {
   "mobile.workflow.chats.adminOnly": "Solo un propietario o administrador puede cambiar este paso.",
   "mobile.workflow.chats.loadFailed": "Los chats de este servidor no se cargaron. Inténtalo de nuevo más tarde.",
   "mobile.workflow.slack.hostOnly":
-    "Solo el ordenador que ejecuta OpenBot tiene los espacios de trabajo de Slack. Cambia este paso en OpenBot en ese ordenador.",
+    "Solo el ordenador que ejecuta LogiBricks Workspace tiene los espacios de trabajo de Slack. Cambia este paso en LogiBricks Workspace en ese ordenador.",
   "mobile.workflow.slack.workspace": "Espacio de trabajo",
   "mobile.workflow.slack.chooseWorkspace": "Elegir espacio de trabajo",
   "mobile.workflow.slack.oneWorkspace": "Un espacio de trabajo",

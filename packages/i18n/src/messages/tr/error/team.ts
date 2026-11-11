@@ -9,7 +9,7 @@ export const messages = {
   "error.team.alreadyConfigured": "Ekip sunucusu zaten yapılandırılmış.",
   "error.team.identityCreateFailed": "Ekip kimliği oluşturulamadı.",
   "error.team.accountChangedDuringCreate": "Bu sunucu oluşturulurken oturum açmış hesap değişti.",
-  "error.team.notConfigured": "Bu OpenBot yapılandırılmamış.",
+  "error.team.notConfigured": "Bu LogiBricks Workspace yapılandırılmamış.",
   "error.team.keyRotationMissing": "Bekleyen bir sunucu anahtarı değişikliği yok.",
   "error.team.serverNotActive": "Bu sunucu artık oturum açmış hesap için etkin olan sunucu değil.",
   "error.team.logoInvalid": "512 KB'a kadar geçerli bir PNG, JPEG veya WebP görseli seçin.",
@@ -45,17 +45,18 @@ export const messages = {
   "error.team.usernameInvalid": "Kullanıcı adı 3 ila 32 harf, rakam, nokta, kısa çizgi veya alt çizgi içermelidir.",
   "error.team.passwordLength": "Şifre 12 ila 256 karakter içermelidir.",
   "error.team.bindFailed": "Ekip API'si bağlanamadı.",
-  "error.team.signInRequired": "OpenBot oturumu açılması gereklidir.",
+  "error.team.signInRequired": "LogiBricks Workspace oturumu açılması gereklidir.",
   "error.team.authenticationRequired": "Kimlik doğrulaması gereklidir.",
   "error.team.agentNotFound": "Ajan bulunamadı.",
   "error.team.routeNotFound": "Rota bulunamadı.",
   "error.team.requestFailed": "İstek başarısız oldu.",
   "error.team.tooManySignInAttempts": "Çok fazla oturum açma denemesi. Daha sonra tekrar deneyin.",
-  "error.team.clientUpdateRequired": "Bu ana makineye bağlanmadan önce bu OpenBot istemcisini güncelleyin.",
-  "error.team.hostUpdateRequired": "Bağlanmadan önce ana makinedeki OpenBot'u güncelleyin.",
+  "error.team.clientUpdateRequired":
+    "Bu ana makineye bağlanmadan önce bu LogiBricks Workspace istemcisini güncelleyin.",
+  "error.team.hostUpdateRequired": "Bağlanmadan önce ana makinedeki LogiBricks Workspace'i güncelleyin.",
   "error.team.sidebarLayoutUnavailable": "Kenar çubuğu düzeni kullanılamıyor.",
   "error.team.providersUnsupported": "Sağlayıcı ayarları bu bağlantı tarafından desteklenmiyor.",
-  "error.team.providerNotManaged": "OpenBot bu sağlayıcının CLI aracını yönetmiyor.",
+  "error.team.providerNotManaged": "LogiBricks Workspace bu sağlayıcının CLI aracını yönetmiyor.",
   "error.team.channelsUnsupported": "Kanal sohbetleri bu bağlantı tarafından desteklenmiyor.",
   "error.team.channelContextUnsupported": "Bu bağlantı kanalda yeni konuşmayı veya sıkıştırmayı desteklemiyor.",
   "error.team.channelPictureUnsupported": "Kanal resimleri bu bağlantı tarafından desteklenmiyor.",
@@ -80,9 +81,9 @@ export const messages = {
   "error.team.providerDetectionUnsupported": "Bu bağlantı sunucunun model sunucularını ve ajanlarını bulamaz.",
   "error.team.sidebarFoldersUnsupported": "Klasör içinde klasör bu bağlantı tarafından desteklenmiyor.",
   "error.team.agentNotificationLevelsUnsupported":
-    "Bu sunucu her ajan için kendi bildirim düzeyinizi saklayamıyor. Sunucuyu çalıştıran bilgisayarda OpenBot'u güncelleyin.",
+    "Bu sunucu her ajan için kendi bildirim düzeyinizi saklayamıyor. Sunucuyu çalıştıran bilgisayarda LogiBricks Workspace'i güncelleyin.",
   "error.team.sidebarPinsUnsupported":
-    "Bu sunucu sabitlenmiş sohbetlerinizi tüm cihazlarınız için saklayamaz. Sunucuyu çalıştıran bilgisayarda OpenBot'u güncelleyin.",
+    "Bu sunucu sabitlenmiş sohbetlerinizi tüm cihazlarınız için saklayamaz. Sunucuyu çalıştıran bilgisayarda LogiBricks Workspace'i güncelleyin.",
   "error.team.agentInstructionsUnsupported": "Ajan talimatlarını düzenleme bu bağlantı tarafından desteklenmiyor.",
   "error.team.agentPublishUnsupported": "Ajan yayımlama bu bağlantı tarafından desteklenmiyor.",
   "error.team.agentUpdateUnsupported": "Ajan güncelleme bu bağlantı tarafından desteklenmiyor.",
@@ -94,9 +95,9 @@ export const messages = {
   "error.team.threadMessageSearchUnsupported": "Yan konularda arama bu bağlantı tarafından desteklenmiyor.",
   "error.team.sideQuestionUnsupported": "Yan sorular bu bağlantı tarafından desteklenmiyor.",
   "error.team.liveVoiceUnsupported":
-    "Bu sunucu Codex canlı sesi desteklemiyor. Sunucuyu çalıştıran bilgisayardaki OpenBot'u güncelleyin.",
+    "Bu sunucu Codex canlı sesi desteklemiyor. Sunucuyu çalıştıran bilgisayardaki LogiBricks Workspace'u güncelleyin.",
   "error.team.routineFlowsUnsupported":
-    "Bu sunucu rutin akışlarını desteklemiyor. Sunucuyu çalıştıran bilgisayardaki OpenBot'u güncelleyin.",
+    "Bu sunucu rutin akışlarını desteklemiyor. Sunucuyu çalıştıran bilgisayardaki LogiBricks Workspace'i güncelleyin.",
   "error.team.routineCanvasTooLarge":
     "Bu rutin tuvali bu cihaza gönderilemeyecek kadar büyük. Sunucuyu çalıştıran bilgisayarda rutin talimatlarını kısaltın.",
   "error.team.conversationPageTooLarge":
@@ -133,7 +134,7 @@ export const messages = {
   "error.team.browserSessionNotFound": "Tarayıcı görünümü oturumu bulunamadı.",
   "error.team.mcpUnsupported": "MCP sunucuları bu bağlantı tarafından desteklenmiyor.",
   "error.team.mcpServerListNeedsUpdate":
-    "Bu sunucuda {limit} sayısından fazla MCP sunucusu kullanmak için bu cihazdaki OpenBot'u güncelleyin.",
+    "Bu sunucuda {limit} sayısından fazla MCP sunucusu kullanmak için bu cihazdaki LogiBricks Workspace'u güncelleyin.",
   "error.team.storageUnsupported": "Depolama bu bağlantı tarafından desteklenmiyor.",
   "error.team.machineResourcesUnsupported": "Makine kullanımı bu bağlantı tarafından desteklenmiyor.",
   "error.team.machineAlertMemberInvalid": "Makine uyarılarını yalnızca bu sunucunun sahibi veya yöneticisi alabilir.",
@@ -161,11 +162,13 @@ export const messages = {
   "error.team.mcpServerNotYours": "Bu MCP sunucusunu yalnızca onu ekleyen kişi veya bir yönetici değiştirebilir.",
   "error.team.ownerRequired": "Bunu yalnızca bu sunucunun sahibi yapabilir.",
   "error.team.requestTooLarge": "İstek gövdesi çok büyük.",
-  "error.team.signInRelayUnsupported": "Bu sunucu oturum açmaları aktaramaz. Ana makinedeki OpenBot'u güncelleyin.",
+  "error.team.signInRelayUnsupported":
+    "Bu sunucu oturum açmaları aktaramaz. Ana makinedeki LogiBricks Workspace'i güncelleyin.",
   "error.team.connectorsUnsupported":
-    "Bu sunucunun bağlantıları buradan yönetilemez. Ana makinedeki OpenBot'u güncelleyin.",
-  "error.team.discordAccessUnsupported": "Bu sunucu Discord rollerini ayarlayamıyor. Sunucudaki OpenBot'u güncelleyin.",
-  "error.team.connectorPageRefused": "Sunucu, OpenBot'un açmadığı bir sayfa gönderdi.",
+    "Bu sunucunun bağlantıları buradan yönetilemez. Ana makinedeki LogiBricks Workspace'i güncelleyin.",
+  "error.team.discordAccessUnsupported":
+    "Bu sunucu Discord rollerini ayarlayamıyor. Sunucudaki LogiBricks Workspace'i güncelleyin.",
+  "error.team.connectorPageRefused": "Sunucu, LogiBricks Workspace'in açmadığı bir sayfa gönderdi.",
   "error.team.signInRelayUnknown": "Bu oturum açma sona erdi veya mevcut değil.",
   "error.team.signInRelayUsed": "Bu oturum açma zaten gönderildi.",
   "error.team.signInRelayMismatch": "Bu adres bu oturum açmaya ait değil.",

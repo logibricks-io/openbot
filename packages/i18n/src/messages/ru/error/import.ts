@@ -5,7 +5,7 @@ export const messages = {
   "error.import.manifestNotJson": "{manifest} — некорректный JSON.",
   "error.import.notAgentExport": "{manifest} — не экспорт агента OpenBot.",
   "error.import.newerExportSkill":
-    "Этот экспорт создан более новым навыком экспорта. Обновите OpenBot и повторите попытку.",
+    "Этот экспорт создан более новым навыком экспорта. Обновите LogiBricks Workspace и повторите попытку.",
   "error.import.noAgents": "В экспорте нет агентов.",
   "error.import.tooManyAgents": "В экспорте больше {limit} агентов.",
   "error.import.tooManyChannels": "В экспорте больше {limit} каналов.",
@@ -50,7 +50,7 @@ export const messages = {
   "error.import.uploadDiskSpace":
     "Для экспорта нужно {size} ГБ свободного места на сервере, а свободно {free} ГБ. Освободите место на сервере и выберите экспорт снова.",
   "error.import.remoteZipTooLargeOldHost":
-    "Этот сервер принимает экспорт размером до 100 МБ. Обновите OpenBot на сервере, чтобы импортировать экспорт большего размера.",
+    "Этот сервер принимает экспорт размером до 100 МБ. Обновите LogiBricks Workspace на сервере, чтобы импортировать экспорт большего размера.",
   "error.import.skillKept":
     "{name}: на сервере уже есть навык «{skill}», поэтому агент использует его. Попросите администратора обновить его.",
   "error.import.skillRenamed":

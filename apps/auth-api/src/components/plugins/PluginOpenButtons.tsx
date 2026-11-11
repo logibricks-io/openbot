@@ -1,5 +1,6 @@
 import { Portal } from "@solidjs/web";
 import { createSignal, createUniqueId, onCleanup, Show } from "solid-js";
+import { createCompanyReleaseAvailability } from "../../lib/company-release-availability";
 import { DOWNLOAD_PLATFORMS, detectDownloadPlatform } from "../../lib/download-platforms";
 import { Button } from "../ui/button";
 
@@ -34,11 +35,11 @@ const ENGLISH_TEXT: PluginOpenButtonsText = {
 const DOWNLOAD_HINT_DELAY_MS = 1200;
 
 /**
- * `Open in OpenBot` (or the label the page gives), and the download offer that appears only after it is pressed.
+ * `Open in LogiBricks Workspace` (or the label the page gives), and the download offer that appears only after it is pressed.
  *
  * The page cannot ask whether the app is installed, and it must not try: a hidden frame that probes
  * the scheme is a fingerprint. So the offer is a reveal on a timer, cancelled when the tab is hidden
- * - which is what happens when the app really does take over. A visitor who has OpenBot never sees
+ * - which is what happens when the app really does take over. A visitor who has LogiBricks Workspace never sees
  * it, and a visitor who does not sees it a moment later. Neither is redirected anywhere.
  *
  * The offer is a modal `<dialog>` rather than a line on the page. A visitor sees it only after the
@@ -51,6 +52,7 @@ const DOWNLOAD_HINT_DELAY_MS = 1200;
  * a listing cannot put another link behind this button. The plugin and shared agent pages use it.
  */
 export function PluginOpenButtons(props: PluginOpenButtonsProps) {
+  const releasesAvailable = createCompanyReleaseAvailability();
   const [showDownload, setShowDownload] = createSignal(false);
   const titleId = createUniqueId();
   let timer: ReturnType<typeof setTimeout> | undefined;
@@ -140,7 +142,14 @@ export function PluginOpenButtons(props: PluginOpenButtonsProps) {
               </button>
               {/* Where the dialog puts the focus, because it is the thing the visitor came for.
                   Without it the modal would open on `Not now`, which is the way out. */}
-              <Button autofocus href={platform().href} variant="primary" size="sm" icon="download">
+              <Button
+                autofocus
+                href={releasesAvailable() ? platform().href : undefined}
+                disabled={!releasesAvailable()}
+                variant="primary"
+                size="sm"
+                icon="download"
+              >
                 {text().download(platform().label)}
               </Button>
             </div>

@@ -10,12 +10,12 @@ export const messages = {
   "error.workflow.conditionBranch": "Cada conexión de una condición debe ser sí o no.",
   "error.workflow.duplicateEdge": "Estos dos pasos ya tienen esta conexión.",
   "error.workflow.serverTooOld":
-    "Este servidor no admite flujos de trabajo. Actualiza OpenBot en el ordenador que lo ejecuta.",
+    "Este servidor no admite flujos de trabajo. Actualiza LogiBricks Workspace en el ordenador que lo ejecuta.",
   "error.workflow.nodeUnsupported":
-    "Esta versión de OpenBot aún no puede ejecutar pasos de imagen, archivo ni mensaje.",
-  "error.workflow.interrupted": "OpenBot se detuvo mientras se ejecutaba este paso. Ejecútalo de nuevo.",
+    "Esta versión de LogiBricks Workspace aún no puede ejecutar pasos de imagen, archivo ni mensaje.",
+  "error.workflow.interrupted": "LogiBricks Workspace se detuvo mientras se ejecutaba este paso. Ejecútalo de nuevo.",
   "error.workflow.agentMissing": "Elige un agente para este paso.",
-  "error.workflow.handoffFailed": "OpenBot no pudo enviar este paso a su agente.",
+  "error.workflow.handoffFailed": "LogiBricks Workspace no pudo enviar este paso a su agente.",
   "error.workflow.agentStepEnded": "El mensaje al agente se eliminó antes de que respondiera.",
   "error.workflow.conditionUnclear": "El modelo no respondió sí o no.",
   "error.workflow.modelFailed": "El modelo no pudo responder. Ejecuta el paso de nuevo.",
@@ -27,7 +27,8 @@ export const messages = {
   "error.workflow.noDecision": "Este paso no espera una decisión.",
   "error.workflow.outputPlaceMissing": "Elige un lugar de mensajería para esta salida.",
   "error.workflow.outputChannelMissing": "Elige un canal para esta salida.",
-  "error.workflow.outputChannelFailed": "OpenBot no pudo publicar el resultado en el canal. Ejecuta el paso de nuevo.",
+  "error.workflow.outputChannelFailed":
+    "LogiBricks Workspace no pudo publicar el resultado en el canal. Ejecuta el paso de nuevo.",
   "error.workflow.discordNoMessage":
     "Esta salida actúa sobre el mensaje de Discord que inició la ejecución. Inicia la ejecución desde una mención en Discord o elige Publicar en canal.",
   "error.workflow.slackNoMessage":
@@ -64,7 +65,7 @@ export const messages = {
     "La aplicación de GitHub de OpenBot no puede cambiar este repositorio. Abre GitHub y dale acceso.",
   "error.workflow.githubLocked": "Esta conversación está bloqueada en GitHub.",
   "error.workflow.githubRefused": "GitHub rechazó el cambio: {detail}",
-  "error.workflow.githubUnreachable": "OpenBot no pudo conectar con GitHub. Ejecuta el paso de nuevo.",
+  "error.workflow.githubUnreachable": "LogiBricks Workspace no pudo conectar con GitHub. Ejecuta el paso de nuevo.",
   "error.workflow.githubUncertain":
     "El cambio se detuvo a medio camino. Puede que ya esté en GitHub. Revísalo antes de ejecutar el paso de nuevo.",
   "error.workflow.githubNoEvent":

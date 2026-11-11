@@ -40,7 +40,10 @@ export function SupportSettingsScreen() {
       return;
     }
     setSaving(true);
-    const file = new File(Paths.cache, `openbot-support-log-${new Date().toISOString().replace(/[:.]/gu, "-")}.txt`);
+    const file = new File(
+      Paths.cache,
+      `logibricks-workspace-support-log-${new Date().toISOString().replace(/[:.]/gu, "-")}.txt`,
+    );
     try {
       file.writeSync(supportLogFileText());
       await Sharing.shareAsync(file.uri, {

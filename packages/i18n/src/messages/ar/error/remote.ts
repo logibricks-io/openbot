@@ -17,10 +17,10 @@ export const messages = {
   "error.remote.sessionCapacity": "لدى المضيف بالفعل أربع جلسات نشطة.",
   "error.remote.linuxNeedsX11": "يحتاج سطح المكتب البعيد على Linux إلى جلسة X11. Wayland غير مدعوم.",
   "error.remote.runtimeMissing":
-    "بيئة تشغيل Sunshine وMoonlight Web مفقودة أو غير مدعومة على هذا المضيف. ثبّت إصدار OpenBot الكامل على Mac أو مضيف Windows x64 أو مضيف Linux x64، ثم أعد تشغيل OpenBot.",
+    "بيئة تشغيل Sunshine وMoonlight Web مفقودة أو غير مدعومة على هذا المضيف. ثبّت إصدار LogiBricks Workspace الكامل على Mac أو مضيف Windows x64 أو مضيف Linux x64، ثم أعد تشغيل LogiBricks Workspace.",
   "error.remote.testActive": "يوجد اختبار نشط لسطح المكتب البعيد. أعد المحاولة عند انتهائه.",
   "error.remote.screenRecordingDenied":
-    "لم يسمح المضيف لـ OpenBot بتسجيل شاشته. امنح إذن تسجيل الشاشة على المضيف، ثم أعد المحاولة.",
+    "لم يسمح المضيف لـ LogiBricks Workspace بتسجيل شاشته. امنح إذن تسجيل الشاشة على المضيف، ثم أعد المحاولة.",
   "error.remote.teamSessionExpired": "انتهت صلاحية جلسة الفريق.",
   "error.remote.finishTestBeforeSwitch": "أنهِ اختبار سطح المكتب البعيد قبل تبديل الشاشات.",
   "error.remote.displayNotFound": "الشاشة البعيدة غير موجودة.",
@@ -33,7 +33,7 @@ export const messages = {
   "error.remote.moonlightStartFailed":
     "لم يبدأ Moonlight Web على المضيف. راجع سجلات سطح المكتب البعيد على المضيف، ثم أعد المحاولة.",
   "error.remote.pairingFailed":
-    "تعذّر على Moonlight الاقتران مع Sunshine على المضيف. أعد المحاولة. إذا استمرت المشكلة، فأعد تشغيل OpenBot على المضيف.",
+    "تعذّر على Moonlight الاقتران مع Sunshine على المضيف. أعد المحاولة. إذا استمرت المشكلة، فأعد تشغيل LogiBricks Workspace على المضيف.",
   "error.remote.runtimeStartFailed":
     "لم تبدأ بيئة تشغيل سطح المكتب البعيد على المضيف. راجع سجلات سطح المكتب البعيد على المضيف، ثم أعد المحاولة.",
   "error.remote.hostUnreachable": "يتعذّر الوصول إلى المضيف.",
@@ -41,7 +41,7 @@ export const messages = {
   "error.remote.invalidData": "أعاد المضيف بيانات غير صالحة.",
   "error.remote.unsafeData": "أعاد المضيف بيانات لا يمكن لهذا التطبيق استخدامها بأمان.",
   "error.remote.requestFailedStatus": "فشل طلب الخادم البعيد ({status}).",
-  "error.remote.appUpdateRequired": "حدّث تطبيق OpenBot هذا قبل الاتصال بالمضيف.",
+  "error.remote.appUpdateRequired": "حدّث تطبيق LogiBricks Workspace هذا قبل الاتصال بالمضيف.",
   "error.remote.identityNotVerified": "تعذّر التحقق من هوية الخادم.",
   "error.remote.webRtcUnavailable": "نقل WebRTC غير متاح.",
   "error.remote.invalidCompatibility": "أعاد المضيف معلومات توافق غير صالحة.",
@@ -59,8 +59,8 @@ export const messages = {
   "error.remote.inviteAcceptedOtherHost": "قبلت خدمة الحسابات مضيفًا مختلفًا.",
   "error.remote.inviteIdentityChanged": "تغيّرت هوية مضيف الدعوة أثناء قبولها.",
   "error.remote.localServerRemove": "لا يمكن إزالة الخادم المحلي.",
-  "error.remote.desktopSetupHostUpdate": "حدّث OpenBot على المضيف للتحقق من إعداد سطح المكتب البعيد.",
-  "error.remote.desktopTestHostUpdate": "حدّث OpenBot على المضيف لاختبار إعداد سطح المكتب البعيد.",
+  "error.remote.desktopSetupHostUpdate": "حدّث LogiBricks Workspace على المضيف للتحقق من إعداد سطح المكتب البعيد.",
+  "error.remote.desktopTestHostUpdate": "حدّث LogiBricks Workspace على المضيف لاختبار إعداد سطح المكتب البعيد.",
   "error.remote.viewerProxyUnavailable": "وكيل العارض البعيد المحلي غير متاح.",
   "error.remote.viewerTransportInvalid": "نقل العارض البعيد غير صالح.",
   "error.remote.viewerProxyNoPort": "لم يحصل وكيل العارض البعيد المحلي على منفذ.",
@@ -157,7 +157,7 @@ export const messages = {
   "error.remote.signalInvalidMessage": "أعاد Signal رسالة غير صالحة.",
   "error.remote.sessionInvalid": "الجلسة البعيدة غير صالحة.",
   "error.remote.ticketInvalid": "تذكرة الاتصال غير صالحة.",
-  "error.remote.mobileUpdateRequired": "حدّث OpenBot Mobile أو تطبيق الحاسوب المكتبي قبل الاتصال.",
+  "error.remote.mobileUpdateRequired": "حدّث LogiBricks Workspace Mobile أو تطبيق الحاسوب المكتبي قبل الاتصال.",
   "error.remote.connectionStepFailed": "تعذّر إكمال خطوة الاتصال هذه.",
   "error.remote.signalNotConnected": "Signal غير متصل.",
   "error.remote.signalFrameUnreadable": "أرسل Signal إطارًا لا يستطيع هذا النظير قراءته.",
@@ -165,14 +165,15 @@ export const messages = {
   "error.remote.dataChannelFailed": "فشلت قناة {kind}.",
   "error.remote.hostBusy": "المضيف مشغول باتصال آخر. أعد المحاولة بعد لحظة.",
   "error.remote.signalPermissionDenied": "لا يملك حسابك وصولًا إلى هذا المضيف. اطلب الوصول من المالك.",
-  "error.remote.signalRateLimited": "محاولات اتصال كثيرة جدًا. سيعيد OpenBot المحاولة بعد {seconds} ثانية.",
-  "error.remote.signalProtocolError": "لا يتفق Signal وهذا التطبيق على بروتوكول الاتصال. حدّث OpenBot، ثم أعد المحاولة.",
+  "error.remote.signalRateLimited": "محاولات اتصال كثيرة جدًا. سيعيد LogiBricks Workspace المحاولة بعد {seconds} ثانية.",
+  "error.remote.signalProtocolError":
+    "لا يتفق Signal وهذا التطبيق على بروتوكول الاتصال. حدّث LogiBricks Workspace، ثم أعد المحاولة.",
   "error.remote.signalRefused": "رفض Signal الاتصال.",
   "error.remote.signalClosed": "أُغلق الاتصال بـ Signal قبل أن يرد المضيف.",
   "error.remote.relayUnavailable": "لم يرسل Signal أي خوادم ترحيل لهذا الاتصال. أعد المحاولة لاحقًا.",
   "error.remote.iceFailed": "تعذّر إنشاء اتصال مباشر بالمضيف. قد يحظره جدار حماية أو VPN أو وكيل.",
   "error.remote.iceDisconnected": "فُقد الاتصال المباشر بالمضيف.",
-  "error.remote.directoryUnreachable": "تعذّر على OpenBot الوصول إلى خدمة OpenBot. تحقق من اتصالك.",
+  "error.remote.directoryUnreachable": "تعذّر على LogiBricks Workspace الوصول إلى خدمة OpenBot. تحقق من اتصالك.",
   "error.remote.directoryTimeout": "لم ترد خدمة OpenBot في الوقت المحدد. أعد المحاولة.",
   "error.remote.inviteAlreadyUsed": "استُخدمت هذه الدعوة بالفعل. اطلب دعوة جديدة.",
   "error.remote.inviteNotFound": "هذه الدعوة غير موجودة أو انتهت صلاحيتها. اطلب دعوة جديدة.",
@@ -199,5 +200,5 @@ export const messages = {
     "حُذف الخادم على حاسوبه، لكن الحساب لا يزال يُدرجه. احذفه مرة أخرى لإزالته من الحساب.",
   "error.remote.localServerLimit": "يمكنك امتلاك {limit} خادم كحد أقصى على هذا الحاسوب. احذف واحدًا لإنشاء آخر.",
   "error.remote.localServersReadOnly":
-    "لا يستطيع هذا الإصدار من OpenBot قراءة قائمة الخوادم على هذا الحاسوب. حدّث OpenBot.",
+    "لا يستطيع هذا الإصدار من LogiBricks Workspace قراءة قائمة الخوادم على هذا الحاسوب. حدّث LogiBricks Workspace.",
 } as const satisfies PartialTranslation<typeof source>;

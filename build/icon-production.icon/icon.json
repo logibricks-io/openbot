@@ -2,33 +2,13 @@
   "fill-specializations": [
     {
       "value": {
-        "linear-gradient": ["display-p3:0.86726,0.73451,1.00000,1.00000", "display-p3:0.66522,0.56340,0.76704,1.00000"],
-        "orientation": {
-          "start": {
-            "x": 0.5,
-            "y": 0
-          },
-          "stop": {
-            "x": 0.5,
-            "y": 0.7
-          }
-        }
+        "solid": "srgb:0.96471,0.95294,0.92941,1.00000"
       }
     },
     {
       "appearance": "dark",
       "value": {
-        "linear-gradient": ["display-p3:0.11699,0.11737,0.11850,1.00000", "display-p3:0.07498,0.07395,0.07647,1.00000"],
-        "orientation": {
-          "start": {
-            "x": 0.5,
-            "y": 0
-          },
-          "stop": {
-            "x": 0.5,
-            "y": 0.7
-          }
-        }
+        "solid": "srgb:0.08235,0.08627,0.09412,1.00000"
       }
     }
   ],
@@ -44,40 +24,59 @@
             {
               "appearance": "dark",
               "value": {
-                "solid": "extended-gray:1.00000,1.00000"
+                "solid": "srgb:0.96471,0.95294,0.92941,1.00000"
               }
             }
           ],
           "glass-specializations": [
             {
-              "value": true
-            },
-            {
-              "appearance": "dark",
-              "value": true
-            },
-            {
-              "appearance": "tinted",
-              "value": true
+              "value": false
             }
           ],
           "hidden": false,
-          "image-name": "eyes.png",
-          "name": "eyes",
+          "image-name": "framework.svg",
+          "name": "framework",
           "opacity": 1,
           "position": {
-            "scale": 0.21,
-            "translation-in-points": [0, 0]
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "blend-mode": "normal",
+          "fill-specializations": [
+            {
+              "value": "automatic"
+            }
+          ],
+          "glass-specializations": [
+            {
+              "value": false
+            }
+          ],
+          "hidden": false,
+          "image-name": "active-module.svg",
+          "name": "active-module",
+          "opacity": 1,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
           }
         }
       ],
       "shadow": {
         "kind": "neutral",
-        "opacity": 0.5
+        "opacity": 0.15
       },
       "translucency": {
-        "enabled": true,
-        "value": 0.5
+        "enabled": false,
+        "value": 0.0
       }
     }
   ],

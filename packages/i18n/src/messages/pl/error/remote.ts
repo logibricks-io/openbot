@@ -17,10 +17,10 @@ export const messages = {
   "error.remote.sessionCapacity": "Host ma już cztery aktywne sesje.",
   "error.remote.linuxNeedsX11": "Zdalny pulpit w systemie Linux wymaga sesji X11. Wayland nie jest obsługiwany.",
   "error.remote.runtimeMissing":
-    "Brakuje środowiska Sunshine i Moonlight Web lub nie jest ono obsługiwane na tym hoście. Zainstaluj pełne wydanie OpenBot na Macu, hoście Windows x64 lub hoście Linux x64, a następnie uruchom ponownie OpenBot.",
+    "Brakuje środowiska Sunshine i Moonlight Web lub nie jest ono obsługiwane na tym hoście. Zainstaluj pełne wydanie LogiBricks Workspace na Macu, hoście Windows x64 lub hoście Linux x64, a następnie uruchom ponownie LogiBricks Workspace.",
   "error.remote.testActive": "Test zdalnego pulpitu jest aktywny. Spróbuj ponownie po jego zakończeniu.",
   "error.remote.screenRecordingDenied":
-    "Host nie zezwolił OpenBot na nagrywanie ekranu. Przyznaj na hoście uprawnienie do nagrywania ekranu, a następnie spróbuj ponownie.",
+    "Host nie zezwolił LogiBricks Workspace na nagrywanie ekranu. Przyznaj na hoście uprawnienie do nagrywania ekranu, a następnie spróbuj ponownie.",
   "error.remote.teamSessionExpired": "Sesja zespołu wygasła.",
   "error.remote.finishTestBeforeSwitch": "Zakończ test zdalnego pulpitu, zanim przełączysz ekran.",
   "error.remote.displayNotFound": "Nie znaleziono zdalnego ekranu.",
@@ -33,7 +33,7 @@ export const messages = {
   "error.remote.moonlightStartFailed":
     "Moonlight Web nie uruchomił się na hoście. Sprawdź logi zdalnego pulpitu na hoście, a następnie spróbuj ponownie.",
   "error.remote.pairingFailed":
-    "Moonlight nie mógł sparować się z Sunshine na hoście. Spróbuj ponownie. Jeśli problem nie ustąpi, uruchom ponownie OpenBot na hoście.",
+    "Moonlight nie mógł sparować się z Sunshine na hoście. Spróbuj ponownie. Jeśli problem nie ustąpi, uruchom ponownie LogiBricks Workspace na hoście.",
   "error.remote.runtimeStartFailed":
     "Środowisko zdalnego pulpitu nie uruchomiło się na hoście. Sprawdź logi zdalnego pulpitu na hoście, a następnie spróbuj ponownie.",
   "error.remote.hostUnreachable": "Host jest nieosiągalny.",
@@ -41,7 +41,7 @@ export const messages = {
   "error.remote.invalidData": "Host zwrócił nieprawidłowe dane.",
   "error.remote.unsafeData": "Host zwrócił dane, których ta aplikacja nie może bezpiecznie użyć.",
   "error.remote.requestFailedStatus": "Żądanie do zdalnego serwera nie powiodło się ({status}).",
-  "error.remote.appUpdateRequired": "Zaktualizuj tę aplikację OpenBot, zanim połączysz się z hostem.",
+  "error.remote.appUpdateRequired": "Zaktualizuj tę aplikację LogiBricks Workspace, zanim połączysz się z hostem.",
   "error.remote.identityNotVerified": "Nie udało się zweryfikować tożsamości serwera.",
   "error.remote.webRtcUnavailable": "Transport WebRTC jest niedostępny.",
   "error.remote.invalidCompatibility": "Host zwrócił nieprawidłowe informacje o zgodności.",
@@ -59,9 +59,10 @@ export const messages = {
   "error.remote.inviteAcceptedOtherHost": "Usługa kont zaakceptowała inny host.",
   "error.remote.inviteIdentityChanged": "Tożsamość hosta zaproszenia zmieniła się podczas akceptacji.",
   "error.remote.localServerRemove": "Nie można usunąć lokalnego serwera.",
-  "error.remote.desktopSetupHostUpdate": "Zaktualizuj OpenBot na hoście, aby sprawdzić konfigurację zdalnego pulpitu.",
+  "error.remote.desktopSetupHostUpdate":
+    "Zaktualizuj LogiBricks Workspace na hoście, aby sprawdzić konfigurację zdalnego pulpitu.",
   "error.remote.desktopTestHostUpdate":
-    "Zaktualizuj OpenBot na hoście, aby przetestować konfigurację zdalnego pulpitu.",
+    "Zaktualizuj LogiBricks Workspace na hoście, aby przetestować konfigurację zdalnego pulpitu.",
   "error.remote.viewerProxyUnavailable": "Lokalny serwer proxy zdalnego podglądu jest niedostępny.",
   "error.remote.viewerTransportInvalid": "Transport zdalnego podglądu jest nieprawidłowy.",
   "error.remote.viewerProxyNoPort": "Lokalny serwer proxy zdalnego podglądu nie otrzymał portu.",
@@ -160,7 +161,8 @@ export const messages = {
   "error.remote.signalInvalidMessage": "Signal zwrócił nieprawidłową wiadomość.",
   "error.remote.sessionInvalid": "Zdalna sesja jest nieprawidłowa.",
   "error.remote.ticketInvalid": "Bilet połączenia jest nieprawidłowy.",
-  "error.remote.mobileUpdateRequired": "Zaktualizuj OpenBot Mobile lub aplikację desktopową przed połączeniem.",
+  "error.remote.mobileUpdateRequired":
+    "Zaktualizuj LogiBricks Workspace Mobile lub aplikację desktopową przed połączeniem.",
   "error.remote.connectionStepFailed": "Nie udało się ukończyć tego kroku połączenia.",
   "error.remote.signalNotConnected": "Signal nie jest połączony.",
   "error.remote.signalFrameUnreadable": "Signal wysłał ramkę, której ten węzeł nie może odczytać.",
@@ -168,9 +170,10 @@ export const messages = {
   "error.remote.dataChannelFailed": "Kanał {kind} uległ awarii.",
   "error.remote.hostBusy": "Host obsługuje inne połączenie. Spróbuj ponownie za chwilę.",
   "error.remote.signalPermissionDenied": "Twoje konto nie ma dostępu do tego hosta. Poproś właściciela o dostęp.",
-  "error.remote.signalRateLimited": "Zbyt wiele prób połączenia. OpenBot spróbuje ponownie za {seconds} s.",
+  "error.remote.signalRateLimited":
+    "Zbyt wiele prób połączenia. LogiBricks Workspace spróbuje ponownie za {seconds} s.",
   "error.remote.signalProtocolError":
-    "Signal i ta aplikacja nie zgadzają się co do protokołu połączenia. Zaktualizuj OpenBot, a następnie spróbuj ponownie.",
+    "Signal i ta aplikacja nie zgadzają się co do protokołu połączenia. Zaktualizuj LogiBricks Workspace, a następnie spróbuj ponownie.",
   "error.remote.signalRefused": "Signal odrzucił połączenie.",
   "error.remote.signalClosed": "Połączenie z Signal zamknęło się, zanim host odpowiedział.",
   "error.remote.relayUnavailable":
@@ -178,7 +181,8 @@ export const messages = {
   "error.remote.iceFailed":
     "Nie udało się nawiązać bezpośredniego połączenia z hostem. Może je blokować zapora, VPN lub serwer proxy.",
   "error.remote.iceDisconnected": "Bezpośrednie połączenie z hostem zostało utracone.",
-  "error.remote.directoryUnreachable": "OpenBot nie mógł połączyć się z usługą OpenBot. Sprawdź połączenie.",
+  "error.remote.directoryUnreachable":
+    "LogiBricks Workspace nie mógł połączyć się z usługą OpenBot. Sprawdź połączenie.",
   "error.remote.directoryTimeout": "Usługa OpenBot nie odpowiedziała na czas. Spróbuj ponownie.",
   "error.remote.inviteAlreadyUsed": "To zaproszenie zostało już użyte. Poproś o nowe zaproszenie.",
   "error.remote.inviteNotFound": "To zaproszenie nie istnieje lub wygasło. Poproś o nowe zaproszenie.",

@@ -1,25 +1,24 @@
 import { useCSSVariable } from "uniwind";
 
 /**
- * The colors of the sign-in controls. The brand lavender of the logo marks focus, so the controls
- * match the Scan QR code button. `--openbot-border-strong` is almost invisible on the dark canvas,
- * so a control shows as a filled surface with a clear ring only when it has focus or a state.
+ * Sign-in controls use the shared action fill and its matching foreground.
+ * The logo keeps the fixed Clay accent, separate from these control colors.
  */
 export function useSignInColors() {
   const surface = useCSSVariable("--openbot-bg-control-active");
-  const brand = useCSSVariable("--openbot-logo-production");
-  const onBrand = useCSSVariable("--openbot-logo-eye");
+  const brand = useCSSVariable("--openbot-action");
+  const onBrand = useCSSVariable("--openbot-action-foreground");
   const text = useCSSVariable("--openbot-text-primary");
   const muted = useCSSVariable("--openbot-text-muted");
   const danger = useCSSVariable("--openbot-danger");
   const success = useCSSVariable("--openbot-success");
   const radius = useCSSVariable("--openbot-radius-lg");
   return {
-    surface: String(surface ?? "#2a2a2a"),
-    brand: String(brand ?? "#d6adf2"),
-    onBrand: String(onBrand ?? "#040007"),
-    text: String(text ?? "#ffffff"),
-    muted: String(muted ?? "#979797"),
+    surface: String(surface ?? "#333438"),
+    brand: String(brand ?? "#f0a182"),
+    onBrand: String(onBrand ?? "#18181b"),
+    text: String(text ?? "#f6f3ed"),
+    muted: String(muted ?? "#b5b3ae"),
     danger: String(danger ?? "#fd2f3b"),
     success: String(success ?? "#31cf76"),
     radius: Number.parseFloat(String(radius ?? "12")),

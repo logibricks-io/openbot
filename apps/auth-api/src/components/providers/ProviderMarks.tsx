@@ -1,10 +1,11 @@
-import { AppLogo, ProviderLogo } from "@openbot/brand";
+import { ProviderLogo } from "@openbot/brand";
 import { Show } from "solid-js";
 import type { ProviderPage } from "../../content/providers/provider-page";
+import { UpstreamLogo } from "../brand/UpstreamLogo";
 import { LandingIcon } from "../landing/LandingIcon";
 
 /**
- * The frosted plate of the compare pages, with OpenBot's mark, "runs", and the
+ * The frosted plate of the compare pages, with LogiBricks Workspace's mark, "runs", and the
  * provider's mark. The hero shows the names under the marks; an index card shows
  * the marks only.
  */
@@ -12,7 +13,7 @@ export function ProviderMarks(props: { page: Pick<ProviderPage, "provider" | "na
   return (
     <span class={props.small ? "compare-marks compare-marks-small" : "compare-marks"}>
       <span class="compare-mark">
-        <AppLogo variant="production" animation={props.small ? "none" : "blink"} class="compare-mark-logo" />
+        <UpstreamLogo class="compare-mark-logo" />
         <Show when={!props.small}>
           <span class="compare-mark-name">OpenBot</span>
         </Show>

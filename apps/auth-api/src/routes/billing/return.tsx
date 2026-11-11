@@ -56,7 +56,7 @@ function sendCheckoutAttribution(): void {
     keepalive: true,
     // The page has no referrer; the account service still needs the Origin header of this site.
     referrerPolicy: "same-origin",
-    headers: { "Content-Type": "application/json", "X-OpenBot-Browser": "1" },
+    headers: { "Content-Type": "application/json", "X-LogiBricks Workspace-Browser": "1" },
     body: JSON.stringify({ sessionId, firstTouch }),
   }).catch(() => undefined);
 }

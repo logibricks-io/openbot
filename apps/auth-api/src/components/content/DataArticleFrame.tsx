@@ -45,6 +45,10 @@ export function DataArticleFrame(props: DataArticleFrameProps) {
       <SiteHeader page="content" />
 
       <main class="post-main">
+        <p class="post-container post-meta">
+          Upstream OpenBot reference. Original comparison claims and dates are preserved; they are not claims about
+          LogiBricks Workspace.
+        </p>
         <article ref={articleBody} class="post-container compare-article">
           {props.children}
         </article>

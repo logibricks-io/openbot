@@ -9,11 +9,12 @@ export const messages = {
   "error.workflow.branch": "الشرط وحده يمكن أن تكون له اتصالات «نعم» و«لا».",
   "error.workflow.conditionBranch": "يجب أن يكون كل اتصال من شرط «نعم» أو «لا».",
   "error.workflow.duplicateEdge": "لهاتين الخطوتين هذا الاتصال بالفعل.",
-  "error.workflow.serverTooOld": "لا يدعم هذا الخادم مسارات العمل. حدّث OpenBot على الحاسوب الذي يشغّله.",
-  "error.workflow.nodeUnsupported": "لا يستطيع هذا الإصدار من OpenBot تشغيل خطوات الصور والملفات والرسائل بعد.",
-  "error.workflow.interrupted": "توقف OpenBot أثناء تشغيل هذه الخطوة. شغّلها مرة أخرى.",
+  "error.workflow.serverTooOld": "لا يدعم هذا الخادم مسارات العمل. حدّث LogiBricks Workspace على الحاسوب الذي يشغّله.",
+  "error.workflow.nodeUnsupported":
+    "لا يستطيع هذا الإصدار من LogiBricks Workspace تشغيل خطوات الصور والملفات والرسائل بعد.",
+  "error.workflow.interrupted": "توقف LogiBricks Workspace أثناء تشغيل هذه الخطوة. شغّلها مرة أخرى.",
   "error.workflow.agentMissing": "اختر وكيلًا لهذه الخطوة.",
-  "error.workflow.handoffFailed": "تعذّر على OpenBot إرسال هذه الخطوة إلى وكيلها.",
+  "error.workflow.handoffFailed": "تعذّر على LogiBricks Workspace إرسال هذه الخطوة إلى وكيلها.",
   "error.workflow.agentStepEnded": "أُزيلت رسالة الوكيل لهذه الخطوة قبل أن يجيب.",
   "error.workflow.conditionUnclear": "لم يجب النموذج بـ «نعم» أو «لا».",
   "error.workflow.modelFailed": "تعذّر على النموذج الإجابة. شغّل الخطوة مرة أخرى.",
@@ -25,7 +26,7 @@ export const messages = {
   "error.workflow.noDecision": "لا تنتظر هذه الخطوة قرارًا.",
   "error.workflow.outputPlaceMissing": "اختر مكان مراسلة لهذا المُخرَج.",
   "error.workflow.outputChannelMissing": "اختر قناة لهذا المُخرَج.",
-  "error.workflow.outputChannelFailed": "لم يتمكن OpenBot من نشر النتيجة في القناة. شغّل الخطوة مرة أخرى.",
+  "error.workflow.outputChannelFailed": "لم يتمكن LogiBricks Workspace من نشر النتيجة في القناة. شغّل الخطوة مرة أخرى.",
   "error.workflow.discordNoMessage":
     "يعمل هذا المُخرَج على رسالة Discord التي بدأت التشغيل. ابدأ التشغيل من إشارة في Discord، أو اختر «النشر في القناة».",
   "error.workflow.slackNoMessage":
@@ -55,7 +56,7 @@ export const messages = {
   "error.workflow.githubNoWrite": "لا يستطيع تطبيق OpenBot على GitHub تغيير هذا المستودع. افتح GitHub وامنحه الوصول.",
   "error.workflow.githubLocked": "هذه المحادثة مقفلة على GitHub.",
   "error.workflow.githubRefused": "رفض GitHub التغيير: {detail}",
-  "error.workflow.githubUnreachable": "تعذّر على OpenBot الوصول إلى GitHub. شغّل الخطوة مرة أخرى.",
+  "error.workflow.githubUnreachable": "تعذّر على LogiBricks Workspace الوصول إلى GitHub. شغّل الخطوة مرة أخرى.",
   "error.workflow.githubUncertain":
     "توقف التغيير في الطريق. قد يكون على GitHub. تحقق هناك قبل أن تشغّل الخطوة مرة أخرى.",
   "error.workflow.githubNoEvent": "لا توجد على GitHub مشكلة أو طلب سحب يبدأ عليه هذا المشغّل.",

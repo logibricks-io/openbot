@@ -27,7 +27,7 @@ export const messages = {
   "error.agent.instructionsTooLarge":
     "Talimat dosyası burada açılamayacak kadar büyük. Bir metin düzenleyicide kısaltın.",
   "error.agent.instructionsOutside":
-    "Talimat dosyası ajanın çalışma alanı dışındaki bir yeri gösteriyor, bu yüzden OpenBot onu açmıyor.",
+    "Talimat dosyası ajanın çalışma alanı dışındaki bir yeri gösteriyor, bu yüzden LogiBricks Workspace onu açmıyor.",
   "error.agent.instructionsReadFailed": "Talimat dosyası okunamadı.",
   "error.agent.instructionsSaveFailed": "Talimat dosyası kaydedilemedi.",
   "error.agent.profileGenerationBusy": "Profil oluşturma meşgul. Kısa bir süre sonra tekrar deneyin.",
@@ -73,14 +73,15 @@ export const messages = {
   "error.agent.hostLimit": "Bir ana makinede en fazla {limit} ajan bulunabilir.",
   "error.agent.changedWhileDuplicating": "Ajan kopyalanırken değişti. Tekrar deneyin.",
   "error.agent.duplicatedAgentGone": "Kopyalanan ajan artık mevcut değil.",
-  "error.agent.stateCorrupt": "Ajan durumu bozuk veya daha yeni bir OpenBot sürümünden; üzerine yazılması reddedildi.",
+  "error.agent.stateCorrupt":
+    "Ajan durumu bozuk veya daha yeni bir LogiBricks Workspace sürümünden; üzerine yazılması reddedildi.",
   "error.agent.oldRoleField":
-    "Kayıtlı ajan profilleri eski rol alanını kullanıyor; OpenBot'u başlatmadan önce verileri güncelleyin.",
+    "Kayıtlı ajan profilleri eski rol alanını kullanıyor; LogiBricks Workspace'i başlatmadan önce verileri güncelleyin.",
   "error.agent.duplicateIds": "Ajan durumu yinelenen ajan kimlikleri içeriyor; üzerine yazılması reddedildi.",
-  "error.agent.copyNameFailed": "OpenBot benzersiz bir ajan kopya adı oluşturamadı.",
+  "error.agent.copyNameFailed": "LogiBricks Workspace benzersiz bir ajan kopya adı oluşturamadı.",
   "error.agent.endpointRemoved": "Bu ajanın kullandığı uç nokta kaldırıldı. Ajan için başka bir model seçin.",
   "error.agent.turnStalled":
-    "{provider} yanıt vermeyi bıraktı, bu yüzden OpenBot bu turu bitirdi. Mesajı yeniden gönderin veya başka bir model seçin.",
+    "{provider} yanıt vermeyi bıraktı, bu yüzden LogiBricks Workspace bu turu bitirdi. Mesajı yeniden gönderin veya başka bir model seçin.",
   "error.agent.compactionConnectionLost":
     "Ajan bağlamını sıkıştırırken bağlantı kesildi, bu yüzden görev durdu. İnternet bağlantınızı kontrol edin, ardından devam etmek için bir mesaj gönderin.",
   "error.agent.selectedGone": "Seçilen ajan artık mevcut değil.",
@@ -134,7 +135,7 @@ export const messages = {
   "error.agent.lowMemoryServer":
     "Bu sunucunun belleği azaldı. Mesajınız kuyrukta bekler ve bellek boşaldığında başlar.",
   "error.agent.workspaceOnlyToolMissing":
-    "“Yalnızca çalışma alanı” seçeneği, OpenBot'un bulamadığı {tool} aracına ihtiyaç duyar. Aracı yükleyin veya ajan ayarlarından Tam erişim'i seçin.",
+    "“Yalnızca çalışma alanı” seçeneği, LogiBricks Workspace'in bulamadığı {tool} aracına ihtiyaç duyar. Aracı yükleyin veya ajan ayarlarından Tam erişim'i seçin.",
   "error.agent.claudeSandboxUnavailable":
     "“Yalnızca çalışma alanı” Claude korumalı alanına ihtiyaç duyar, ancak Claude bu bilgisayarda onu başlatamıyor: {reason}. Ajan ayarlarından Tam erişim'i veya başka bir sağlayıcıyı seçin.",
   "error.agent.screenCaptureOff":
@@ -150,7 +151,7 @@ export const messages = {
   "error.agent.screenCaptureRegionOutside":
     "Bölge tek bir ekranın içinde değil. list_capture_sources sonucundaki tek bir ekranın sınırları içinde kalan masaüstü noktaları kullanın.",
   "error.agent.screenCapturePermissionMissing":
-    "OpenBot'un Ekran Kaydı izni yok. Kullanıcıdan Sistem Ayarları > Gizlilik ve Güvenlik > Ekran ve Sistem Sesi Kaydı bölümünü açmasını, OpenBot'u etkinleştirmesini, sonra OpenBot'tan çıkıp yeniden açmasını isteyin.",
+    "LogiBricks Workspace'in Ekran Kaydı izni yok. Kullanıcıdan Sistem Ayarları > Gizlilik ve Güvenlik > Ekran ve Sistem Sesi Kaydı bölümünü açmasını, LogiBricks Workspace'i etkinleştirmesini, sonra LogiBricks Workspace'ten çıkıp yeniden açmasını isteyin.",
   "error.agent.screenCaptureEmptyWindows":
     "Windows boş bir görüntü verdi. Kullanıcıdan bilgisayarın kilidini açmasını ve korumalı içeriği kapatmasını isteyin. Bir kuruluş ilkesi de ekran yakalamayı engelleyebilir.",
   "error.agent.screenCaptureFailed": "Ekran yakalama başarısız oldu. Tekrar deneyin.",

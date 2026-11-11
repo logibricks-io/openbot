@@ -1,6 +1,4 @@
 import type { MobilePlatformLogoVariant } from "@openbot/brand";
-import { ANDROID_PLAY_STORE_URL } from "@openbot/ui/features/mobile-app/android-play-store";
-import { IOS_APP_STORE_URL } from "@openbot/ui/features/mobile-app/ios-app-store";
 import type { PlatformNavigator } from "./download-platforms";
 
 export type MobilePlatform = MobilePlatformLogoVariant;
@@ -11,7 +9,7 @@ export interface MobileAppDetails {
   href: string;
   id: MobilePlatform;
   label: string;
-  status: "Available";
+  status: "Not published";
 }
 
 /** The phone apps on the landing cards. They open a store page, so the links leave the site. */
@@ -19,18 +17,18 @@ export const MOBILE_APPS: Record<MobilePlatform, MobileAppDetails> = {
   ios: {
     id: "ios",
     label: "iPhone",
-    status: "Available",
-    description: "App Store · Connects to your computer",
-    action: "Download on the App Store",
-    href: IOS_APP_STORE_URL,
+    status: "Not published",
+    description: "Company iOS release not published",
+    action: "Release not published",
+    href: "/download/ios",
   },
   android: {
     id: "android",
     label: "Android",
-    status: "Available",
-    description: "Google Play · Connects to your computer",
-    action: "Get it on Google Play",
-    href: ANDROID_PLAY_STORE_URL,
+    status: "Not published",
+    description: "Company Android release not published",
+    action: "Release not published",
+    href: "/download/android",
   },
 };
 

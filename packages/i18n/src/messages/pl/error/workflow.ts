@@ -10,11 +10,12 @@ export const messages = {
   "error.workflow.conditionBranch": "Każde połączenie z warunku musi być tak albo nie.",
   "error.workflow.duplicateEdge": "Te dwa kroki mają już to połączenie.",
   "error.workflow.serverTooOld":
-    "Ten serwer nie obsługuje przepływów pracy. Zaktualizuj OpenBot na komputerze, na którym działa.",
-  "error.workflow.nodeUnsupported": "Ta wersja OpenBot nie może jeszcze uruchamiać kroków obrazu, pliku i wiadomości.",
-  "error.workflow.interrupted": "OpenBot zatrzymał się podczas tego kroku. Uruchom go ponownie.",
+    "Ten serwer nie obsługuje przepływów pracy. Zaktualizuj LogiBricks Workspace na komputerze, na którym działa.",
+  "error.workflow.nodeUnsupported":
+    "Ta wersja LogiBricks Workspace nie może jeszcze uruchamiać kroków obrazu, pliku i wiadomości.",
+  "error.workflow.interrupted": "LogiBricks Workspace zatrzymał się podczas tego kroku. Uruchom go ponownie.",
   "error.workflow.agentMissing": "Wybierz agenta dla tego kroku.",
-  "error.workflow.handoffFailed": "OpenBot nie mógł wysłać tego kroku do jego agenta.",
+  "error.workflow.handoffFailed": "LogiBricks Workspace nie mógł wysłać tego kroku do jego agenta.",
   "error.workflow.agentStepEnded": "Wiadomość do agenta została usunięta, zanim odpowiedział.",
   "error.workflow.conditionUnclear": "Model nie odpowiedział tak ani nie.",
   "error.workflow.modelFailed": "Model nie mógł odpowiedzieć. Uruchom krok ponownie.",
@@ -26,7 +27,8 @@ export const messages = {
   "error.workflow.noDecision": "Ten krok nie czeka na decyzję.",
   "error.workflow.outputPlaceMissing": "Wybierz miejsce w komunikatorze dla tego wyjścia.",
   "error.workflow.outputChannelMissing": "Wybierz kanał dla tego wyjścia.",
-  "error.workflow.outputChannelFailed": "OpenBot nie mógł opublikować wyniku w kanale. Uruchom krok ponownie.",
+  "error.workflow.outputChannelFailed":
+    "LogiBricks Workspace nie mógł opublikować wyniku w kanale. Uruchom krok ponownie.",
   "error.workflow.discordNoMessage":
     "To wyjście działa na wiadomość z Discorda, która uruchomiła przepływ. Uruchom przepływ ze wzmianki na Discordzie albo wybierz Opublikuj na kanale.",
   "error.workflow.slackNoMessage":
@@ -61,7 +63,7 @@ export const messages = {
     "OpenBot GitHub App nie może zmieniać tego repozytorium. Otwórz GitHub i daj jej dostęp.",
   "error.workflow.githubLocked": "Ta rozmowa jest zablokowana w GitHub.",
   "error.workflow.githubRefused": "GitHub odrzucił zmianę: {detail}",
-  "error.workflow.githubUnreachable": "OpenBot nie mógł połączyć się z GitHub. Uruchom krok ponownie.",
+  "error.workflow.githubUnreachable": "LogiBricks Workspace nie mógł połączyć się z GitHub. Uruchom krok ponownie.",
   "error.workflow.githubUncertain":
     "Zmiana zatrzymała się w drodze. Może już być w GitHub. Sprawdź tam, zanim ponownie uruchomisz krok.",
   "error.workflow.githubNoEvent": "W GitHub nie ma zgłoszenia ani pull requestu, dla którego startuje ten wyzwalacz.",

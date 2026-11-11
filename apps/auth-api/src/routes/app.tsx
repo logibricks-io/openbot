@@ -3,7 +3,8 @@ import { WEB_APPEARANCE_BOOT_SCRIPT } from "../../../../src/renderer/src/feature
 
 export const Route = createFileRoute("/app")({
   head: () => ({
-    meta: [{ title: "OpenBot web" }, { name: "robots", content: "noindex, nofollow" }],
+    meta: [{ title: "LogiBricks Workspace" }, { name: "robots", content: "noindex, nofollow" }],
+    links: [{ rel: "icon", href: "/logibricks-favicon.svg", type: "image/svg+xml" }],
     scripts: [{ children: WEB_APPEARANCE_BOOT_SCRIPT }],
   }),
   headers: () => ({

@@ -169,7 +169,7 @@ export const messages = {
 
   "workflow.output.title": "Wyjście",
   "workflow.output.name": "wyjście",
-  "workflow.output.channel.openbot": "OpenBot",
+  "workflow.output.channel.openbot": "LogiBricks Workspace",
   "workflow.output.channel.search": "Szukaj kanałów",
   "workflow.output.postsAs": "Publikuje jako",
   "workflow.output.postsAsNote": "Notatka; żadne zadanie się nie zaczyna",
@@ -270,15 +270,16 @@ export const messages = {
   "workflow.github.filter.branch": "Gałąź bazowa to",
   "workflow.github.filter.titleValue": "Tytuł zawiera „{text}”",
   "workflow.github.filter.branchValue": "Gałąź bazowa to {branch}",
-  "workflow.github.alert.missing": "OpenBot nie widzi {repository} w GitHub.",
-  "workflow.github.alert.readOnly": "OpenBot nie może zmieniać zgłoszeń ani pull requestów w {repository}.",
+  "workflow.github.alert.missing": "LogiBricks Workspace nie widzi {repository} w GitHub.",
+  "workflow.github.alert.readOnly":
+    "LogiBricks Workspace nie może zmieniać zgłoszeń ani pull requestów w {repository}.",
   "workflow.github.alert.eventsOff": "GitHub nie wysyła jeszcze zdarzeń z {repository}.",
   "workflow.github.alert.noEvent": "Wyzwalacz nie jest zdarzeniem GitHub. Wybierz repozytorium i weź numer z wejścia.",
   "workflow.github.alert.pullRequestOnly":
     "„{action}” działa tylko dla pull requestów. Wyzwalacz uruchamia się dla zgłoszeń.",
   "workflow.github.history.name": "Zdarzenia",
   "workflow.github.history.none": "Brak",
-  "workflow.github.history.offline": "OpenBot był offline",
+  "workflow.github.history.offline": "LogiBricks Workspace był offline",
   "workflow.github.history.waitingGroup": "Oczekujące",
   "workflow.github.history.startedGroup": "Uruchomione",
   "workflow.github.history.skippedGroup": "Pominięte",
@@ -509,8 +510,9 @@ export const messages = {
   "workflow.canvas.version.run": "Przed uruchomieniem",
   "workflow.canvas.deleteUndo.title": "Usunięto: {name}",
   "workflow.canvas.deleteUndo.action": "Cofnij",
-  "workflow.page.failed": "OpenBot nie mógł tego zrobić. Spróbuj ponownie.",
+  "workflow.page.failed": "LogiBricks Workspace nie mógł tego zrobić. Spróbuj ponownie.",
   "workflow.page.conflict": "Zmieniono na innym urządzeniu. Cofnij, aby odzyskać swoje zmiany.",
-  "workflow.page.needsNewerApp": "Ten przepływ ma kroki z nowszej wersji OpenBot. Zaktualizuj OpenBot, aby go zmienić.",
+  "workflow.page.needsNewerApp":
+    "Ten przepływ ma kroki z nowszej wersji LogiBricks Workspace. Zaktualizuj LogiBricks Workspace, aby go zmienić.",
   "workflow.page.manageOnly": "Aby zmienić ten przepływ, potrzebujesz dostępu do zarządzania każdym z jego agentów.",
 } as const satisfies PartialTranslation<typeof source>;

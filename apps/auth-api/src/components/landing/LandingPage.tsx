@@ -14,10 +14,8 @@ import { LandingBeam } from "./LandingBeam";
 import { LandingFooter } from "./LandingFooter";
 import { LandingGlow } from "./LandingGlow";
 import { LandingTextProvider, useLandingText } from "./LandingText";
-import { PricingSection } from "./PricingSection";
 import { SiteHeader } from "./SiteHeader";
 import { useSitePath } from "./SiteText";
-import { TeamsSection } from "./TeamsSection";
 
 /** A promise and the function that resolves it. */
 function latch(): { open: () => void; opened: Promise<void> } {
@@ -94,7 +92,7 @@ function LandingPageContent() {
             source={() => download}
             avoid={() => (copy ? [...copy.children] : [])}
             beamPosition={0.78}
-            color="#a46cf5"
+            color="#d97757"
             start={previewReady.opened}
             onImpact={beamImpact.open}
           />
@@ -145,7 +143,7 @@ function LandingPageContent() {
                 )}
               </Show>
               <AppLogo variant="production" animation="blink" interactive class="landing-hero-logo" />{" "}
-              <span>OpenBot</span>
+              <span>LogiBricks</span>
               <Show when={hero().title.after}>
                 {(after) => (
                   <>
@@ -182,8 +180,6 @@ function LandingPageContent() {
         </section>
         <AgentNetworkSection />
         <FeaturesSection />
-        <PricingSection />
-        <TeamsSection />
         <FaqSection />
         <DownloadSection />
         <ContentCallToAction />

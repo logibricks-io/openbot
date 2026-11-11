@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "OpenBot",
+    "name": "LogiBricks Workspace",
     "slug": "openbot",
     "platforms": ["ios", "android"],
     "version": "1.4.9",
@@ -13,7 +13,7 @@
       "supportsTablet": true,
       "associatedDomains": ["applinks:openbot.run"],
       "infoPlist": {
-        "NSLocalNetworkUsageDescription": "Allow OpenBot to connect to your desktop during local development.",
+        "NSLocalNetworkUsageDescription": "Allow LogiBricks Workspace to connect to your desktop during local development.",
         "NSAppTransportSecurity": {
           "NSAllowsLocalNetworking": true
         },
@@ -23,11 +23,11 @@
     },
     "android": {
       "package": "run.openbot.mobile",
-      "icon": "./assets/icons/app-icon.png",
+      "icon": "./assets/icons/android-icon.png",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icons/android-adaptive-eyes.png",
+        "foregroundImage": "./assets/icons/android-adaptive-foreground.png",
         "backgroundImage": "./assets/icons/android-adaptive-background.png",
-        "monochromeImage": "./assets/icons/android-adaptive-eyes.png"
+        "monochromeImage": "./assets/icons/android-adaptive-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
       "permissions": ["android.permission.CAMERA"],
@@ -48,24 +48,24 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#CDADEC",
-          "image": "./assets/splash/eyes.png",
-          "imageWidth": 240,
+          "backgroundColor": "#F6F3ED",
+          "image": "./assets/splash/mark-light.png",
+          "imageWidth": 160,
           "resizeMode": "contain",
           "dark": {
-            "backgroundColor": "#756183",
-            "image": "./assets/splash/eyes.png"
+            "backgroundColor": "#151618",
+            "image": "./assets/splash/mark-dark.png"
           },
           "android": {
-            "imageWidth": 188
+            "imageWidth": 128
           }
         }
       ],
       [
         "expo-camera",
         {
-          "cameraPermission": "Allow OpenBot to use your camera to scan QR codes.",
-          "microphonePermission": "Allow OpenBot to use the microphone to dictate messages.",
+          "cameraPermission": "Allow LogiBricks Workspace to use your camera to scan QR codes.",
+          "microphonePermission": "Allow LogiBricks Workspace to use the microphone to dictate messages.",
           "recordAudioAndroid": false,
           "barcodeScannerEnabled": true
         }
@@ -73,16 +73,16 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Allow OpenBot to access the photos you choose to share.",
-          "cameraPermission": "Allow OpenBot to use your camera to add photos.",
-          "microphonePermission": "Allow OpenBot to use the microphone to dictate messages."
+          "photosPermission": "Allow LogiBricks Workspace to access the photos you choose to share.",
+          "cameraPermission": "Allow LogiBricks Workspace to use your camera to add photos.",
+          "microphonePermission": "Allow LogiBricks Workspace to use the microphone to dictate messages."
         }
       ],
       [
         "expo-media-library",
         {
-          "photosPermission": "Allow OpenBot to access the photos you choose to share.",
-          "savePhotosPermission": "Allow OpenBot to save images and videos you download from a chat to your photo library.",
+          "photosPermission": "Allow LogiBricks Workspace to access the photos you choose to share.",
+          "savePhotosPermission": "Allow LogiBricks Workspace to save images and videos you download from a chat to your photo library.",
           "granularPermissions": ["photo"]
         }
       ],
@@ -90,7 +90,7 @@
         "expo-notifications",
         {
           "icon": "./assets/icons/notification-icon.png",
-          "color": "#6960F1"
+          "color": "#D97757"
         }
       ],
       [
@@ -109,7 +109,7 @@
       [
         "expo-local-authentication",
         {
-          "faceIDPermission": "Allow OpenBot to use Face ID to unlock the app."
+          "faceIDPermission": "Allow LogiBricks Workspace to use Face ID to unlock the app."
         }
       ],
       [
@@ -205,15 +205,15 @@
       [
         "expo-speech-recognition",
         {
-          "microphonePermission": "Allow OpenBot to use the microphone to dictate messages.",
-          "speechRecognitionPermission": "Allow OpenBot to turn your speech into message text."
+          "microphonePermission": "Allow LogiBricks Workspace to use the microphone to dictate messages.",
+          "speechRecognitionPermission": "Allow LogiBricks Workspace to turn your speech into message text."
         }
       ],
       [
         "@config-plugins/react-native-webrtc",
         {
-          "cameraPermission": "Allow OpenBot to use your camera to scan QR codes.",
-          "microphonePermission": "Allow OpenBot to use the microphone to dictate messages."
+          "cameraPermission": "Allow LogiBricks Workspace to use your camera to scan QR codes.",
+          "microphonePermission": "Allow LogiBricks Workspace to use the microphone to dictate messages."
         }
       ],
       [
@@ -249,6 +249,7 @@
       "policy": "fingerprint"
     },
     "updates": {
+      "enabled": false,
       "url": "https://updates.openbot.run/manifest",
       "codeSigningCertificate": "./certs/certificate.pem",
       "codeSigningMetadata": {

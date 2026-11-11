@@ -5,7 +5,7 @@ export const messages = {
   "error.import.manifestNotJson": "{manifest} não é um JSON válido.",
   "error.import.notAgentExport": "{manifest} não é uma exportação de agente do OpenBot.",
   "error.import.newerExportSkill":
-    "Esta exportação foi feita por uma habilidade de exportação mais recente. Atualize o OpenBot e tente novamente.",
+    "Esta exportação foi feita por uma habilidade de exportação mais recente. Atualize o LogiBricks Workspace e tente novamente.",
   "error.import.noAgents": "A exportação não contém agentes.",
   "error.import.tooManyAgents": "A exportação contém mais de {limit} agentes.",
   "error.import.tooManyChannels": "A exportação contém mais de {limit} canais.",
@@ -51,7 +51,7 @@ export const messages = {
   "error.import.uploadDiskSpace":
     "A exportação precisa de {size} GB de espaço livre no servidor, e há {free} GB livres. Libere espaço no servidor e escolha a exportação novamente.",
   "error.import.remoteZipTooLargeOldHost":
-    "Este servidor aceita uma exportação de até 100 MB. Atualize o OpenBot no servidor para importar uma exportação maior.",
+    "Este servidor aceita uma exportação de até 100 MB. Atualize o LogiBricks Workspace no servidor para importar uma exportação maior.",
   "error.import.skillKept":
     '{name}: o servidor já tem a habilidade "{skill}", por isso o agente usa essa habilidade. Peça a um administrador para atualizá-la.',
   "error.import.skillRenamed":

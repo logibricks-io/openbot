@@ -9,7 +9,7 @@ import { MIRROR_IN_RTL } from "@/shared/lib/text-direction";
 export interface StageBackButtonProps {
   icon: "back" | "close";
   label: string;
-  /** The color of the iOS glass label: the eyes on the block, white over the camera. */
+  /** The color of the iOS glass label: the mark on the block, white over the camera. */
   color: string;
   disabled?: boolean;
   onPress: () => void;

@@ -1,7 +1,7 @@
 import { defineMessages } from "../../../message";
 
 export const messages = defineMessages("mobile.workflow", {
-  "mobile.workflow.unsupported": "Update OpenBot on this server to use workflows on your phone.",
+  "mobile.workflow.unsupported": "Update LogiBricks Workspace on this server to use workflows on your phone.",
   "mobile.workflow.offline": "The server is offline. Workflows show when it connects.",
   "mobile.workflow.list.loading": "Loading…",
   "mobile.workflow.list.loadFailed": "Could not load the workflows.",
@@ -19,7 +19,7 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.action.edit": "Edit",
   "mobile.workflow.alert.runFailedTitle": "Could not start the workflow",
   "mobile.workflow.alert.runFailedBody": "The server did not start the run. Try again.",
-  "mobile.workflow.alert.tryAgain": "OpenBot could not do this. Try again.",
+  "mobile.workflow.alert.tryAgain": "LogiBricks Workspace could not do this. Try again.",
   "mobile.workflow.drawer.needYou": { one: "{count} needs you", other: "{count} need you" },
   "mobile.workflow.drawer.running": { one: "{count} running", other: "{count} running" },
   "mobile.workflow.drawer.review": "Needs you · tap to review",
@@ -31,7 +31,7 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.detail.loadFailed": "Could not load the workflow.",
   "mobile.workflow.detail.starting": "Starting…",
   "mobile.workflow.detail.newerApp":
-    "This workflow has steps from a newer OpenBot. Update OpenBot on your phone to change it.",
+    "This workflow has steps from a newer LogiBricks Workspace. Update LogiBricks Workspace on your phone to change it.",
   "mobile.workflow.detail.waits": "Run {number} waits for you. Review",
   "mobile.workflow.detail.canvasOrder": "The steps show from left to right, as on the canvas.",
   "mobile.workflow.detail.trigger": "Trigger",
@@ -66,7 +66,7 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.trigger.webhook": "Webhook",
   "mobile.workflow.trigger.webhookHint": "Runs when its address gets a request.",
   "mobile.workflow.trigger.message": "Message",
-  "mobile.workflow.trigger.messageHint": "Change this trigger in OpenBot on your computer.",
+  "mobile.workflow.trigger.messageHint": "Change this trigger in LogiBricks Workspace on your computer.",
   "mobile.workflow.trigger.github": "GitHub",
   "mobile.workflow.trigger.githubHint": "Runs when something happens in a GitHub repository.",
   "mobile.workflow.trigger.discord": "Discord",
@@ -89,7 +89,7 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.webhook.secretFailed": "Could not make a secret",
   "mobile.workflow.output.notify": "Notification",
   "mobile.workflow.output.channel": "Messaging place",
-  "mobile.workflow.output.chatChannel": "OpenBot channel",
+  "mobile.workflow.output.chatChannel": "LogiBricks Workspace channel",
   "mobile.workflow.output.file": "File",
   "mobile.workflow.status.running": "Running",
   "mobile.workflow.status.approval": "Waiting for you",
@@ -110,7 +110,7 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.step.questionDefault": "Approve to continue.",
   "mobile.workflow.step.textEmpty": "No text",
   "mobile.workflow.step.textPlaceholder": "Text for the next step",
-  "mobile.workflow.step.computerOnly": "Change this step in OpenBot on your computer.",
+  "mobile.workflow.step.computerOnly": "Change this step in LogiBricks Workspace on your computer.",
   "mobile.workflow.step.gone": "This step is not in the workflow now.",
   "mobile.workflow.step.agent": "Agent",
   "mobile.workflow.step.agentHint": "The agent does the task with the output of the step before it.",
@@ -128,8 +128,10 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.step.questionHint": "The run waits until you approve or decline. You get a notification.",
   "mobile.workflow.step.text": "Text",
   "mobile.workflow.step.sendTo": "Send to",
-  "mobile.workflow.step.channelHint": "An owner or admin chooses the messaging place in OpenBot on the computer.",
-  "mobile.workflow.step.chatChannelHint": "An owner or admin chooses the channel in OpenBot on the computer.",
+  "mobile.workflow.step.channelHint":
+    "An owner or admin chooses the messaging place in LogiBricks Workspace on the computer.",
+  "mobile.workflow.step.chatChannelHint":
+    "An owner or admin chooses the channel in LogiBricks Workspace on the computer.",
   "mobile.workflow.problem.noTitle": "Write a name.",
   "mobile.workflow.problem.noAgent": "Choose an agent",
   "mobile.workflow.problem.agentGone": "The agent is not available. Choose an agent",
@@ -150,7 +152,7 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.add.prompt": "Fixed text for the next step.",
   "mobile.workflow.add.output": "Sends the result to you.",
   "mobile.workflow.add.oneCondition":
-    "On the phone, a workflow has one condition. For more paths, use OpenBot on your computer.",
+    "On the phone, a workflow has one condition. For more paths, use LogiBricks Workspace on your computer.",
   "mobile.workflow.editor.title": "Edit workflow",
   "mobile.workflow.editor.newTitle": "New workflow",
   "mobile.workflow.editor.step": "Step",
@@ -159,7 +161,7 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.editor.create": "Create workflow",
   "mobile.workflow.editor.saveFailed": "Could not save the workflow.",
   "mobile.workflow.editor.fieldsOnly":
-    "This workflow has a shape that the phone cannot show as a list. You can change each step here. To add, move or delete steps, use OpenBot on your computer.",
+    "This workflow has a shape that the phone cannot show as a list. You can change each step here. To add, move or delete steps, use LogiBricks Workspace on your computer.",
   "mobile.workflow.editor.annotationsKept": "The notes and drawings on the canvas stay as they are.",
   "mobile.workflow.editor.addStep": "Add a step",
   "mobile.workflow.editor.addAfter": "Add a step after",
@@ -234,7 +236,8 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.version.restoreBody":
     "The workflow changes to this version for each member. The server keeps the current workflow as a version.",
   "mobile.workflow.version.restoreFailed": "Could not restore the version",
-  "mobile.workflow.github.unsupported": "Update OpenBot on this server to use GitHub in workflows on your phone.",
+  "mobile.workflow.github.unsupported":
+    "Update LogiBricks Workspace on this server to use GitHub in workflows on your phone.",
   "mobile.workflow.github.summary": "{repository} · {event}",
   "mobile.workflow.github.adminOnly": "An owner or admin of the server changes GitHub steps.",
   "mobile.workflow.github.catalogFailed": "Could not load the GitHub repositories of the server.",
@@ -269,8 +272,9 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.github.filter.firstTime": "First-time contributor",
   "mobile.workflow.github.filter.title": "Title contains",
   "mobile.workflow.github.filter.branch": "Base branch is",
-  "mobile.workflow.github.alert.missing": "OpenBot cannot see {repository} on GitHub.",
-  "mobile.workflow.github.alert.readOnly": "OpenBot cannot change issues and pull requests in {repository}.",
+  "mobile.workflow.github.alert.missing": "LogiBricks Workspace cannot see {repository} on GitHub.",
+  "mobile.workflow.github.alert.readOnly":
+    "LogiBricks Workspace cannot change issues and pull requests in {repository}.",
   "mobile.workflow.github.alert.eventsOff": "GitHub does not send events from {repository} yet.",
   "mobile.workflow.github.alert.noEvent":
     "The trigger is not a GitHub event. Choose a repository, and take the number from the input.",
@@ -284,7 +288,7 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.github.history.all": "See all events",
   "mobile.workflow.github.history.none": "No events yet.",
   "mobile.workflow.github.history.loadFailed": "Could not load the GitHub events.",
-  "mobile.workflow.github.history.offline": "OpenBot was offline",
+  "mobile.workflow.github.history.offline": "LogiBricks Workspace was offline",
   "mobile.workflow.github.history.waitingGroup": "Waiting",
   "mobile.workflow.github.history.startedGroup": "Started runs",
   "mobile.workflow.github.history.skippedGroup": "Skipped",
@@ -327,8 +331,9 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.github.reason.completed": "As completed",
   "mobile.workflow.github.reason.notPlanned": "As not planned",
   "mobile.workflow.discord.hostOnly":
-    "Only the computer that runs OpenBot has the Discord servers. Change this step in OpenBot on that computer.",
-  "mobile.workflow.discord.triggerComputerOnly": "Change this trigger in OpenBot on the computer that runs it.",
+    "Only the computer that runs LogiBricks Workspace has the Discord servers. Change this step in LogiBricks Workspace on that computer.",
+  "mobile.workflow.discord.triggerComputerOnly":
+    "Change this trigger in LogiBricks Workspace on the computer that runs it.",
   "mobile.workflow.discord.outputSummary": "Discord · {action}",
   "mobile.workflow.discord.server": "Server",
   "mobile.workflow.discord.event": "Event",
@@ -354,7 +359,7 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.slack.outputSummary": "Slack · {action}",
   "mobile.workflow.slack.action.reply": "Reply in thread",
   "mobile.workflow.telegram.hostOnly":
-    "Only the computer that runs OpenBot has the Telegram chats. Change this step in OpenBot on that computer.",
+    "Only the computer that runs LogiBricks Workspace has the Telegram chats. Change this step in LogiBricks Workspace on that computer.",
   "mobile.workflow.telegram.outputSummary": "Telegram · {action}",
   "mobile.workflow.telegram.chat": "Chat",
   "mobile.workflow.telegram.anyChat": "Any linked chat",
@@ -374,7 +379,7 @@ export const messages = defineMessages("mobile.workflow", {
   "mobile.workflow.chats.adminOnly": "Only an owner or admin can change this step.",
   "mobile.workflow.chats.loadFailed": "The chats of this server did not load. Try again later.",
   "mobile.workflow.slack.hostOnly":
-    "Only the computer that runs OpenBot has the Slack workspaces. Change this step in OpenBot on that computer.",
+    "Only the computer that runs LogiBricks Workspace has the Slack workspaces. Change this step in LogiBricks Workspace on that computer.",
   "mobile.workflow.slack.workspace": "Workspace",
   "mobile.workflow.slack.chooseWorkspace": "Choose workspace",
   "mobile.workflow.slack.oneWorkspace": "One workspace",

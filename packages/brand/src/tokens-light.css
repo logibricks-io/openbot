@@ -7,7 +7,7 @@
  *
  * The rules of the dark palette stay true here, turned over: a raised surface is lighter
  * than the canvas, and a hover or a border is a translucent ink. In the dark palette that
- * ink is white; here it is the primary text color, #141414.
+ * ink is light; here it is the Graphite primary text color, #18181b.
  *
  * Not here, on purpose:
  * - The native-only tokens (bg-native-canvas, chrome-*): mobile has its own light theme in
@@ -22,64 +22,66 @@
 :root[data-openbot-color-scheme="light"] {
   color-scheme: light;
 
-  --openbot-bg-canvas: #f5f5f6;
-  --openbot-bg-canvas-clear: rgba(245, 245, 246, 0);
-  --openbot-bg-frame: #e8e8eb;
-  --openbot-bg-sidebar: #f5f5f6;
-  --openbot-bg-native-sidebar: #f5f5f6;
+  --openbot-bg-canvas: #f6f3ed;
+  --openbot-bg-canvas-clear: rgba(246, 243, 237, 0);
+  --openbot-bg-frame: #e9e4da;
+  --openbot-bg-sidebar: #f6f3ed;
+  --openbot-bg-native-sidebar: #f6f3ed;
   --openbot-bg-sheet: #ffffff;
-  --openbot-bg-sheet-inset: #f0f0f2;
+  --openbot-bg-sheet-inset: #f0ebe2;
   --openbot-bg-grouped: #ffffff;
-  --openbot-text-grouped-secondary: #6b6b70;
-  --openbot-border-grouped: #e3e3e6;
-  --openbot-marketplace-detail-bg: #ececee;
+  --openbot-text-grouped-secondary: #696a70;
+  --openbot-border-grouped: #d9d4cb;
+  --openbot-marketplace-detail-bg: #f0ebe2;
   --openbot-bg-surface: #ffffff;
-  --openbot-bg-surface-raised: #fcfcfc;
+  --openbot-bg-surface-raised: #fffdfa;
   --openbot-bg-control: #ffffff;
-  --openbot-bg-control-hover: #f0f0f2;
-  --openbot-bg-control-active: #e8e8eb;
-  --openbot-tabs-bar-bg: #ececee;
+  --openbot-bg-control-hover: #f0ebe2;
+  --openbot-bg-control-active: #e9e4da;
+  --openbot-tabs-bar-bg: #f0ebe2;
   --openbot-tabs-pill-bg: #ffffff;
-  --openbot-bg-overlay: rgba(245, 245, 246, 0.92);
-  --openbot-dialog-overlay: rgba(20, 20, 20, 0.12);
-  --openbot-dialog-ring: rgba(20, 20, 20, 0.1);
+  --openbot-bg-overlay: rgba(246, 243, 237, 0.92);
+  --openbot-dialog-overlay: rgba(24, 24, 27, 0.12);
+  --openbot-dialog-ring: rgba(24, 24, 27, 0.1);
   --openbot-bg-glass: rgba(255, 255, 255, 0.76);
-  --openbot-glass-surface: rgba(20, 20, 20, 0.04);
-  --openbot-glass-surface-hover: rgba(20, 20, 20, 0.07);
-  --openbot-glass-border: rgba(20, 20, 20, 0.12);
+  --openbot-glass-surface: rgba(24, 24, 27, 0.04);
+  --openbot-glass-surface-hover: rgba(24, 24, 27, 0.07);
+  --openbot-glass-border: rgba(24, 24, 27, 0.12);
   --openbot-glass-highlight: rgba(255, 255, 255, 0.6);
   --openbot-glass-shadow: transparent;
-  --openbot-scroll-edge-overlay: rgba(245, 245, 246, 0.72);
+  --openbot-scroll-edge-overlay: rgba(246, 243, 237, 0.72);
 
-  --openbot-border: rgba(20, 20, 20, 0.07);
-  --openbot-border-strong: rgba(20, 20, 20, 0.1);
-  --openbot-image-outline: rgba(20, 20, 20, 0.1);
-  --openbot-hover: rgba(20, 20, 20, 0.05);
+  --openbot-border: #d9d4cb;
+  --openbot-border-strong: #c5bfb4;
+  --openbot-image-outline: rgba(24, 24, 27, 0.1);
+  --openbot-hover: rgba(24, 24, 27, 0.05);
 
-  /* Contrast on the canvas: primary 17:1, secondary 10:1, muted 4.9:1. Dim is for
-     marks and disabled text, as in the dark palette. */
-  --openbot-text-primary: #141414;
-  --openbot-text-secondary: #3a3a3c;
-  --openbot-text-muted: #6b6b70;
-  --openbot-text-dim: #8e8e93;
-  --openbot-text-placeholder: #5c5c61;
-  --openbot-text-readable: rgba(20, 20, 20, 0.6);
-  --openbot-settings-text-muted: rgba(20, 20, 20, 0.6);
+  /* Graphite text on the Paper canvas. Dim is for marks and disabled text. */
+  --openbot-text-primary: #18181b;
+  --openbot-text-secondary: #424348;
+  --openbot-text-muted: #696a70;
+  --openbot-text-dim: #898982;
+  --openbot-text-placeholder: #696a70;
+  --openbot-text-readable: rgba(24, 24, 27, 0.72);
+  --openbot-settings-text-muted: rgba(24, 24, 27, 0.72);
 
   /* The on-light family is the high-contrast inverted element: the default button, a checked
      switch, the user's bubble, the light tooltip. On a light canvas it turns dark. */
-  --openbot-surface-light: #1c1c1e;
+  --openbot-surface-light: #18181b;
   --openbot-text-on-light: #ffffff;
   --openbot-text-muted-on-light: rgba(255, 255, 255, 0.64);
   --openbot-text-dim-on-light: rgba(255, 255, 255, 0.4);
   --openbot-border-on-light: rgba(255, 255, 255, 0.16);
 
-  /* The same hue 210 as the dark accent. The fill keeps its value, so a button looks the same
-     in both themes; text and hover go darker for contrast (accent-text 5.3:1 on the canvas). */
-  --openbot-accent-hover: #006ad4;
-  --openbot-accent-text: #0064c8;
-  --openbot-accent-soft: rgba(0, 124, 247, 0.12);
-  --openbot-accent-strong: rgba(0, 124, 247, 0.26);
+  /* V2 light action and its foreground are separate from the fixed Clay logo accent. */
+  --openbot-action: #a2462a;
+  --openbot-action-foreground: #ffffff;
+  --openbot-accent: #a2462a;
+  --openbot-text-on-accent: #ffffff;
+  --openbot-accent-hover: #883b23;
+  --openbot-accent-text: #a2462a;
+  --openbot-accent-soft: rgba(217, 119, 87, 0.12);
+  --openbot-accent-strong: rgba(217, 119, 87, 0.26);
 
   /* Chart series: darker steps of the dark-palette hues, so each series reads on white.
      Not yet checked with the dataviz palette validator in light mode. */
@@ -137,17 +139,17 @@
   --openbot-file-default: #0064c8;
   --openbot-file-default-soft: rgba(0, 124, 247, 0.12);
 
-  --openbot-data-table-border: #e3e3e6;
-  --openbot-data-table-header-text: #6b6b70;
-  --openbot-data-table-text: #1c1c1e;
-  --openbot-data-table-outer-border: rgba(20, 20, 20, 0);
-  --openbot-data-table-ring: rgba(20, 20, 20, 0.1);
+  --openbot-data-table-border: #d9d4cb;
+  --openbot-data-table-header-text: #696a70;
+  --openbot-data-table-text: #18181b;
+  --openbot-data-table-outer-border: rgba(24, 24, 27, 0);
+  --openbot-data-table-ring: rgba(24, 24, 27, 0.1);
 
   /* No drop shadows: on the dark canvas they do not show, but on white they read as a halo.
      A raised surface keeps its 1px ring. */
   --openbot-shadow-popover-ambient: transparent;
   --openbot-shadow-dialog: transparent;
   --openbot-shadow-menu: transparent;
-  --openbot-shadow-ring: rgba(20, 20, 20, 0.04);
+  --openbot-shadow-ring: rgba(24, 24, 27, 0.04);
   --openbot-shadow-overlay: 0 0 0 transparent;
 }

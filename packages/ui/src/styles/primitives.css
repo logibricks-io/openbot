@@ -385,7 +385,7 @@
 
 :where(.z-badge-variant-default) {
   background: var(--openbot-accent);
-  color: var(--openbot-text-primary);
+  color: var(--openbot-text-on-accent);
 }
 
 :where(.z-badge-variant-secondary) {
@@ -530,7 +530,7 @@
 .ui-checkbox-input:checked + .ui-checkbox-visual {
   border-color: var(--openbot-accent);
   background: var(--openbot-accent);
-  color: var(--openbot-text-primary);
+  color: var(--openbot-text-on-accent);
 }
 
 .ui-checkbox-input:focus-visible + .ui-checkbox-visual {

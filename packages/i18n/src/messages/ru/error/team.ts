@@ -9,7 +9,7 @@ export const messages = {
   "error.team.identityCreateFailed": "Не удалось создать идентификатор команды.",
   "error.team.accountChangedDuringCreate":
     "Аккаунт, в который выполнен вход, изменился во время создания этого сервера.",
-  "error.team.notConfigured": "Этот OpenBot не настроен.",
+  "error.team.notConfigured": "Этот LogiBricks Workspace не настроен.",
   "error.team.keyRotationMissing": "Нет ожидающей смены ключа сервера.",
   "error.team.serverNotActive": "Этот сервер больше не является активным для аккаунта, в который выполнен вход.",
   "error.team.logoInvalid": "Выберите корректное изображение PNG, JPEG или WebP размером до 512 КБ.",
@@ -46,17 +46,18 @@ export const messages = {
     "Имя пользователя должно содержать от 3 до 32 букв, цифр, точек, дефисов или подчёркиваний.",
   "error.team.passwordLength": "Пароль должен содержать от 12 до 256 символов.",
   "error.team.bindFailed": "Не удалось привязать API команды.",
-  "error.team.signInRequired": "Требуется вход в OpenBot.",
+  "error.team.signInRequired": "Требуется вход в LogiBricks Workspace.",
   "error.team.authenticationRequired": "Требуется аутентификация.",
   "error.team.agentNotFound": "Агент не найден.",
   "error.team.routeNotFound": "Маршрут не найден.",
   "error.team.requestFailed": "Запрос не удался.",
   "error.team.tooManySignInAttempts": "Слишком много попыток входа. Повторите попытку позже.",
-  "error.team.clientUpdateRequired": "Обновите этот клиент OpenBot, прежде чем подключаться к этому хосту.",
-  "error.team.hostUpdateRequired": "Обновите OpenBot на хосте, прежде чем подключаться.",
+  "error.team.clientUpdateRequired":
+    "Обновите этот клиент LogiBricks Workspace, прежде чем подключаться к этому хосту.",
+  "error.team.hostUpdateRequired": "Обновите LogiBricks Workspace на хосте, прежде чем подключаться.",
   "error.team.sidebarLayoutUnavailable": "Структура боковой панели недоступна.",
   "error.team.providersUnsupported": "Это подключение не поддерживает настройки провайдеров.",
-  "error.team.providerNotManaged": "OpenBot не управляет CLI этого провайдера.",
+  "error.team.providerNotManaged": "LogiBricks Workspace не управляет CLI этого провайдера.",
   "error.team.channelsUnsupported": "Это подключение не поддерживает чаты каналов.",
   "error.team.channelContextUnsupported": "Это подключение не поддерживает новый разговор и сжатие в канале.",
   "error.team.channelPictureUnsupported": "Это подключение не поддерживает изображения каналов.",
@@ -81,9 +82,9 @@ export const messages = {
   "error.team.providerDetectionUnsupported": "Это подключение не может найти серверы моделей и агентов на сервере.",
   "error.team.sidebarFoldersUnsupported": "Это подключение не поддерживает папки в папках.",
   "error.team.agentNotificationLevelsUnsupported":
-    "Этот сервер не может хранить ваш уровень уведомлений для каждого агента. Обновите OpenBot на компьютере, где он работает.",
+    "Этот сервер не может хранить ваш уровень уведомлений для каждого агента. Обновите LogiBricks Workspace на компьютере, где он работает.",
   "error.team.sidebarPinsUnsupported":
-    "Этот сервер не может хранить закреплённые чаты для всех ваших устройств. Обновите OpenBot на компьютере, на котором он работает.",
+    "Этот сервер не может хранить закреплённые чаты для всех ваших устройств. Обновите LogiBricks Workspace на компьютере, на котором он работает.",
   "error.team.agentInstructionsUnsupported": "Это подключение не поддерживает редактирование инструкций агентов.",
   "error.team.agentPublishUnsupported": "Это подключение не поддерживает публикацию агентов.",
   "error.team.agentUpdateUnsupported": "Это подключение не поддерживает обновление агентов.",
@@ -95,9 +96,9 @@ export const messages = {
   "error.team.threadMessageSearchUnsupported": "Это подключение не поддерживает поиск в побочных ветках.",
   "error.team.sideQuestionUnsupported": "Это подключение не поддерживает побочные вопросы.",
   "error.team.liveVoiceUnsupported":
-    "Этот сервер не поддерживает живой голос Codex. Обновите OpenBot на компьютере, где он работает.",
+    "Этот сервер не поддерживает живой голос Codex. Обновите LogiBricks Workspace на компьютере, где он работает.",
   "error.team.routineFlowsUnsupported":
-    "Этот сервер не поддерживает цепочки регулярных задач. Обновите OpenBot на компьютере, где он работает.",
+    "Этот сервер не поддерживает цепочки регулярных задач. Обновите LogiBricks Workspace на компьютере, где он работает.",
   "error.team.routineCanvasTooLarge":
     "Эта схема регулярных задач слишком велика для отправки на это устройство. Сократите инструкции регулярных задач на компьютере, где работает сервер.",
   "error.team.conversationPageTooLarge":
@@ -134,7 +135,7 @@ export const messages = {
   "error.team.browserSessionNotFound": "Сессия вида браузера не найдена.",
   "error.team.mcpUnsupported": "Это подключение не поддерживает серверы MCP.",
   "error.team.mcpServerListNeedsUpdate":
-    "Обновите OpenBot на этом устройстве, чтобы использовать на этом сервере больше {limit} серверов MCP.",
+    "Обновите LogiBricks Workspace на этом устройстве, чтобы использовать на этом сервере больше {limit} серверов MCP.",
   "error.team.storageUnsupported": "Это подключение не поддерживает хранилище.",
   "error.team.machineResourcesUnsupported": "Это подключение не поддерживает данные о машине.",
   "error.team.machineAlertMemberInvalid":
@@ -163,10 +164,12 @@ export const messages = {
   "error.team.mcpServerNotYours": "Изменить этот MCP-сервер может только тот, кто его добавил, или администратор.",
   "error.team.ownerRequired": "Это может сделать только владелец сервера.",
   "error.team.requestTooLarge": "Тело запроса слишком большое.",
-  "error.team.signInRelayUnsupported": "Этот сервер не может передавать входы. Обновите OpenBot на хосте.",
-  "error.team.connectorsUnsupported": "Подключениями этого сервера нельзя управлять отсюда. Обновите OpenBot на хосте.",
-  "error.team.discordAccessUnsupported": "Этот сервер не может задать роли Discord. Обновите на нём OpenBot.",
-  "error.team.connectorPageRefused": "Сервер прислал страницу, которую OpenBot не открывает.",
+  "error.team.signInRelayUnsupported": "Этот сервер не может передавать входы. Обновите LogiBricks Workspace на хосте.",
+  "error.team.connectorsUnsupported":
+    "Подключениями этого сервера нельзя управлять отсюда. Обновите LogiBricks Workspace на хосте.",
+  "error.team.discordAccessUnsupported":
+    "Этот сервер не может задать роли Discord. Обновите на нём LogiBricks Workspace.",
+  "error.team.connectorPageRefused": "Сервер прислал страницу, которую LogiBricks Workspace не открывает.",
   "error.team.signInRelayUnknown": "Этот вход завершён или не существует.",
   "error.team.signInRelayUsed": "Этот вход уже отправлен.",
   "error.team.signInRelayMismatch": "Этот адрес не относится к этому входу.",

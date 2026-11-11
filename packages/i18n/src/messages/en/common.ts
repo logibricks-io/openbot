@@ -31,4 +31,5 @@ export const messages = defineMessages("common", {
   "common.download": "Download",
   "common.removing": "Removing…",
   "common.sending": "Sending…",
+  "common.productName": "LogiBricks Workspace",
 });

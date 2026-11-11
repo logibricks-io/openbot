@@ -31,6 +31,11 @@ export function LegalPage(props: LegalPageProps) {
           </header>
 
           <div class="post-prose" data-enter="post-prose">
+            <p>
+              <strong>Upstream reference.</strong> The following OpenBot document belongs to its original publisher. It
+              is retained for source and license context, and is not a LogiBricks service agreement. This deployment has
+              not published separate commercial terms.
+            </p>
             {props.children}
           </div>
         </article>

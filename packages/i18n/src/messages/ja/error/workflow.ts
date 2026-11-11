@@ -10,12 +10,13 @@ export const messages = {
   "error.workflow.conditionBranch": "条件からの接続は、それぞれ「はい」か「いいえ」である必要があります。",
   "error.workflow.duplicateEdge": "この 2 つのステップにはすでにこの接続があります。",
   "error.workflow.serverTooOld":
-    "このサーバーはワークフローに対応していません。サーバーを実行しているコンピューターの OpenBot を更新してください。",
+    "このサーバーはワークフローに対応していません。サーバーを実行しているコンピューターの LogiBricks Workspace を更新してください。",
   "error.workflow.nodeUnsupported":
-    "このバージョンの OpenBot では、画像、ファイル、メッセージのステップはまだ実行できません。",
-  "error.workflow.interrupted": "このステップの実行中に OpenBot が停止しました。もう一度実行してください。",
+    "このバージョンの LogiBricks Workspace では、画像、ファイル、メッセージのステップはまだ実行できません。",
+  "error.workflow.interrupted":
+    "このステップの実行中に LogiBricks Workspace が停止しました。もう一度実行してください。",
   "error.workflow.agentMissing": "このステップのエージェントを選択してください。",
-  "error.workflow.handoffFailed": "OpenBot はこのステップをエージェントに送信できませんでした。",
+  "error.workflow.handoffFailed": "LogiBricks Workspace はこのステップをエージェントに送信できませんでした。",
   "error.workflow.agentStepEnded": "エージェントが回答する前に、このステップのメッセージが削除されました。",
   "error.workflow.conditionUnclear": "モデルが「はい」か「いいえ」で回答しませんでした。",
   "error.workflow.modelFailed": "モデルが回答できませんでした。ステップをもう一度実行してください。",
@@ -28,7 +29,7 @@ export const messages = {
   "error.workflow.outputPlaceMissing": "この出力のメッセージングの投稿先を選んでください。",
   "error.workflow.outputChannelMissing": "この出力のチャンネルを選んでください。",
   "error.workflow.outputChannelFailed":
-    "OpenBot は結果をチャンネルに投稿できませんでした。ステップをもう一度実行してください。",
+    "LogiBricks Workspace は結果をチャンネルに投稿できませんでした。ステップをもう一度実行してください。",
   "error.workflow.discordNoMessage":
     "この出力は実行を開始した Discord メッセージに対して動作します。Discord のメンションから実行を開始するか、「チャンネルに投稿」を選んでください。",
   "error.workflow.slackNoMessage":
@@ -66,7 +67,8 @@ export const messages = {
     "OpenBot GitHub App はこのリポジトリを変更できません。GitHub を開いてアクセスを許可してください。",
   "error.workflow.githubLocked": "この会話は GitHub でロックされています。",
   "error.workflow.githubRefused": "GitHub が変更を拒否しました: {detail}",
-  "error.workflow.githubUnreachable": "OpenBot は GitHub に接続できませんでした。ステップをもう一度実行してください。",
+  "error.workflow.githubUnreachable":
+    "LogiBricks Workspace は GitHub に接続できませんでした。ステップをもう一度実行してください。",
   "error.workflow.githubUncertain":
     "変更が途中で止まりました。GitHub にすでに反映されている可能性があります。ステップを再実行する前に GitHub を確認してください。",
   "error.workflow.githubNoEvent": "このトリガーが開始する Issue またはプルリクエストが GitHub にありません。",

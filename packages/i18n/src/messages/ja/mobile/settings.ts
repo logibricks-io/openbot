@@ -8,28 +8,28 @@ export const messages = {
   "mobile.settings.language.system": "システムの設定",
   "mobile.settings.language.footer":
     "「システムの設定」は、スマートフォンの設定で最初に表示される言語に従います。まだ翻訳されていないテキストは英語で表示されます。",
-  "mobile.settings.language.restartTitle": "OpenBot を再起動しますか？",
+  "mobile.settings.language.restartTitle": "LogiBricks Workspace を再起動しますか？",
   "mobile.settings.language.restartBody":
-    "この言語は逆方向に読みます。OpenBot を次に起動したときに画面の向きが切り替わります。再起動後も画面がおかしい場合は、App スイッチャーで OpenBot を閉じてから開き直してください。",
+    "この言語は逆方向に読みます。LogiBricks Workspace を次に起動したときに画面の向きが切り替わります。再起動後も画面がおかしい場合は、App スイッチャーで LogiBricks Workspace を閉じてから開き直してください。",
   "mobile.settings.language.restartNow": "今すぐ再起動",
   "mobile.settings.language.restartFailed":
-    "OpenBot を再起動できませんでした。次に OpenBot を開いたときに画面の向きが切り替わります。",
+    "LogiBricks Workspace を再起動できませんでした。次に LogiBricks Workspace を開いたときに画面の向きが切り替わります。",
   "mobile.settings.dictation.language": "音声入力の言語",
   "mobile.settings.about.development": "開発版",
   "mobile.settings.about.openFailed": "リンクを開けませんでした。もう一度お試しください。",
   "mobile.settings.about.resources": "リソース",
-  "mobile.settings.about.website": "Web サイト",
-  "mobile.settings.about.privacy": "プライバシーポリシー",
+  "mobile.settings.about.website": "OpenBot の元プロジェクトサイト",
+  "mobile.settings.about.privacy": "OpenBot のプライバシーポリシー",
   "mobile.settings.home.profile": "プロフィール",
   "mobile.settings.home.preferences": "環境設定",
-  "mobile.settings.home.about": "OpenBot について",
+  "mobile.settings.home.about": "LogiBricks について",
   "mobile.settings.home.support": "サポート",
   "mobile.settings.home.supportHint": "ヘルプとサポートログの保存",
   "mobile.settings.support.help": "ヘルプ",
   "mobile.settings.support.discord": "Discord でチケットを作成",
   "mobile.settings.support.discordHint": "いちばん早くサポートを受けられます",
-  "mobile.settings.support.message": "X でメッセージを送る",
-  "mobile.settings.support.issues": "GitHub で問題を報告",
+  "mobile.settings.support.message": "X で OpenBot に連絡",
+  "mobile.settings.support.issues": "GitHub の OpenBot の問題",
   "mobile.settings.support.helpFooter":
     "何がいつ起きたかをお知らせください。Discord のチケットまたは GitHub の Issue にサポートログのファイルを添付してください。",
   "mobile.settings.support.log": "サポートログ",
@@ -40,7 +40,7 @@ export const messages = {
   "mobile.settings.support.clearTitle": "サポートログを消去しますか？",
   "mobile.settings.support.clearBody": "このスマートフォンのログから、すべてのイベントを削除します。",
   "mobile.settings.support.logFooter":
-    "ログはこのスマートフォンに保存され、OpenBot が送信することはありません。接続の手順、リクエスト、エラーを記録します。メッセージやファイルは記録せず、パスワードとトークンは伏せて記録します。共有する前にファイルの内容を確認してください。",
+    "ログはこのスマートフォンに保存され、LogiBricks Workspace が送信することはありません。接続の手順、リクエスト、エラーを記録します。メッセージやファイルは記録せず、パスワードとトークンは伏せて記録します。共有する前にファイルの内容を確認してください。",
   "mobile.settings.support.saveFailed": "ログファイルを保存できませんでした。もう一度お試しください。",
   "mobile.settings.support.sharingUnavailable": "このスマートフォンでは共有を利用できません。",
   "mobile.settings.support.newestFirst": "新しい順に表示しています。",
@@ -109,17 +109,17 @@ export const messages = {
   "mobile.settings.feedback.retry": "触覚フィードバックの設定をもう一度保存",
   "mobile.settings.liveActivities.title": "ライブアクティビティ",
   "mobile.settings.liveActivities.footer":
-    "OpenBot の実行中、エージェントの作業、メッセージ、質問、承認をロック画面と Dynamic Island に表示します。",
+    "LogiBricks Workspace の実行中、エージェントの作業、メッセージ、質問、承認をロック画面と Dynamic Island に表示します。",
   "mobile.settings.liveActivities.toggle": "エージェントのアクティビティを表示",
   "mobile.settings.liveActivities.retry": "ライブアクティビティの設定をもう一度保存",
   "mobile.settings.notifications.title": "通知",
   "mobile.settings.notifications.toggle": "通知を許可",
   "mobile.settings.notifications.footer":
-    "エージェントが作業を終えたとき、エラーで止まったとき、または入力、承認、ブラウザーでの操作が必要なときに通知します。このアプリまたはデスクトップアプリで OpenBot を使っている間は通知しません。ライブアクティビティの表示中は、代わりにライブアクティビティに表示します。",
+    "エージェントが作業を終えたとき、エラーで止まったとき、または入力、承認、ブラウザーでの操作が必要なときに通知します。このアプリまたはデスクトップアプリで LogiBricks Workspace を使っている間は通知しません。ライブアクティビティの表示中は、代わりにライブアクティビティに表示します。",
   "mobile.settings.notifications.footerAndroid":
-    "エージェントが作業を終えたとき、エラーで止まったとき、または入力、承認、ブラウザーでの操作が必要なときに通知します。このアプリまたはデスクトップアプリで OpenBot を使っている間は通知しません。",
-  "mobile.settings.notifications.denied": "iOS の設定で OpenBot の通知がオフになっています。",
-  "mobile.settings.notifications.deniedAndroid": "Android の設定で OpenBot の通知がオフになっています。",
+    "エージェントが作業を終えたとき、エラーで止まったとき、または入力、承認、ブラウザーでの操作が必要なときに通知します。このアプリまたはデスクトップアプリで LogiBricks Workspace を使っている間は通知しません。",
+  "mobile.settings.notifications.denied": "iOS の設定で LogiBricks Workspace の通知がオフになっています。",
+  "mobile.settings.notifications.deniedAndroid": "Android の設定で LogiBricks Workspace の通知がオフになっています。",
   "mobile.settings.notifications.openSettings": "iOS の設定を開く",
   "mobile.settings.notifications.openSettingsAndroid": "Android の設定を開く",
   "mobile.settings.notifications.preview": "返信のプレビューを表示",
@@ -132,7 +132,7 @@ export const messages = {
     "スレッドの返信をオンにすると、エージェントがスレッドで作業を終えたとき、またはエラーで止まったときに通知します。オフでも、スレッドで入力または承認が必要なときは通知します。",
   "mobile.settings.notifications.sound": "サウンド",
   "mobile.settings.notifications.playSound": "サウンドを再生",
-  "mobile.settings.notifications.sound.openbot": "OpenBot",
+  "mobile.settings.notifications.sound.openbot": "LogiBricks",
   "mobile.settings.notifications.sound.warm": "あたたか",
   "mobile.settings.notifications.sound.mech": "メカニカル",
   "mobile.settings.notifications.sound.bubble": "バブル",
@@ -140,9 +140,9 @@ export const messages = {
   "mobile.settings.notifications.sound.default": "iOS のデフォルト",
   "mobile.settings.notifications.sound.defaultAndroid": "Android のデフォルト",
   "mobile.settings.notifications.soundFooter":
-    "通知とライブアクティビティはこのサウンドを再生します。ライブアクティビティは画面も点灯します。OpenBot のサウンドは、デスクトップアプリがタスク完了時に鳴らすサウンドです。その次の 4 つは、デスクトップアプリのサウンドテーマのサウンドです。",
+    "通知とライブアクティビティはこのサウンドを再生します。ライブアクティビティは画面も点灯します。LogiBricks Workspace のサウンドは、デスクトップアプリがタスク完了時に鳴らすサウンドです。その次の 4 つは、デスクトップアプリのサウンドテーマのサウンドです。",
   "mobile.settings.notifications.soundFooterAndroid":
-    "通知はこのサウンドを再生します。OpenBot のサウンドは、デスクトップアプリがタスク完了時に鳴らすサウンドです。その次の 4 つは、デスクトップアプリのサウンドテーマのサウンドです。",
+    "通知はこのサウンドを再生します。LogiBricks Workspace のサウンドは、デスクトップアプリがタスク完了時に鳴らすサウンドです。その次の 4 つは、デスクトップアプリのサウンドテーマのサウンドです。",
   "mobile.settings.notifications.level.all": "すべてのアクティビティ",
   "mobile.settings.notifications.level.needsMe": "自分が必要なときのみ",
   "mobile.settings.notifications.level.nothing": "なし",
@@ -158,7 +158,7 @@ export const messages = {
   "mobile.settings.notifications.serverFooter":
     "このサーバーのどのイベントをこのスマートフォンに通知するかを選びます。デスクトップアプリには別の設定があります。",
   "mobile.settings.notifications.serverUnsupported":
-    "このサーバーは通知を送信できません。サーバーを実行しているコンピューターで OpenBot をアップデートしてください。",
+    "このサーバーは通知を送信できません。サーバーを実行しているコンピューターで LogiBricks Workspace をアップデートしてください。",
   "mobile.settings.notifications.thisPhone": "このスマートフォン",
   "mobile.settings.notifications.whatYouHear": "通知を受け取る内容",
   "mobile.settings.notifications.wholeServer": "サーバー全体",
@@ -174,7 +174,7 @@ export const messages = {
   "mobile.settings.notifications.levelsFooter":
     "エージェントのレベルをもう一度タップすると、サーバーの設定に従います。",
   "mobile.settings.notifications.agentsUnsupported":
-    "エージェントごとに選ぶには、このサーバーの OpenBot をアップデートしてください。",
+    "エージェントごとに選ぶには、このサーバーの LogiBricks Workspace をアップデートしてください。",
   "mobile.settings.notifications.agentsOffline": "このサーバーがオンラインになると、エージェントが表示されます。",
   "mobile.settings.notifications.scopeFooter":
     "選んだ内容はあなたのすべてのデバイスに適用されます。ミュートはこのスマートフォンだけに適用されます。",
@@ -202,7 +202,8 @@ export const messages = {
   "mobile.settings.profile.security": "セキュリティ",
   "mobile.settings.profile.accountSessions": "アカウントのセッション",
   "mobile.settings.profile.signOutTitle": "サインアウトしますか？",
-  "mobile.settings.profile.signOutBody": "デスクトップの OpenBot で新しいコードをスキャンして再接続してください。",
+  "mobile.settings.profile.signOutBody":
+    "デスクトップの LogiBricks Workspace で新しいコードをスキャンして再接続してください。",
   "mobile.settings.profile.signOut": "サインアウト",
   "mobile.settings.profile.options": "プロフィールのオプション",
   "mobile.settings.profile.activity.title": "{server} でのアクティビティ",
@@ -234,7 +235,7 @@ export const messages = {
   "mobile.settings.profile.models.title": "モデルの使用量",
   "mobile.settings.profile.share": "共有",
   "mobile.settings.profile.shareTitle": "アクティビティを共有",
-  "mobile.settings.profile.share.caption": "OpenBot と過ごした直近 6 か月",
+  "mobile.settings.profile.share.caption": "LogiBricks Workspace と過ごした直近 6 か月",
   "mobile.settings.profile.share.createFailed": "画像を作成できませんでした。",
   "mobile.settings.profile.share.fileName": "openbot-activity.png",
   "mobile.settings.voice.title": "音声",
@@ -268,7 +269,7 @@ export const messages = {
   "mobile.settings.voice.supertonic.male": "男性の声 {number}",
   "mobile.settings.voice.elevenLabs.title": "ElevenLabs",
   "mobile.settings.voice.elevenLabs.footer":
-    "OpenBot はあなたのキーで各返信のテキストを ElevenLabs に送信し、料金はあなたのアカウントに請求されます。キーはこのスマートフォンのキーチェーンに保存されます。",
+    "LogiBricks Workspace はあなたのキーで各返信のテキストを ElevenLabs に送信し、料金はあなたのアカウントに請求されます。キーはこのスマートフォンのキーチェーンに保存されます。",
   "mobile.settings.voice.elevenLabs.key": "API キー",
   "mobile.settings.voice.elevenLabs.keySaved": "このスマートフォンに保存済み",
   "mobile.settings.voice.elevenLabs.chooseVoice": "声を選択",
@@ -278,7 +279,7 @@ export const messages = {
   "mobile.settings.voice.elevenLabs.removeBody": "Supertonic 3 が再び返信を読み上げます。",
   "mobile.settings.voice.elevenLabs.saveKey": "キーを保存",
   "mobile.settings.voice.elevenLabs.testing": "キーを確認中",
-  "mobile.settings.voice.elevenLabs.keyHint": "OpenBot は保存前に最初の 2 つの権限を確認します。",
+  "mobile.settings.voice.elevenLabs.keyHint": "LogiBricks Workspace は保存前に最初の 2 つの権限を確認します。",
   "mobile.settings.voice.elevenLabs.testFailed": "ElevenLabs から応答がありません。もう一度お試しください。",
   "mobile.settings.voice.elevenLabs.refused": "ElevenLabs がリクエストを拒否しました: {reason}",
   "mobile.settings.voice.elevenLabs.getKey": "API キーを取得",
@@ -333,10 +334,10 @@ export const messages = {
   "mobile.settings.voice.pause.title": "送信までの間",
   "mobile.settings.voice.pause.label": "新しい言葉を待つ時間",
   "mobile.settings.voice.pause.footer":
-    "音声会話では、この長さだけ新しい言葉を認識しないと OpenBot が言葉を送信します。言葉のない雑音では聞き取りは続きません。ゆっくり話す場合や考えるために止まる場合は、長めの間を選んでください。",
+    "音声会話では、この長さだけ新しい言葉を認識しないと LogiBricks Workspace が言葉を送信します。言葉のない雑音では聞き取りは続きません。ゆっくり話す場合や考えるために止まる場合は、長めの間を選んでください。",
   "mobile.settings.voice.pause.seconds": "{seconds} 秒",
   "mobile.settings.voice.speed.title": "返信の速度",
-  "mobile.settings.voice.speed.footer": "OpenBot が読み上げる返信の速度です。音声会話にも適用されます。",
+  "mobile.settings.voice.speed.footer": "LogiBricks Workspace が読み上げる返信の速度です。音声会話にも適用されます。",
   "mobile.settings.voice.speed.value": "{speed}×",
   "mobile.settings.voice.gptLive.title": "GPT Live Voice",
   "mobile.settings.voice.gptLive.footer":
@@ -350,13 +351,13 @@ export const messages = {
   "mobile.settings.voice.gptLive.status.ready": "準備完了",
   "mobile.settings.voice.gptLive.status.supported": "対応",
   "mobile.settings.voice.gptLive.status.offline": "オフライン",
-  "mobile.settings.voice.gptLive.status.update": "そのコンピューターに新しい OpenBot が必要です",
+  "mobile.settings.voice.gptLive.status.update": "そのコンピューターに新しい LogiBricks Workspace が必要です",
   "mobile.settings.voice.gptLive.status.signIn": "ChatGPT で Codex にサインイン",
   "mobile.settings.voice.server.title": "音声サーバー",
   "mobile.settings.voice.server.row": "OpenAI 互換サーバー",
   "mobile.settings.voice.server.notSetUp": "未設定",
   "mobile.settings.voice.server.footer":
-    "デスクトップと同じく、Speaches や Kokoro-FastAPI など、OpenAI の /v1/audio ルートを持つ自分のサーバーです。OpenBot は録音と返信のテキストをそのアドレスにだけ送ります。同じネットワークなど、電話からそのアドレスに接続できる必要があります。",
+    "デスクトップと同じく、Speaches や Kokoro-FastAPI など、OpenAI の /v1/audio ルートを持つ自分のサーバーです。LogiBricks Workspace は録音と返信のテキストをそのアドレスにだけ送ります。同じネットワークなど、電話からそのアドレスに接続できる必要があります。",
   "mobile.settings.voice.server.choice": "自分の音声サーバー",
   "mobile.settings.voice.server.dictationReady": "音声サーバー · {model}",
   "mobile.settings.voice.server.dictationOff": "音声サーバーで音声入力を設定してください",
@@ -381,7 +382,7 @@ export const messages = {
     "サーバーが聞き取りや読み上げをしていた所は、電話の音声認識と Supertonic 3 が引き継ぎます。API キーはこの電話から削除されます。",
   "mobile.settings.voice.server.removeFailed": "音声サーバーを削除できませんでした。",
   "mobile.settings.voice.elevenLabs.recognitionFooter":
-    "OpenBot は 1 回限りのトークンで音声を ElevenLabs にストリーミングし、料金は ElevenLabs のアカウントに請求されます。キーはこの端末に保存されます。",
+    "LogiBricks Workspace は 1 回限りのトークンで音声を ElevenLabs にストリーミングし、料金は ElevenLabs のアカウントに請求されます。キーはこの端末に保存されます。",
   "mobile.settings.voice.elevenLabs.model.title": "モデル",
   "mobile.settings.voice.elevenLabs.model.footer":
     "ElevenLabs ではモデルごとに料金が異なります。変更は次の返信から適用されます。",
@@ -390,4 +391,5 @@ export const messages = {
   "mobile.settings.voice.elevenLabs.model.v3": "表現豊か · 低速",
   "mobile.settings.voice.elevenLabs.model.v4Turbo": "90以上の言語 · 高速",
   "mobile.settings.voice.elevenLabs.model.v4": "最高品質 · 90以上の言語 · 低速",
+  "mobile.settings.about.attribution": "OpenBot を基に構築。PolyForm Noncommercial 1.0.0。",
 } as const satisfies PartialTranslation<typeof source>;

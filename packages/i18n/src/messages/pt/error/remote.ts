@@ -20,10 +20,10 @@ export const messages = {
   "error.remote.linuxNeedsX11":
     "A área de trabalho remota no Linux precisa de uma sessão X11. Não há suporte para Wayland.",
   "error.remote.runtimeMissing":
-    "O ambiente de execução do Sunshine e do Moonlight Web está ausente ou não é compatível com este computador anfitrião. Instale a versão completa do OpenBot em um Mac, um computador anfitrião Windows x64 ou Linux x64 e reinicie o OpenBot.",
+    "O ambiente de execução do Sunshine e do Moonlight Web está ausente ou não é compatível com este computador anfitrião. Instale a versão completa do LogiBricks Workspace em um Mac, um computador anfitrião Windows x64 ou Linux x64 e reinicie o LogiBricks Workspace.",
   "error.remote.testActive": "Um teste de área de trabalho remota está ativo. Tente novamente quando terminar.",
   "error.remote.screenRecordingDenied":
-    "O computador anfitrião não permitiu que o OpenBot grave a tela. Conceda a permissão de gravação de tela no computador anfitrião e tente novamente.",
+    "O computador anfitrião não permitiu que o LogiBricks Workspace grave a tela. Conceda a permissão de gravação de tela no computador anfitrião e tente novamente.",
   "error.remote.teamSessionExpired": "A sessão da equipe expirou.",
   "error.remote.finishTestBeforeSwitch": "Conclua o teste de área de trabalho remota antes de trocar de tela.",
   "error.remote.displayNotFound": "Tela remota não encontrada.",
@@ -36,7 +36,7 @@ export const messages = {
   "error.remote.moonlightStartFailed":
     "O Moonlight Web não iniciou no computador anfitrião. Verifique os logs da área de trabalho remota no computador anfitrião e tente novamente.",
   "error.remote.pairingFailed":
-    "O Moonlight não conseguiu parear com o Sunshine no computador anfitrião. Tente novamente. Se o problema continuar, reinicie o OpenBot no computador anfitrião.",
+    "O Moonlight não conseguiu parear com o Sunshine no computador anfitrião. Tente novamente. Se o problema continuar, reinicie o LogiBricks Workspace no computador anfitrião.",
   "error.remote.runtimeStartFailed":
     "O ambiente de execução da área de trabalho remota não iniciou no computador anfitrião. Verifique os logs da área de trabalho remota no computador anfitrião e tente novamente.",
   "error.remote.hostUnreachable": "Não é possível acessar o computador anfitrião.",
@@ -45,7 +45,8 @@ export const messages = {
   "error.remote.unsafeData":
     "O computador anfitrião retornou dados que este aplicativo não conseguiu usar com segurança.",
   "error.remote.requestFailedStatus": "A solicitação ao servidor remoto falhou ({status}).",
-  "error.remote.appUpdateRequired": "Atualize este aplicativo OpenBot antes de conectar ao computador anfitrião.",
+  "error.remote.appUpdateRequired":
+    "Atualize este aplicativo LogiBricks Workspace antes de conectar ao computador anfitrião.",
   "error.remote.identityNotVerified": "Não foi possível verificar a identidade do servidor.",
   "error.remote.webRtcUnavailable": "O transporte WebRTC está indisponível.",
   "error.remote.invalidCompatibility": "O computador anfitrião retornou informações de compatibilidade inválidas.",
@@ -64,9 +65,9 @@ export const messages = {
   "error.remote.inviteIdentityChanged": "A identidade do computador anfitrião mudou durante a aceitação do convite.",
   "error.remote.localServerRemove": "O servidor local não pode ser removido.",
   "error.remote.desktopSetupHostUpdate":
-    "Atualize o OpenBot no computador anfitrião para verificar a configuração da área de trabalho remota.",
+    "Atualize o LogiBricks Workspace no computador anfitrião para verificar a configuração da área de trabalho remota.",
   "error.remote.desktopTestHostUpdate":
-    "Atualize o OpenBot no computador anfitrião para testar a configuração da área de trabalho remota.",
+    "Atualize o LogiBricks Workspace no computador anfitrião para testar a configuração da área de trabalho remota.",
   "error.remote.viewerProxyUnavailable": "O proxy local do visualizador remoto está indisponível.",
   "error.remote.viewerTransportInvalid": "O transporte do visualizador remoto é inválido.",
   "error.remote.viewerProxyNoPort": "O proxy local do visualizador remoto não obteve uma porta.",
@@ -167,7 +168,8 @@ export const messages = {
   "error.remote.signalInvalidMessage": "O Signal retornou uma mensagem inválida.",
   "error.remote.sessionInvalid": "A sessão remota é inválida.",
   "error.remote.ticketInvalid": "O tíquete de conexão é inválido.",
-  "error.remote.mobileUpdateRequired": "Atualize o OpenBot Mobile ou o aplicativo para computador antes de conectar.",
+  "error.remote.mobileUpdateRequired":
+    "Atualize o LogiBricks Workspace Mobile ou o aplicativo para computador antes de conectar.",
   "error.remote.connectionStepFailed": "Não foi possível concluir esta etapa de conexão.",
   "error.remote.signalNotConnected": "O Signal não está conectado.",
   "error.remote.signalFrameUnreadable": "O Signal enviou um quadro que este par não consegue ler.",
@@ -176,9 +178,10 @@ export const messages = {
   "error.remote.hostBusy": "O computador anfitrião está ocupado com outra conexão. Tente novamente em instantes.",
   "error.remote.signalPermissionDenied":
     "Sua conta não tem acesso a este computador anfitrião. Peça acesso ao proprietário.",
-  "error.remote.signalRateLimited": "Muitas tentativas de conexão. O OpenBot tenta novamente em {seconds} segundos.",
+  "error.remote.signalRateLimited":
+    "Muitas tentativas de conexão. O LogiBricks Workspace tenta novamente em {seconds} segundos.",
   "error.remote.signalProtocolError":
-    "O Signal e este aplicativo usam protocolos de conexão incompatíveis. Atualize o OpenBot e tente novamente.",
+    "O Signal e este aplicativo usam protocolos de conexão incompatíveis. Atualize o LogiBricks Workspace e tente novamente.",
   "error.remote.signalRefused": "O Signal recusou a conexão.",
   "error.remote.signalClosed": "A conexão com o Signal foi fechada antes de o computador anfitrião responder.",
   "error.remote.relayUnavailable":
@@ -186,7 +189,8 @@ export const messages = {
   "error.remote.iceFailed":
     "Não foi possível estabelecer uma conexão direta com o computador anfitrião. Um firewall, VPN ou proxy pode bloqueá-la.",
   "error.remote.iceDisconnected": "A conexão direta com o computador anfitrião foi perdida.",
-  "error.remote.directoryUnreachable": "O OpenBot não conseguiu acessar o serviço do OpenBot. Verifique sua conexão.",
+  "error.remote.directoryUnreachable":
+    "O LogiBricks Workspace não conseguiu acessar o serviço do OpenBot. Verifique sua conexão.",
   "error.remote.directoryTimeout": "O serviço do OpenBot não respondeu a tempo. Tente novamente.",
   "error.remote.inviteAlreadyUsed": "Este convite já foi usado. Peça um novo convite.",
   "error.remote.inviteNotFound": "Este convite não existe ou expirou. Peça um novo convite.",

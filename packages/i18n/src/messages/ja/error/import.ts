@@ -6,7 +6,7 @@ export const messages = {
   "error.import.manifestNotJson": "{manifest} は有効な JSON ではありません。",
   "error.import.notAgentExport": "{manifest} は OpenBot のエージェントのエクスポートではありません。",
   "error.import.newerExportSkill":
-    "このエクスポートは、より新しいエクスポート用スキルで作成されました。OpenBot をアップデートしてから、もう一度お試しください。",
+    "このエクスポートは、より新しいエクスポート用スキルで作成されました。LogiBricks Workspace をアップデートしてから、もう一度お試しください。",
   "error.import.noAgents": "エクスポートにエージェントが含まれていません。",
   "error.import.tooManyAgents": "エクスポートに含まれるエージェントが {limit} 個を超えています。",
   "error.import.tooManyChannels": "エクスポートに含まれるチャンネルが {limit} 個を超えています。",
@@ -52,7 +52,7 @@ export const messages = {
   "error.import.uploadDiskSpace":
     "このエクスポートにはサーバーに {size} GB の空き容量が必要ですが、空きは {free} GB です。サーバーの空き容量を増やしてから、もう一度エクスポートを選んでください。",
   "error.import.remoteZipTooLargeOldHost":
-    "このサーバーが受け付けるエクスポートは 100 MB までです。より大きなエクスポートをインポートするには、サーバーの OpenBot をアップデートしてください。",
+    "このサーバーが受け付けるエクスポートは 100 MB までです。より大きなエクスポートをインポートするには、サーバーの LogiBricks Workspace をアップデートしてください。",
   "error.import.skillKept":
     "{name}: サーバーにはすでにスキル「{skill}」があるため、エージェントはそのスキルを使います。更新は管理者に依頼してください。",
   "error.import.skillRenamed":

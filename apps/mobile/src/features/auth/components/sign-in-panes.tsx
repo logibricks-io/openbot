@@ -15,6 +15,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
+import { AppWordmark } from "@/features/auth/components/app-logo";
 import { EmailCodeInput, type EmailCodeInputHandle } from "@/features/auth/components/email-code-input";
 import { EmailField } from "@/features/auth/components/email-field";
 import { SIGN_IN_CONTROL_HEIGHT, useSignInColors } from "@/features/auth/components/sign-in-colors";
@@ -66,7 +67,7 @@ function PaneItem({
   );
 }
 
-/** A full-width sign-in button. The lilac one is the main action; the gray one the other choice. */
+/** A full-width sign-in button. The Clay action uses its paired ink; the neutral action is the other choice. */
 function SignInButton({
   label,
   labelKey = label,
@@ -311,9 +312,9 @@ export function OptionsPane({
         </PaneItem>
       ) : null}
       <PaneItem index={0} motion={motion}>
-        <Typography.Heading type="h1" accessibilityRole="header" className="tracking-openbot-tight">
-          {t("mobile.auth.signIn.title")}
-        </Typography.Heading>
+        <View accessible accessibilityRole="header" accessibilityLabel={t("common.productName")}>
+          <AppWordmark width={240} />
+        </View>
       </PaneItem>
       <PaneItem index={1} motion={motion} className="mt-2.5">
         <Typography.Paragraph color="muted">{t("mobile.auth.signIn.subtitle")}</Typography.Paragraph>

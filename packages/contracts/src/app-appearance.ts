@@ -13,8 +13,8 @@ export const APP_APPEARANCES = ["system", "light", "dark"] as const;
 
 export type AppAppearance = (typeof APP_APPEARANCES)[number];
 
-/** Dark: OpenBot was dark only before this choice existed, so an update does not change the look. */
-export const DEFAULT_APP_APPEARANCE: AppAppearance = "dark";
+/** Devices without a saved choice follow the OS. Explicit light/dark choices stay unchanged. */
+export const DEFAULT_APP_APPEARANCE: AppAppearance = "system";
 
 /** Off: a see-through window is a choice, and only macOS can blur what is behind it. */
 export const DEFAULT_TRANSPARENT_WINDOW = false;

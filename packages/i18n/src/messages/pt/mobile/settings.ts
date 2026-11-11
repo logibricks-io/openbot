@@ -8,28 +8,28 @@ export const messages = {
   "mobile.settings.language.system": "Padrão do sistema",
   "mobile.settings.language.footer":
     "Padrão do sistema segue o primeiro idioma nas configurações do celular. O texto ainda não traduzido aparece em inglês.",
-  "mobile.settings.language.restartTitle": "Reiniciar o OpenBot?",
+  "mobile.settings.language.restartTitle": "Reiniciar o LogiBricks Workspace?",
   "mobile.settings.language.restartBody":
-    "Este idioma é lido na direção oposta. As telas mudam de direção quando o OpenBot iniciar de novo. Se as telas ainda parecerem erradas depois de reiniciar, feche o OpenBot no alternador de apps e abra-o de novo.",
+    "Este idioma é lido na direção oposta. As telas mudam de direção quando o LogiBricks Workspace iniciar de novo. Se as telas ainda parecerem erradas depois de reiniciar, feche o LogiBricks Workspace no alternador de apps e abra-o de novo.",
   "mobile.settings.language.restartNow": "Reiniciar agora",
   "mobile.settings.language.restartFailed":
-    "Não foi possível reiniciar o OpenBot. As telas mudam de direção na próxima vez que você abrir o OpenBot.",
+    "Não foi possível reiniciar o LogiBricks Workspace. As telas mudam de direção na próxima vez que você abrir o LogiBricks Workspace.",
   "mobile.settings.dictation.language": "Idioma do ditado",
   "mobile.settings.about.development": "Desenvolvimento",
   "mobile.settings.about.openFailed": "Não foi possível abrir o link. Tente novamente.",
   "mobile.settings.about.resources": "Recursos",
-  "mobile.settings.about.website": "Site",
-  "mobile.settings.about.privacy": "Política de privacidade",
+  "mobile.settings.about.website": "Site do OpenBot (projeto original)",
+  "mobile.settings.about.privacy": "Privacidade do OpenBot",
   "mobile.settings.home.profile": "Perfil",
   "mobile.settings.home.preferences": "Preferências",
-  "mobile.settings.home.about": "Sobre o OpenBot",
+  "mobile.settings.home.about": "Sobre o LogiBricks",
   "mobile.settings.home.support": "Suporte",
   "mobile.settings.home.supportHint": "Obter ajuda e salvar um registro de suporte",
   "mobile.settings.support.help": "Obter ajuda",
   "mobile.settings.support.discord": "Abrir um ticket no Discord",
   "mobile.settings.support.discordHint": "O jeito mais rápido de conseguir ajuda",
-  "mobile.settings.support.message": "Fale conosco no X",
-  "mobile.settings.support.issues": "Relatar um problema no GitHub",
+  "mobile.settings.support.message": "OpenBot no X",
+  "mobile.settings.support.issues": "Problemas do OpenBot no GitHub",
   "mobile.settings.support.helpFooter":
     "Conte o que aconteceu e quando. Anexe o arquivo de registro de suporte ao seu ticket no Discord ou à sua issue no GitHub.",
   "mobile.settings.support.log": "Registro de suporte",
@@ -40,7 +40,7 @@ export const messages = {
   "mobile.settings.support.clearTitle": "Limpar o registro de suporte?",
   "mobile.settings.support.clearBody": "Isso remove todos os eventos do registro neste celular.",
   "mobile.settings.support.logFooter":
-    "O registro fica neste celular e o OpenBot não o envia. Ele registra etapas de conexão, solicitações e erros. Ele não registra mensagens nem arquivos e oculta senhas e tokens. Leia o arquivo antes de compartilhá-lo.",
+    "O registro fica neste celular e o LogiBricks Workspace não o envia. Ele registra etapas de conexão, solicitações e erros. Ele não registra mensagens nem arquivos e oculta senhas e tokens. Leia o arquivo antes de compartilhá-lo.",
   "mobile.settings.support.saveFailed": "Não foi possível salvar o arquivo de registro. Tente novamente.",
   "mobile.settings.support.sharingUnavailable": "O compartilhamento não está disponível neste celular.",
   "mobile.settings.support.newestFirst": "Mais recentes primeiro.",
@@ -109,18 +109,19 @@ export const messages = {
   "mobile.settings.feedback.retry": "Tentar salvar a resposta tátil de novo",
   "mobile.settings.liveActivities.title": "Atividades ao Vivo",
   "mobile.settings.liveActivities.footer":
-    "Mostra o trabalho dos agentes, mensagens, perguntas e aprovações na Tela Bloqueada e na Dynamic Island enquanto o OpenBot está em execução.",
+    "Mostra o trabalho dos agentes, mensagens, perguntas e aprovações na Tela Bloqueada e na Dynamic Island enquanto o LogiBricks Workspace está em execução.",
   "mobile.settings.liveActivities.toggle": "Mostrar atividade dos agentes",
   "mobile.settings.liveActivities.retry": "Tentar salvar Atividades ao Vivo de novo",
   "mobile.settings.notifications.title": "Notificações",
   "mobile.settings.notifications.toggle": "Permitir notificações",
   "mobile.settings.notifications.footer":
-    "Os agentes avisam quando terminam, param com um erro ou precisam da sua resposta, de uma aprovação ou de uma etapa no navegador. Nada chega enquanto você usa o OpenBot aqui ou no app para computador. Enquanto a Atividade ao Vivo aparece, ela mostra o evento no lugar.",
+    "Os agentes avisam quando terminam, param com um erro ou precisam da sua resposta, de uma aprovação ou de uma etapa no navegador. Nada chega enquanto você usa o LogiBricks Workspace aqui ou no app para computador. Enquanto a Atividade ao Vivo aparece, ela mostra o evento no lugar.",
   "mobile.settings.notifications.footerAndroid":
-    "Os agentes avisam quando terminam, param com um erro ou precisam da sua resposta, de uma aprovação ou de uma etapa no navegador. Nada chega enquanto você usa o OpenBot aqui ou no app para computador.",
-  "mobile.settings.notifications.denied": "As notificações do OpenBot estão desativadas nos Ajustes do iOS.",
+    "Os agentes avisam quando terminam, param com um erro ou precisam da sua resposta, de uma aprovação ou de uma etapa no navegador. Nada chega enquanto você usa o LogiBricks Workspace aqui ou no app para computador.",
+  "mobile.settings.notifications.denied":
+    "As notificações do LogiBricks Workspace estão desativadas nos Ajustes do iOS.",
   "mobile.settings.notifications.deniedAndroid":
-    "As notificações do OpenBot estão desativadas nas configurações do Android.",
+    "As notificações do LogiBricks Workspace estão desativadas nas configurações do Android.",
   "mobile.settings.notifications.openSettings": "Abrir Ajustes do iOS",
   "mobile.settings.notifications.openSettingsAndroid": "Abrir configurações do Android",
   "mobile.settings.notifications.preview": "Mostrar prévia da resposta",
@@ -133,7 +134,7 @@ export const messages = {
     "As respostas em tópicos avisam quando um agente termina ou para com um erro em um tópico. Sem elas, um tópico ainda avisa quando precisa da sua resposta ou de uma aprovação.",
   "mobile.settings.notifications.sound": "Som",
   "mobile.settings.notifications.playSound": "Tocar som",
-  "mobile.settings.notifications.sound.openbot": "OpenBot",
+  "mobile.settings.notifications.sound.openbot": "LogiBricks",
   "mobile.settings.notifications.sound.warm": "Acolhedor",
   "mobile.settings.notifications.sound.mech": "Mecânico",
   "mobile.settings.notifications.sound.bubble": "Borbulhante",
@@ -141,9 +142,9 @@ export const messages = {
   "mobile.settings.notifications.sound.default": "Padrão do iOS",
   "mobile.settings.notifications.sound.defaultAndroid": "Padrão do Android",
   "mobile.settings.notifications.soundFooter":
-    "As notificações e a Atividade ao Vivo tocam este som. A Atividade ao Vivo também acende a tela. O som do OpenBot é o som que o app para computador toca quando uma tarefa termina. Os quatro sons seguintes são os dos temas de som do app para computador.",
+    "As notificações e a Atividade ao Vivo tocam este som. A Atividade ao Vivo também acende a tela. O som do LogiBricks Workspace é o som que o app para computador toca quando uma tarefa termina. Os quatro sons seguintes são os dos temas de som do app para computador.",
   "mobile.settings.notifications.soundFooterAndroid":
-    "As notificações tocam este som. O som do OpenBot é o som que o app para computador toca quando uma tarefa termina. Os quatro sons seguintes são os dos temas de som do app para computador.",
+    "As notificações tocam este som. O som do LogiBricks Workspace é o som que o app para computador toca quando uma tarefa termina. Os quatro sons seguintes são os dos temas de som do app para computador.",
   "mobile.settings.notifications.level.all": "Toda atividade",
   "mobile.settings.notifications.level.needsMe": "Só quando precisar de mim",
   "mobile.settings.notifications.level.nothing": "Nada",
@@ -159,7 +160,7 @@ export const messages = {
   "mobile.settings.notifications.serverFooter":
     "Os eventos deste servidor que notificam este celular. O app para computador tem as próprias configurações.",
   "mobile.settings.notifications.serverUnsupported":
-    "Este servidor não pode enviar notificações. Atualize o OpenBot no computador que o executa.",
+    "Este servidor não pode enviar notificações. Atualize o LogiBricks Workspace no computador que o executa.",
   "mobile.settings.notifications.thisPhone": "Este celular",
   "mobile.settings.notifications.whatYouHear": "O que chega para você",
   "mobile.settings.notifications.wholeServer": "Servidor inteiro",
@@ -173,7 +174,8 @@ export const messages = {
   "mobile.settings.notifications.chooseAgent": "Escolher para um agente",
   "mobile.settings.notifications.chooseAnotherAgent": "Escolher outro agente",
   "mobile.settings.notifications.levelsFooter": "Toque de novo no nível de um agente para seguir o servidor.",
-  "mobile.settings.notifications.agentsUnsupported": "Atualize o OpenBot neste servidor para escolher agentes.",
+  "mobile.settings.notifications.agentsUnsupported":
+    "Atualize o LogiBricks Workspace neste servidor para escolher agentes.",
   "mobile.settings.notifications.agentsOffline": "Os agentes aparecem quando este servidor está online.",
   "mobile.settings.notifications.scopeFooter":
     "Suas escolhas valem em todos os seus dispositivos. Silenciar vale só para este celular.",
@@ -201,7 +203,7 @@ export const messages = {
   "mobile.settings.profile.security": "Segurança",
   "mobile.settings.profile.accountSessions": "Sessões da conta",
   "mobile.settings.profile.signOutTitle": "Sair?",
-  "mobile.settings.profile.signOutBody": "Reconecte-se lendo um novo código do OpenBot no computador.",
+  "mobile.settings.profile.signOutBody": "Reconecte-se lendo um novo código do LogiBricks Workspace no computador.",
   "mobile.settings.profile.signOut": "Sair",
   "mobile.settings.profile.options": "Opções do perfil",
   "mobile.settings.profile.activity.title": "Atividade em {server}",
@@ -239,7 +241,7 @@ export const messages = {
   "mobile.settings.profile.models.title": "Uso de modelos",
   "mobile.settings.profile.share": "Compartilhar",
   "mobile.settings.profile.shareTitle": "Compartilhe sua atividade",
-  "mobile.settings.profile.share.caption": "Meus últimos seis meses com o OpenBot",
+  "mobile.settings.profile.share.caption": "Meus últimos seis meses com o LogiBricks Workspace",
   "mobile.settings.profile.share.createFailed": "Não foi possível criar a imagem.",
   "mobile.settings.profile.share.fileName": "openbot-activity.png",
   "mobile.settings.voice.title": "Voz",
@@ -271,7 +273,7 @@ export const messages = {
   "mobile.settings.voice.supertonic.male": "Voz masculina {number}",
   "mobile.settings.voice.elevenLabs.title": "ElevenLabs",
   "mobile.settings.voice.elevenLabs.footer":
-    "O OpenBot envia o texto de cada resposta à ElevenLabs com sua chave, e a ElevenLabs cobra sua conta. A chave fica nas chaves deste celular.",
+    "O LogiBricks Workspace envia o texto de cada resposta à ElevenLabs com sua chave, e a ElevenLabs cobra sua conta. A chave fica nas chaves deste celular.",
   "mobile.settings.voice.elevenLabs.key": "Chave de API",
   "mobile.settings.voice.elevenLabs.keySaved": "Salva neste celular",
   "mobile.settings.voice.elevenLabs.chooseVoice": "Escolha uma voz",
@@ -281,7 +283,8 @@ export const messages = {
   "mobile.settings.voice.elevenLabs.removeBody": "O Supertonic 3 volta a ler as respostas.",
   "mobile.settings.voice.elevenLabs.saveKey": "Salvar chave",
   "mobile.settings.voice.elevenLabs.testing": "Testando a chave",
-  "mobile.settings.voice.elevenLabs.keyHint": "O OpenBot testa as duas primeiras permissões antes de salvar a chave.",
+  "mobile.settings.voice.elevenLabs.keyHint":
+    "O LogiBricks Workspace testa as duas primeiras permissões antes de salvar a chave.",
   "mobile.settings.voice.elevenLabs.testFailed": "A ElevenLabs não respondeu. Tente de novo.",
   "mobile.settings.voice.elevenLabs.refused": "A ElevenLabs recusou a solicitação: {reason}",
   "mobile.settings.voice.elevenLabs.getKey": "Obter uma chave de API",
@@ -337,11 +340,11 @@ export const messages = {
   "mobile.settings.voice.pause.title": "Pausa antes de enviar",
   "mobile.settings.voice.pause.label": "Esperar novas palavras",
   "mobile.settings.voice.pause.footer":
-    "Em uma conversa por voz, o OpenBot envia suas palavras quando não reconhece novas palavras por esse tempo. Ruído sem palavras não o mantém ouvindo. Escolha uma pausa maior se você fala devagar ou para para pensar.",
+    "Em uma conversa por voz, o LogiBricks Workspace envia suas palavras quando não reconhece novas palavras por esse tempo. Ruído sem palavras não o mantém ouvindo. Escolha uma pausa maior se você fala devagar ou para para pensar.",
   "mobile.settings.voice.pause.seconds": "{seconds} s",
   "mobile.settings.voice.speed.title": "Velocidade das respostas",
   "mobile.settings.voice.speed.footer":
-    "A velocidade das respostas que o OpenBot lê em voz alta, também em uma conversa por voz.",
+    "A velocidade das respostas que o LogiBricks Workspace lê em voz alta, também em uma conversa por voz.",
   "mobile.settings.voice.speed.value": "{speed}×",
   "mobile.settings.voice.gptLive.title": "GPT Live Voice",
   "mobile.settings.voice.gptLive.footer":
@@ -355,13 +358,13 @@ export const messages = {
   "mobile.settings.voice.gptLive.status.ready": "Pronto",
   "mobile.settings.voice.gptLive.status.supported": "Compatível",
   "mobile.settings.voice.gptLive.status.offline": "Offline",
-  "mobile.settings.voice.gptLive.status.update": "Precisa de um OpenBot mais recente no computador dele",
+  "mobile.settings.voice.gptLive.status.update": "Precisa de um LogiBricks Workspace mais recente no computador dele",
   "mobile.settings.voice.gptLive.status.signIn": "Entre no Codex com o ChatGPT",
   "mobile.settings.voice.server.title": "Servidor de voz",
   "mobile.settings.voice.server.row": "Servidor compatível com OpenAI",
   "mobile.settings.voice.server.notSetUp": "Não configurado",
   "mobile.settings.voice.server.footer":
-    "O seu próprio servidor com as rotas /v1/audio da OpenAI, como Speaches ou Kokoro-FastAPI, como no computador. O OpenBot envia as suas gravações e o texto das respostas só para o endereço dele, e o telefone tem de o alcançar, por exemplo na mesma rede.",
+    "O seu próprio servidor com as rotas /v1/audio da OpenAI, como Speaches ou Kokoro-FastAPI, como no computador. O LogiBricks Workspace envia as suas gravações e o texto das respostas só para o endereço dele, e o telefone tem de o alcançar, por exemplo na mesma rede.",
   "mobile.settings.voice.server.choice": "O seu servidor de voz",
   "mobile.settings.voice.server.dictationReady": "No seu servidor de voz · {model}",
   "mobile.settings.voice.server.dictationOff": "Configure o ditado no seu servidor de voz",
@@ -386,7 +389,7 @@ export const messages = {
     "O reconhecimento do telefone e o Supertonic 3 assumem onde o servidor ouvia ou falava, e a chave de API é apagada deste telefone.",
   "mobile.settings.voice.server.removeFailed": "Não foi possível remover o servidor de voz.",
   "mobile.settings.voice.elevenLabs.recognitionFooter":
-    "O OpenBot transmite sua fala para a ElevenLabs com um token de uso único, e a ElevenLabs cobra na sua conta. A chave fica neste celular.",
+    "O LogiBricks Workspace transmite sua fala para a ElevenLabs com um token de uso único, e a ElevenLabs cobra na sua conta. A chave fica neste celular.",
   "mobile.settings.voice.elevenLabs.model.title": "Modelo",
   "mobile.settings.voice.elevenLabs.model.footer":
     "Cada modelo tem seu próprio preço no ElevenLabs. A mudança vale a partir da próxima resposta.",
@@ -395,4 +398,5 @@ export const messages = {
   "mobile.settings.voice.elevenLabs.model.v3": "Expressivo · lento",
   "mobile.settings.voice.elevenLabs.model.v4Turbo": "Mais de 90 idiomas · rápido",
   "mobile.settings.voice.elevenLabs.model.v4": "Melhor qualidade · mais de 90 idiomas · lento",
+  "mobile.settings.about.attribution": "Baseado no OpenBot. PolyForm Noncommercial 1.0.0.",
 } as const satisfies PartialTranslation<typeof source>;

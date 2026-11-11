@@ -124,6 +124,7 @@ export const messages = {
   "billing.license.cancel.descriptionNow":
     "De licentie eindigt aan het einde van de betaalde periode. Je servers merken hier niets van.",
   "billing.license.cancel.keep": "Licentie behouden",
+  "billing.order.server.summary": "Gehoste server voor je team.",
   "billing.license.invite.title": "Gebruiker aan de licentie toevoegen?",
   "billing.license.invite.description":
     "Deze uitnodiging voegt 1 gebruiker toe aan je licentie: {price} meer per maand.",

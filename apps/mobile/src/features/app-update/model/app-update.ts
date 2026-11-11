@@ -5,6 +5,7 @@ import {
   parseMobileReleaseNotes,
 } from "@openbot/contracts/mobile-features";
 import { useQuery } from "@tanstack/react-query";
+import Constants from "expo-constants";
 import * as SecureStore from "expo-secure-store";
 import * as Updates from "expo-updates";
 import { useEffect } from "react";
@@ -15,6 +16,7 @@ import { supportLog } from "@/features/support/model/support-log";
 import { devLatestAppVersion } from "@/shared/lib/dev-feature-overrides";
 import { currentAppVersion, refreshMobileFeatures, useLatestAppVersion } from "@/shared/lib/mobile-features";
 import { isIOS } from "@/shared/lib/platform";
+import { currentText } from "@/shared/lib/text";
 
 /**
  * An update the app can offer. `ready` is an over-the-air bundle that `expo-updates` has already
@@ -24,11 +26,12 @@ import { isIOS } from "@/shared/lib/platform";
  */
 export type AppUpdate = { kind: "ready"; id: string } | { kind: "store"; id: string; version: string };
 
-// The store pages of the app. The web pages are the fallback when the store app does not open.
-const IOS_STORE_URL = "itms-apps://apps.apple.com/app/id6807024266";
-const IOS_STORE_WEB_URL = "https://apps.apple.com/app/id6807024266";
-const ANDROID_STORE_URL = "market://details?id=run.openbot.mobile";
-const ANDROID_STORE_WEB_URL = "https://play.google.com/store/apps/details?id=run.openbot.mobile";
+// A branded distribution must supply its own listing. There is no upstream store fallback.
+function appStoreUrl(): string | null {
+  return isIOS
+    ? (Constants.expoConfig?.ios?.appStoreUrl ?? null)
+    : (Constants.expoConfig?.android?.playStoreUrl ?? null);
+}
 
 /** The public changelog, for when the notes cannot load. */
 export const MOBILE_CHANGELOG_URL = "https://openbot.run/changelog?platform=mobile";
@@ -160,9 +163,9 @@ export function useAppUpdate(): AppUpdate | null {
   if (dismissed === undefined) return null;
   const current = currentAppVersion();
   const update: AppUpdate | null =
-    isUpdatePending && downloadedUpdate
+    Updates.isEnabled && isUpdatePending && downloadedUpdate
       ? { kind: "ready", id: downloadedUpdateId(downloadedUpdate) }
-      : latest && current && isNewerMobileVersion(latest, current)
+      : appStoreUrl() && latest && current && isNewerMobileVersion(latest, current)
         ? { kind: "store", id: `store:${latest}`, version: latest }
         : null;
   return update && update.id !== dismissed ? update : null;
@@ -175,13 +178,15 @@ export function useAppUpdate(): AppUpdate | null {
  */
 export async function installAppUpdate(update: AppUpdate, reloadColor: string): Promise<void> {
   if (update.kind === "ready") {
+    if (!Updates.isEnabled) throw new Error(currentText().t("mobile.app.update.channelUnavailable"));
     await Updates.reloadAsync({
       reloadScreenOptions: { backgroundColor: reloadColor, fade: true, spinner: { enabled: false } },
     });
     return;
   }
-  const [url, webUrl] = isIOS ? [IOS_STORE_URL, IOS_STORE_WEB_URL] : [ANDROID_STORE_URL, ANDROID_STORE_WEB_URL];
-  await Linking.openURL(url).catch(() => Linking.openURL(webUrl));
+  const url = appStoreUrl();
+  if (!url) throw new Error(currentText().t("mobile.app.update.channelUnavailable"));
+  await Linking.openURL(url);
 }
 
 async function fetchReleaseNotes(apiUrl: string, after: string | null, signal: AbortSignal) {

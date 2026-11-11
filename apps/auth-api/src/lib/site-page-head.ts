@@ -1,5 +1,5 @@
 import { SITE_OPEN_GRAPH_LOCALES } from "./site-locale";
-import { OPENBOT_X_HANDLE, type PageSocialImage, pageSocialImageMeta } from "./site-metadata";
+import { COMPANY_SOCIAL_IMAGE, type PageSocialImage, pageSocialImageMeta } from "./site-metadata";
 import { type EnglishPagePath, pagePaths, SITE_LOCALES, type SiteLocale, siteHreflang } from "./site-paths";
 
 /** The head of a page that has localized copies, in one language. */
@@ -21,21 +21,20 @@ export interface SitePageHead {
  */
 export function sitePageHead(siteUrl: string, head: SitePageHead) {
   const url = new URL(head.path, siteUrl).toString();
-  const image = pageSocialImageMeta(head.image, siteUrl);
+  const image = pageSocialImageMeta(COMPANY_SOCIAL_IMAGE, siteUrl);
   const paths = pagePaths(head.page);
   return {
     meta: [
       { title: head.title },
       { name: "description", content: head.description },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "OpenBot" },
+      { property: "og:site_name", content: "LogiBricks Workspace" },
       { property: "og:locale", content: SITE_OPEN_GRAPH_LOCALES[head.locale] },
       { property: "og:url", content: url },
       { property: "og:title", content: head.title },
       { property: "og:description", content: head.description },
       ...image.openGraph,
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: OPENBOT_X_HANDLE },
       { name: "twitter:title", content: head.title },
       { name: "twitter:description", content: head.description },
       ...image.twitter,

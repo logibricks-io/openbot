@@ -21,10 +21,10 @@ const AgentAvatar = lazy(() =>
  * serves; how it is drawn is a later step.
  */
 
-const SHARE_HOST = "openbot.run";
+const SHARE_HOST = "Workspace host";
 
 function shareTitle(agent: MarketplaceAgentSummary): string {
-  return `${agent.name} — OpenBot agent`;
+  return `${agent.name} — LogiBricks Workspace agent`;
 }
 
 export function ShareCard(props: { agent: MarketplaceAgentSummary }): JSX.Element {
@@ -33,7 +33,7 @@ export function ShareCard(props: { agent: MarketplaceAgentSummary }): JSX.Elemen
       <CardAvatar agent={props.agent} />
       <span class="marketplace-share-brand">
         <AppLogo variant="production" class="marketplace-share-logo" />
-        OpenBot
+        LogiBricks Workspace
       </span>
       <span class="marketplace-share-copy">
         <span class="marketplace-share-name">
@@ -101,7 +101,7 @@ export function MessagesFrame(props: { agent: MarketplaceAgentSummary }): JSX.El
 export function SlackFrame(props: { agent: MarketplaceAgentSummary }): JSX.Element {
   return (
     <figure class="marketplace-share-slack">
-      <span class="marketplace-share-slack-site">OpenBot</span>
+      <span class="marketplace-share-slack-site">LogiBricks Workspace</span>
       <span class="marketplace-share-slack-title">{shareTitle(props.agent)}</span>
       <span class="marketplace-share-slack-description">{props.agent.title}</span>
       <div class="marketplace-share-slack-media">

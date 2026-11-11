@@ -2,7 +2,8 @@ import type { PartialTranslation } from "../../../message";
 import type { messages as source } from "../../en/mobile/workflow";
 
 export const messages = {
-  "mobile.workflow.unsupported": "Werk OpenBot bij op deze server om workflows op je telefoon te gebruiken.",
+  "mobile.workflow.unsupported":
+    "Werk LogiBricks Workspace bij op deze server om workflows op je telefoon te gebruiken.",
   "mobile.workflow.offline": "De server is offline. Workflows verschijnen als hij verbinding maakt.",
   "mobile.workflow.list.loading": "Laden…",
   "mobile.workflow.list.loadFailed": "Kan de workflows niet laden.",
@@ -21,7 +22,7 @@ export const messages = {
   "mobile.workflow.action.edit": "Wijzigen",
   "mobile.workflow.alert.runFailedTitle": "Kan de workflow niet starten",
   "mobile.workflow.alert.runFailedBody": "De server heeft de run niet gestart. Probeer het opnieuw.",
-  "mobile.workflow.alert.tryAgain": "OpenBot kan dit niet doen. Probeer het opnieuw.",
+  "mobile.workflow.alert.tryAgain": "LogiBricks Workspace kan dit niet doen. Probeer het opnieuw.",
   "mobile.workflow.drawer.needYou": { one: "{count} wacht op jou", other: "{count} wachten op jou" },
   "mobile.workflow.drawer.running": { one: "{count} bezig", other: "{count} bezig" },
   "mobile.workflow.drawer.review": "Wacht op jou · tik om te bekijken",
@@ -33,7 +34,7 @@ export const messages = {
   "mobile.workflow.detail.loadFailed": "Kan de workflow niet laden.",
   "mobile.workflow.detail.starting": "Starten…",
   "mobile.workflow.detail.newerApp":
-    "Deze workflow heeft stappen uit een nieuwere OpenBot. Werk OpenBot op je telefoon bij om hem te wijzigen.",
+    "Deze workflow heeft stappen uit een nieuwere LogiBricks Workspace. Werk LogiBricks Workspace op je telefoon bij om hem te wijzigen.",
   "mobile.workflow.detail.waits": "Run {number} wacht op jou. Bekijken",
   "mobile.workflow.detail.canvasOrder": "De stappen staan van links naar rechts, zoals op het canvas.",
   "mobile.workflow.detail.trigger": "Trigger",
@@ -68,7 +69,7 @@ export const messages = {
   "mobile.workflow.trigger.webhook": "Webhook",
   "mobile.workflow.trigger.webhookHint": "Wordt uitgevoerd als het adres een request krijgt.",
   "mobile.workflow.trigger.message": "Bericht",
-  "mobile.workflow.trigger.messageHint": "Wijzig deze trigger in OpenBot op je computer.",
+  "mobile.workflow.trigger.messageHint": "Wijzig deze trigger in LogiBricks Workspace op je computer.",
   "mobile.workflow.trigger.github": "GitHub",
   "mobile.workflow.trigger.githubHint": "Wordt uitgevoerd als er iets gebeurt in een GitHub-repository.",
   "mobile.workflow.trigger.discord": "Discord",
@@ -91,7 +92,7 @@ export const messages = {
   "mobile.workflow.webhook.secretFailed": "Kan geen geheim maken",
   "mobile.workflow.output.notify": "Melding",
   "mobile.workflow.output.channel": "Berichtenplek",
-  "mobile.workflow.output.chatChannel": "OpenBot-kanaal",
+  "mobile.workflow.output.chatChannel": "LogiBricks Workspace-kanaal",
   "mobile.workflow.output.file": "Bestand",
   "mobile.workflow.status.running": "Bezig",
   "mobile.workflow.status.approval": "Wacht op jou",
@@ -112,7 +113,7 @@ export const messages = {
   "mobile.workflow.step.questionDefault": "Keur goed om door te gaan.",
   "mobile.workflow.step.textEmpty": "Geen tekst",
   "mobile.workflow.step.textPlaceholder": "Tekst voor de volgende stap",
-  "mobile.workflow.step.computerOnly": "Wijzig deze stap in OpenBot op je computer.",
+  "mobile.workflow.step.computerOnly": "Wijzig deze stap in LogiBricks Workspace op je computer.",
   "mobile.workflow.step.gone": "Deze stap staat nu niet meer in de workflow.",
   "mobile.workflow.step.agent": "Agent",
   "mobile.workflow.step.agentHint": "De agent voert de taak uit met de uitvoer van de stap ervoor.",
@@ -130,8 +131,10 @@ export const messages = {
   "mobile.workflow.step.questionHint": "De run wacht tot je goedkeurt of afwijst. Je krijgt een melding.",
   "mobile.workflow.step.text": "Tekst",
   "mobile.workflow.step.sendTo": "Sturen naar",
-  "mobile.workflow.step.channelHint": "Een eigenaar of beheerder kiest de berichtenplek in OpenBot op de computer.",
-  "mobile.workflow.step.chatChannelHint": "Een eigenaar of beheerder kiest het kanaal in OpenBot op de computer.",
+  "mobile.workflow.step.channelHint":
+    "Een eigenaar of beheerder kiest de berichtenplek in LogiBricks Workspace op de computer.",
+  "mobile.workflow.step.chatChannelHint":
+    "Een eigenaar of beheerder kiest het kanaal in LogiBricks Workspace op de computer.",
   "mobile.workflow.problem.noTitle": "Schrijf een naam.",
   "mobile.workflow.problem.noAgent": "Kies een agent",
   "mobile.workflow.problem.agentGone": "De agent is niet beschikbaar. Kies een agent",
@@ -155,7 +158,7 @@ export const messages = {
   "mobile.workflow.add.prompt": "Vaste tekst voor de volgende stap.",
   "mobile.workflow.add.output": "Stuurt het resultaat naar jou.",
   "mobile.workflow.add.oneCondition":
-    "Op de telefoon heeft een workflow één voorwaarde. Gebruik OpenBot op je computer voor meer paden.",
+    "Op de telefoon heeft een workflow één voorwaarde. Gebruik LogiBricks Workspace op je computer voor meer paden.",
   "mobile.workflow.editor.title": "Workflow wijzigen",
   "mobile.workflow.editor.newTitle": "Nieuwe workflow",
   "mobile.workflow.editor.step": "Stap",
@@ -164,7 +167,7 @@ export const messages = {
   "mobile.workflow.editor.create": "Workflow maken",
   "mobile.workflow.editor.saveFailed": "Kan de workflow niet opslaan.",
   "mobile.workflow.editor.fieldsOnly":
-    "Deze workflow heeft een vorm die de telefoon niet als lijst kan tonen. Je kunt hier elke stap wijzigen. Gebruik OpenBot op je computer om stappen toe te voegen, te verplaatsen of te verwijderen.",
+    "Deze workflow heeft een vorm die de telefoon niet als lijst kan tonen. Je kunt hier elke stap wijzigen. Gebruik LogiBricks Workspace op je computer om stappen toe te voegen, te verplaatsen of te verwijderen.",
   "mobile.workflow.editor.annotationsKept": "De notities en tekeningen op het canvas blijven zoals ze zijn.",
   "mobile.workflow.editor.addStep": "Stap toevoegen",
   "mobile.workflow.editor.addAfter": "Stap toevoegen na",
@@ -241,7 +244,7 @@ export const messages = {
     "De workflow verandert voor elk lid naar deze versie. De server bewaart de huidige workflow als versie.",
   "mobile.workflow.version.restoreFailed": "Kan de versie niet herstellen",
   "mobile.workflow.github.unsupported":
-    "Werk OpenBot bij op deze server om GitHub in workflows op je telefoon te gebruiken.",
+    "Werk LogiBricks Workspace bij op deze server om GitHub in workflows op je telefoon te gebruiken.",
   "mobile.workflow.github.summary": "{repository} · {event}",
   "mobile.workflow.github.adminOnly": "Een eigenaar of beheerder van de server wijzigt GitHub-stappen.",
   "mobile.workflow.github.catalogFailed": "Kan de GitHub-repository's van de server niet laden.",
@@ -276,8 +279,9 @@ export const messages = {
   "mobile.workflow.github.filter.firstTime": "Nieuwe bijdrager",
   "mobile.workflow.github.filter.title": "Titel bevat",
   "mobile.workflow.github.filter.branch": "Basisbranch is",
-  "mobile.workflow.github.alert.missing": "OpenBot kan {repository} niet zien op GitHub.",
-  "mobile.workflow.github.alert.readOnly": "OpenBot kan issues en pull requests in {repository} niet wijzigen.",
+  "mobile.workflow.github.alert.missing": "LogiBricks Workspace kan {repository} niet zien op GitHub.",
+  "mobile.workflow.github.alert.readOnly":
+    "LogiBricks Workspace kan issues en pull requests in {repository} niet wijzigen.",
   "mobile.workflow.github.alert.eventsOff": "GitHub stuurt nog geen events van {repository}.",
   "mobile.workflow.github.alert.noEvent":
     "De trigger is geen GitHub-event. Kies een repository en neem het nummer uit de invoer.",
@@ -292,7 +296,7 @@ export const messages = {
   "mobile.workflow.github.history.all": "Alle gebeurtenissen tonen",
   "mobile.workflow.github.history.none": "Nog geen gebeurtenissen.",
   "mobile.workflow.github.history.loadFailed": "Kan de GitHub-gebeurtenissen niet laden.",
-  "mobile.workflow.github.history.offline": "OpenBot was offline",
+  "mobile.workflow.github.history.offline": "LogiBricks Workspace was offline",
   "mobile.workflow.github.history.waitingGroup": "Wachtend",
   "mobile.workflow.github.history.startedGroup": "Gestarte runs",
   "mobile.workflow.github.history.skippedGroup": "Overgeslagen",
@@ -335,8 +339,9 @@ export const messages = {
   "mobile.workflow.github.reason.completed": "Als voltooid",
   "mobile.workflow.github.reason.notPlanned": "Als niet gepland",
   "mobile.workflow.discord.hostOnly":
-    "Alleen de computer waarop OpenBot draait heeft de Discord-servers. Wijzig deze stap in OpenBot op die computer.",
-  "mobile.workflow.discord.triggerComputerOnly": "Wijzig deze trigger in OpenBot op de computer die hem uitvoert.",
+    "Alleen de computer waarop LogiBricks Workspace draait heeft de Discord-servers. Wijzig deze stap in LogiBricks Workspace op die computer.",
+  "mobile.workflow.discord.triggerComputerOnly":
+    "Wijzig deze trigger in LogiBricks Workspace op de computer die hem uitvoert.",
   "mobile.workflow.discord.outputSummary": "Discord · {action}",
   "mobile.workflow.discord.server": "Server",
   "mobile.workflow.discord.event": "Gebeurtenis",
@@ -362,7 +367,7 @@ export const messages = {
   "mobile.workflow.slack.outputSummary": "Slack · {action}",
   "mobile.workflow.slack.action.reply": "Reageren in thread",
   "mobile.workflow.telegram.hostOnly":
-    "Alleen de computer waarop OpenBot draait heeft de Telegram-chats. Wijzig deze stap in OpenBot op die computer.",
+    "Alleen de computer waarop LogiBricks Workspace draait heeft de Telegram-chats. Wijzig deze stap in LogiBricks Workspace op die computer.",
   "mobile.workflow.telegram.outputSummary": "Telegram · {action}",
   "mobile.workflow.telegram.chat": "Chat",
   "mobile.workflow.telegram.anyChat": "Elke gekoppelde chat",
@@ -382,7 +387,7 @@ export const messages = {
   "mobile.workflow.chats.adminOnly": "Alleen een eigenaar of beheerder kan deze stap wijzigen.",
   "mobile.workflow.chats.loadFailed": "De chats van deze server zijn niet geladen. Probeer het later opnieuw.",
   "mobile.workflow.slack.hostOnly":
-    "Alleen de computer waarop OpenBot draait heeft de Slack-workspaces. Wijzig deze stap in OpenBot op die computer.",
+    "Alleen de computer waarop LogiBricks Workspace draait heeft de Slack-workspaces. Wijzig deze stap in LogiBricks Workspace op die computer.",
   "mobile.workflow.slack.workspace": "Workspace",
   "mobile.workflow.slack.chooseWorkspace": "Workspace kiezen",
   "mobile.workflow.slack.oneWorkspace": "Eén workspace",

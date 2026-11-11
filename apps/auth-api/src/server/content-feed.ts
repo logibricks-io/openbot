@@ -3,9 +3,9 @@
 // tests can assert on the XML without standing up a router.
 
 import {
-  createMarketplaceShareUrl,
   isMarketplaceAgentId,
   isMarketplaceSkillSlug,
+  marketplaceListingPath,
 } from "@openbot/contracts/marketplace-links";
 import { BRAND_PAGE_UPDATED_AT, BRAND_ROUTE } from "../lib/brand-page";
 import { changelogUrl } from "../lib/changelog";
@@ -81,8 +81,8 @@ function newestListingDate(listings: readonly { updatedAt: string }[]): string {
  * The Marketplace tabs and every approved agent and skill. An agent that waits for its first review
  * has no approved version, so the catalog never returns it and it is never here.
  */
-function marketplaceSitemapEntries(listings: MarketplaceSitemapListings | null): SitemapEntry[] {
-  const marketplaceUrl = (path: string) => new URL(path, OPENBOT_SITE_URL).toString();
+function marketplaceSitemapEntries(listings: MarketplaceSitemapListings | null, siteUrl: string): SitemapEntry[] {
+  const marketplaceUrl = (path: string) => new URL(path, siteUrl).toString();
   const apps = { loc: marketplaceUrl(MARKETPLACE_APPS_ROUTE), lastmod: PLUGINS_UPDATED_AT };
   if (!listings) {
     return [
@@ -97,12 +97,12 @@ function marketplaceSitemapEntries(listings: MarketplaceSitemapListings | null):
   return [
     { loc: marketplaceUrl(MARKETPLACE_ROUTE), lastmod: newestListingDate(agents) },
     ...agents.map((agent) => ({
-      loc: createMarketplaceShareUrl({ kind: "agent", id: agent.id }),
+      loc: marketplaceUrl(marketplaceListingPath({ kind: "agent", id: agent.id })),
       lastmod: agent.updatedAt.slice(0, 10),
     })),
     { loc: marketplaceUrl(MARKETPLACE_SKILLS_ROUTE), lastmod: newestListingDate(skills) },
     ...skills.map((skill) => ({
-      loc: createMarketplaceShareUrl({ kind: "skill", id: skill.slug }),
+      loc: marketplaceUrl(marketplaceListingPath({ kind: "skill", id: skill.slug })),
       lastmod: skill.updatedAt.slice(0, 10),
     })),
     apps,
@@ -110,40 +110,40 @@ function marketplaceSitemapEntries(listings: MarketplaceSitemapListings | null):
 }
 
 /** The sitemap entries of the copies of `page` in each language other than English. */
-function localizedSitemapEntries(page: EnglishPagePath, lastmod: string): SitemapEntry[] {
+function localizedSitemapEntries(page: EnglishPagePath, lastmod: string, siteUrl: string): SitemapEntry[] {
   return Object.values(LOCALIZED_PAGE_PATHS).map((paths) => ({
-    loc: new URL(paths[page], OPENBOT_SITE_URL).toString(),
+    loc: new URL(paths[page], siteUrl).toString(),
     lastmod,
   }));
 }
 
-function contentSitemapXml(listings: MarketplaceSitemapListings | null): string {
+function contentSitemapXml(listings: MarketplaceSitemapListings | null, siteUrl: string): string {
   const entries: SitemapEntry[] = [
-    { loc: OPENBOT_SITE_URL, lastmod: latestSiteModifiedAt() },
-    ...localizedSitemapEntries("/", latestSiteModifiedAt()),
-    { loc: downloadPageUrl("hub"), lastmod: DOWNLOAD_PAGES_UPDATED_AT },
+    { loc: siteUrl, lastmod: latestSiteModifiedAt() },
+    ...localizedSitemapEntries("/", latestSiteModifiedAt(), siteUrl),
+    { loc: downloadPageUrl("hub", siteUrl), lastmod: DOWNLOAD_PAGES_UPDATED_AT },
     ...DOWNLOAD_PAGE_ORDER.map((platform) => ({
-      loc: downloadPageUrl(platform),
+      loc: downloadPageUrl(platform, siteUrl),
       lastmod: DOWNLOAD_PAGES_UPDATED_AT,
     })),
     ...CONTENT_COLLECTIONS.flatMap((collection) => [
-      { loc: collectionIndexUrl(collection), lastmod: latestModifiedAt(collection) },
+      { loc: collectionIndexUrl(collection, siteUrl), lastmod: latestModifiedAt(collection) },
       ...collection.articles.map((article) => ({
-        loc: articleUrl(collection, article.slug),
+        loc: articleUrl(collection, article.slug, siteUrl),
         lastmod: article.updatedAt ?? article.publishedAt,
       })),
     ]),
-    ...marketplaceSitemapEntries(listings),
+    ...marketplaceSitemapEntries(listings, siteUrl),
     /* The plugin pages hold no secret, unlike /join, so they are indexed like any article. Each
        entry's date is the catalog's own, which is what changes when a listing ships. */
-    ...SITE_PLUGINS.map((plugin) => ({ loc: pluginUrl(plugin.slug), lastmod: PLUGINS_UPDATED_AT })),
-    { loc: changelogUrl(), lastmod: CHANGELOG_UPDATED_AT },
-    { loc: new URL(TEAMS_ROUTE, OPENBOT_SITE_URL).toString(), lastmod: TEAMS_PAGE_UPDATED_AT },
-    ...localizedSitemapEntries(TEAMS_ROUTE, TEAMS_PAGE_UPDATED_AT),
-    { loc: new URL(PRICING_ROUTE, OPENBOT_SITE_URL).toString(), lastmod: PRICING_PAGE_UPDATED_AT },
-    ...localizedSitemapEntries(PRICING_ROUTE, PRICING_PAGE_UPDATED_AT),
-    { loc: new URL(BRAND_ROUTE, OPENBOT_SITE_URL).toString(), lastmod: BRAND_PAGE_UPDATED_AT },
-    { loc: new URL(PRIVACY_POLICY_ROUTE, OPENBOT_SITE_URL).toString(), lastmod: PRIVACY_POLICY_UPDATED_AT },
+    ...SITE_PLUGINS.map((plugin) => ({ loc: pluginUrl(plugin.slug, siteUrl), lastmod: PLUGINS_UPDATED_AT })),
+    { loc: changelogUrl(siteUrl), lastmod: CHANGELOG_UPDATED_AT },
+    { loc: new URL(TEAMS_ROUTE, siteUrl).toString(), lastmod: TEAMS_PAGE_UPDATED_AT },
+    ...localizedSitemapEntries(TEAMS_ROUTE, TEAMS_PAGE_UPDATED_AT, siteUrl),
+    { loc: new URL(PRICING_ROUTE, siteUrl).toString(), lastmod: PRICING_PAGE_UPDATED_AT },
+    ...localizedSitemapEntries(PRICING_ROUTE, PRICING_PAGE_UPDATED_AT, siteUrl),
+    { loc: new URL(BRAND_ROUTE, siteUrl).toString(), lastmod: BRAND_PAGE_UPDATED_AT },
+    { loc: new URL(PRIVACY_POLICY_ROUTE, siteUrl).toString(), lastmod: PRIVACY_POLICY_UPDATED_AT },
   ];
 
   const urls = entries
@@ -157,10 +157,10 @@ function contentSitemapXml(listings: MarketplaceSitemapListings | null): string 
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
-function contentRssXml(collection: ContentCollection): string {
+function contentRssXml(collection: ContentCollection, siteUrl: string): string {
   const items = collection.articles
     .map((article) => {
-      const url = articleUrl(collection, article.slug);
+      const url = articleUrl(collection, article.slug, siteUrl);
       return [
         "    <item>",
         `      <title>${escapeXml(article.title)}</title>`,
@@ -173,7 +173,7 @@ function contentRssXml(collection: ContentCollection): string {
         // RSS 2.0 `<author>` holds an email address, and a name there makes the
         // item invalid. Dublin Core's creator is the field for a name.
         `      <dc:creator>${escapeXml(article.author)}</dc:creator>`,
-        `      <enclosure url="${escapeXml(articleOgImageUrl(collection, article.slug))}" type="image/png" length="0" />`,
+        `      <enclosure url="${escapeXml(articleOgImageUrl(collection, article.slug, siteUrl))}" type="image/png" length="0" />`,
         "    </item>",
       ].join("\n");
     })
@@ -184,11 +184,11 @@ function contentRssXml(collection: ContentCollection): string {
     '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">',
     "  <channel>",
     `    <title>${escapeXml(`${collection.feedTitle} — ${OPENBOT_SITE_TITLE}`)}</title>`,
-    `    <link>${escapeXml(collectionIndexUrl(collection))}</link>`,
+    `    <link>${escapeXml(collectionIndexUrl(collection, siteUrl))}</link>`,
     `    <description>${escapeXml(collection.indexDescription)}</description>`,
     "    <language>en-us</language>",
     `    <lastBuildDate>${articleRssDate(latestPublishedAt(collection))}</lastBuildDate>`,
-    `    <atom:link href="${escapeXml(collectionFeedUrl(collection))}" rel="self" type="application/rss+xml" />`,
+    `    <atom:link href="${escapeXml(collectionFeedUrl(collection, siteUrl))}" rel="self" type="application/rss+xml" />`,
     items,
     "  </channel>",
     "</rss>",
@@ -205,9 +205,9 @@ type MarketplaceSitemapListings = Awaited<ReturnType<typeof readMarketplaceSitem
  * The sitemap reads the Marketplace from D1. When that read fails, the sitemap still lists every
  * other page and the three tabs, and no cache keeps that shorter version.
  */
-export async function contentSitemapResponse(): Promise<Response> {
+export async function contentSitemapResponse(siteUrl: string = OPENBOT_SITE_URL): Promise<Response> {
   const listings = await readMarketplaceSitemapListings().catch(() => null);
-  return new Response(contentSitemapXml(listings), {
+  return new Response(contentSitemapXml(listings, siteUrl), {
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
       "Cache-Control": listings ? FEED_CACHE_CONTROL : "no-store",
@@ -216,8 +216,8 @@ export async function contentSitemapResponse(): Promise<Response> {
   });
 }
 
-export function contentRssResponse(collection: ContentCollection): Response {
-  return new Response(contentRssXml(collection), {
+export function contentRssResponse(collection: ContentCollection, siteUrl: string = OPENBOT_SITE_URL): Response {
+  return new Response(contentRssXml(collection, siteUrl), {
     headers: {
       "Content-Type": "application/rss+xml; charset=utf-8",
       "Cache-Control": FEED_CACHE_CONTROL,

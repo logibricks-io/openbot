@@ -44,11 +44,11 @@ function pathMark(path: string) {
 }
 
 const SOCIALS: readonly FooterSocial[] = [
-  { label: "GitHub", href: OPENBOT_LINKS.repository, Mark: pathMark(GITHUB_MARK_PATH) },
-  { label: "X", href: OPENBOT_LINKS.x, Mark: pathMark(X_MARK_PATH) },
-  { label: "Discord", href: OPENBOT_LINKS.discord, Mark: pathMark(DISCORD_MARK_PATH) },
+  { label: "Upstream OpenBot source", href: OPENBOT_LINKS.repository, Mark: pathMark(GITHUB_MARK_PATH) },
+  { label: "Upstream OpenBot on X", href: OPENBOT_LINKS.x, Mark: pathMark(X_MARK_PATH) },
+  { label: "Upstream OpenBot community", href: OPENBOT_LINKS.discord, Mark: pathMark(DISCORD_MARK_PATH) },
   ...OTHER_NETWORKS.map((network) => ({
-    label: SOCIAL_NETWORKS[network].name,
+    label: `OpenBot: ${SOCIAL_NETWORKS[network].name}`,
     href: OPENBOT_LINKS[network],
     Mark: () => <SocialNetworkMark network={network} />,
   })),
@@ -73,7 +73,7 @@ export function LandingFooter() {
               aria-label={chrome().text.home}
             >
               <AppLogo variant="production" class="landing-footer-logo" />
-              <span>OpenBot</span>
+              <span>LogiBricks</span>
             </Link>
 
             <p class="landing-footer-description">{text().description}</p>
@@ -128,11 +128,7 @@ export function LandingFooter() {
               <span class="landing-footer-availability" aria-hidden="true" />
               {text().available}
             </Link>
-            <p class="landing-footer-made">
-              {text().made.before}
-              <LandingIcon name="heart" label={text().love} />
-              {text().made.after}
-            </p>
+            <p class="landing-footer-made">LogiBricks Workspace</p>
           </div>
         </div>
       </div>

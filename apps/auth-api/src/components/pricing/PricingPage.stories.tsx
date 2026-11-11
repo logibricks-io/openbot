@@ -4,7 +4,6 @@ import { createRootRoute, createRoute, createRouter, RouterContextProvider } fro
 import type { Meta, StoryObj } from "storybook-solidjs-vite";
 // The site's stylesheet, loaded only when a site story opens. See `ArticleMedia.stories.tsx`.
 import "../../styles.css";
-import { LIST_PRICE_PLANS } from "../../lib/pricing-page";
 import { siteText } from "../../lib/site-text";
 import { SiteTextProvider } from "../landing/SiteText";
 import { PricingPage } from "./PricingPage";
@@ -56,9 +55,7 @@ const meta = {
   component: PricingPage,
   args: {
     text: pricingPageText(translateFor("en")),
-    offer: { plans: LIST_PRICE_PLANS, inEu: false },
     lang: "en",
-    locale: "en",
   },
   parameters: { layout: "fullscreen", a11y: { test: "error" } },
   render: (args) => <WithRouter>{() => <PricingPage {...args} />}</WithRouter>,
@@ -67,10 +64,5 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/** A visitor outside the EU: the total has no VAT text. */
-export const OutsideEu: Story = {};
-
-/** A visitor in the EU: the unit beside the total says "excl. VAT". */
-export const InEu: Story = {
-  args: { offer: { plans: LIST_PRICE_PLANS, inEu: true } },
-};
+/** The company deployment notice does not offer a hosted plan or a commercial license. */
+export const DeploymentNotice: Story = {};

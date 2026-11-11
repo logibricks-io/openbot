@@ -1,9 +1,9 @@
-import { AppLogo } from "@openbot/brand";
 import { Link } from "@tanstack/solid-router";
 import { For, Show } from "solid-js";
 import { COMPARE_COLLECTION } from "../../lib/compare";
 import { LANDING_COMPARISON_LINKS } from "../../lib/landing-content";
 import { EXTERNAL_LINK_REL } from "../../lib/landing-links";
+import { UpstreamLogo } from "../brand/UpstreamLogo";
 import { RivalMark } from "../compare/RivalMark";
 import { ArticleGradient } from "../content/ArticleGradient";
 import { createLandingReveal } from "./createLandingReveal";
@@ -81,7 +81,7 @@ export function FaqSection() {
                           hoverTarget={() => card}
                         />
                         <span class="landing-compare-marks">
-                          <AppLogo variant="production" class="landing-compare-mark" />
+                          <UpstreamLogo class="landing-compare-mark" />
                           <RivalMark name={comparison.mark} class="landing-compare-mark landing-compare-mark-rival" />
                         </span>
                       </span>

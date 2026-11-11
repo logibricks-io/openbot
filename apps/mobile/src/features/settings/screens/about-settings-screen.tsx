@@ -4,7 +4,7 @@ import * as Updates from "expo-updates";
 import { Typography } from "heroui-native";
 import { useState } from "react";
 import { Linking, View } from "react-native";
-import { AppLogo } from "@/features/auth/components/app-logo";
+import { AppLogo, AppWordmark } from "@/features/auth/components/app-logo";
 import {
   SettingsContent,
   SettingsNote,
@@ -12,8 +12,6 @@ import {
   SettingsSection,
 } from "@/features/settings/components/settings-content";
 import { useText } from "@/shared/lib/text";
-
-const PRODUCT_NAME = "OpenBot";
 
 export function AboutSettingsScreen() {
   const { t } = useText();
@@ -40,15 +38,18 @@ export function AboutSettingsScreen() {
         {error ? <SettingsNote>{error}</SettingsNote> : null}
       </SettingsSection>
       <View className="items-center gap-4 px-4 pb-6 pt-8">
-        <AppLogo size={56} interactive />
+        <AppLogo size={56} />
         <View className="items-center gap-1">
-          <Typography.Heading type="h4" align="center">
-            {PRODUCT_NAME}
-          </Typography.Heading>
+          <View accessible accessibilityLabel={t("common.productName")} accessibilityRole="header">
+            <AppWordmark />
+          </View>
           <Typography.Paragraph type="body-xs" align="center" className="text-grouped-secondary" selectable>
             {versionLabel}
           </Typography.Paragraph>
         </View>
+        <Typography.Paragraph type="body-xs" align="center" className="text-grouped-secondary">
+          {t("mobile.settings.about.attribution")}
+        </Typography.Paragraph>
       </View>
     </SettingsContent>
   );

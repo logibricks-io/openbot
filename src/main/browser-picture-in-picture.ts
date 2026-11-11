@@ -1,3 +1,4 @@
+import { PRODUCT_NAME } from "@openbot/brand/product-identity";
 import type { BrowserBounds, BrowserPictureInPictureEvent } from "@openbot/contracts/ipc";
 import { Effect, Schema } from "effect";
 import { BrowserWindow, screen, WebContentsView } from "electron";
@@ -69,7 +70,7 @@ export class BrowserPictureInPicture {
       maximizable: false,
       skipTaskbar: true,
       backgroundColor: windowBackgroundColor(PICTURE_IN_PICTURE_DARK_BACKGROUND),
-      title: "OpenBot Browser",
+      title: PRODUCT_NAME,
       icon: this.#options.iconPath,
       webPreferences: {
         preload: this.#options.preloadPath,

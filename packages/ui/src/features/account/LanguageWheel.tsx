@@ -1,4 +1,4 @@
-import { AppLogo } from "@openbot/brand";
+import { AppLogo, Wordmark } from "@openbot/brand";
 import type { AppVariant } from "@openbot/contracts/ipc";
 import { TRANSLATED_LOCALES, type TranslatedLocale } from "@openbot/i18n";
 import { APP_LANGUAGE_OPTIONS, type AppLanguageOption } from "@openbot/i18n/languages";
@@ -21,7 +21,6 @@ interface WheelEntry {
   option: AppLanguageOption;
 }
 
-const PRODUCT_NAME = "OpenBot";
 const TITLE_ID = "language-wheel-title";
 
 /** The catalog languages in selector order. "System default" is not a row: the wheel opens on it. */
@@ -292,8 +291,9 @@ export function LanguageWheel(props: LanguageWheelProps) {
     <main class="account-login-screen" lang={props.language}>
       <div class="language-wheel-shell">
         <header class="account-login-brand-lockup">
+          <span class="sr-only">{t("common.productName")}</span>
           <AppLogo variant={props.variant} animation="blink" interactive class="account-login-logo" />
-          <span class="account-login-wordmark">{PRODUCT_NAME}</span>
+          <Wordmark class="account-login-wordmark" />
         </header>
         <h1 id={TITLE_ID} class="language-wheel-title">
           {t("account.language.title")}

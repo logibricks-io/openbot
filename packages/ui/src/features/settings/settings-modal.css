@@ -568,6 +568,19 @@
   color: var(--openbot-text-secondary);
 }
 
+.settings-modal-row .settings-brand-value {
+  gap: var(--openbot-space-1-5);
+  color: var(--openbot-text-secondary);
+  font-size: var(--openbot-text-sm);
+  font-weight: var(--openbot-weight-regular);
+  line-height: var(--openbot-leading-md);
+}
+
+.settings-brand-value .settings-company-mark {
+  width: var(--openbot-icon-md);
+  height: var(--openbot-icon-md);
+}
+
 .app-settings-modal-shell .settings-modal-update-track-select {
   width: 112px;
 }
@@ -844,6 +857,10 @@
 
   .app-settings-modal-shell .settings-modal-update-actions {
     justify-content: flex-end;
+  }
+
+  .app-settings-modal-shell .settings-brand-value {
+    justify-content: flex-start;
   }
 }
 

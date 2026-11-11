@@ -154,7 +154,7 @@ export function MessagingConnectPage(props: {
   );
 }
 
-/** The page's card: the link back to OpenBot, or why the install did not finish and how to try again. */
+/** The page's card: the link back to LogiBricks Workspace, or why the install did not finish and how to try again. */
 export function MessagingConnectView(props: {
   provider: WebMessagingInstallPlatform;
   /** The language of `text`. */

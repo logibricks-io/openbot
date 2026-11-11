@@ -83,7 +83,7 @@ export const messages = {
   "files.storage.allFiles": "Tutti i file",
   "files.storage.allFilesOn": "Tutti i file su {host}",
   "files.storage.allFilesDescription": "File di tutti gli agenti e le chat",
-  "files.storage.openBotOn": "OpenBot su {host}",
+  "files.storage.openBotOn": "LogiBricks Workspace su {host}",
   "files.storage.measuring": "Misurazione…",
   "files.storage.measureAgain": "Misura di nuovo",
   "files.storage.measuringStorage": "Misurazione dell'archiviazione",
@@ -92,7 +92,7 @@ export const messages = {
   "files.storage.byType": "Archiviazione per tipo",
   "files.storage.emptyTitle": "Ancora niente in archivio",
   "files.storage.emptyDescription":
-    "I workspace degli agenti, i file e la cronologia delle chat compaiono qui quando inizi a usare OpenBot.",
+    "I workspace degli agenti, i file e la cronologia delle chat compaiono qui quando inizi a usare LogiBricks Workspace.",
   "files.storage.agents": "Agenti",
   "files.storage.largestChats": "Chat più grandi",
   "files.storage.files": "File",
@@ -103,7 +103,7 @@ export const messages = {
   "files.storage.justNow": "proprio ora",
   "files.storage.minutesAgo": "{minutes} min fa",
   "files.storage.hoursAgo": "{hours} h fa",
-  "files.storage.updateServer": "Aggiorna OpenBot su questo server per vedere la sua archiviazione.",
+  "files.storage.updateServer": "Aggiorna LogiBricks Workspace su questo server per vedere la sua archiviazione.",
   "files.storage.openFailed": "Impossibile aprire «{name}»",
   "files.storage.tryAgain": "Riprova.",
   "files.machine.title": "Macchina",
@@ -133,12 +133,13 @@ export const messages = {
   "files.machine.saveFailed": "Impossibile salvare le impostazioni degli avvisi.",
   "files.cleanup.title": "Pulizia",
   "files.cleanup.canBeCleared": "{size} possono essere liberati",
-  "files.cleanup.description.caches": "Copie dei file del server. OpenBot le scarica di nuovo quando le apri.",
+  "files.cleanup.description.caches":
+    "Copie dei file del server. LogiBricks Workspace le scarica di nuovo quando le apri.",
   "files.cleanup.description.logs": "Log diagnostici. I nuovi log partono subito.",
   "files.cleanup.description.runtimes":
-    "Versioni precedenti della CLI dei provider che nessun agente usa. OpenBot conserva la versione in uso.",
+    "Versioni precedenti della CLI dei provider che nessun agente usa. LogiBricks Workspace conserva la versione in uso.",
   "files.cleanup.description.runtimeDownloads":
-    "I download della CLI di {providers} ed eventuali versioni precedenti della CLI. Nessun agente li usa: questi provider sono disattivati o usano la CLI che hai installato. OpenBot scarica di nuovo una CLI quando un provider ne ha bisogno.",
+    "I download della CLI di {providers} ed eventuali versioni precedenti della CLI. Nessun agente li usa: questi provider sono disattivati o usano la CLI che hai installato. LogiBricks Workspace scarica di nuovo una CLI quando un provider ne ha bisogno.",
   "files.cleanup.clear": "Svuota",
   "files.cleanup.clearCategory": "Svuota {category}",
   "files.cleanup.confirm.caches": "Svuotare i file del server in cache?",

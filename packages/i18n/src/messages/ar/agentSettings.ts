@@ -54,7 +54,8 @@ export const messages = {
   "agentSettings.folders.inWorkspace": "{folder} موجود في مساحة العمل، لذا يمكن لـ {agent} تغييره من قبل",
   "agentSettings.folders.inShared": "{folder} موجود في المجلد المشترك، لذا يمكن لـ {agent} تغييره من قبل",
   "agentSettings.folders.inFolder": "{folder} موجود في {parent}، وهو مضاف من قبل",
-  "agentSettings.folders.protected": "لا يمكنك إضافة {folder}: فهو يحتوي على بيانات OpenBot أو ملفات وكلاء آخرين",
+  "agentSettings.folders.protected":
+    "لا يمكنك إضافة {folder}: فهو يحتوي على بيانات LogiBricks Workspace أو ملفات وكلاء آخرين",
   "agentSettings.folders.missing": "{folder} ليس مجلدًا على هذا الحاسوب",
   "agentSettings.folders.limit": {
     zero: "لا يمكنك إضافة أي مجلد",
@@ -186,7 +187,8 @@ export const messages = {
   "agentSettings.runtime.workingDirectory": "دليل العمل",
   "agentSettings.runtime.notAvailable": "غير متاح بعد",
   "agentSettings.runtime.fullAccessNote": "يعمل الوكيل بوصول كامل إلى الحاسوب من مساحة عمله والمجلد المشترك.",
-  "agentSettings.runtime.askNote": "يسألك قبل أن يستخدم أداة من OpenBot أو ينشر موقعًا، وعندما يطلب مزوّده الموافقة.",
+  "agentSettings.runtime.askNote":
+    "يسألك قبل أن يستخدم أداة من LogiBricks Workspace أو ينشر موقعًا، وعندما يطلب مزوّده الموافقة.",
   "agentSettings.runtime.fullNote": "يعمل دون أن يسأل، إلا في الأسئلة التي يوجّهها إليك.",
 
   "agentSettings.access.workspace": "مساحة العمل فقط",
@@ -221,7 +223,7 @@ export const messages = {
   "agentSettings.deleteHistory.button": "حذف",
   "agentSettings.deleteHistory.confirmTitle": "هل تريد حذف سجل الدردشة مع {name}؟",
   "agentSettings.deleteHistory.confirmDescription":
-    "تُحذف كل رسائل هذه الدردشة وملفاتها من OpenBot وينساها الوكيل. لا يمكن التراجع عن ذلك. لا تتغير المحادثات الجانبية والتعليمات والنموذج والأدوات والذكريات ومساحة العمل والمتصفح.",
+    "تُحذف كل رسائل هذه الدردشة وملفاتها من LogiBricks Workspace وينساها الوكيل. لا يمكن التراجع عن ذلك. لا تتغير المحادثات الجانبية والتعليمات والنموذج والأدوات والذكريات ومساحة العمل والمتصفح.",
   "agentSettings.deleteHistory.confirm": "حذف السجل",
   "agentSettings.deleteHistory.failed": "تعذّر حذف السجل.",
 
@@ -277,7 +279,7 @@ export const messages = {
   "agentSettings.runtime.workspaceEnforcedCommand": "الأمر الذي يجب أن يكتب خارجها يسألك أولًا.",
   "agentSettings.runtime.workspaceEnforcedClaude": "تعديل ملف خارجها يسألك أولًا. ولا يستطيع أي أمر الكتابة خارجها.",
   "agentSettings.runtime.workspaceUnlimited":
-    "التحكم في الحاسوب ومتصفح OpenBot غير مقيّدين؛ ويمكنك إيقاف التحكم في الحاسوب أدناه.",
+    "التحكم في الحاسوب ومتصفح LogiBricks Workspace غير مقيّدين؛ ويمكنك إيقاف التحكم في الحاسوب أدناه.",
   "agentSettings.computerUse.title": "التحكم في الحاسوب",
   "agentSettings.computerUse.description": "السماح لهذا الوكيل بالتحكم في التطبيقات على هذا الحاسوب",
   "agentSettings.automation.title": "البرامج النصية المحلية",

@@ -17,10 +17,10 @@ export const messages = {
   "error.remote.sessionCapacity": "במארח כבר יש ארבעה סשנים פעילים.",
   "error.remote.linuxNeedsX11": "שולחן עבודה מרוחק ב-Linux דורש סשן X11. Wayland אינו נתמך.",
   "error.remote.runtimeMissing":
-    "סביבת הריצה של Sunshine ו-Moonlight Web חסרה או שאינה נתמכת במארח הזה. יש להתקין את גרסת OpenBot המלאה ב-Mac, במארח Windows x64 או במארח Linux x64, ואז להפעיל מחדש את OpenBot.",
+    "סביבת הריצה של Sunshine ו-Moonlight Web חסרה או שאינה נתמכת במארח הזה. יש להתקין את גרסת LogiBricks Workspace המלאה ב-Mac, במארח Windows x64 או במארח Linux x64, ואז להפעיל מחדש את LogiBricks Workspace.",
   "error.remote.testActive": "בדיקת שולחן עבודה מרוחק פעילה. יש לנסות שוב כשהיא תסתיים.",
   "error.remote.screenRecordingDenied":
-    "המארח לא אישר ל-OpenBot להקליט את המסך שלו. יש לאשר הקלטת מסך במארח ולנסות שוב.",
+    "המארח לא אישר ל-LogiBricks Workspace להקליט את המסך שלו. יש לאשר הקלטת מסך במארח ולנסות שוב.",
   "error.remote.teamSessionExpired": "הסשן של הצוות פג.",
   "error.remote.finishTestBeforeSwitch": "יש לסיים את בדיקת שולחן העבודה המרוחק לפני החלפת תצוגות.",
   "error.remote.displayNotFound": "התצוגה המרוחקת לא נמצאה.",
@@ -33,7 +33,7 @@ export const messages = {
   "error.remote.moonlightStartFailed":
     "Moonlight Web לא הופעל במארח. יש לבדוק את יומני שולחן העבודה המרוחק במארח ולנסות שוב.",
   "error.remote.pairingFailed":
-    "Moonlight לא הצליח להתאים את עצמו ל-Sunshine במארח. יש לנסות שוב. אם הבעיה נמשכת, יש להפעיל מחדש את OpenBot במארח.",
+    "Moonlight לא הצליח להתאים את עצמו ל-Sunshine במארח. יש לנסות שוב. אם הבעיה נמשכת, יש להפעיל מחדש את LogiBricks Workspace במארח.",
   "error.remote.runtimeStartFailed":
     "סביבת הריצה של שולחן עבודה מרוחק לא הופעלה במארח. יש לבדוק את יומני שולחן העבודה המרוחק במארח ולנסות שוב.",
   "error.remote.hostUnreachable": "אי אפשר להגיע למארח.",
@@ -41,7 +41,7 @@ export const messages = {
   "error.remote.invalidData": "המארח החזיר נתונים לא תקינים.",
   "error.remote.unsafeData": "המארח החזיר נתונים שהאפליקציה לא יכלה להשתמש בהם בבטחה.",
   "error.remote.requestFailedStatus": "הבקשה לשרת המרוחק נכשלה ({status}).",
-  "error.remote.appUpdateRequired": "יש לעדכן את אפליקציית OpenBot לפני החיבור למארח.",
+  "error.remote.appUpdateRequired": "יש לעדכן את אפליקציית LogiBricks Workspace לפני החיבור למארח.",
   "error.remote.identityNotVerified": "לא ניתן היה לאמת את זהות השרת.",
   "error.remote.webRtcUnavailable": "שכבת התעבורה WebRTC אינה זמינה.",
   "error.remote.invalidCompatibility": "המארח החזיר מידע תאימות לא תקין.",
@@ -59,8 +59,10 @@ export const messages = {
   "error.remote.inviteAcceptedOtherHost": "שירות החשבונות אישר מארח אחר.",
   "error.remote.inviteIdentityChanged": "זהות מארח ההזמנה השתנתה בזמן אישור ההזמנה.",
   "error.remote.localServerRemove": "אי אפשר להסיר את השרת המקומי.",
-  "error.remote.desktopSetupHostUpdate": "יש לעדכן את OpenBot במארח כדי לבדוק את הגדרת שולחן העבודה המרוחק.",
-  "error.remote.desktopTestHostUpdate": "יש לעדכן את OpenBot במארח כדי לבדוק את הגדרת שולחן העבודה המרוחק.",
+  "error.remote.desktopSetupHostUpdate":
+    "יש לעדכן את LogiBricks Workspace במארח כדי לבדוק את הגדרת שולחן העבודה המרוחק.",
+  "error.remote.desktopTestHostUpdate":
+    "יש לעדכן את LogiBricks Workspace במארח כדי לבדוק את הגדרת שולחן העבודה המרוחק.",
   "error.remote.viewerProxyUnavailable": "שרת הביניים המקומי של מציג שולחן העבודה המרוחק אינו זמין.",
   "error.remote.viewerTransportInvalid": "שכבת התעבורה של מציג שולחן העבודה המרוחק אינה תקינה.",
   "error.remote.viewerProxyNoPort": "שרת הביניים המקומי של המציג המרוחק לא קיבל פורט.",
@@ -157,7 +159,8 @@ export const messages = {
   "error.remote.signalInvalidMessage": "Signal החזיר הודעה לא תקינה.",
   "error.remote.sessionInvalid": "הסשן המרוחק אינו תקין.",
   "error.remote.ticketInvalid": "כרטיס החיבור אינו תקין.",
-  "error.remote.mobileUpdateRequired": "יש לעדכן את OpenBot לנייד או את אפליקציית שולחן העבודה לפני החיבור.",
+  "error.remote.mobileUpdateRequired":
+    "יש לעדכן את LogiBricks Workspace לנייד או את אפליקציית שולחן העבודה לפני החיבור.",
   "error.remote.connectionStepFailed": "לא ניתן היה להשלים את שלב החיבור הזה.",
   "error.remote.signalNotConnected": "Signal אינו מחובר.",
   "error.remote.signalFrameUnreadable": "Signal שלח מסגרת שהצד הזה לא יכול לקרוא.",
@@ -165,15 +168,15 @@ export const messages = {
   "error.remote.dataChannelFailed": "ערוץ {kind} נכשל.",
   "error.remote.hostBusy": "המארח עסוק בחיבור אחר. יש לנסות שוב בעוד רגע.",
   "error.remote.signalPermissionDenied": "לחשבון שלך אין גישה למארח הזה. יש לבקש גישה מהבעלים.",
-  "error.remote.signalRateLimited": "יותר מדי ניסיונות חיבור. OpenBot ינסה שוב בעוד {seconds} שניות.",
+  "error.remote.signalRateLimited": "יותר מדי ניסיונות חיבור. LogiBricks Workspace ינסה שוב בעוד {seconds} שניות.",
   "error.remote.signalProtocolError":
-    "Signal והאפליקציה הזו לא מסכימים על פרוטוקול החיבור. יש לעדכן את OpenBot ולנסות שוב.",
+    "Signal והאפליקציה הזו לא מסכימים על פרוטוקול החיבור. יש לעדכן את LogiBricks Workspace ולנסות שוב.",
   "error.remote.signalRefused": "Signal דחה את החיבור.",
   "error.remote.signalClosed": "החיבור ל-Signal נסגר לפני שהמארח ענה.",
   "error.remote.relayUnavailable": "Signal לא שלח שרתי ממסר לחיבור הזה. יש לנסות שוב מאוחר יותר.",
   "error.remote.iceFailed": "לא ניתן היה ליצור חיבור ישיר למארח. חומת אש, VPN או שרת proxy יכולים לחסום אותו.",
   "error.remote.iceDisconnected": "החיבור הישיר למארח אבד.",
-  "error.remote.directoryUnreachable": "OpenBot לא הצליח להגיע לשירות OpenBot. יש לבדוק את החיבור.",
+  "error.remote.directoryUnreachable": "LogiBricks Workspace לא הצליח להגיע לשירות OpenBot. יש לבדוק את החיבור.",
   "error.remote.directoryTimeout": "שירות OpenBot לא ענה בזמן. יש לנסות שוב.",
   "error.remote.inviteAlreadyUsed": "ההזמנה הזו כבר נוצלה. יש לבקש הזמנה חדשה.",
   "error.remote.inviteNotFound": "ההזמנה הזו אינה קיימת או שפג תוקפה. יש לבקש הזמנה חדשה.",
@@ -199,5 +202,5 @@ export const messages = {
     "השרת נמחק במחשב שלו, אבל החשבון עדיין מציג אותו. יש למחוק אותו שוב כדי להסיר אותו מהחשבון.",
   "error.remote.localServerLimit": "אפשר לקיים עד {limit} שרתים במחשב הזה. יש למחוק אחד כדי ליצור שרת נוסף.",
   "error.remote.localServersReadOnly":
-    "הגרסה הזו של OpenBot לא יכולה לקרוא את רשימת השרתים במחשב הזה. יש לעדכן את OpenBot.",
+    "הגרסה הזו של LogiBricks Workspace לא יכולה לקרוא את רשימת השרתים במחשב הזה. יש לעדכן את LogiBricks Workspace.",
 } as const satisfies PartialTranslation<typeof source>;

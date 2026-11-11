@@ -1,6 +1,7 @@
 import { PlatformLogo } from "@openbot/brand";
 import { createSignal, createUniqueId, For, onSettled, Show } from "solid-js";
 import { landingAnalytics } from "../../lib/analytics";
+import { createCompanyReleaseAvailability } from "../../lib/company-release-availability";
 import {
   DOWNLOAD_PLATFORM_ORDER,
   DOWNLOAD_PLATFORMS,
@@ -44,9 +45,10 @@ interface HeroMenuItemProps {
 function HeroMenuItem(props: HeroMenuItemProps) {
   const text = useLandingText();
   const offer = () => heroOffer(props.platform, text());
+  const available = createCompanyReleaseAvailability();
   return (
     <Show
-      when={offer().href}
+      when={available() && !offer().external ? offer().href : undefined}
       fallback={
         <button
           class="landing-download-menu-item"
@@ -54,11 +56,14 @@ function HeroMenuItem(props: HeroMenuItemProps) {
           role="menuitem"
           data-state="coming-soon"
           data-selected={props.selected ? "true" : undefined}
-          onClick={() => props.onSelect()}
+          onClick={(event) => {
+            event.preventDefault();
+            props.onSelect();
+          }}
         >
           <PlatformLogo platform={props.platform} />
           <span>{offer().label}</span>
-          <small>{offer().status}</small>
+          <small>{available() && !offer().external ? offer().status : text().download.unpublished}</small>
         </button>
       }
     >
@@ -71,11 +76,14 @@ function HeroMenuItem(props: HeroMenuItemProps) {
           role="menuitem"
           data-state="available"
           data-selected={props.selected ? "true" : undefined}
-          onClick={() => props.onSelect()}
+          onClick={(event) => {
+            event.preventDefault();
+            props.onSelect();
+          }}
         >
           <PlatformLogo platform={props.platform} />
           <span>{offer().label}</span>
-          <small>{offer().status}</small>
+          <small>{available() && !offer().external ? offer().status : text().download.unpublished}</small>
         </a>
       )}
     </Show>
@@ -90,7 +98,13 @@ export function HeroDownloadSelector() {
   let root: HTMLDivElement | undefined;
   let trigger: HTMLButtonElement | undefined;
 
-  const current = () => heroOffer(platform(), text());
+  const available = createCompanyReleaseAvailability();
+  const current = () => {
+    const offer = heroOffer(platform(), text());
+    return available() && !offer.external
+      ? offer
+      : { ...offer, href: undefined, action: text().download.releaseUnavailable, status: text().download.unpublished };
+  };
   const menuItems = () => Array.from(root?.querySelectorAll<HTMLElement>('[role="menuitem"]') ?? []);
 
   function closeMenu(restoreFocus = false): void {

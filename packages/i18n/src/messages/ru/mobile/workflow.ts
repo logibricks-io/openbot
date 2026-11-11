@@ -2,7 +2,8 @@ import type { PartialTranslation } from "../../../message";
 import type { messages as source } from "../../en/mobile/workflow";
 
 export const messages = {
-  "mobile.workflow.unsupported": "Обновите OpenBot на этом сервере, чтобы работать с рабочими процессами на телефоне.",
+  "mobile.workflow.unsupported":
+    "Обновите LogiBricks Workspace на этом сервере, чтобы работать с рабочими процессами на телефоне.",
   "mobile.workflow.offline": "Сервер не в сети. Рабочие процессы появятся после подключения.",
   "mobile.workflow.list.loading": "Загрузка…",
   "mobile.workflow.list.loadFailed": "Не удалось загрузить рабочие процессы.",
@@ -21,7 +22,7 @@ export const messages = {
   "mobile.workflow.action.edit": "Изменить",
   "mobile.workflow.alert.runFailedTitle": "Не удалось запустить рабочий процесс",
   "mobile.workflow.alert.runFailedBody": "Сервер не начал запуск. Повторите попытку.",
-  "mobile.workflow.alert.tryAgain": "OpenBot не удалось это сделать. Повторите попытку.",
+  "mobile.workflow.alert.tryAgain": "LogiBricks Workspace не удалось это сделать. Повторите попытку.",
   "mobile.workflow.drawer.needYou": {
     one: "{count} ждёт вас",
     few: "{count} ждут вас",
@@ -48,7 +49,7 @@ export const messages = {
   "mobile.workflow.detail.loadFailed": "Не удалось загрузить рабочий процесс.",
   "mobile.workflow.detail.starting": "Запуск…",
   "mobile.workflow.detail.newerApp":
-    "В этом рабочем процессе есть шаги из более новой версии OpenBot. Обновите OpenBot на телефоне, чтобы изменить его.",
+    "В этом рабочем процессе есть шаги из более новой версии LogiBricks Workspace. Обновите LogiBricks Workspace на телефоне, чтобы изменить его.",
   "mobile.workflow.detail.waits": "Запуск {number} ждёт вас. Проверить",
   "mobile.workflow.detail.canvasOrder": "Шаги показаны слева направо, как на холсте.",
   "mobile.workflow.detail.trigger": "Триггер",
@@ -83,7 +84,7 @@ export const messages = {
   "mobile.workflow.trigger.webhook": "Вебхук",
   "mobile.workflow.trigger.webhookHint": "Запускается, когда на его адрес приходит запрос.",
   "mobile.workflow.trigger.message": "Сообщение",
-  "mobile.workflow.trigger.messageHint": "Измените этот триггер в OpenBot на компьютере.",
+  "mobile.workflow.trigger.messageHint": "Измените этот триггер в LogiBricks Workspace на компьютере.",
   "mobile.workflow.trigger.github": "GitHub",
   "mobile.workflow.trigger.githubHint": "Запускается, когда в репозитории GitHub что-то происходит.",
   "mobile.workflow.trigger.discord": "Discord",
@@ -106,7 +107,7 @@ export const messages = {
   "mobile.workflow.webhook.secretFailed": "Не удалось создать секрет",
   "mobile.workflow.output.notify": "Уведомление",
   "mobile.workflow.output.channel": "Место в мессенджере",
-  "mobile.workflow.output.chatChannel": "Канал OpenBot",
+  "mobile.workflow.output.chatChannel": "Канал LogiBricks Workspace",
   "mobile.workflow.output.file": "Файл",
   "mobile.workflow.status.running": "Выполняется",
   "mobile.workflow.status.approval": "Ждёт вас",
@@ -127,7 +128,7 @@ export const messages = {
   "mobile.workflow.step.questionDefault": "Одобрите, чтобы продолжить.",
   "mobile.workflow.step.textEmpty": "Нет текста",
   "mobile.workflow.step.textPlaceholder": "Текст для следующего шага",
-  "mobile.workflow.step.computerOnly": "Измените этот шаг в OpenBot на компьютере.",
+  "mobile.workflow.step.computerOnly": "Измените этот шаг в LogiBricks Workspace на компьютере.",
   "mobile.workflow.step.gone": "Этого шага больше нет в рабочем процессе.",
   "mobile.workflow.step.agent": "Агент",
   "mobile.workflow.step.agentHint": "Агент выполняет задачу с результатом предыдущего шага.",
@@ -146,8 +147,9 @@ export const messages = {
   "mobile.workflow.step.text": "Текст",
   "mobile.workflow.step.sendTo": "Куда отправить",
   "mobile.workflow.step.channelHint":
-    "Место в мессенджере выбирает владелец или администратор в OpenBot на компьютере.",
-  "mobile.workflow.step.chatChannelHint": "Владелец или администратор выбирает канал в OpenBot на компьютере.",
+    "Место в мессенджере выбирает владелец или администратор в LogiBricks Workspace на компьютере.",
+  "mobile.workflow.step.chatChannelHint":
+    "Владелец или администратор выбирает канал в LogiBricks Workspace на компьютере.",
   "mobile.workflow.problem.noTitle": "Введите название.",
   "mobile.workflow.problem.noAgent": "Выберите агента",
   "mobile.workflow.problem.agentGone": "Агент недоступен. Выберите агента",
@@ -173,7 +175,7 @@ export const messages = {
   "mobile.workflow.add.prompt": "Готовый текст для следующего шага.",
   "mobile.workflow.add.output": "Отправляет результат вам.",
   "mobile.workflow.add.oneCondition":
-    "На телефоне в рабочем процессе может быть одно условие. Для большего числа веток используйте OpenBot на компьютере.",
+    "На телефоне в рабочем процессе может быть одно условие. Для большего числа веток используйте LogiBricks Workspace на компьютере.",
   "mobile.workflow.editor.title": "Изменить процесс",
   "mobile.workflow.editor.newTitle": "Новый процесс",
   "mobile.workflow.editor.step": "Шаг",
@@ -182,7 +184,7 @@ export const messages = {
   "mobile.workflow.editor.create": "Создать процесс",
   "mobile.workflow.editor.saveFailed": "Не удалось сохранить рабочий процесс.",
   "mobile.workflow.editor.fieldsOnly":
-    "Телефон не может показать этот рабочий процесс списком. Здесь можно изменить каждый шаг. Чтобы добавить, переместить или удалить шаги, используйте OpenBot на компьютере.",
+    "Телефон не может показать этот рабочий процесс списком. Здесь можно изменить каждый шаг. Чтобы добавить, переместить или удалить шаги, используйте LogiBricks Workspace на компьютере.",
   "mobile.workflow.editor.annotationsKept": "Заметки и рисунки на холсте останутся без изменений.",
   "mobile.workflow.editor.addStep": "Добавить шаг",
   "mobile.workflow.editor.addAfter": "Добавить шаг после",
@@ -260,7 +262,7 @@ export const messages = {
     "Рабочий процесс сменится на эту версию для всех участников. Сервер сохранит текущий процесс как версию.",
   "mobile.workflow.version.restoreFailed": "Не удалось восстановить версию",
   "mobile.workflow.github.unsupported":
-    "Обновите OpenBot на этом сервере, чтобы использовать GitHub в рабочих процессах на телефоне.",
+    "Обновите LogiBricks Workspace на этом сервере, чтобы использовать GitHub в рабочих процессах на телефоне.",
   "mobile.workflow.github.summary": "{repository} · {event}",
   "mobile.workflow.github.adminOnly": "Шаги GitHub меняет владелец или администратор сервера.",
   "mobile.workflow.github.catalogFailed": "Не удалось загрузить репозитории GitHub сервера.",
@@ -296,8 +298,9 @@ export const messages = {
   "mobile.workflow.github.filter.firstTime": "Новый участник",
   "mobile.workflow.github.filter.title": "Заголовок содержит",
   "mobile.workflow.github.filter.branch": "Базовая ветка",
-  "mobile.workflow.github.alert.missing": "OpenBot не видит {repository} на GitHub.",
-  "mobile.workflow.github.alert.readOnly": "OpenBot не может изменять задачи и пул-реквесты в {repository}.",
+  "mobile.workflow.github.alert.missing": "LogiBricks Workspace не видит {repository} на GitHub.",
+  "mobile.workflow.github.alert.readOnly":
+    "LogiBricks Workspace не может изменять задачи и пул-реквесты в {repository}.",
   "mobile.workflow.github.alert.eventsOff": "GitHub пока не присылает события из {repository}.",
   "mobile.workflow.github.alert.noEvent":
     "Триггер не является событием GitHub. Выберите репозиторий и берите номер из входа.",
@@ -312,7 +315,7 @@ export const messages = {
   "mobile.workflow.github.history.all": "Все события",
   "mobile.workflow.github.history.none": "Событий пока нет.",
   "mobile.workflow.github.history.loadFailed": "Не удалось загрузить события GitHub.",
-  "mobile.workflow.github.history.offline": "OpenBot был офлайн",
+  "mobile.workflow.github.history.offline": "LogiBricks Workspace был офлайн",
   "mobile.workflow.github.history.waitingGroup": "Ожидающие",
   "mobile.workflow.github.history.startedGroup": "Запущенные",
   "mobile.workflow.github.history.skippedGroup": "Пропущенные",
@@ -355,9 +358,9 @@ export const messages = {
   "mobile.workflow.github.reason.completed": "Выполнено",
   "mobile.workflow.github.reason.notPlanned": "Не планируется",
   "mobile.workflow.discord.hostOnly":
-    "Серверы Discord есть только на компьютере, где работает OpenBot. Измените этот шаг в OpenBot на этом компьютере.",
+    "Серверы Discord есть только на компьютере, где работает LogiBricks Workspace. Измените этот шаг в LogiBricks Workspace на этом компьютере.",
   "mobile.workflow.discord.triggerComputerOnly":
-    "Измените этот триггер в OpenBot на компьютере, который его запускает.",
+    "Измените этот триггер в LogiBricks Workspace на компьютере, который его запускает.",
   "mobile.workflow.discord.outputSummary": "Discord · {action}",
   "mobile.workflow.discord.server": "Сервер",
   "mobile.workflow.discord.event": "Событие",
@@ -388,7 +391,7 @@ export const messages = {
   "mobile.workflow.slack.outputSummary": "Slack · {action}",
   "mobile.workflow.slack.action.reply": "Ответить в треде",
   "mobile.workflow.telegram.hostOnly":
-    "Чаты Telegram есть только на компьютере, где работает OpenBot. Измените этот шаг в OpenBot на этом компьютере.",
+    "Чаты Telegram есть только на компьютере, где работает LogiBricks Workspace. Измените этот шаг в LogiBricks Workspace на этом компьютере.",
   "mobile.workflow.telegram.outputSummary": "Telegram · {action}",
   "mobile.workflow.telegram.chat": "Чат",
   "mobile.workflow.telegram.anyChat": "Любой связанный чат",
@@ -408,7 +411,7 @@ export const messages = {
   "mobile.workflow.chats.adminOnly": "Изменить этот шаг может только владелец или администратор.",
   "mobile.workflow.chats.loadFailed": "Не удалось загрузить чаты этого сервера. Повторите попытку позже.",
   "mobile.workflow.slack.hostOnly":
-    "Рабочие пространства Slack есть только на компьютере, где работает OpenBot. Измените этот шаг в OpenBot на этом компьютере.",
+    "Рабочие пространства Slack есть только на компьютере, где работает LogiBricks Workspace. Измените этот шаг в LogiBricks Workspace на этом компьютере.",
   "mobile.workflow.slack.workspace": "Рабочее пространство",
   "mobile.workflow.slack.chooseWorkspace": "Выберите рабочее пространство",
   "mobile.workflow.slack.oneWorkspace": "Одно рабочее пространство",

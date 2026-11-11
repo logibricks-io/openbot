@@ -1,3 +1,4 @@
+import { PRODUCT_NAME } from "@openbot/brand/product-identity";
 /**
  * A self-hosted server: the packaged Linux build that `install-server.sh` installs on a computer
  * with no screen. systemd starts it with `OPENBOT_SERVER=1` under a virtual display, and it is a
@@ -38,7 +39,7 @@ const CONTROL_SOCKET_FILE = "control.sock";
 const MAX_BODY_BYTES = 4096;
 const MAX_EMAIL_LENGTH = 254;
 /** The name of a server whose owner signed in without one. The same default as a mobile connect. */
-const DEFAULT_SERVER_NAME = "OpenBot";
+const DEFAULT_SERVER_NAME = PRODUCT_NAME;
 
 export interface ServerModeEnvironment {
   controlSocketPath: string;

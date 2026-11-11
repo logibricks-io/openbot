@@ -74,7 +74,7 @@ import { followAppearance, followWindowGlass, glassWindowOptions, windowBackgrou
 import { followWindowButtonSide, WINDOW_BUTTON_INSET } from "./window-buttons";
 
 /** The dark background of the main and setup windows, under the page's own canvas. */
-const MAIN_WINDOW_DARK_BACKGROUND = "#0b0d0e";
+const MAIN_WINDOW_DARK_BACKGROUND = "#151618";
 
 /**
  * The main window loads its page again when the renderer stops, as many times as this in

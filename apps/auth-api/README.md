@@ -368,3 +368,35 @@ from Firebase console > Project settings > Service accounts > Generate new priva
 the encrypted environment as one line (`jq -c . <file>.json`) and into the `cloudflare-production`
 GitHub environment. A deployment stops before remote changes when the value is not a service account
 key file. The local Worker sends to Firebase directly.
+
+
+## LogiBricks public brand and company releases
+
+This checkout keeps upstream source and license notices. Its public article, comparison, legal and
+release-history pages are marked as upstream references. They are not LogiBricks release evidence.
+The `/pricing`, `/teams` and `/contact` pages do not offer an unconfigured company service.
+Public social artwork and install icons come from `design/brand/logibricks-workspace/v2/exports`.
+`public/logibricks-social.svg` composes the approved primary lockup on Paper; its PNG is 1200 by 630.
+The old `openbot-social.png` path is retained as an asset alias with the same new artwork.
+
+Company desktop downloads are unavailable by default. Set the non-secret Worker variable
+`LOGIBRICKS_RELEASES_URL` only after the company release directory and binaries are verified.
+In local development, pass the value through the shell environment; the existing runtime loader
+forwards it. Do not add a plaintext environment file or change an encrypted file for this setting.
+The value is the full HTTPS directory that directly contains `latest-mac.yml`, `latest.yml`,
+`latest-linux.yml`, `latest-linux-arm64.yml` and their installer files. A GitHub release directory
+must end in `/releases/latest/download`. No credential, query, or fragment is accepted. Original
+`openbot.run` origins and the `nightly-labs/openbot` release repository are rejected.
+
+The download endpoint and public buttons fail closed without that value. A failed manifest read,
+missing installer, or invalid value returns HTTP 503 with no redirect. Mobile store buttons stay
+unavailable until separate verified company store listings exist. Email templates use the new
+product name and no implicit upstream website/logo link; existing signed invitation and invoice
+URLs are kept. No production deployment, callback migration or commercial entitlement is implied.
+
+Installer filenames must use a stable slug, such as
+`LogiBricks-Workspace-${version}-${arch}.${ext}`. Spaces and directory paths are rejected by the
+manifest reader. The macOS manifest must identify its arm64 asset by `arm64` in the filename;
+the x64 asset must not contain that substring. The directory URL is normalized by removing
+trailing slashes. Empty, malformed, non-HTTPS, credential-bearing, query-bearing and fragment-bearing
+values are refused; validation also checks decoded original-upstream GitHub paths.

@@ -66,8 +66,6 @@ const KEYBOARD_GAP = 24;
 const MIN_LIFTED_HEADER = 64;
 // The keyboard rises while the email pane comes in, as the block settles.
 const EMAIL_FOCUS_MS = 380;
-// The sad face after a refused value.
-const SAD_MS = 1100;
 // "Connected" stays on the block this long before the app takes over.
 const DONE_HOLD_MS = 900;
 // The camera stays under the block until the block has come back over it.
@@ -130,9 +128,9 @@ interface ScanState {
 }
 
 /**
- * The sign-in screen. The stage's lilac block is its header: the block covers the screen at
+ * The sign-in screen. The stage's neutral block is its header: the block covers the screen at
  * launch, rises to make room for the choices, shrinks for the email steps, covers the screen again
- * for the camera and fades so the camera shows through, while the eyes become the scanner frame.
+ * for the camera and fades so the camera shows through, with a separate scanner frame.
  */
 export function SignInScreen({ notice }: { notice?: SignInNotice }) {
   const { t } = useText();
@@ -141,7 +139,7 @@ export function SignInScreen({ notice }: { notice?: SignInNotice }) {
   const isFocused = useIsFocused();
   const reduced = useReducedMotion();
   const { connect } = useMobileSession();
-  const { lift, look } = useBloubStage();
+  const { lift } = useBloubStage();
   const [viewport, setViewport] = useState({ width: 0, height: 0 });
 
   // A new session first shows "Connected" on the block, then the app takes over under it.
@@ -198,15 +196,6 @@ export function SignInScreen({ notice }: { notice?: SignInNotice }) {
     [],
   );
 
-  // A refused value makes the eyes sad for a moment.
-  const [sad, setSad] = useState(false);
-  useEffect(() => {
-    if (signIn.rejection === 0) return;
-    setSad(true);
-    const timer = setTimeout(() => setSad(false), SAD_MS);
-    return () => clearTimeout(timer);
-  }, [signIn.rejection]);
-
   // Layout of the first step. A copy that nobody sees measures the pane before the block moves, so
   // the block and the pane can move together.
   const [optionsHeight, setOptionsHeight] = useState(0);
@@ -253,13 +242,7 @@ export function SignInScreen({ notice }: { notice?: SignInNotice }) {
     onPress: closeScanner,
     disabled: scanBusy,
   };
-  const formMood: BloubMood = signIn.verified
-    ? "happy"
-    : signIn.sending || signIn.verifying
-      ? "think"
-      : sad
-        ? "sad"
-        : "down";
+  const formMood: BloubMood = signIn.verified ? "happy" : signIn.sending || signIn.verifying ? "think" : "idle";
   const request: BloubStageRequest | null = !isFocused
     ? null
     : finished
@@ -274,7 +257,7 @@ export function SignInScreen({ notice }: { notice?: SignInNotice }) {
         ? scan.mode === "camera"
           ? { shape: { kind: "clear" }, mood: scanBusy ? "found" : "frame", back: close }
           : scan.mode === "permission"
-            ? { shape: { kind: "header", bottom: compactBottom }, mood: "down", back: close }
+            ? { shape: { kind: "header", bottom: compactBottom }, mood: "idle", back: close }
             : { shape: { kind: "cover" }, mood: "think", back: close }
         : scannerMounted
           ? // The block covers the camera again before it moves to the header, so the camera never
@@ -298,16 +281,6 @@ export function SignInScreen({ notice }: { notice?: SignInNotice }) {
   useEffect(() => {
     if (active) setRevealed(true);
   }, [active]);
-
-  // The eyes follow the text cursor while the user types.
-  const emailLength = signIn.email.length;
-  const codeLength = signIn.code.length;
-  const looking = !finished && !scan;
-  useEffect(() => {
-    if (!looking || step === "options") look(0, 0);
-    else if (step === "email") look(-16 + Math.min(emailLength, 26) * 1.25, 9);
-    else look(-22 + Math.min(codeLength, 7) * 6.4, 9);
-  }, [codeLength, emailLength, look, looking, step]);
 
   // The pane on the screen follows the target one render later, so the leaving pane knows where
   // the next one comes from and leaves the other way.

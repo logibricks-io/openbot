@@ -20,10 +20,10 @@ export const messages = {
   "error.remote.linuxNeedsX11":
     "Linux のリモートデスクトップには X11 セッションが必要です。Wayland には対応していません。",
   "error.remote.runtimeMissing":
-    "Sunshine と Moonlight Web のランタイムがないか、このホストでは対応していません。Mac、Windows x64 または Linux x64 のホストに OpenBot のフルリリースをインストールしてから、OpenBot を再起動してください。",
+    "Sunshine と Moonlight Web のランタイムがないか、このホストでは対応していません。Mac、Windows x64 または Linux x64 のホストに LogiBricks Workspace のフルリリースをインストールしてから、LogiBricks Workspace を再起動してください。",
   "error.remote.testActive": "リモートデスクトップのテストを実行中です。終了してから再試行してください。",
   "error.remote.screenRecordingDenied":
-    "ホストが OpenBot に画面の収録を許可していません。ホストで画面収録を許可してから、再試行してください。",
+    "ホストが LogiBricks Workspace に画面の収録を許可していません。ホストで画面収録を許可してから、再試行してください。",
   "error.remote.teamSessionExpired": "チームのセッションの期限が切れました。",
   "error.remote.finishTestBeforeSwitch":
     "ディスプレイを切り替える前に、リモートデスクトップのテストを終了してください。",
@@ -37,7 +37,7 @@ export const messages = {
   "error.remote.moonlightStartFailed":
     "ホストで Moonlight Web を起動できませんでした。ホストのリモートデスクトップのログを確認してから、もう一度お試しください。",
   "error.remote.pairingFailed":
-    "ホストで Moonlight と Sunshine をペアリングできませんでした。もう一度お試しください。問題が続く場合は、ホストで OpenBot を再起動してください。",
+    "ホストで Moonlight と Sunshine をペアリングできませんでした。もう一度お試しください。問題が続く場合は、ホストで LogiBricks Workspace を再起動してください。",
   "error.remote.runtimeStartFailed":
     "ホストでリモートデスクトップのランタイムを起動できませんでした。ホストのリモートデスクトップのログを確認してから、もう一度お試しください。",
   "error.remote.hostUnreachable": "ホストに接続できません。",
@@ -45,7 +45,7 @@ export const messages = {
   "error.remote.invalidData": "ホストが無効なデータを返しました。",
   "error.remote.unsafeData": "ホストが、このアプリで安全に使用できないデータを返しました。",
   "error.remote.requestFailedStatus": "リモートサーバーへのリクエストに失敗しました ({status})。",
-  "error.remote.appUpdateRequired": "ホストに接続する前に、この OpenBot アプリを更新してください。",
+  "error.remote.appUpdateRequired": "ホストに接続する前に、この LogiBricks Workspace アプリを更新してください。",
   "error.remote.identityNotVerified": "サーバーの ID を確認できませんでした。",
   "error.remote.webRtcUnavailable": "WebRTC トランスポートを利用できません。",
   "error.remote.invalidCompatibility": "ホストが無効な互換性情報を返しました。",
@@ -64,9 +64,9 @@ export const messages = {
   "error.remote.inviteIdentityChanged": "招待の承認中に、ホストの ID が変わりました。",
   "error.remote.localServerRemove": "ローカルサーバーは削除できません。",
   "error.remote.desktopSetupHostUpdate":
-    "リモートデスクトップの設定を確認するには、ホストの OpenBot を更新してください。",
+    "リモートデスクトップの設定を確認するには、ホストの LogiBricks Workspace を更新してください。",
   "error.remote.desktopTestHostUpdate":
-    "リモートデスクトップの設定をテストするには、ホストの OpenBot を更新してください。",
+    "リモートデスクトップの設定をテストするには、ホストの LogiBricks Workspace を更新してください。",
   "error.remote.viewerProxyUnavailable": "リモートビューアーのローカルプロキシを利用できません。",
   "error.remote.viewerTransportInvalid": "リモートビューアーのトランスポートが無効です。",
   "error.remote.viewerProxyNoPort": "リモートビューアーのローカルプロキシがポートを取得できませんでした。",
@@ -164,7 +164,8 @@ export const messages = {
   "error.remote.signalInvalidMessage": "Signal が無効なメッセージを返しました。",
   "error.remote.sessionInvalid": "リモートセッションが無効です。",
   "error.remote.ticketInvalid": "接続チケットが無効です。",
-  "error.remote.mobileUpdateRequired": "接続する前に、OpenBot Mobile またはデスクトップアプリを更新してください。",
+  "error.remote.mobileUpdateRequired":
+    "接続する前に、LogiBricks Workspace Mobile またはデスクトップアプリを更新してください。",
   "error.remote.connectionStepFailed": "この接続ステップを完了できませんでした。",
   "error.remote.signalNotConnected": "Signal に接続していません。",
   "error.remote.signalFrameUnreadable": "Signal から、このピアが読み取れないフレームが送信されました。",
@@ -173,16 +174,18 @@ export const messages = {
   "error.remote.hostBusy": "ホストは別の接続を処理中です。しばらくしてからもう一度お試しください。",
   "error.remote.signalPermissionDenied":
     "あなたのアカウントにはこのホストへのアクセス権がありません。オーナーにアクセスを依頼してください。",
-  "error.remote.signalRateLimited": "接続の試行が多すぎます。OpenBot は {seconds} 秒後にもう一度試します。",
+  "error.remote.signalRateLimited":
+    "接続の試行が多すぎます。LogiBricks Workspace は {seconds} 秒後にもう一度試します。",
   "error.remote.signalProtocolError":
-    "Signal とこのアプリの接続プロトコルが一致しません。OpenBot を更新してから、もう一度お試しください。",
+    "Signal とこのアプリの接続プロトコルが一致しません。LogiBricks Workspace を更新してから、もう一度お試しください。",
   "error.remote.signalRefused": "Signal が接続を拒否しました。",
   "error.remote.signalClosed": "ホストが応答する前に Signal への接続が閉じました。",
   "error.remote.relayUnavailable": "Signal はこの接続にリレーサーバーを送りませんでした。後でもう一度お試しください。",
   "error.remote.iceFailed":
     "ホストに直接接続できませんでした。ファイアウォール、VPN、プロキシが接続をブロックしている可能性があります。",
   "error.remote.iceDisconnected": "ホストへの直接接続が切れました。",
-  "error.remote.directoryUnreachable": "OpenBot は OpenBot サービスに接続できませんでした。接続を確認してください。",
+  "error.remote.directoryUnreachable":
+    "LogiBricks Workspace は OpenBot サービスに接続できませんでした。接続を確認してください。",
   "error.remote.directoryTimeout": "OpenBot サービスが時間内に応答しませんでした。もう一度お試しください。",
   "error.remote.inviteAlreadyUsed": "この招待はすでに使用されています。新しい招待を依頼してください。",
   "error.remote.inviteNotFound": "この招待は存在しないか、期限が切れています。新しい招待を依頼してください。",

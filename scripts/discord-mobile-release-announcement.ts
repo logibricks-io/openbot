@@ -73,7 +73,10 @@ export const ANNOUNCED_TAG_PREFIX = "mobile-announced/";
  * existed, so `announce` never posts them without `--version`.
  */
 const FIRST_TAGGED_VERSION = "1.4.7";
-const STORE_LINKS: Record<MobileStore, string> = { ios: IOS_APP_STORE_URL, android: ANDROID_PLAY_STORE_URL };
+const STORE_LINKS: Record<MobileStore, string | undefined> = {
+  ios: IOS_APP_STORE_URL,
+  android: ANDROID_PLAY_STORE_URL,
+};
 
 /**
  * The heading state of each store version in `changelog`, newest first. An OTA section, such as
@@ -144,9 +147,12 @@ export function announcementMessage({ highlights, version, stores, dates, roleId
   const others = MOBILE_STORES.filter((store) => !stores.includes(store)).flatMap(
     (store) => otherStoreLine(store, dates) ?? [],
   );
-  // A store link only for a store that has the version.
-  const links = MOBILE_STORES.filter((store) => stores.includes(store) || storeDay(dates, store) !== undefined).map(
-    (store) => `[${MOBILE_STORE_NAMES[store]}](<${STORE_LINKS[store]}>)`,
+  // A store link only for a published company listing that has the version.
+  const links = MOBILE_STORES.filter((store) => stores.includes(store) || storeDay(dates, store) !== undefined).flatMap(
+    (store) => {
+      const url = STORE_LINKS[store];
+      return url ? [`[${MOBILE_STORE_NAMES[store]}](<${url}>)`] : [];
+    },
   );
   return [
     roleId === undefined ? "@Mobile Release Pings" : `<@&${roleId}>`,

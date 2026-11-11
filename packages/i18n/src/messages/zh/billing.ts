@@ -148,9 +148,9 @@ export const messages = {
   // {percent} is a whole number, such as 20.
   "billing.order.yearlySaving": "按年 −{percent}%",
   "billing.order.server.title": "托管服务器",
-  "billing.order.server.summary": "我们为你的团队运行 OpenBot。",
+  "billing.order.server.summary": "为你的团队提供的托管服务器。",
   "billing.order.server.none": "不要服务器",
-  "billing.order.server.noneDetail": "在你自己的电脑上运行 OpenBot",
+  "billing.order.server.noneDetail": "在你自己的电脑上运行 LogiBricks Workspace",
   "billing.order.server.bestValue": "最划算",
   "billing.order.server.bestFor.starter": "最适合个人",
   "billing.order.server.bestFor.standard": "最适合小团队",

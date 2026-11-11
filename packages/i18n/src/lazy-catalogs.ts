@@ -4,8 +4,8 @@ import type { TranslatedLocale } from "./locale";
 import type { loadLocale as LoadLocale, localeLoaded as LocaleLoaded } from "./locale-loading";
 import { messages as enFormat } from "./messages/en/format";
 import { en } from "./messages/en/index";
-import { source as enSource } from "./messages/en/source";
 import type { sourceTranslation as SourceTranslation } from "./source-catalogs";
+import { englishSourceDisplay } from "./source-display-en";
 
 /**
  * The catalogs of the public web build: `app-catalogs.ts`, `source-catalogs.ts`,
@@ -85,7 +85,9 @@ const loaders: Record<LoadableLocale, () => Promise<LocaleCatalogs>> = {
     ),
 };
 
-const loaded = new Map<TranslatedLocale, LocaleCatalogs>([["en", { app: en, source: enSource, format: enFormat }]]);
+const loaded = new Map<TranslatedLocale, LocaleCatalogs>([
+  ["en", { app: en, source: englishSourceDisplay, format: enFormat }],
+]);
 const loading = new Map<LoadableLocale, Promise<void>>();
 
 export const appTranslation: typeof AppTranslation = (locale) => loaded.get(locale)?.app;

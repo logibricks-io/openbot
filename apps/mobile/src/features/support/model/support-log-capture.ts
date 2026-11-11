@@ -170,7 +170,7 @@ function systemName(): string {
 export function supportLogFileText(): string {
   const entries = supportLog.entries();
   return [
-    "OpenBot support log",
+    "LogiBricks Workspace support log",
     `Saved: ${new Date().toISOString()}`,
     `App: ${appVersion()}`,
     `Bundle: ${bundleName()}`,
@@ -241,7 +241,11 @@ export function installSupportLog(): void {
   installed = true;
   restoreWhenIdle();
   supportLog.subscribe(schedulePersist);
-  supportLog.add("info", "app", `Started OpenBot ${appVersion()} on ${systemName()}, bundle ${bundleName()}`);
+  supportLog.add(
+    "info",
+    "app",
+    `Started LogiBricks Workspace ${appVersion()} on ${systemName()}, bundle ${bundleName()}`,
+  );
   captureConsole();
   captureErrors();
   captureFetch();

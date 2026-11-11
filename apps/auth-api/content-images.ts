@@ -60,7 +60,7 @@ export interface ContentImageJob {
   markRow?: readonly ContentImageMark[] | undefined;
 }
 
-/** A compared product's mark, or OpenBot's own logo. */
+/** An archived compared product's mark. "openbot" always means the upstream project, never LogiBricks. */
 export type ContentImageMark = RivalMarkName | "openbot";
 
 export interface ContentImageLockup {

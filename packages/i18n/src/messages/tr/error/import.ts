@@ -6,7 +6,7 @@ export const messages = {
   "error.import.manifestNotJson": "{manifest} geçerli bir JSON değil.",
   "error.import.notAgentExport": "{manifest} bir OpenBot ajan dışa aktarımı değil.",
   "error.import.newerExportSkill":
-    "Bu dışa aktarım daha yeni bir dışa aktarma becerisi tarafından yapıldı. OpenBot'u güncelleyip tekrar deneyin.",
+    "Bu dışa aktarım daha yeni bir dışa aktarma becerisi tarafından yapıldı. LogiBricks Workspace'i güncelleyip tekrar deneyin.",
   "error.import.noAgents": "Dışa aktarım hiçbir ajan içermiyor.",
   "error.import.tooManyAgents": "Dışa aktarım {limit} ajandan fazlasını içeriyor.",
   "error.import.tooManyChannels": "Dışa aktarım {limit} kanaldan fazlasını içeriyor.",
@@ -48,7 +48,7 @@ export const messages = {
   "error.import.uploadDiskSpace":
     "Dışa aktarım sunucuda {size} GB boş disk alanı gerektiriyor ve {free} GB boş. Sunucuda yer açın, ardından dışa aktarımı yeniden seçin.",
   "error.import.remoteZipTooLargeOldHost":
-    "Bu sunucu en fazla 100 MB'lık bir dışa aktarım kabul ediyor. Daha büyük bir dışa aktarımı içe aktarmak için sunucudaki OpenBot'u güncelleyin.",
+    "Bu sunucu en fazla 100 MB'lık bir dışa aktarım kabul ediyor. Daha büyük bir dışa aktarımı içe aktarmak için sunucudaki LogiBricks Workspace'u güncelleyin.",
   "error.import.skillKept":
     '{name}: sunucu zaten "{skill}" becerisine sahip, bu yüzden ajan bu beceriyi kullanıyor. Bir yöneticiden güncellemesini isteyin.',
   "error.import.skillRenamed":

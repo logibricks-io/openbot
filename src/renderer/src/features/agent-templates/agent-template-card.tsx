@@ -1,6 +1,7 @@
 import { AppLogo } from "@openbot/brand";
 import { AGENT_TEMPLATE_CARD, type AgentTemplatePreview } from "@openbot/contracts/ipc";
 import { avatarHeadColor, createStaticAvatarSvg } from "@openbot/ui/bloub-avatar";
+import { currentText } from "@openbot/ui/text";
 import { render } from "@solidjs/web";
 import { flush } from "solid-js";
 import { loadImage, loadSvg, withAlpha } from "../../avatar-canvas";
@@ -60,12 +61,12 @@ function themeColors(): ThemeColors {
     return value;
   };
   return {
-    canvas: token("--openbot-bg-native-canvas"),
+    canvas: token("--openbot-bg-canvas"),
     primary: token("--openbot-text-primary"),
     secondary: token("--openbot-text-secondary"),
     muted: token("--openbot-text-muted"),
-    logo: token("--openbot-logo-production"),
-    logoEye: token("--openbot-logo-production-eye"),
+    logo: token("--openbot-text-primary"),
+    logoEye: token("--openbot-brand-accent"),
   };
 }
 
@@ -122,13 +123,14 @@ async function drawColumn(
   colors: ThemeColors,
 ): Promise<void> {
   const { x, width } = COLUMN;
+  const { t } = currentText();
   context.textBaseline = "alphabetic";
 
   // The brand row: the mark and the wordmark.
   await drawLogo(context, x, 92, 44, colors);
   context.fillStyle = colors.primary;
   context.font = `600 28px ${FONT}`;
-  context.fillText("OpenBot", x + 58, 124);
+  context.fillText(t("common.productName"), x + 58, 124);
 
   // `y` is always the baseline of the last line drawn.
   let y = 154;
@@ -157,7 +159,7 @@ async function drawColumn(
     y += lineHeight;
   }
 
-  const label = "Add to OpenBot";
+  const label = t("marketplace.agent.addAgent");
   context.font = `600 24px ${FONT}`;
   const pillWidth = context.measureText(label).width + 64;
   context.fillStyle = colors.primary;
@@ -185,13 +187,9 @@ export async function drawLogo(
   const svg = host.querySelector("svg")?.cloneNode(true);
   dispose();
   if (!(svg instanceof SVGSVGElement)) return;
-  svg.querySelector(".app-logo-background")?.setAttribute("fill", colors.logo);
-  for (const eye of svg.querySelectorAll(".app-logo-eye")) {
-    eye.setAttribute("fill", "none");
-    eye.setAttribute("stroke", colors.logoEye);
-    eye.setAttribute("stroke-width", "9.5");
-    eye.setAttribute("stroke-linecap", "round");
-    eye.setAttribute("stroke-linejoin", "round");
+  // Canvas SVGs have no application stylesheet. Resolve both brand fills before serialization.
+  for (const module of svg.querySelectorAll(".app-logo-module")) {
+    module.setAttribute("fill", module.classList.contains("app-logo-module-accent") ? colors.logoEye : colors.logo);
   }
   context.drawImage(await loadSvg(svg, size), x, y, size, size);
 }

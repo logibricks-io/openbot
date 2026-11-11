@@ -1,3 +1,11 @@
+# LogiBricks Workspace
+
+This fork adapts OpenBot for a freight-forwarding workspace. The desktop, Web, and mobile clients use the LogiBricks Workspace identity. The material below documents the upstream project. It does not announce a company installer or hosted service.
+
+OpenBot is copyright 2026 Synthetify Labs spółka z ograniczoną odpowiedzialnością. Keep the original [LICENSE](LICENSE), [NOTICE](NOTICE), and third-party credits. The product name does not change those terms.
+
+## Upstream project documentation
+
 # OpenBot
 
 [![CI](https://github.com/nightly-labs/openbot/actions/workflows/ci.yml/badge.svg)](https://github.com/nightly-labs/openbot/actions/workflows/ci.yml)

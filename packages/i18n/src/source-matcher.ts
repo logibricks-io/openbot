@@ -2,7 +2,7 @@ import type { TranslatedLocale } from "./locale";
 import { createTranslate, type Message, type MessageCatalog, type PartialTranslation, type Translate } from "./message";
 
 /**
- * Map English text back to its key, then render the key in another language.
+ * Map wire text back to its key, then render the key with the display catalog of the reader.
  *
  * Each English template compiles to one anchored pattern: `{count}` matches a number, and any other
  * placeholder matches the shortest text that lets the rest of the template match. Text that no
@@ -140,7 +140,7 @@ export function createSourceLocalizer(input: {
 
   return {
     localize: (text, locale) => {
-      if (locale === "en" || !input.translation(locale)) return text;
+      if (!input.translation(locale)) return text;
       const cacheKey = `${locale}\u0000${text}`;
       const cached = cache.get(cacheKey);
       if (cached !== undefined) {

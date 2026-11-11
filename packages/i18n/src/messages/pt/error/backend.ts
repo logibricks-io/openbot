@@ -3,7 +3,7 @@ import type { messages as source } from "../../en/error/backend";
 
 export const messages = {
   "error.backend.eventsUnavailable": "Os eventos não estão disponíveis neste computador anfitrião.",
-  "error.backend.databaseIntegrity": "O banco de dados do OpenBot falhou na verificação de integridade.",
+  "error.backend.databaseIntegrity": "O banco de dados do LogiBricks Workspace falhou na verificação de integridade.",
   "error.backend.webhookRouteLimit": "Um computador anfitrião pode ter no máximo {limit} rotinas de webhook.",
   "error.backend.webhookSettingsInvalid": "Verifique as configurações do webhook e tente de novo.",
   "error.backend.webhookSenderSecretInvalid":
@@ -17,8 +17,8 @@ export const messages = {
   "error.backend.browserViewLimit": "Há visualizações do navegador demais abertas neste computador anfitrião.",
   "error.backend.browserViewEnded": "A visualização ao vivo desta página terminou.",
   "error.backend.browserViewFailed": "A visualização ao vivo desta página falhou.",
-  "error.backend.windowTemporarilyUnavailable": "A janela do OpenBot está temporariamente indisponível.",
-  "error.backend.windowUnavailable": "A janela do OpenBot está indisponível.",
+  "error.backend.windowTemporarilyUnavailable": "A janela do LogiBricks Workspace está temporariamente indisponível.",
+  "error.backend.windowUnavailable": "A janela do LogiBricks Workspace está indisponível.",
   "error.backend.sunshineApiHttp": "A API do Sunshine falhou com HTTP {status}.",
   "error.backend.sunshinePortsUnavailable":
     "Não foi possível reservar um conjunto de portas livres do Sunshine para a área de trabalho remota.",
@@ -36,7 +36,7 @@ export const messages = {
   "error.backend.moonlightRejectedPairing": "O Moonlight rejeitou o pareamento com o Sunshine.",
   "error.backend.moonlightNoPin": "O Moonlight não retornou um PIN de pareamento.",
   "error.backend.moonlightPairingIncomplete": "O pareamento do Moonlight não foi concluído.",
-  "error.backend.moonlightWebNotEmbedded": "O Moonlight Web não é uma versão integrada ao OpenBot.",
+  "error.backend.moonlightWebNotEmbedded": "O Moonlight Web não é uma versão integrada ao LogiBricks Workspace.",
   "error.backend.moonlightEmptyResponse": "O Moonlight retornou uma resposta vazia.",
   "error.backend.remoteDesktopTimeout": "O tempo da solicitação de área de trabalho remota esgotou.",
   "error.backend.moonlightApiHttp": "A API do Moonlight falhou com HTTP {status}.",
@@ -53,8 +53,8 @@ export const messages = {
   "error.backend.browserUserControlUnsupported":
     "Este computador anfitrião remoto não oferece suporte para assumir o controle de uma aba do navegador.",
   "error.backend.browserSignInUnsupported": "Este host remoto não pode receber um início de sessão deste computador.",
-  "error.backend.browserSignInOpenFailed": "O OpenBot não conseguiu abrir a janela de login.",
-  "error.backend.browserSignInReadFailed": "O OpenBot não conseguiu ler o login da janela.",
+  "error.backend.browserSignInOpenFailed": "O LogiBricks Workspace não conseguiu abrir a janela de login.",
+  "error.backend.browserSignInReadFailed": "O LogiBricks Workspace não conseguiu ler o login da janela.",
   "error.backend.browserStopUnsupported":
     "Este computador anfitrião remoto não consegue parar o carregamento de uma página.",
   "error.backend.sharedDataLocalOnly":
@@ -64,15 +64,15 @@ export const messages = {
   "error.backend.sunshineNotReadyReason": "O Sunshine não ficou pronto. {reason}",
   "error.backend.channelLeadModelUnavailable": "O modelo do líder do canal está indisponível.",
   "error.backend.contextCompactionIneffective":
-    "A compactação não reduz este chat: após duas compactações, ele ainda usa {percent}% da janela de contexto do modelo, por isso o OpenBot para de compactá-lo. Ferramentas e instruções usam a maior parte da janela. Desative os servidores MCP ou o uso do computador de que este agente não precisa, ou escolha um modelo com uma janela maior. Depois, inicie um novo chat.",
+    "A compactação não reduz este chat: após duas compactações, ele ainda usa {percent}% da janela de contexto do modelo, por isso o LogiBricks Workspace para de compactá-lo. Ferramentas e instruções usam a maior parte da janela. Desative os servidores MCP ou o uso do computador de que este agente não precisa, ou escolha um modelo com uma janela maior. Depois, inicie um novo chat.",
   "error.backend.contextCompactionStopped":
-    'Duas compactações seguidas deste chat falharam, então o OpenBot para de compactá-lo automaticamente. Cada tentativa envia o chat inteiro ao modelo e consome o limite do seu plano. Selecione "Compactar agora" para tentar de novo ou inicie um novo chat.',
+    'Duas compactações seguidas deste chat falharam, então o LogiBricks Workspace para de compactá-lo automaticamente. Cada tentativa envia o chat inteiro ao modelo e consome o limite do seu plano. Selecione "Compactar agora" para tentar de novo ou inicie um novo chat.',
   "error.backend.providerRetrying":
     "O provedor falhou nesta solicitação {attempts} vezes e tenta novamente. Se o agente não continuar, pare o turno.",
   "error.backend.providerRetryingLargeContext":
-    "O provedor falhou nesta solicitação {attempts} vezes e tenta novamente. Este chat usa {percent}% da janela de contexto do modelo. Se o agente não continuar, pare o turno: o OpenBot compacta o chat antes da próxima mensagem.",
+    "O provedor falhou nesta solicitação {attempts} vezes e tenta novamente. Este chat usa {percent}% da janela de contexto do modelo. Se o agente não continuar, pare o turno: o LogiBricks Workspace compacta o chat antes da próxima mensagem.",
   "error.backend.sharedDataUnavailable": "Os dados compartilhados estão indisponíveis.",
-  "error.backend.shuttingDown": "O OpenBot está encerrando.",
+  "error.backend.shuttingDown": "O LogiBricks Workspace está encerrando.",
   "error.backend.channelUnconfirmedStart":
     "O canal tem uma tarefa atribuída cujo início não foi confirmado. Verifique o resultado antes de excluí-lo.",
   "error.backend.channelNotFound": "Canal não encontrado.",
@@ -158,14 +158,14 @@ export const messages = {
   "error.backend.fileGone": "O arquivo não existe ou já foi excluído.",
   "error.backend.managedAttachmentChanged": "O anexo gerenciado não foi encontrado ou mudou: {name}",
   "error.backend.mailboxStateCorrupt":
-    "O estado da caixa de mensagens está corrompido ou é de uma versão mais recente do OpenBot; ele não será sobrescrito.",
+    "O estado da caixa de mensagens está corrompido ou é de uma versão mais recente do LogiBricks Workspace; ele não será sobrescrito.",
   "error.backend.recipientDeleting": "O destinatário está sendo excluído. Tente novamente quando a exclusão terminar.",
   "error.backend.recipientHidden": "Este agente está oculto. Restaure-o para enviar mensagens.",
   "error.backend.attachBetween": "Anexe de 1 a {limit} arquivos.",
   "error.backend.attachmentNotFile": "O anexo não é um arquivo: {path}",
   "error.backend.generatedImageTooLarge": "A imagem gerada excede o limite de 100 MB.",
   "error.backend.attachmentNotRegularFile": "Somente arquivos comuns podem ser anexados: {name}",
-  "error.backend.attachmentCopyFailed": "O OpenBot não conseguiu copiar {name}.",
+  "error.backend.attachmentCopyFailed": "O LogiBricks Workspace não conseguiu copiar {name}.",
   "error.backend.routineNameRequired": "É necessário informar um nome para a rotina.",
   "error.backend.routineNameTooLong": "O nome da rotina é muito longo.",
   "error.backend.routineInstructionRequired": "É necessário informar uma instrução para a rotina.",
@@ -189,14 +189,14 @@ export const messages = {
   "error.backend.routineRunStarting":
     "Esta execução da rotina ainda está iniciando. Tente novamente após o início do turno.",
   "error.backend.routineRunNoSession":
-    "O OpenBot não pode interromper a execução ativa da rotina porque a sessão do provedor está indisponível.",
+    "O LogiBricks Workspace não pode interromper a execução ativa da rotina porque a sessão do provedor está indisponível.",
   "error.backend.interruptSelf": "Um agente não pode interromper a si mesmo.",
   "error.backend.interruptOtherWork":
     "Este agente trabalha em uma tarefa que sua mensagem não iniciou. Somente o usuário ou quem enviou a tarefa pode interrompê-lo.",
   "error.backend.interruptStarting":
     "Este agente ainda está iniciando um turno. Tente novamente após o início do turno.",
   "error.backend.interruptNoSession":
-    "O OpenBot não pode interromper este agente porque a sessão do provedor está indisponível.",
+    "O LogiBricks Workspace não pode interromper este agente porque a sessão do provedor está indisponível.",
   "error.backend.memoryTextRequired": "É necessário informar o texto da memória.",
   "error.backend.memoryTextTooLong": "O texto da memória é muito longo.",
   "error.backend.mcpServerGone": "Este servidor MCP não existe mais.",
@@ -226,9 +226,9 @@ export const messages = {
     "Esta mensagem faz parte de um turno em andamento. Exclua-a quando o turno terminar.",
   "error.backend.messageDeleteForbidden": "Você só pode excluir as mensagens que enviou.",
   "error.backend.routineFlowHandoffFailed": "A rotina não conseguiu passar o trabalho para este agente.",
-  "error.backend.mcpServerLimit": "O OpenBot mantém até {limit} servidores MCP.",
+  "error.backend.mcpServerLimit": "O LogiBricks Workspace mantém até {limit} servidores MCP.",
   "error.backend.mcpServerNameTaken": "Já existe um servidor MCP chamado {name}.",
-  "error.backend.mcpServerInvalid": "O OpenBot não pode salvar esta configuração de servidor MCP.",
+  "error.backend.mcpServerInvalid": "O LogiBricks Workspace não pode salvar esta configuração de servidor MCP.",
   "error.backend.mcpServerNoAnswer": "O servidor não respondeu em {seconds} segundos.",
   "error.backend.mcpSignInNotAccepted": "O servidor não aceitou esse login.",
   "error.backend.mcpSignInClientRefused":
@@ -243,16 +243,17 @@ export const messages = {
   "error.backend.mcpSignInNotWebPage": "O endereço de login não é uma página da web.",
   "error.backend.mcpSignInRequired":
     "Este servidor pede que você se autentique. Escolha Entrar para continuar no navegador.",
-  "error.backend.mcpSignInOnHost": "Este servidor pede login. Entre nele pelo OpenBot no computador anfitrião.",
+  "error.backend.mcpSignInOnHost":
+    "Este servidor pede login. Entre nele pelo LogiBricks Workspace no computador anfitrião.",
   "error.backend.mcpSignInNeedsHttps":
-    "Este servidor pede login, e o OpenBot só faz login por https. Altere a URL para {url}.",
+    "Este servidor pede login, e o LogiBricks Workspace só faz login por https. Altere a URL para {url}.",
   "error.backend.mcpSignInCancelled": "O login foi cancelado.",
   "error.backend.mcpSignInTimedOut": "O login não foi concluído no navegador.",
   "error.backend.mcpSignInResponseTimedOut": "A resposta do login não chegou a tempo.",
   "error.backend.mcpSignInMetadataUnreadable":
-    "O OpenBot não conseguiu ler as informações de login deste servidor. Verifique o endereço do servidor e tente novamente.",
+    "O LogiBricks Workspace não conseguiu ler as informações de login deste servidor. Verifique o endereço do servidor e tente novamente.",
   "error.backend.mcpSignInAnswerUnreadable":
-    "O servidor de login enviou uma resposta que o OpenBot não consegue ler. Se o serviço fornecer uma chave de API ou um token, adicione-o nas configurações deste servidor e teste a conexão novamente.",
+    "O servidor de login enviou uma resposta que o LogiBricks Workspace não consegue ler. Se o serviço fornecer uma chave de API ou um token, adicione-o nas configurações deste servidor e teste a conexão novamente.",
   "error.backend.mcpServerExited":
     "O servidor parou antes de responder. Execute o comando em um terminal para ver o erro.",
   "error.backend.mcpServerFailedToStart": "O servidor não iniciou: {reason}",
@@ -261,10 +262,11 @@ export const messages = {
   "error.backend.mcpServerFailedForProvider":
     "{provider} não conseguiu iniciar o servidor MCP {name}. Abra as configurações de MCP e escolha Testar conexão para ver a causa.",
   "error.backend.mcpOAuthProxyUnavailable":
-    "O OpenBot não conseguiu iniciar a conexão local de login para este servidor. Reinicie o OpenBot e tente novamente.",
+    "O LogiBricks Workspace não conseguiu iniciar a conexão local de login para este servidor. Reinicie o LogiBricks Workspace e tente novamente.",
   "error.backend.mcpOAuthSignInNeeded":
-    "O login neste servidor MCP terminou. O usuário precisa entrar novamente no OpenBot.",
-  "error.backend.mcpServerUnreachable": "O OpenBot não conseguiu acessar o servidor. Verifique a URL e sua rede.",
+    "O login neste servidor MCP terminou. O usuário precisa entrar novamente no LogiBricks Workspace.",
+  "error.backend.mcpServerUnreachable":
+    "O LogiBricks Workspace não conseguiu acessar o servidor. Verifique a URL e sua rede.",
   "error.backend.mcpLocalServerOff":
     "Nenhum servidor responde em {address} neste computador. Inicie o servidor ou ative-o no app que o executa e tente novamente.",
   "error.backend.mcpServerBlocked":
@@ -272,7 +274,7 @@ export const messages = {
   "error.backend.mcpServerIncompatible":
     "Algo respondeu neste endereço, mas não como um servidor MCP por Streamable HTTP. Verifique a URL e atualize o app que executa o servidor.",
   "error.backend.mcpRemoteBridge":
-    "{reason} Este comando executa a ponte mcp-remote. Escolha Streamable HTTP com a URL {url} e o OpenBot faz o login para você.",
+    "{reason} Este comando executa a ponte mcp-remote. Escolha Streamable HTTP com a URL {url} e o LogiBricks Workspace faz o login para você.",
   "error.backend.oauthNotHttps": "O endpoint OAuth {origin} não usa https, por isso as credenciais não foram enviadas.",
   "error.backend.oauthTooManyRedirects": "O endpoint OAuth redirecionou vezes demais.",
   "error.backend.oauthRedirectOrigin":
@@ -316,7 +318,7 @@ export const messages = {
   "error.backend.approvalInactive": "Esta aprovação não está mais ativa.",
   "error.backend.takeoverInactive": "Este controle manual do navegador não está mais ativo.",
   "error.backend.authSubmitting": "O envio da autenticação já está em andamento.",
-  "error.backend.apiKeySaveFailed": "O OpenBot não conseguiu salvar a chave de API. Tente novamente.",
+  "error.backend.apiKeySaveFailed": "O LogiBricks Workspace não conseguiu salvar a chave de API. Tente novamente.",
   "error.backend.apiKeyNotAllowed":
     "Somente o proprietário do servidor ou um administrador pode inserir uma chave de API.",
   "error.backend.apiKeySaving": "A chave de API já está sendo salva.",
@@ -372,7 +374,7 @@ export const messages = {
   "error.backend.mcpSignInAppUrl": "O app de login precisa de uma URL de servidor válida.",
   "error.backend.mcpSignInAppClientId": "Digite o ID do cliente do app de login.",
   "error.backend.mcpSignInAppIssuerChanged":
-    "O servidor de login deste servidor MCP mudou, então o OpenBot não enviou o app de login a ele. Se a mudança estiver correta, remova o app de login e adicione-o de novo.",
+    "O servidor de login deste servidor MCP mudou, então o LogiBricks Workspace não enviou o app de login a ele. Se a mudança estiver correta, remova o app de login e adicione-o de novo.",
   "error.backend.mcpSignInAppNoServer":
     "Salve este servidor MCP como servidor de URL antes de adicionar um app de login.",
   "error.backend.mcpSignInAppUnavailable": "Este computador não consegue guardar um app de login.",
@@ -404,5 +406,6 @@ export const messages = {
   "error.backend.taskOpenLimitReached":
     "Este agente tem {count} tarefas abertas. Feche uma tarefa e depois inicie ou abra outra.",
   "error.backend.taskRemoteUnsupported": "As tarefas só estão disponíveis para agentes neste computador.",
-  "error.backend.taskStartFailed": "O OpenBot não conseguiu iniciar a tarefa. Faça o trabalho neste turno.",
+  "error.backend.taskStartFailed":
+    "O LogiBricks Workspace não conseguiu iniciar a tarefa. Faça o trabalho neste turno.",
 } as const satisfies PartialTranslation<typeof source>;

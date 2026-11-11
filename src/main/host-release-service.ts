@@ -1,4 +1,5 @@
 import { readFile } from "node:fs/promises";
+import { companyReleaseUrl } from "@openbot/brand/release-url";
 import type { HostReleaseStatus, UpdateStatus } from "@openbot/contracts/ipc";
 import { Deferred, Effect, Exit, Schema } from "effect";
 import { parse } from "yaml";
@@ -14,22 +15,23 @@ const ReleaseManifest = Schema.Struct({
 type ReleaseTarget = { feed: string; asset: (version: string) => string };
 
 /** Only published desktop targets have a compatible release feed. */
-function releaseTarget(platform: NodeJS.Platform, arch: string): ReleaseTarget | null {
+function releaseTarget(platform: NodeJS.Platform, arch: string, base: string | null): ReleaseTarget | null {
+  if (!base) return null;
   if (arch !== "x64" && arch !== "arm64") return null;
   if (platform === "linux")
     return {
-      feed: arch === "arm64" ? "latest-linux-arm64.yml" : "latest-linux.yml",
-      asset: (version) => `OpenBot-${version}-${arch === "x64" ? "x86_64" : "arm64"}.AppImage`,
+      feed: `${base}/${arch === "arm64" ? "latest-linux-arm64.yml" : "latest-linux.yml"}`,
+      asset: (version) => `LogiBricks-Workspace-${version}-${arch === "x64" ? "x86_64" : "arm64"}.AppImage`,
     };
   if (platform === "darwin")
     return {
-      feed: "latest-mac.yml",
-      asset: (version) => `OpenBot-${version}-${arch}.zip`,
+      feed: `${base}/latest-mac.yml`,
+      asset: (version) => `LogiBricks-Workspace-${version}-${arch}.zip`,
     };
   if (platform === "win32" && arch === "x64")
     return {
-      feed: "latest.yml",
-      asset: (version) => `OpenBot-${version}-x64.exe`,
+      feed: `${base}/latest.yml`,
+      asset: (version) => `LogiBricks-Workspace-${version}-x64.exe`,
     };
   return null;
 }
@@ -67,7 +69,9 @@ export class HostReleaseService {
   constructor(options: HostReleaseOptions) {
     this.#options = options;
     this.#target =
-      options.packaged && isValidSemver(options.currentVersion) ? releaseTarget(options.platform, options.arch) : null;
+      options.packaged && isValidSemver(options.currentVersion)
+        ? releaseTarget(options.platform, options.arch, companyReleaseUrl(options.environment.LOGIBRICKS_RELEASES_URL))
+        : null;
   }
 
   snapshot(): HostReleaseStatus {
@@ -80,7 +84,7 @@ export class HostReleaseService {
   }
 
   #method(): HostReleaseStatus["method"] {
-    if (!this.#options.packaged) return "unavailable";
+    if (!this.#target) return "unavailable";
     if (this.#options.updateStatus().managedByHost) return "host-manager";
     if (this.#options.platform === "linux") {
       // A hosted or self-installed server, or a container of openbot-instance, whose host installs
@@ -128,7 +132,7 @@ export class HostReleaseService {
 
 /** The version of the latest published release for `target`. Rejects on any fault of the feed. */
 async function fetchLatestRelease(target: ReleaseTarget, request: typeof fetch, signal: AbortSignal): Promise<string> {
-  const response = await request(`https://github.com/nightly-labs/openbot/releases/latest/download/${target.feed}`, {
+  const response = await request(target.feed, {
     signal: AbortSignal.any([signal, AbortSignal.timeout(15_000)]),
   });
   if (!response.ok || !response.body) {
@@ -158,7 +162,7 @@ async function fetchLatestRelease(target: ReleaseTarget, request: typeof fetch, 
 
 /** The latest Linux release for `arch`, for the hosted installer. */
 export function fetchLatestLinuxRelease(arch: string, request: typeof fetch, signal: AbortSignal): Promise<string> {
-  const target = releaseTarget("linux", arch);
+  const target = releaseTarget("linux", arch, companyReleaseUrl(process.env.LOGIBRICKS_RELEASES_URL));
   if (!target) return Promise.reject(new Error("No release for this machine"));
   return fetchLatestRelease(target, request, signal);
 }

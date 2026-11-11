@@ -29,6 +29,7 @@
 
 .account-login-brand-lockup {
   display: inline-flex;
+  max-width: 100%;
   align-items: center;
   align-self: center;
   gap: 24px;
@@ -42,11 +43,11 @@
 }
 
 .account-login-wordmark {
-  color: var(--openbot-text-primary);
-  font-size: var(--openbot-text-display);
-  font-weight: 620;
-  letter-spacing: -0.015em;
-  line-height: var(--openbot-leading-display);
+  display: block;
+  width: 206px;
+  min-width: 0;
+  max-width: 100%;
+  height: 80px;
 }
 
 .account-login {
@@ -700,7 +701,7 @@
 
 .ui-button.provider-picker-connect {
   background: var(--openbot-accent);
-  color: var(--openbot-text-primary);
+  color: var(--openbot-text-on-accent);
 }
 
 @media (hover: hover) and (pointer: fine) {

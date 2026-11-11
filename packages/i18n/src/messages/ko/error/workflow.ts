@@ -10,11 +10,12 @@ export const messages = {
   "error.workflow.conditionBranch": "조건에서 나가는 각 연결은 ‘예’ 또는 ‘아니요’여야 해요.",
   "error.workflow.duplicateEdge": "이 두 단계에는 이미 이 연결이 있어요.",
   "error.workflow.serverTooOld":
-    "이 서버는 워크플로를 지원하지 않아요. 서버를 실행하는 컴퓨터에서 OpenBot을 업데이트하세요.",
-  "error.workflow.nodeUnsupported": "이 버전의 OpenBot은 아직 이미지, 파일, 메시지 단계를 실행할 수 없어요.",
-  "error.workflow.interrupted": "이 단계가 실행되는 동안 OpenBot이 중지됐어요. 다시 실행해 주세요.",
+    "이 서버는 워크플로를 지원하지 않아요. 서버를 실행하는 컴퓨터에서 LogiBricks Workspace를 업데이트하세요.",
+  "error.workflow.nodeUnsupported":
+    "이 버전의 LogiBricks Workspace는 아직 이미지, 파일, 메시지 단계를 실행할 수 없어요.",
+  "error.workflow.interrupted": "이 단계가 실행되는 동안 LogiBricks Workspace가 중지됐어요. 다시 실행해 주세요.",
   "error.workflow.agentMissing": "이 단계의 에이전트를 선택하세요.",
-  "error.workflow.handoffFailed": "OpenBot이 이 단계를 에이전트에 보내지 못했어요.",
+  "error.workflow.handoffFailed": "LogiBricks Workspace가 이 단계를 에이전트에 보내지 못했어요.",
   "error.workflow.agentStepEnded": "에이전트가 답하기 전에 이 단계의 메시지가 삭제됐어요.",
   "error.workflow.conditionUnclear": "모델이 ‘예’ 또는 ‘아니요’로 답하지 않았어요.",
   "error.workflow.modelFailed": "모델이 답할 수 없었어요. 단계를 다시 실행해 주세요.",
@@ -26,7 +27,8 @@ export const messages = {
   "error.workflow.noDecision": "이 단계는 결정을 기다리고 있지 않아요.",
   "error.workflow.outputPlaceMissing": "이 출력의 메시징 위치를 선택하세요.",
   "error.workflow.outputChannelMissing": "이 출력의 채널을 선택하세요.",
-  "error.workflow.outputChannelFailed": "OpenBot이 결과를 채널에 게시하지 못했습니다. 단계를 다시 실행하세요.",
+  "error.workflow.outputChannelFailed":
+    "LogiBricks Workspace이 결과를 채널에 게시하지 못했습니다. 단계를 다시 실행하세요.",
   "error.workflow.discordNoMessage":
     "이 출력은 실행을 시작한 Discord 메시지에 작동합니다. Discord 멘션으로 실행을 시작하거나 채널에 게시를 선택하세요.",
   "error.workflow.slackNoMessage":
@@ -60,7 +62,7 @@ export const messages = {
     "OpenBot GitHub App이 이 저장소를 변경할 수 없어요. GitHub를 열고 액세스 권한을 주세요.",
   "error.workflow.githubLocked": "이 대화는 GitHub에서 잠겨 있어요.",
   "error.workflow.githubRefused": "GitHub가 변경을 거부했어요: {detail}",
-  "error.workflow.githubUnreachable": "OpenBot이 GitHub에 연결하지 못했어요. 단계를 다시 실행해 주세요.",
+  "error.workflow.githubUnreachable": "LogiBricks Workspace가 GitHub에 연결하지 못했어요. 단계를 다시 실행해 주세요.",
   "error.workflow.githubUncertain":
     "변경이 도중에 멈췄어요. GitHub에 이미 반영됐을 수 있어요. 단계를 다시 실행하기 전에 GitHub를 확인하세요.",
   "error.workflow.githubNoEvent": "이 트리거가 시작할 이슈나 풀 리퀘스트가 GitHub에 없어요.",

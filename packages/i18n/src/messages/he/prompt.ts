@@ -32,7 +32,7 @@ export const messages = {
   "prompt.approval.report.bugHeadline": "מצאת באג? בוא נתקן אותו.",
   "prompt.approval.report.ideaHeadline": "יש לך רעיון? בוא נגשים אותו.",
   "prompt.approval.report.dontSend": "לא עכשיו",
-  "prompt.approval.report.send": "שליחה לצוות OpenBot",
+  "prompt.approval.report.send": "שליחה לצוות LogiBricks Workspace",
   "prompt.approval.title.command": "הרצת פקודה",
   "prompt.approval.title.fileChange": "שינוי קבצים",
   "prompt.approval.title.permissions": "מתן הרשאות",
@@ -57,7 +57,7 @@ export const messages = {
   "prompt.browser.signInBlocked.title": "{host} חסם את ההתחברות מ-{server}",
   "prompt.browser.signInBlocked.cancelledTitle": "ההתחברות אל {host} בוטלה",
   "prompt.browser.signInBlocked.body":
-    "יש להתחבר במחשב הזה. OpenBot שולח אל {server} רק את ההתחברות אל {host}, ו-{name} ממשיך.",
+    "יש להתחבר במחשב הזה. LogiBricks Workspace שולח אל {server} רק את ההתחברות אל {host}, ו-{name} ממשיך.",
   "prompt.browser.signInBlocked.cancelledBody": "ההתחברות בוטלה.",
   "prompt.browser.signInBlocked.waiting": "ממתין להתחברות",
   "prompt.browser.signInBlocked.waitingButton": "ממתין להתחברות…",

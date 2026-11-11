@@ -1,12 +1,12 @@
 import { uptime } from "node:os";
 import { join, resolve } from "node:path";
+import { PRODUCT_NAME } from "@openbot/brand/product-identity";
 import { parseInviteUrl, selfHostedApiOrigin } from "@openbot/contracts/invite-links";
 import {
   type AgentEvent,
   type AgentSummary,
   type AppLogoColor,
   type CentralAuthState,
-  DEFAULT_APP_LOGO_COLOR,
   DEFAULT_QUIT_GUARD,
   type HostStatus,
   IPC_ENDPOINTS,
@@ -298,7 +298,8 @@ if (commandLineUserDataDirectory) {
     ),
   );
 }
-app.setName("OpenBot");
+// Display identity is separate from released protocols and explicitly selected dev profiles.
+app.setName(PRODUCT_NAME);
 app.enableSandbox();
 if (process.platform === "win32") app.setAppUserModelId("app.openbot.desktop");
 // Linux: on Wayland, Chromium waits until a monitor is on before it starts. With none, start again on
@@ -582,25 +583,11 @@ const windows = createMainWindowController({
 });
 
 let appIconColorImage: NativeImage | undefined;
-/**
- * A packaged release on macOS shows the icon of its bundle in the Dock. On macOS 26 that icon comes
- * from the Icon Composer catalog, with glass and with dark, clear and tinted versions; `dock.setIcon`
- * would replace it with one flat image until the app quits.
- */
-const dockShowsBundleIcon = process.platform === "darwin" && app.isPackaged && appVariant === "production";
-/** Electron cannot give the Dock back to the bundle icon, so after one change each change sets an image. */
-let dockIconChanged = false;
 let backgroundTray: BackgroundTray | null = null;
 
-/**
- * Shows the chosen logo color on the Dock icon, or on each window icon where there is no Dock. A dev
- * or preview build keeps the icon of its build, so it is not mistaken for the release. macOS has no
- * alternate app icon API, so when the app is closed the Dock shows the icon inside the app bundle:
- * changing that file would break the code signature.
- */
+/** Apply the saved desktop preference to Windows and Linux window and tray icons. */
 function applyAppIconColor(color: AppLogoColor): void {
-  if (appVariant !== "production") return;
-  if (dockShowsBundleIcon && color === DEFAULT_APP_LOGO_COLOR && !dockIconChanged) return;
+  if (appVariant !== "production" || process.platform === "darwin") return;
   const icon = nativeImage.createFromPath(
     resolveLogoColorIconPath({
       color,
@@ -611,11 +598,6 @@ function applyAppIconColor(color: AppLogoColor): void {
     }),
   );
   if (icon.isEmpty()) return;
-  if (process.platform === "darwin") {
-    dockIconChanged = true;
-    app.dock?.setIcon(icon);
-    return;
-  }
   // A window takes `appIconPath` when it is created, so a window opened after the choice gets the
   // chosen icon here.
   if (!appIconColorImage)
@@ -1076,7 +1058,9 @@ function requestDesktopNotificationPermission(
       preference,
       showWelcome: () => {
         if (!Notification.isSupported()) return;
-        showRetainedNotification(new Notification({ title: "OpenBot", body: translate("notification.welcome") }));
+        showRetainedNotification(
+          new Notification({ title: translate("common.productName"), body: translate("notification.welcome") }),
+        );
       },
     }),
   );
@@ -1391,9 +1375,17 @@ if (!hasSingleInstanceLock) {
       powerMonitor.on("suspend", () => runMarker?.suspend());
       powerMonitor.on("resume", () => runMarker?.resume());
       powerMonitor.on("shutdown", () => runMarker?.osShutdown());
-      // Set the Dock icon before `dock.show()` below. A development build runs the stock Electron.app,
-      // so until this call its Dock tile shows the Electron logo.
-      if (process.platform === "darwin" && !localServerChild && !dockShowsBundleIcon) app.dock?.setIcon(appIconPath);
+      app.setAboutPanelOptions({
+        applicationName: PRODUCT_NAME,
+        applicationVersion: app.getVersion(),
+        copyright: "OpenBot © 2026 Synthetify Labs spółka z ograniczoną odpowiedzialnością",
+        credits:
+          "Based on OpenBot. See the included LICENSE and NOTICE for the original software and third-party credits.",
+        iconPath: appIconPath,
+      });
+      // Stock Electron.app needs our icon at launch. Packaged macOS builds use the bundle's
+      // native icon so the Dock and Finder draw the same size and system appearance.
+      if (process.platform === "darwin" && !app.isPackaged && !localServerChild) app.dock?.setIcon(appIconPath);
       if (!(await runCauseEffect(hostAllowsTenantLaunch()))) {
         app.quit();
         return;

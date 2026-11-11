@@ -1,5 +1,5 @@
 import type { MarketplaceAgentSummary, MarketplaceSkillSummary } from "@openbot/contracts/ipc";
-import { createMarketplaceShareUrl, type MarketplaceListingLink } from "@openbot/contracts/marketplace-links";
+import { type MarketplaceListingLink, marketplaceListingPath } from "@openbot/contracts/marketplace-links";
 import type { TranslatedLocale } from "@openbot/i18n";
 import { ShieldCheck } from "@openbot/ui/icons";
 import { TextProvider, useText } from "@openbot/ui/text";
@@ -61,7 +61,7 @@ export function SkillIcon(props: { skill: Pick<MarketplaceSkillSummary, "iconUrl
   );
 }
 
-/** The shield after a verified name, as in the app. A screen reader reads ", verified by OpenBot" after the name. */
+/** The shield after a verified name, as in the app. A screen reader reads ", verified by LogiBricks Workspace" after the name. */
 export function VerifiedMark(props: { verified: boolean }) {
   const { t } = useText();
   return (
@@ -97,11 +97,7 @@ const COPIED_MS = 1600;
  * address; any other origin, such as a preview deployment, gives the public one.
  */
 function shareUrl(link: MarketplaceListingLink): string {
-  try {
-    return createMarketplaceShareUrl(link, window.location.origin);
-  } catch {
-    return createMarketplaceShareUrl(link);
-  }
+  return new URL(marketplaceListingPath(link), window.location.origin).toString();
 }
 
 export function CopyLinkButton(props: { link: MarketplaceListingLink }) {

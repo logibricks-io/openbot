@@ -3,7 +3,7 @@ import { defineMessages } from "../../message";
 export const messages = defineMessages("settings", {
   // The language setting itself.
   "settings.language.title": "Language",
-  "settings.language.description": "OpenBot shows menus, buttons and messages in this language.",
+  "settings.language.description": "LogiBricks Workspace shows menus, buttons and messages in this language.",
   "settings.language.system": "System default",
   // The logo color setting, General tab.
   "settings.appearance.title": "Appearance",
@@ -16,16 +16,17 @@ export const messages = defineMessages("settings", {
   "settings.appearance.transparentWindow.description":
     "Show the blurred desktop behind the window. Websites and menus then use the app theme.",
   "settings.interfaceSize.title": "Interface size",
-  "settings.interfaceSize.description": "The size of text and controls in OpenBot.",
+  "settings.interfaceSize.description": "The size of text and controls in LogiBricks Workspace.",
   "settings.interfaceFont.title": "Interface font",
   "settings.interfaceFont.description": "The font of menus, chats and settings.",
   "settings.interfaceFont.default": "Default (Inter)",
   "settings.codeFont.title": "Code font",
   "settings.codeFont.description": "The font of code, terminals and file paths.",
   "settings.codeFont.default": "Default",
-  "settings.logoColor.title": "Logo color",
-  "settings.logoColor.description": "Shown in the Dock, the taskbar and the Dynamic Island.",
-  "settings.logoColor.buildNote": "This build keeps its own logo color. The choice applies to the release app.",
+  "settings.logoColor.title": "Brand",
+  "settings.logoColor.description":
+    "LogiBricks Workspace uses one logo and palette. Theme controls light and dark appearance.",
+  "settings.logoColor.buildNote": "Brand colors stay fixed in this preview.",
   "settings.logoColor.lavender": "Lavender",
   "settings.logoColor.green": "Green",
   "settings.logoColor.gold": "Gold",
@@ -64,12 +65,12 @@ export const messages = defineMessages("settings", {
   // The Settings window, General tab.
   "settings.appBehavior.title": "App behavior",
   "settings.conversations.title": "Conversations",
-  "settings.launchAtLogin.title": "Launch OpenBot at login",
+  "settings.launchAtLogin.title": "Launch LogiBricks at login",
   "settings.launchAtLogin.description": "Open the app when you sign in to this computer.",
-  "settings.keepRunning.title": "Keep OpenBot running in the background",
+  "settings.keepRunning.title": "Keep LogiBricks running in the background",
   "settings.keepRunning.description": "Keep active tasks running after you close the window.",
-  "settings.menuBar.title": "Show OpenBot in the menu bar",
-  "settings.menuBar.description": "Open or quit OpenBot from an icon in the menu bar.",
+  "settings.menuBar.title": "Show LogiBricks in the menu bar",
+  "settings.menuBar.description": "Open or quit LogiBricks Workspace from an icon in the menu bar.",
   "settings.keepAwake.title": "Keep this computer awake",
   "settings.keepAwake.description":
     "Routines run on time while the computer is connected to power. The display can still turn off.",
@@ -87,7 +88,7 @@ export const messages = defineMessages("settings", {
   "settings.externalLinks.description": "Links in chats, sign-in pages and billing pages open here.",
   // The two link targets. The saved value stays in English; only the label is translated.
   "settings.externalLinks.defaultBrowser": "Default browser",
-  "settings.externalLinks.openbot": "OpenBot",
+  "settings.externalLinks.openbot": "LogiBricks",
   "settings.externalLinks.defaultBrowserNamed": "Default browser ({name})",
   "settings.externalLinks.otherApp": "Other app…",
   "settings.externalLinks.command": "Command…",
@@ -129,9 +130,9 @@ export const messages = defineMessages("settings", {
   "settings.agentDefaults.agentLabel": "{setting} for {agent}",
   "settings.agentDefaults.loadFailed": "The agents could not be read.",
   "settings.commitCoAuthor.sectionTitle": "Git commits",
-  "settings.commitCoAuthor.title": "Credit OpenBot in commits",
+  "settings.commitCoAuthor.title": "Credit LogiBricks Workspace in commits",
   "settings.commitCoAuthor.description":
-    "Agents add OpenBot as a co-author to the commits they make. You stay the author.",
+    "Agents add LogiBricks Workspace as a co-author to the commits they make. You stay the author.",
   // "Start the work", under the default of "Show the plan before long tasks".
   "settings.planStart.title": "Start the work",
   "settings.planStart.wait": "When I press Start",
@@ -156,7 +157,7 @@ export const messages = defineMessages("settings", {
     "The most messages and routine runs that local scripts can send each agent in one hour.",
   "settings.backgroundProcesses.title": "Background processes",
   "settings.backgroundProcesses.description":
-    "Programs that agents started and left running, such as dev servers. They keep running after the chat ends and after you quit OpenBot.",
+    "Programs that agents started and left running, such as dev servers. They keep running after the chat ends and after you quit LogiBricks Workspace.",
   "settings.backgroundProcesses.empty": "No programs from agents are running.",
   "settings.backgroundProcesses.loadFailed": "The background processes could not be read.",
   "settings.backgroundProcesses.noAgent": "No agent",
@@ -167,7 +168,7 @@ export const messages = defineMessages("settings", {
   "settings.backgroundProcesses.stopFailed": "The process could not be stopped.",
   "settings.keepRemoteSessions.title": "Fast connection to servers",
   "settings.keepRemoteSessions.description":
-    "Keep the connection to your joined servers between launches. OpenBot starts about a second faster. When you quit OpenBot, the OpenBot service does not close the connection.",
+    "Keep the connection to your joined servers between launches. LogiBricks Workspace starts about a second faster. When you quit LogiBricks Workspace, the OpenBot service does not close the connection.",
   "settings.permissions.title": "Permissions",
   "settings.notifications.whatYouHear": "What you hear about",
   "settings.notifications.allDevices": "All my devices",
@@ -184,7 +185,7 @@ export const messages = defineMessages("settings", {
   "settings.notificationMatrix.offline": "Offline",
   "settings.notificationMatrix.thisComputerOnly": "This computer only",
   "settings.notificationMatrix.thisBrowserOnly": "This browser only",
-  "settings.notificationMatrix.updateServer": "Update OpenBot on this server to choose agents",
+  "settings.notificationMatrix.updateServer": "Update LogiBricks Workspace on this server to choose agents",
   "settings.notificationMatrix.loading": "Loading agents…",
   "settings.notificationMatrix.loadFailed": "Could not load the agents of this server.",
   "settings.desktopNotifications.title": "Desktop notifications",
@@ -193,7 +194,7 @@ export const messages = defineMessages("settings", {
   "settings.notificationPreview.description": "Show the start of the agent's reply or question in notifications.",
   "settings.testNotification.title": "Test notification",
   "settings.testNotification.description":
-    "Show one now. If it does not appear, allow OpenBot notifications in your system settings.",
+    "Show one now. If it does not appear, allow LogiBricks Workspace notifications in your system settings.",
   "settings.testNotification.action": "Send test",
   "settings.testNotification.failed": "Could not show a notification.",
   "settings.testNotification.openSettings": "Open system settings",
@@ -215,12 +216,12 @@ export const messages = defineMessages("settings", {
   "settings.notch.show.description": "Show agent activity and items that need attention at the top of each display.",
   "settings.notch.xwayland.title": "Restart needed",
   "settings.notch.xwayland.description":
-    "On Wayland, OpenBot must use XWayland to show the Dynamic Island above other apps. Until then, the island does not show.",
+    "On Wayland, LogiBricks Workspace must use XWayland to show the Dynamic Island above other apps. Until then, the island does not show.",
   "settings.notch.xwayland.unsupported":
     "On Wayland without XWayland, the Dynamic Island cannot show above other apps.",
   "settings.notch.xwayland.restart": "Restart",
   "settings.notch.idle.title": "Show idle island",
-  "settings.notch.idle.description": "Show the OpenBot logo and greeting when no status is active.",
+  "settings.notch.idle.description": "Show the LogiBricks Workspace logo and greeting when no status is active.",
   "settings.notch.displays.title": "Show on additional displays",
   "settings.notch.displays.description": "Show Dynamic Island on connected external displays.",
   "settings.notch.haptics.title": "Haptic feedback",
@@ -240,19 +241,19 @@ export const messages = defineMessages("settings", {
   "settings.agentDock.show.description": "Show your agents at the screen edge, ready for a quick chat.",
   "settings.agentDock.placement.title": "Position",
   "settings.agentDock.placement.description":
-    "Above other apps keeps the dock on screen when OpenBot is in the background.",
+    "Above other apps keeps the dock on screen when LogiBricks Workspace is in the background.",
   "settings.agentDock.placement.screen": "Above other apps",
-  "settings.agentDock.placement.window": "In the OpenBot window",
+  "settings.agentDock.placement.window": "In the LogiBricks Workspace window",
   "settings.agentDock.xwayland.title": "Restart needed",
   "settings.agentDock.xwayland.description":
-    "On Wayland, OpenBot must use XWayland to show the dock above other apps. Until then, the dock shows in the OpenBot window.",
+    "On Wayland, LogiBricks Workspace must use XWayland to show the dock above other apps. Until then, the dock shows in the LogiBricks Workspace window.",
   "settings.agentDock.xwayland.unsupported":
-    "On Wayland without XWayland, the dock cannot show above other apps. It shows in the OpenBot window.",
+    "On Wayland without XWayland, the dock cannot show above other apps. It shows in the LogiBricks Workspace window.",
   "settings.agentDock.xwayland.restart": "Restart",
   "settings.agentDock.display.title": "Display",
   "settings.agentDock.display.description":
-    "If that display is not connected, the dock goes to the display of the OpenBot window.",
-  "settings.agentDock.display.window": "With the OpenBot window",
+    "If that display is not connected, the dock goes to the display of the LogiBricks Workspace window.",
+  "settings.agentDock.display.window": "With the LogiBricks Workspace window",
   "settings.agentDock.display.primary": "Main display",
   "settings.agentDock.display.all": "All displays",
   "settings.agentDock.display.unnamed": "Display {number}",
@@ -278,20 +279,20 @@ export const messages = defineMessages("settings", {
     "On: usage and reliability metadata goes to OpenBot’s self-hosted analytics with your account ID and email. Off: the same metadata goes with a random install ID only. Chats, files and prompts are never sent. This setting applies to this browser.",
   // The Settings window shell: its tab list, headers and save bar.
   "settings.tab.general.title": "General",
-  "settings.tab.general.description": "Control how OpenBot behaves on this computer.",
+  "settings.tab.general.description": "Control how LogiBricks Workspace behaves on this computer.",
   "settings.tab.agents.title": "Agents",
   "settings.tab.agents.description":
     "Choose what the agents on this computer can do when you do not set it for an agent.",
   "settings.tab.notifications.title": "Notifications",
-  "settings.tab.notifications.description": "Choose how OpenBot alerts you.",
+  "settings.tab.notifications.description": "Choose how LogiBricks Workspace alerts you.",
   "settings.tab.voice.title": "Voice",
   "settings.tab.voice.description":
     "Dictation in the message box. Local models run on this computer; ElevenLabs and Groq run in the cloud.",
   "settings.tab.computerUse.title": "Computer Use",
   "settings.tab.computerUse.description":
-    "Let agents on this computer's OpenBot see and use its apps. Agents on another server use that server's computer.",
+    "Let agents on this computer's LogiBricks Workspace see and use its apps. Agents on another server use that server's computer.",
   "settings.tab.profile.title": "Profile",
-  "settings.tab.profile.description": "Manage how you appear in OpenBot.",
+  "settings.tab.profile.description": "Manage how you appear in LogiBricks Workspace.",
   "settings.tab.mobileConnect.title": "Mobile Connect",
   "settings.tab.mobileConnect.description": "Sign in securely on your phone.",
   "settings.tab.dynamicIsland.title": "Dynamic Island",
@@ -299,11 +300,11 @@ export const messages = defineMessages("settings", {
   "settings.tab.agentDock.title": "Agent dock",
   "settings.tab.agentDock.description": "Choose where the dock shows and which agents are on it.",
   "settings.tab.updates.title": "Updates",
-  "settings.tab.updates.description": "Keep OpenBot current on this computer.",
+  "settings.tab.updates.description": "Keep LogiBricks Workspace current on this computer.",
   "settings.tab.billing.title": "Billing",
   "settings.tab.billing.description": "License, server plans, payment method and invoices.",
   "settings.tab.hostedServers.title": "Hosted servers",
-  "settings.tab.hostedServers.description": "Create OpenBot servers that run when this computer is off.",
+  "settings.tab.hostedServers.description": "Create LogiBricks Workspace servers that run when this computer is off.",
   "settings.sections.label": "Settings sections",
   "settings.panel.resize": "Resize right panel",
   // A failed read or save of the app preferences on the General, Notifications, Dynamic Island and Updates tabs.
@@ -318,28 +319,29 @@ export const messages = defineMessages("settings", {
   "settings.disconnect.pending": "Disconnecting…",
   // The Mobile Connect tab.
   "settings.mobileConnect.phones.title": "Your phones",
-  "settings.mobileConnect.phones.description": "Phones that use OpenBot with this account.",
+  "settings.mobileConnect.phones.description": "Phones that use LogiBricks Workspace with this account.",
   "settings.mobileConnect.phones.add": "Add phone",
   "settings.mobileConnect.phones.empty.title": "No phones yet",
   "settings.mobileConnect.phones.empty.description": "Chat with your agents and follow their work from your phone.",
   // {time} is "Just now", "5m ago", "2h ago" or a date.
   "settings.mobileConnect.devices.lastActive": "Last active: {time}",
   "settings.mobileConnect.add.title": "Add a phone",
-  "settings.mobileConnect.add.question": "Is OpenBot installed on the phone?",
+  "settings.mobileConnect.add.question": "Is LogiBricks Workspace installed on the phone?",
   "settings.mobileConnect.add.signIn.title": "Yes, sign in",
   "settings.mobileConnect.add.signIn.hint": "Show a one-time code",
   "settings.mobileConnect.add.install.title": "No, get the app",
   "settings.mobileConnect.add.install.hint": "iPhone or Android",
   "settings.mobileConnect.add.install.heading": "Get the app",
-  "settings.mobileConnect.add.install.note": "Point the phone camera at the code, install OpenBot, then continue.",
+  "settings.mobileConnect.add.install.note":
+    "Point the phone camera at the code, install LogiBricks Workspace, then continue.",
   "settings.mobileConnect.add.continue": "Continue to sign in",
   // The tags under the QR codes. Each tag says what its code does.
   "settings.mobileConnect.qr.appStore": "Opens the App Store",
   "settings.mobileConnect.qr.playStore": "Opens Google Play",
-  "settings.mobileConnect.qr.signIn": "Scan in the OpenBot app",
+  "settings.mobileConnect.qr.signIn": "Scan in the LogiBricks app",
   "settings.mobileConnect.qr.permanent": "Permanent code",
   "settings.mobileConnect.qr.connected": "{name} connected",
-  "settings.mobileConnect.step.open": "Open OpenBot on your phone.",
+  "settings.mobileConnect.step.open": "Open LogiBricks Workspace on your phone.",
   "settings.mobileConnect.step.scan": "Tap Scan QR code.",
   "settings.mobileConnect.step.point": "Point the camera at this screen.",
   "settings.mobileConnect.code.expired": "Code expired",
@@ -390,14 +392,14 @@ export const messages = defineMessages("settings", {
     "For phones, other computers and team members that connect to this computer.",
   // {route} is "Through OpenBot" or "Private network".
   "settings.mobileConnect.route.chipLabel": "How devices connect: {route}",
-  "settings.mobileConnect.route.openbot.title": "Through OpenBot",
+  "settings.mobileConnect.route.openbot.title": "Through LogiBricks",
   "settings.mobileConnect.route.openbot.badge": "Recommended",
   "settings.mobileConnect.route.openbot.description":
     "Works on any network. Chats and files are encrypted between your devices.",
   "settings.mobileConnect.route.private.title": "Private network",
   "settings.mobileConnect.route.private.tailscale": "Tailscale found",
   "settings.mobileConnect.route.private.description":
-    "Tailscale or this Wi-Fi. Devices still sign in with OpenBot. Chats and files never go through OpenBot servers, and devices connect only on that network.",
+    "Tailscale or this Wi-Fi. Devices still sign in with LogiBricks Workspace. Chats and files never go through LogiBricks Workspace servers, and devices connect only on that network.",
   "settings.mobileConnect.route.error.load": "Could not load how devices connect.",
   "settings.mobileConnect.route.error.save": "Could not change how devices connect.",
   "settings.mobileConnect.disconnectInfo.description":
@@ -433,7 +435,7 @@ export const messages = defineMessages("settings", {
   "settings.profile.edit.title": "Edit profile",
   "settings.profile.share.action": "Share",
   "settings.profile.share.title": "Share your activity",
-  "settings.profile.share.imageAlt": "Your OpenBot activity in the past six months",
+  "settings.profile.share.imageAlt": "Your LogiBricks Workspace activity in the past six months",
   "settings.profile.share.copy": "Copy image",
   "settings.profile.share.save": "Save image",
   "settings.profile.share.copied": "Image copied",
@@ -441,7 +443,7 @@ export const messages = defineMessages("settings", {
   "settings.profile.share.createFailed": "Could not make the image.",
   "settings.profile.share.fileName": "openbot-activity.png",
   // The text in the image to share.
-  "settings.profile.share.caption": "My last six months with OpenBot",
+  "settings.profile.share.caption": "My last six months with LogiBricks Workspace",
   "settings.profile.activity.title": "Activity on this computer",
   "settings.profile.activity.activeDays": {
     one: "{count} active day in the past year",
@@ -477,7 +479,7 @@ export const messages = defineMessages("settings", {
   "settings.profile.models.title": "Model usage",
   "settings.profile.account.title": "Account",
   "settings.profile.email.title": "Email",
-  "settings.profile.email.description": "Used to sign in to OpenBot.",
+  "settings.profile.email.description": "Used to sign in to LogiBricks Workspace.",
   "settings.profile.sessions.title": "Account sessions",
   "settings.profile.sessions.description":
     "Sessions stay signed in until you log out or disconnect them. Disconnecting also ends this account's active remote connections.",
@@ -498,9 +500,9 @@ export const messages = defineMessages("settings", {
   "settings.profile.sessions.disconnectConfirm.description":
     "This device is signed out of your account. It must sign in again to connect.",
   // The Updates tab. {target} is "OpenBot v1.2.3" or settings.updates.target.latest.
-  "settings.updates.title": "OpenBot updates",
+  "settings.updates.title": "LogiBricks Workspace updates",
   "settings.updates.track.title": "Update track",
-  "settings.updates.track.description": "Stable receives tested OpenBot releases.",
+  "settings.updates.track.description": "Stable receives tested LogiBricks Workspace releases.",
   "settings.updates.track.stable": "Stable",
   "settings.updates.version": "Version {version}",
   "settings.updates.versionUnknown": "Unknown",
@@ -510,8 +512,8 @@ export const messages = defineMessages("settings", {
   "settings.updates.autoDownload.description": "Download new versions when they become available.",
   "settings.updates.managed.title": "Managed by Host Manager",
   "settings.updates.managed.description":
-    "Updates for this Mac are managed automatically by OpenBot Host Manager. All users share the same OpenBot application and are updated together when registered users are idle.",
-  "settings.updates.target.latest": "The latest OpenBot update",
+    "Updates for this Mac are managed automatically by OpenBot Host Manager. All users share the same LogiBricks Workspace application and are updated together when registered users are idle.",
+  "settings.updates.target.latest": "The latest LogiBricks Workspace update",
   "settings.updates.host.upToDate": "Up to date. OpenBot Host Manager keeps this Mac current.",
   "settings.updates.host.ready": "{target} is downloaded. Waiting for the other users of this Mac to be idle.",
   "settings.updates.host.installing": "Installing {target}…",
@@ -524,19 +526,19 @@ export const messages = defineMessages("settings", {
   "settings.updates.status.downloadingProgress": "Downloading {target} · {progress}",
   "settings.updates.status.ready": "{target} is ready. Restart to apply.",
   "settings.updates.status.installing": "Restarting to apply {target}…",
-  "settings.updates.status.upToDate": "OpenBot is up to date on the Stable track.",
-  "settings.updates.status.checkFailed": "OpenBot could not check for updates. Try again.",
+  "settings.updates.status.upToDate": "LogiBricks Workspace is up to date on the Stable track.",
+  "settings.updates.status.checkFailed": "LogiBricks Workspace could not check for updates. Try again.",
   "settings.updates.status.unsupported": "Updates are unavailable in this build.",
-  "settings.updates.actionFailed": "Could not update OpenBot.",
+  "settings.updates.actionFailed": "Could not update LogiBricks Workspace.",
   "settings.updates.autoInstall.title": "Install updates automatically",
   "settings.updates.autoInstall.description":
-    "OpenBot restarts into a downloaded update when the agents are idle. Members of your servers are disconnected for a short time.",
+    "LogiBricks Workspace restarts into a downloaded update when the agents are idle. Members of your servers are disconnected for a short time.",
   // Restart OpenBot, or install a downloaded update, when no agent works.
-  "settings.updates.idleRestart.title": "Restart OpenBot",
+  "settings.updates.idleRestart.title": "Restart LogiBricks",
   "settings.updates.idleRestart.relaunchDescription":
-    "OpenBot restarts when no agent works. New routine runs wait until then.",
+    "LogiBricks Workspace restarts when no agent works. New routine runs wait until then.",
   "settings.updates.idleRestart.updateDescription":
-    "OpenBot installs {target} when no agent works. New routine runs wait until then.",
+    "LogiBricks Workspace installs {target} when no agent works. New routine runs wait until then.",
   "settings.updates.idleRestart.relaunch": "Restart when idle",
   "settings.updates.idleRestart.update": "Install when idle",
   "settings.updates.allowRemote.title": "Allow updates from server members",
@@ -793,8 +795,8 @@ export const messages = defineMessages("settings", {
   "settings.transfer.import.reading": "Reading the file…",
   "settings.transfer.import.openFailed": "The file could not be opened",
   "settings.transfer.import.contains": "This file contains",
-  "settings.transfer.import.source": "OpenBot {version} · exported {date}",
-  "settings.transfer.import.sourceNoDate": "OpenBot {version}",
+  "settings.transfer.import.source": "{version} · exported {date}",
+  "settings.transfer.import.sourceNoDate": "{version}",
   "settings.transfer.import.warnings": "Before the import starts",
   "settings.transfer.import.agentsLabel": "Agents in the file",
   "settings.transfer.import.nameExists": "Name already used",
@@ -813,4 +815,7 @@ export const messages = defineMessages("settings", {
   "settings.transfer.result.signInButton": "Sign in to {provider}",
   "settings.transfer.result.notImported": "Not imported",
   "settings.transfer.result.warnings": "Check these",
+  "settings.mobileConnect.add.install.unavailable": "Store download unavailable",
+  "settings.mobileConnect.add.install.unavailableNote":
+    "Store downloads are not available yet. An installed LogiBricks app can still sign in.",
 });

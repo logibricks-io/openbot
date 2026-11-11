@@ -19,7 +19,7 @@ export const messages = {
     "Os agentes só podem usar os repositórios em que o aplicativo OpenBot para GitHub está instalado.",
   "connector.github.chooseRepositories": "Escolher repositórios",
   "connector.github.repositoriesLoading": "Lendo os repositórios do GitHub",
-  "connector.github.repositoriesFailed": "O OpenBot não conseguiu ler os repositórios do GitHub.",
+  "connector.github.repositoriesFailed": "O LogiBricks Workspace não conseguiu ler os repositórios do GitHub.",
   "connector.github.noRepositories": "O aplicativo OpenBot para GitHub ainda não está instalado em nenhum repositório.",
   "connector.github.moreRepositories": { one: "E mais {count} repositório", other: "E mais {count} repositórios" },
   "connector.github.private": "Privado",
@@ -31,7 +31,7 @@ export const messages = {
   "connector.github.expiredDescription":
     "Conecte novamente como @{login} para devolver o acesso ao GitHub aos agentes.",
   "connector.github.reconnect": "Reconectar",
-  "connector.github.actionFailed": "O OpenBot não conseguiu alterar a conexão com o GitHub.",
+  "connector.github.actionFailed": "O LogiBricks Workspace não conseguiu alterar a conexão com o GitHub.",
   "connector.github.statusConnected": "Conectado",
   "connector.github.statusConnecting": "Conectando",
   "connector.github.statusExpired": "Expirado",
@@ -41,7 +41,7 @@ export const messages = {
   "connector.github.noMatch": "Nenhum repositório corresponde a “{query}”.",
   "connector.github.stepSignIn": "Entrar",
   "connector.github.stepConnected": "Conectado",
-  "connector.github.requestingCode": "O OpenBot solicita um código ao GitHub.",
+  "connector.github.requestingCode": "O LogiBricks Workspace solicita um código ao GitHub.",
   "connector.github.codeLabel": "Código {code}",
   "connector.github.failedTitle": "O GitHub não conectou",
   "connector.github.cancelConnecting": "Cancelar conexão com o GitHub",
@@ -69,7 +69,7 @@ export const messages = {
   "connector.github.close": "Fechar",
   "connector.dangerZone": "Zona de perigo",
   "connector.statusUnknown": "Desconhecido",
-  "connector.readFailed": "O OpenBot não conseguiu ler o estado desta conexão.",
+  "connector.readFailed": "O LogiBricks Workspace não conseguiu ler o estado desta conexão.",
   "connector.slack.title": "Slack",
   "connector.slack.description":
     "As pessoas mencionam @OpenBot no Slack ou enviam uma mensagem direta para ele. O Orquestrador do Slack consulta o agente certo e responde.",
@@ -92,10 +92,10 @@ export const messages = {
   "connector.slack.disconnectAllSummary":
     "Todos os workspaces são desconectados. Ninguém poderá falar com seus agentes pelo @OpenBot.",
   "connector.slack.disconnectAllSummaryOrchestrator":
-    "Todos os workspaces são desconectados. O Orquestrador do Slack e as conversas dele são excluídos do OpenBot.",
+    "Todos os workspaces são desconectados. O Orquestrador do Slack e as conversas dele são excluídos do LogiBricks Workspace.",
   "connector.slack.missingScopes":
-    "O OpenBot não tem estas permissões no Slack: {scopes}. Desconecte o espaço de trabalho e conecte-o novamente.",
-  "connector.slack.retryAt": "O Slack pediu para o OpenBot aguardar. Ele tentará novamente às {time}.",
+    "O LogiBricks Workspace não tem estas permissões no Slack: {scopes}. Desconecte o espaço de trabalho e conecte-o novamente.",
+  "connector.slack.retryAt": "O Slack pediu para o LogiBricks Workspace aguardar. Ele tentará novamente às {time}.",
   "connector.slack.reconnect": "Reconectar",
   "connector.slack.pause": "Pausar",
   "connector.slack.resume": "Retomar",
@@ -106,7 +106,7 @@ export const messages = {
   "connector.slack.orchestratorNone": "Nenhum agente responde ainda",
   "connector.slack.orchestratorNoneDescription": "Adicione o Orquestrador do Slack para que o Slack receba respostas.",
   "connector.slack.inviteNote":
-    "O OpenBot entra automaticamente em todos os canais públicos, inclusive nos novos. Para um canal privado, convide-o: /invite @OpenBot.",
+    "O LogiBricks Workspace entra automaticamente em todos os canais públicos, inclusive nos novos. Para um canal privado, convide-o: /invite @OpenBot.",
   "connector.slack.stepWorkspace": "Espaço de trabalho",
   "connector.slack.stepAgent": "Agente",
   "connector.slack.connectTitle": "Conectar um espaço de trabalho do Slack",
@@ -132,13 +132,14 @@ export const messages = {
   "connector.slack.done": "Concluir",
   "connector.slack.disconnectTitle": "Desconectar {workspace}?",
   "connector.slack.disconnectDescription":
-    "O OpenBot para de responder em {workspace} e remove o token do Slack deste computador.",
+    "O LogiBricks Workspace para de responder em {workspace} e remove o token do Slack deste computador.",
   "connector.slack.disconnectDescriptionHost":
-    "O OpenBot para de responder em {workspace} e remove o token do Slack de {host}.",
+    "O LogiBricks Workspace para de responder em {workspace} e remove o token do Slack de {host}.",
   "connector.slack.disconnectEffect":
     "As pessoas em {workspace} não poderão mais acessar seus agentes por meio de @OpenBot.",
-  "connector.slack.removeEffectKept": "As conversas e o Orquestrador do Slack continuam no OpenBot.",
-  "connector.slack.removeEffectDeleted": "O Orquestrador do Slack e as conversas dele são excluídos do OpenBot.",
+  "connector.slack.removeEffectKept": "As conversas e o Orquestrador do Slack continuam no LogiBricks Workspace.",
+  "connector.slack.removeEffectDeleted":
+    "O Orquestrador do Slack e as conversas dele são excluídos do LogiBricks Workspace.",
   "connector.slack.keep": "Manter conectado",
   "connector.slack.close": "Fechar",
   "connector.slack.addWorkspace": "Adicionar espaço de trabalho",
@@ -172,10 +173,10 @@ export const messages = {
   "connector.discord.disconnectAllSummary":
     "Todos os servidores são desconectados. Ninguém poderá falar com seus agentes pelo @OpenBot.",
   "connector.discord.disconnectAllSummaryOrchestrator":
-    "Todos os servidores são desconectados. O Orquestrador do Discord e as conversas dele são excluídos do OpenBot.",
+    "Todos os servidores são desconectados. O Orquestrador do Discord e as conversas dele são excluídos do LogiBricks Workspace.",
   "connector.discord.missingScopes":
-    "O OpenBot não tem estas permissões no Discord: {scopes}. Desconecte o servidor do Discord e conecte-o novamente.",
-  "connector.discord.retryAt": "O Discord pediu para o OpenBot aguardar. Ele tentará novamente às {time}.",
+    "O LogiBricks Workspace não tem estas permissões no Discord: {scopes}. Desconecte o servidor do Discord e conecte-o novamente.",
+  "connector.discord.retryAt": "O Discord pediu para o LogiBricks Workspace aguardar. Ele tentará novamente às {time}.",
   "connector.discord.reconnect": "Reconectar",
   "connector.discord.pause": "Pausar",
   "connector.discord.resume": "Retomar",
@@ -210,13 +211,14 @@ export const messages = {
   "connector.discord.done": "Concluir",
   "connector.discord.disconnectTitle": "Desconectar {workspace}?",
   "connector.discord.disconnectDescription":
-    "O OpenBot para de responder em {workspace} e remove a conexão do Discord deste computador.",
+    "O LogiBricks Workspace para de responder em {workspace} e remove a conexão do Discord deste computador.",
   "connector.discord.disconnectDescriptionHost":
-    "O OpenBot para de responder em {workspace} e remove a conexão do Discord de {host}.",
+    "O LogiBricks Workspace para de responder em {workspace} e remove a conexão do Discord de {host}.",
   "connector.discord.disconnectEffect":
     "As pessoas em {workspace} não poderão mais acessar seus agentes por meio de @OpenBot.",
-  "connector.discord.removeEffectKept": "As conversas e o Orquestrador do Discord continuam no OpenBot.",
-  "connector.discord.removeEffectDeleted": "O Orquestrador do Discord e as conversas dele são excluídos do OpenBot.",
+  "connector.discord.removeEffectKept": "As conversas e o Orquestrador do Discord continuam no LogiBricks Workspace.",
+  "connector.discord.removeEffectDeleted":
+    "O Orquestrador do Discord e as conversas dele são excluídos do LogiBricks Workspace.",
   "connector.discord.keep": "Manter conectado",
   "connector.discord.close": "Fechar",
   "connector.discord.addWorkspace": "Adicionar servidor do Discord",
@@ -228,21 +230,23 @@ export const messages = {
     one: "{count} servidor do Discord · O Orquestrador do Discord responde",
     other: "{count} servidores do Discord · O Orquestrador do Discord responde",
   },
-  "connector.discord.accessTitle": "Quem pode usar o OpenBot",
-  "connector.discord.accessDescription": "O OpenBot responde só a essas pessoas. Ele ignora menções de outras pessoas.",
+  "connector.discord.accessTitle": "Quem pode usar o LogiBricks Workspace",
+  "connector.discord.accessDescription":
+    "O LogiBricks Workspace responde só a essas pessoas. Ele ignora menções de outras pessoas.",
   "connector.discord.accessEveryone": "Todos no servidor",
   "connector.discord.accessEveryoneDescription":
-    "Qualquer pessoa que pode postar em um canal que o OpenBot vê pode mencioná-lo.",
+    "Qualquer pessoa que pode postar em um canal que o LogiBricks Workspace vê pode mencioná-lo.",
   "connector.discord.accessRoles": "Membros com {roles}",
   "connector.discord.accessChoose": "Escolher funções",
-  "connector.discord.accessDialogTitle": "Quem pode usar o OpenBot em {workspace}?",
-  "connector.discord.accessDialogDescription": "Sem nenhuma função selecionada, todos podem mencionar o OpenBot.",
+  "connector.discord.accessDialogTitle": "Quem pode usar o LogiBricks Workspace em {workspace}?",
+  "connector.discord.accessDialogDescription":
+    "Sem nenhuma função selecionada, todos podem mencionar o LogiBricks Workspace.",
   "connector.discord.accessLoading": "Carregando funções…",
   "connector.discord.accessLoadFailed": "As funções do Discord não carregaram",
   "connector.discord.accessNoRoles": "Este servidor não tem funções para escolher.",
   "connector.discord.accessRoleDeleted": "{role} (excluída)",
   "connector.discord.accessSave": "Salvar",
-  "connector.discord.accessHostUpdate": "Atualize o OpenBot em {host} para escolher funções.",
+  "connector.discord.accessHostUpdate": "Atualize o LogiBricks Workspace em {host} para escolher funções.",
   "connector.telegram.title": "Telegram",
   "connector.telegram.description":
     "Adicione o bot do OpenBot a um grupo do Telegram ou abra um chat direto com ele. O Orquestrador do Telegram consulta o agente certo e responde.",
@@ -270,11 +274,13 @@ export const messages = {
   "connector.telegram.helpRemoved":
     "O bot do OpenBot não está mais neste chat. Desconecte o chat e adicione o bot novamente.",
   "connector.telegram.helpRelayUnavailable":
-    "O OpenBot não consegue receber mensagens do Telegram neste computador. Entre na sua conta, dê um nome a este computador nas Configurações do servidor e mantenha o OpenBot aberto.",
+    "O LogiBricks Workspace não consegue receber mensagens do Telegram neste computador. Entre na sua conta, dê um nome a este computador nas Configurações do servidor e mantenha o LogiBricks Workspace aberto.",
   "connector.telegram.helpRelayUnavailableHost":
-    "O OpenBot em {host} não consegue receber mensagens do Telegram. Em {host}, entre na sua conta, dê um nome ao servidor nas Configurações do servidor e mantenha o OpenBot aberto.",
-  "connector.telegram.helpError": "O OpenBot não consegue acessar este chat. Reconecte ou desconecte o chat.",
-  "connector.telegram.retryAt": "O Telegram pediu para o OpenBot aguardar. Ele tentará novamente às {time}.",
+    "O LogiBricks Workspace em {host} não consegue receber mensagens do Telegram. Em {host}, entre na sua conta, dê um nome ao servidor nas Configurações do servidor e mantenha o LogiBricks Workspace aberto.",
+  "connector.telegram.helpError":
+    "O LogiBricks Workspace não consegue acessar este chat. Reconecte ou desconecte o chat.",
+  "connector.telegram.retryAt":
+    "O Telegram pediu para o LogiBricks Workspace aguardar. Ele tentará novamente às {time}.",
   "connector.telegram.pause": "Pausar",
   "connector.telegram.resume": "Retomar",
   "connector.telegram.reconnect": "Reconectar",
@@ -283,14 +289,14 @@ export const messages = {
   "connector.telegram.disconnectAllSummary":
     "Todos os chats são desconectados. Ninguém poderá falar com seus agentes pelo bot do OpenBot.",
   "connector.telegram.disconnectAllSummaryOrchestrator":
-    "Todos os chats são desconectados. O Orquestrador do Telegram e as conversas dele são excluídos do OpenBot.",
+    "Todos os chats são desconectados. O Orquestrador do Telegram e as conversas dele são excluídos do LogiBricks Workspace.",
   "connector.telegram.rowAction": "{action}: {name}",
   "connector.telegram.linkChat": "Vincular um chat",
   "connector.telegram.addToGroup": "Adicionar a um grupo",
   "connector.telegram.openDirectChat": "Abrir um chat direto",
   "connector.telegram.orchestratorTitle": "Orquestrador do Telegram",
   "connector.telegram.orchestratorDescription":
-    "Este agente recebe as mensagens para o OpenBot de todos os seus chats do Telegram. Ele mesmo responde às curtas, encaminha o restante do trabalho ao agente certo e publica a resposta no chat.",
+    "Este agente recebe as mensagens para o LogiBricks Workspace de todos os seus chats do Telegram. Ele mesmo responde às curtas, encaminha o restante do trabalho ao agente certo e publica a resposta no chat.",
   "connector.telegram.orchestratorNone": "Nenhum agente responde ainda",
   "connector.telegram.orchestratorNoneDescription":
     "Adicione o Orquestrador do Telegram para que o Telegram receba respostas.",
@@ -307,10 +313,11 @@ export const messages = {
   "connector.telegram.connectWaiting": "Aguardando o Telegram. Selecione o chat no Telegram.",
   "connector.telegram.agentStepTitle": "Adicionar o Orquestrador do Telegram",
   "connector.telegram.agentStepDescription":
-    "Este novo agente responde às mensagens para o OpenBot em {chat} e em cada chat que você vincular depois.",
+    "Este novo agente responde às mensagens para o LogiBricks Workspace em {chat} e em cada chat que você vincular depois.",
   "connector.telegram.orchestratorName": "Orquestrador do Telegram",
   "connector.telegram.orchestratorRole": "Responde no Telegram e consulta a equipe",
-  "connector.telegram.orchestratorDoesReceive": "Recebe primeiro todas as mensagens do Telegram para o OpenBot",
+  "connector.telegram.orchestratorDoesReceive":
+    "Recebe primeiro todas as mensagens do Telegram para o LogiBricks Workspace",
   "connector.telegram.orchestratorDoesDelegate": "Atribui cada tarefa ao agente mais adequado",
   "connector.telegram.orchestratorDoesAnswer": "Publica a resposta no chat do Telegram",
   "connector.telegram.orchestratorModel": "Modelo",
@@ -320,9 +327,9 @@ export const messages = {
   "connector.telegram.leaveDescription": "O bot do OpenBot sai de {chat} e o OpenBot para de responder lá.",
   "connector.telegram.disconnectEffect":
     "As pessoas em {chat} não poderão mais acessar seus agentes por meio do bot do OpenBot.",
-  "connector.telegram.removeEffectKept": "As conversas e o Orquestrador do Telegram continuam no OpenBot.",
+  "connector.telegram.removeEffectKept": "As conversas e o Orquestrador do Telegram continuam no LogiBricks Workspace.",
   "connector.telegram.removeEffectDeleted":
-    "Este é o último chat, então o Orquestrador do Telegram e as conversas dele são excluídos do OpenBot.",
+    "Este é o último chat, então o Orquestrador do Telegram e as conversas dele são excluídos do LogiBricks Workspace.",
   "connector.telegram.keep": "Manter conectado",
   "connector.telegram.close": "Fechar",
   "connector.whatsapp.title": "WhatsApp",
@@ -351,16 +358,17 @@ export const messages = {
   "connector.whatsapp.numbersTitle": "Números",
   "connector.whatsapp.linkNumber": "Vincular um número",
   "connector.whatsapp.ownNumberNote":
-    "Seu chat “Mensagem para você mesmo” e as pessoas que você permitir falam com o OpenBot.",
+    "Seu chat “Mensagem para você mesmo” e as pessoas que você permitir falam com o LogiBricks Workspace.",
   "connector.whatsapp.dedicatedNote":
-    "As pessoas que você permitir falam com o OpenBot. Outras pessoas recebem um código para passar a você.",
+    "As pessoas que você permitir falam com o LogiBricks Workspace. Outras pessoas recebem um código para passar a você.",
   "connector.whatsapp.helpLoggedOut":
     "O WhatsApp removeu este computador dos dispositivos conectados. Vincule o número novamente.",
   "connector.whatsapp.helpLoggedOutHost":
     "O WhatsApp removeu este servidor dos dispositivos conectados. Vincule o número novamente.",
   "connector.whatsapp.helpError":
-    "O OpenBot não consegue acessar o WhatsApp neste número. Reconecte ou desconecte o número.",
-  "connector.whatsapp.retryAt": "O WhatsApp pediu para o OpenBot aguardar. Ele tentará novamente às {time}.",
+    "O LogiBricks Workspace não consegue acessar o WhatsApp neste número. Reconecte ou desconecte o número.",
+  "connector.whatsapp.retryAt":
+    "O WhatsApp pediu para o LogiBricks Workspace aguardar. Ele tentará novamente às {time}.",
   "connector.whatsapp.pause": "Pausar",
   "connector.whatsapp.resume": "Retomar",
   "connector.whatsapp.reconnect": "Reconectar",
@@ -370,14 +378,14 @@ export const messages = {
   "connector.whatsapp.disconnectAllSummary":
     "Todos os números são desconectados. Ninguém poderá falar com seus agentes pelo WhatsApp.",
   "connector.whatsapp.disconnectAllSummaryOrchestrator":
-    "Todos os números são desconectados. O Orquestrador do WhatsApp e as conversas dele são excluídos do OpenBot.",
+    "Todos os números são desconectados. O Orquestrador do WhatsApp e as conversas dele são excluídos do LogiBricks Workspace.",
   "connector.whatsapp.rowAction": "{action}: {name}",
   "connector.whatsapp.ownNumber": "Número pessoal",
   "connector.whatsapp.ownNumberDescription":
-    "Só o seu chat “Mensagem para você mesmo” e as pessoas que você permitir podem escrever. Desative para um número só para o OpenBot.",
+    "Só o seu chat “Mensagem para você mesmo” e as pessoas que você permitir podem escrever. Desative para um número só para o LogiBricks Workspace.",
   "connector.whatsapp.orchestratorTitle": "Orquestrador do WhatsApp",
   "connector.whatsapp.orchestratorDescription":
-    "Este agente recebe as mensagens para o OpenBot de todos os seus números vinculados. Ele mesmo responde às curtas, encaminha o restante do trabalho ao agente certo e responde no WhatsApp.",
+    "Este agente recebe as mensagens para o LogiBricks Workspace de todos os seus números vinculados. Ele mesmo responde às curtas, encaminha o restante do trabalho ao agente certo e responde no WhatsApp.",
   "connector.whatsapp.orchestratorNone": "Nenhum agente responde ainda",
   "connector.whatsapp.orchestratorNoneDescription":
     "Adicione o Orquestrador do WhatsApp para que o WhatsApp receba respostas.",
@@ -393,8 +401,8 @@ export const messages = {
   "connector.whatsapp.kindLabel": "Número",
   "connector.whatsapp.kindPersonal": "Meu número pessoal",
   "connector.whatsapp.kindPersonalDescription":
-    "O OpenBot responde só ao seu chat “Mensagem para você mesmo” e às pessoas que você permitir.",
-  "connector.whatsapp.kindDedicated": "Um número só para o OpenBot",
+    "O LogiBricks Workspace responde só ao seu chat “Mensagem para você mesmo” e às pessoas que você permitir.",
+  "connector.whatsapp.kindDedicated": "Um número só para o LogiBricks Workspace",
   "connector.whatsapp.kindDedicatedDescription":
     "Pessoas desconhecidas recebem um código para passar a você. Você as aprova aqui.",
   "connector.whatsapp.methodLabel": "Como vincular",
@@ -423,26 +431,27 @@ export const messages = {
   "connector.whatsapp.failedRefused": "O WhatsApp recusou a vinculação. Aguarde alguns minutos e tente novamente.",
   "connector.whatsapp.failedBusy": "Outra vinculação está em andamento. Aguarde até que ela termine e tente novamente.",
   "connector.whatsapp.failedUnavailable":
-    "O OpenBot não consegue acessar o WhatsApp. Verifique a conexão com a internet.",
+    "O LogiBricks Workspace não consegue acessar o WhatsApp. Verifique a conexão com a internet.",
   "connector.whatsapp.tryAgain": "Tentar de novo",
   "connector.whatsapp.agentStepTitle": "Adicionar o Orquestrador do WhatsApp",
   "connector.whatsapp.agentStepDescription":
-    "Este novo agente responde às mensagens para o OpenBot em {number} e em cada número que você vincular depois.",
+    "Este novo agente responde às mensagens para o LogiBricks Workspace em {number} e em cada número que você vincular depois.",
   "connector.whatsapp.orchestratorName": "Orquestrador do WhatsApp",
   "connector.whatsapp.orchestratorRole": "Responde no WhatsApp e consulta a equipe",
-  "connector.whatsapp.orchestratorDoesReceive": "Recebe primeiro todas as mensagens do WhatsApp para o OpenBot",
+  "connector.whatsapp.orchestratorDoesReceive":
+    "Recebe primeiro todas as mensagens do WhatsApp para o LogiBricks Workspace",
   "connector.whatsapp.orchestratorDoesDelegate": "Atribui cada tarefa ao agente mais adequado",
   "connector.whatsapp.orchestratorDoesAnswer": "Responde no chat do WhatsApp",
   "connector.whatsapp.orchestratorModel": "Modelo",
-  "connector.whatsapp.doneTitle": "O OpenBot está vinculado a {number}",
+  "connector.whatsapp.doneTitle": "O LogiBricks Workspace está vinculado a {number}",
   "connector.whatsapp.done": "Concluir",
   "connector.whatsapp.disconnectTitle": "Desconectar {number}?",
   "connector.whatsapp.disconnectDescription":
-    "O OpenBot sai do WhatsApp em {number}. Se o OpenBot estava desligado, remova também o dispositivo em WhatsApp > Dispositivos conectados.",
+    "O LogiBricks Workspace sai do WhatsApp em {number}. Se o LogiBricks Workspace estava desligado, remova também o dispositivo em WhatsApp > Dispositivos conectados.",
   "connector.whatsapp.disconnectEffect": "Ninguém poderá mais acessar seus agentes por meio de {number}.",
-  "connector.whatsapp.removeEffectKept": "As conversas e o Orquestrador do WhatsApp continuam no OpenBot.",
+  "connector.whatsapp.removeEffectKept": "As conversas e o Orquestrador do WhatsApp continuam no LogiBricks Workspace.",
   "connector.whatsapp.removeEffectDeleted":
-    "Este é o último número, então o Orquestrador do WhatsApp e as conversas dele são excluídos do OpenBot.",
+    "Este é o último número, então o Orquestrador do WhatsApp e as conversas dele são excluídos do LogiBricks Workspace.",
   "connector.whatsapp.keep": "Manter vinculado",
   "connector.whatsapp.close": "Fechar",
   "connector.whatsapp.sendersTitle": "Quem pode escrever para {number}",
@@ -462,7 +471,7 @@ export const messages = {
   "connector.whatsapp.groupDescription": "As pessoas deste grupo podem passar trabalho para seus agentes.",
   "connector.whatsapp.groupSearch": "Buscar grupos",
   "connector.whatsapp.groupsLoading": "Lendo os grupos…",
-  "connector.whatsapp.groupsLoadFailed": "O OpenBot não conseguiu ler os grupos",
+  "connector.whatsapp.groupsLoadFailed": "O LogiBricks Workspace não conseguiu ler os grupos",
   "connector.whatsapp.groupsEmpty": "Este número não está em nenhum grupo.",
   "connector.whatsapp.groupsNoMatch": "Nenhum grupo tem este nome.",
   "connector.whatsapp.groupAdded": "Adicionado",
@@ -475,9 +484,9 @@ export const messages = {
   "connector.whatsapp.deny": "Recusar",
   "connector.onePassword.title": "1Password",
   "connector.onePassword.description":
-    "Compartilhe um cofre dedicado do 1Password com o OpenBot por meio de uma conta de serviço, para que os agentes possam entrar em sites no navegador do OpenBot.",
+    "Compartilhe um cofre dedicado do 1Password com o LogiBricks Workspace por meio de uma conta de serviço, para que os agentes possam entrar em sites no navegador do LogiBricks Workspace.",
   "connector.onePassword.howItWorks":
-    "A conexão cria um cofre “Shared with OpenBot” na sua conta do 1Password e uma conta de serviço que só consegue ler esse cofre. O OpenBot preenche os logins salvos no navegador deste computador, então só os itens que você mover para esse cofre são compartilhados. Os agentes nunca veem uma senha.",
+    "A conexão cria um cofre “Shared with OpenBot” na sua conta do 1Password e uma conta de serviço que só consegue ler esse cofre. O LogiBricks Workspace preenche os logins salvos no navegador deste computador, então só os itens que você mover para esse cofre são compartilhados. Os agentes nunca veem uma senha.",
   "connector.onePassword.connect": "Conectar o 1Password",
   "connector.onePassword.setupTitle": "Configuração",
   "connector.onePassword.stepCliTitle": "Instalar a CLI do 1Password",
@@ -485,20 +494,20 @@ export const messages = {
   "connector.onePassword.stepCliInstalling": "Baixando a CLI do 1Password do 1Password",
   "connector.onePassword.stepCliReady": "A versão {version} está instalada.",
   "connector.onePassword.stepCliMissing":
-    "O OpenBot baixa a CLI do 1Password para uma pasta própria. Não é preciso senha de administrador.",
+    "O LogiBricks Workspace baixa a CLI do 1Password para uma pasta própria. Não é preciso senha de administrador.",
   "connector.onePassword.stepCliManual":
-    "O OpenBot não consegue instalá-la neste computador. Instale-a pelo 1Password e volte a esta página.",
+    "O LogiBricks Workspace não consegue instalá-la neste computador. Instale-a pelo 1Password e volte a esta página.",
   "connector.onePassword.installCli": "Instalar",
   "connector.onePassword.stepAppTitle": "Ativar a integração com a CLI",
   "connector.onePassword.stepAppDescription":
     "No app do 1Password, abra Ajustes > Desenvolvedor e ative “Integrar com a CLI do 1Password”.",
   "connector.onePassword.stepAppReady": "O app do 1Password permite que a CLI crie o cofre compartilhado.",
   "connector.onePassword.openApp": "Abrir o 1Password",
-  "connector.onePassword.openAppFailed": "O OpenBot não conseguiu abrir o 1Password.",
+  "connector.onePassword.openAppFailed": "O LogiBricks Workspace não conseguiu abrir o 1Password.",
   "connector.onePassword.checkAgain": "Verificar de novo",
   "connector.onePassword.stepVaultTitle": "Criar o cofre compartilhado",
   "connector.onePassword.stepVaultDescription":
-    "O OpenBot cria o cofre “Shared with OpenBot” e uma conta de serviço que só consegue lê-lo. O 1Password pede sua aprovação.",
+    "O LogiBricks Workspace cria o cofre “Shared with OpenBot” e uma conta de serviço que só consegue lê-lo. O 1Password pede sua aprovação.",
   "connector.onePassword.useTokenDescription":
     "Em vez destes passos, cole um token de conta de serviço do 1Password.com.",
   "connector.onePassword.useTokenAction": "Usar token",
@@ -508,7 +517,8 @@ export const messages = {
   "connector.onePassword.approveInApp": "Aprove o pedido no app do 1Password",
   "connector.onePassword.cancel": "Cancelar",
   "connector.onePassword.chooseAccountTitle": "Escolha uma conta",
-  "connector.onePassword.chooseAccountDescription": "O OpenBot cria o cofre compartilhado na conta que você escolher.",
+  "connector.onePassword.chooseAccountDescription":
+    "O LogiBricks Workspace cria o cofre compartilhado na conta que você escolher.",
   "connector.onePassword.useAccount": "Usar esta conta",
   "connector.onePassword.vaultTitle": "Cofre compartilhado",
   "connector.onePassword.vaultDescription":
@@ -518,14 +528,14 @@ export const messages = {
   "connector.onePassword.disconnect": "Desconectar",
   "connector.onePassword.disconnectTitle": "Desconectar o 1Password",
   "connector.onePassword.disconnectSummary":
-    "O OpenBot esquece o token. O cofre e a conta de serviço continuam no 1Password; remova-os lá se não precisar mais deles.",
-  "connector.onePassword.actionFailed": "O OpenBot não conseguiu alterar a conexão com o 1Password.",
+    "O LogiBricks Workspace esquece o token. O cofre e a conta de serviço continuam no 1Password; remova-os lá se não precisar mais deles.",
+  "connector.onePassword.actionFailed": "O LogiBricks Workspace não conseguiu alterar a conexão com o 1Password.",
   "connector.onePassword.statusConnected": "Conectado",
   "connector.onePassword.statusConnecting": "Conectando",
   "connector.onePassword.descriptionHost":
-    "Compartilhe um cofre dedicado do 1Password com o OpenBot em {host} por meio de uma conta de serviço, para que os agentes em {host} possam entrar em sites no navegador dele.",
+    "Compartilhe um cofre dedicado do 1Password com o LogiBricks Workspace em {host} por meio de uma conta de serviço, para que os agentes em {host} possam entrar em sites no navegador dele.",
   "connector.onePassword.howItWorksHost":
-    "{host} se conecta com um token de conta de serviço. No 1Password.com, crie uma conta de serviço que possa ler apenas o cofre que você compartilha com o OpenBot e cole o token dela aqui. {host} verifica o token e o guarda; este computador não. Os agentes nunca veem uma senha.",
+    "{host} se conecta com um token de conta de serviço. No 1Password.com, crie uma conta de serviço que possa ler apenas o cofre que você compartilha com o LogiBricks Workspace e cole o token dela aqui. {host} verifica o token e o guarda; este computador não. Os agentes nunca veem uma senha.",
   "connector.onePassword.disconnectSummaryHost":
     "{host} esquece o token. O cofre e a conta de serviço continuam no 1Password; remova-os lá se não precisar mais deles.",
   "connector.bitwarden.title": "Bitwarden",
@@ -533,25 +543,25 @@ export const messages = {
   "connector.bitwarden.setup":
     "Instale a CLI do Bitwarden e entre com bw login. Crie uma pasta chamada Shared with OpenBot e coloque nela apenas os logins que os agentes podem usar. Execute bw unlock --raw e cole a chave de sessão abaixo. Não cole sua senha mestra.",
   "connector.bitwarden.scope":
-    "Todos os agentes deste computador podem usar logins correspondentes em Shared with OpenBot. O OpenBot usa origens HTTPS exatas. Ele não usa itens que exigem senha mestra ou regra personalizada de URI.",
+    "Todos os agentes deste computador podem usar logins correspondentes em Shared with OpenBot. O LogiBricks Workspace usa origens HTTPS exatas. Ele não usa itens que exigem senha mestra ou regra personalizada de URI.",
   "connector.bitwarden.session":
-    "A chave de sessão fica na memória. Conecte de novo após 8 horas sem uso do cofre ou após o OpenBot fechar. Desconectar interrompe o acesso do OpenBot; não bloqueia outros clientes Bitwarden.",
+    "A chave de sessão fica na memória. Conecte de novo após 8 horas sem uso do cofre ou após o LogiBricks Workspace fechar. Desconectar interrompe o acesso do LogiBricks Workspace; não bloqueia outros clientes Bitwarden.",
   "connector.bitwarden.sessionKey": "Chave de sessão do Bitwarden",
   "connector.bitwarden.connect": "Conectar Bitwarden",
   "connector.bitwarden.disconnect": "Desconectar Bitwarden",
   "connector.bitwarden.disconnectAction": "Desconectar",
   "connector.bitwarden.disconnectSummary":
-    "O OpenBot esquece a chave de sessão. Os agentes não podem mais preencher logins do Bitwarden. Os outros clientes do Bitwarden continuam desbloqueados.",
+    "O LogiBricks Workspace esquece a chave de sessão. Os agentes não podem mais preencher logins do Bitwarden. Os outros clientes do Bitwarden continuam desbloqueados.",
   "connector.bitwarden.disconnectSummaryHost":
     "{host} remove a chave de API e a senha mestra. Os agentes em {host} não podem mais preencher logins do Bitwarden.",
   "connector.bitwarden.connected": "Conectado",
-  "connector.bitwarden.actionFailed": "O OpenBot não conseguiu alterar a conexão com o Bitwarden.",
+  "connector.bitwarden.actionFailed": "O LogiBricks Workspace não conseguiu alterar a conexão com o Bitwarden.",
   "connector.bitwarden.descriptionHost":
     "Preencha logins do navegador em {host} a partir do Bitwarden ou do Vaultwarden.",
   "connector.bitwarden.setupHost":
     "{host} entra com a própria CLI do Bitwarden. No seu cofre, crie uma pasta chamada Shared with OpenBot e coloque nela apenas os logins que os agentes podem usar. No cofre web, abra Configurações › Segurança › Chaves e veja sua chave de API. Informe abaixo o endereço do servidor, client_id, client_secret e sua senha mestra.",
   "connector.bitwarden.scopeHost":
-    "Todos os agentes em {host} podem usar os logins correspondentes em Shared with OpenBot. O OpenBot usa origens HTTPS exatas. Ele não usa itens que pedem a senha mestra nem itens com uma regra personalizada de correspondência de URI.",
+    "Todos os agentes em {host} podem usar os logins correspondentes em Shared with OpenBot. O LogiBricks Workspace usa origens HTTPS exatas. Ele não usa itens que pedem a senha mestra nem itens com uma regra personalizada de correspondência de URI.",
   "connector.bitwarden.sessionHost":
     "{host} guarda a chave de API e a senha mestra criptografadas, para desbloquear de novo depois de reiniciar. Este computador não as guarda. Desconectar as remove de {host}. {host} precisa acessar o endereço do servidor por HTTPS.",
   "connector.bitwarden.serverUrl": "Endereço do servidor",
@@ -576,19 +586,20 @@ export const messages = {
   "connector.protonPass.keyPlaceholder": "pst_…",
   "connector.protonPass.setupTitle": "Configurar",
   "connector.protonPass.setupDescription":
-    "Conectar abre o login do Proton no seu navegador. Depois, o OpenBot cria o cofre compartilhado e guarda só uma chave somente leitura.",
+    "Conectar abre o login do Proton no seu navegador. Depois, o LogiBricks Workspace cria o cofre compartilhado e guarda só uma chave somente leitura.",
   "connector.protonPass.setupDescriptionHost":
     "Conectar abre o login do Proton no seu navegador. Depois, {host} cria o cofre compartilhado e guarda só uma chave somente leitura.",
   "connector.protonPass.vaultName": "Shared with OpenBot",
   "connector.protonPass.vaultSetup":
-    "O OpenBot cria este cofre quando você conecta. Mova logins para ele para compartilhá-los.",
+    "O LogiBricks Workspace cria este cofre quando você conecta. Mova logins para ele para compartilhá-los.",
   "connector.protonPass.showSteps": "Ver etapas",
   "connector.protonPass.stepsLabel": "Etapas da conexão",
   "connector.protonPass.stepSignIn": "Entrar",
   "connector.protonPass.stepVault": "Criar o cofre compartilhado",
   "connector.protonPass.stepDone": "Pronto",
   "connector.protonPass.signInTitle": "Entre no Proton",
-  "connector.protonPass.signInStarting": "O OpenBot inicia o login. A página do Proton abre no seu navegador.",
+  "connector.protonPass.signInStarting":
+    "O LogiBricks Workspace inicia o login. A página do Proton abre no seu navegador.",
   "connector.protonPass.signInDescription":
     "O login está aberto no seu navegador. O Proton pede sua senha e seu segundo fator.",
   "connector.protonPass.signInDescriptionHost":
@@ -599,7 +610,7 @@ export const messages = {
   "connector.protonPass.continue": "Continuar",
   "connector.protonPass.setupStepTitle": "Criando o cofre compartilhado",
   "connector.protonPass.setupStepDescription":
-    "O OpenBot cria o cofre “{vault}” e uma chave somente leitura para ele. Depois, encerra sua sessão do Proton.",
+    "O LogiBricks Workspace cria o cofre “{vault}” e uma chave somente leitura para ele. Depois, encerra sua sessão do Proton.",
   "connector.protonPass.doneTitle": "O Proton Pass está conectado",
   "connector.protonPass.doneDescription": "Mova logins para “{vault}” para que os agentes entrem com eles.",
   "connector.protonPass.failedTitle": "O Proton Pass não conectou",
@@ -628,9 +639,9 @@ export const messages = {
   "connector.protonPass.keyNoExpiry": "Somente leitura. Não expira.",
   "connector.protonPass.disconnectTitle": "Desconectar o Proton Pass",
   "connector.protonPass.disconnectSummary":
-    "O OpenBot exclui a chave de acesso dele neste computador. O cofre e os logins dele ficam na sua conta Proton.",
+    "O LogiBricks Workspace exclui a chave de acesso dele neste computador. O cofre e os logins dele ficam na sua conta Proton.",
   "connector.protonPass.disconnectSummaryHost":
-    "O OpenBot exclui a chave de acesso dele em {host}. O cofre e os logins dele ficam na sua conta Proton.",
+    "O LogiBricks Workspace exclui a chave de acesso dele em {host}. O cofre e os logins dele ficam na sua conta Proton.",
   "connector.protonPass.disconnect": "Desconectar",
-  "connector.protonPass.actionFailed": "O OpenBot não conseguiu alterar a conexão do Proton Pass.",
+  "connector.protonPass.actionFailed": "O LogiBricks Workspace não conseguiu alterar a conexão do Proton Pass.",
 } as const satisfies PartialTranslation<typeof source>;

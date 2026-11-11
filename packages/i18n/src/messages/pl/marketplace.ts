@@ -48,7 +48,7 @@ export const messages = {
     "Udostępniony przez autora, zanim OpenBot go sprawdził. Po dodaniu może działać w Twoim imieniu.",
   "marketplace.agents.source.pending": "Jeszcze niesprawdzony",
   "marketplace.skill.loading": "Wczytywanie umiejętności",
-  "marketplace.try.readFailed": "OpenBot nie mógł odczytać umiejętności tego agenta. Spróbuj ponownie.",
+  "marketplace.try.readFailed": "LogiBricks Workspace nie mógł odczytać umiejętności tego agenta. Spróbuj ponownie.",
   "marketplace.try.enable": "Włącz tę umiejętność w ustawieniach agenta, aby ją wypróbować.",
   "marketplace.try.repair": "Napraw tę umiejętność w ustawieniach agenta, aby ją wypróbować.",
   "marketplace.try.update": "Zaktualizuj tę umiejętność, aby wypróbować tę wersję.",
@@ -139,24 +139,25 @@ export const messages = {
   "marketplace.app.setup.account": "Zaloguj się w przeglądarce na konto {name}.",
   "marketplace.app.setup.key": "Wymaga klucza API z konta {name}.",
   "marketplace.app.setup.keySaved": "{field} – zapisano na: {host}.",
-  "marketplace.app.account.removeDescription": "OpenBot usunie dane logowania tego konta – miejsce: {host}.",
+  "marketplace.app.account.removeDescription":
+    "LogiBricks Workspace usunie dane logowania tego konta – miejsce: {host}.",
   "marketplace.app.setup.desktop": "Działa w aplikacji desktopowej {name} pod adresem {address}.",
   "marketplace.app.setup.desktopConnected": "Połączono z {address}.",
   "marketplace.app.setup.open": "Nie wymaga logowania ani klucza.",
   "marketplace.app.blocked.update":
-    "{host} ma starszą wersję OpenBot, która nie może łączyć aplikacji. Zaktualizuj OpenBot na {host} albo poproś właściciela o aktualizację.",
+    "{host} ma starszą wersję LogiBricks Workspace, która nie może łączyć aplikacji. Zaktualizuj LogiBricks Workspace na {host} albo poproś właściciela o aktualizację.",
   "marketplace.app.blocked.member":
-    "Tylko właściciel lub administrator {host} może tam łączyć aplikacje. Poproś jednego z nich o połączenie {name} albo o aktualizację OpenBot na {host}, aby członkowie mogli łączyć aplikacje.",
+    "Tylko właściciel lub administrator {host} może tam łączyć aplikacje. Poproś jednego z nich o połączenie {name} albo o aktualizację LogiBricks Workspace na {host}, aby członkowie mogli łączyć aplikacje.",
   "marketplace.app.connectAgain": "Połącz ponownie",
   "marketplace.app.automation.askOnInstall": "Poproś macOS o dostęp przy instalacji",
   "marketplace.app.automation.title": "Dostęp do aplikacji Apple",
   "marketplace.app.automation.description":
     "macOS pokazuje jedno pytanie dla każdej aplikacji. Zamknięta aplikacja otwiera się na chwilę, a potem się zamyka.",
   "marketplace.app.automation.request": "Poproś o dostęp",
-  "marketplace.app.automation.allowed": "OpenBot może teraz sterować wszystkimi aplikacjami Apple.",
+  "marketplace.app.automation.allowed": "LogiBricks Workspace może teraz sterować wszystkimi aplikacjami Apple.",
   "marketplace.app.automation.refused":
-    "macOS nie dał dostępu do: {apps}. Zezwól OpenBot w Ustawienia systemowe › Prywatność i ochrona › Automatyzacja.",
-  "marketplace.app.automation.failed": "OpenBot nie mógł zapytać macOS o: {apps}. Spróbuj ponownie.",
+    "macOS nie dał dostępu do: {apps}. Zezwól LogiBricks Workspace w Ustawienia systemowe › Prywatność i ochrona › Automatyzacja.",
+  "marketplace.app.automation.failed": "LogiBricks Workspace nie mógł zapytać macOS o: {apps}. Spróbuj ponownie.",
   "marketplace.app.automation.app.calendar": "Kalendarz",
   "marketplace.app.automation.app.contacts": "Kontakty",
   "marketplace.app.automation.app.mail": "Mail",
@@ -216,7 +217,7 @@ export const messages = {
   "marketplace.plugin.cobrain.prompt.saveNote": "Zapisz w Cobrain notatkę o tym, co dziś zrobiliśmy i co zostało.",
   "marketplace.plugin.honcho.tagline": "Twoja pamięć we wszystkich narzędziach AI",
   "marketplace.plugin.honcho.description":
-    "Honcho od Plastic Labs daje agentom długotrwałą pamięć o tobie, którą mogą dzielić inne połączone narzędzia AI. Agenci zapisują to, czego się dowiedzą, a Honcho wyciąga z tego wnioski i buduje model twoich preferencji, celów i sposobu pracy. Agenci zadają mu pytania, zanim zaczną. Agenci OpenBot mają też własną pamięć; Honcho to pamięć, która idzie za tobą do innych narzędzi. Wiadomości zapisane przez agentów trafiają na twoje konto Honcho.",
+    "Honcho od Plastic Labs daje agentom długotrwałą pamięć o tobie, którą mogą dzielić inne połączone narzędzia AI. Agenci zapisują to, czego się dowiedzą, a Honcho wyciąga z tego wnioski i buduje model twoich preferencji, celów i sposobu pracy. Agenci zadają mu pytania, zanim zaczną. Agenci LogiBricks Workspace mają też własną pamięć; Honcho to pamięć, która idzie za tobą do innych narzędzi. Wiadomości zapisane przez agentów trafiają na twoje konto Honcho.",
   "marketplace.plugin.honcho.app":
     "Zapisywanie i odpytywanie długotrwałej pamięci w przestrzeniach roboczych Honcho przez jeden serwer MCP.",
   "marketplace.plugin.honcho.prompt.recall": "Zanim zaczniemy, zapytaj Honcho, co wie o tym, jak lubię pracować.",
@@ -225,7 +226,7 @@ export const messages = {
   "marketplace.plugin.honcho.hint.apiKey": "Utwórz klucz na app.honcho.dev.",
   "marketplace.plugin.hindsight.tagline": "Pamięć, która uczy się z czasem",
   "marketplace.plugin.hindsight.description":
-    "Hindsight od Vectorize daje agentom długotrwałą pamięć w Hindsight Cloud. Agenci zapamiętują fakty i zdarzenia, przywołują je według znaczenia, czasu i obiektu oraz analizują je, aby tworzyć modele mentalne. Wspomnienia są przechowywane w bankach, a agenci mogą utworzyć bank dla każdego projektu lub osoby. Agenci OpenBot mają też własną pamięć; Hindsight to pamięć, którą mogą dzielić inne połączone narzędzia AI. To, co agenci zapamiętają, trafia na twoje konto Hindsight Cloud.",
+    "Hindsight od Vectorize daje agentom długotrwałą pamięć w Hindsight Cloud. Agenci zapamiętują fakty i zdarzenia, przywołują je według znaczenia, czasu i obiektu oraz analizują je, aby tworzyć modele mentalne. Wspomnienia są przechowywane w bankach, a agenci mogą utworzyć bank dla każdego projektu lub osoby. Agenci LogiBricks Workspace mają też własną pamięć; Hindsight to pamięć, którą mogą dzielić inne połączone narzędzia AI. To, co agenci zapamiętają, trafia na twoje konto Hindsight Cloud.",
   "marketplace.plugin.hindsight.app":
     "Zapamiętywanie, przywoływanie i analiza wspomnień w bankach Hindsight Cloud przez jeden serwer MCP.",
   "marketplace.plugin.hindsight.prompt.recall": "Zanim zaczniemy, przywołaj z Hindsight, co wiemy o tym projekcie.",
@@ -243,7 +244,7 @@ export const messages = {
   "marketplace.plugin.figma.prompt.assets": "Wyeksportuj ikony marketingowe w 2x do pakietu aplikacji.",
   "marketplace.plugin.paper.tagline": "Płótno projektowe oparte na HTML i CSS",
   "marketplace.plugin.paper.description":
-    "Paper pozwala agentom czytać i zapisywać plik projektu otwarty w Paper Desktop: sprawdzać plansze, zaznaczenia, obliczone style, JSX i tokeny oraz tworzyć lub zmieniać ramki, tekst i style. Zainstaluj Paper Desktop, otwórz go raz i otwórz plik przed rozpoczęciem. OpenBot uruchamia Paper CLI instalowane przez Paper Desktop. Paper nie wymaga klucza. Narzędzia zapisu zmieniają otwarty plik, więc sprawdź każdy zapis, zanim go zatwierdzisz.",
+    "Paper pozwala agentom czytać i zapisywać plik projektu otwarty w Paper Desktop: sprawdzać plansze, zaznaczenia, obliczone style, JSX i tokeny oraz tworzyć lub zmieniać ramki, tekst i style. Zainstaluj Paper Desktop, otwórz go raz i otwórz plik przed rozpoczęciem. LogiBricks Workspace uruchamia Paper CLI instalowane przez Paper Desktop. Paper nie wymaga klucza. Narzędzia zapisu zmieniają otwarty plik, więc sprawdź każdy zapis, zanim go zatwierdzisz.",
   "marketplace.plugin.paper.app":
     "Czyta i zapisuje otwarty plik Paper Desktop przez lokalny serwer MCP przekazywany przez Paper CLI. Wymaga Paper Desktop z otwartym plikiem.",
   "marketplace.plugin.paper.prompt.implement":
@@ -274,7 +275,7 @@ export const messages = {
     "Podsumuj ostatnie dziesięć rozmów mojego agenta głosowego wsparcia.",
   "marketplace.plugin.appleApps.tagline": "Mail, Kalendarz i więcej na Twoim Macu",
   "marketplace.plugin.appleApps.description":
-    "Apple apps pozwala agentom korzystać z aplikacji Mail, Kalendarz, Kontakty, Przypomnienia, Notatki, Wiadomości i Safari na tym Macu. Działa tylko w macOS. OpenBot uruchamia mcp-icloud, serwer społeczności, którego nie tworzy Apple ani OpenBot. Serwer steruje aplikacjami przez AppleScript na tym komputerze i nie wymaga konta ani klucza. Podczas instalacji OpenBot może od razu poprosić macOS o dostęp do wszystkich tych aplikacji, z jednym pytaniem dla każdej. Jeśli tego nie zrobisz, macOS zapyta, gdy agent po raz pierwszy użyje aplikacji. Aby zmienić to później, otwórz Ustawienia systemowe › Prywatność i ochrona › Automatyzacja. Agenci mogą wysyłać e-maile i wiadomości iMessage oraz zmieniać lub usuwać wydarzenia, kontakty i przypomnienia, więc sprawdź każdy zapis, zanim go zatwierdzisz. To, co odczytują narzędzia, na przykład treść e-maili, trafia do dostawcy modelu agenta.",
+    "Apple apps pozwala agentom korzystać z aplikacji Mail, Kalendarz, Kontakty, Przypomnienia, Notatki, Wiadomości i Safari na tym Macu. Działa tylko w macOS. LogiBricks Workspace uruchamia mcp-icloud, serwer społeczności, którego nie tworzy Apple ani LogiBricks Workspace. Serwer steruje aplikacjami przez AppleScript na tym komputerze i nie wymaga konta ani klucza. Podczas instalacji LogiBricks Workspace może od razu poprosić macOS o dostęp do wszystkich tych aplikacji, z jednym pytaniem dla każdej. Jeśli tego nie zrobisz, macOS zapyta, gdy agent po raz pierwszy użyje aplikacji. Aby zmienić to później, otwórz Ustawienia systemowe › Prywatność i ochrona › Automatyzacja. Agenci mogą wysyłać e-maile i wiadomości iMessage oraz zmieniać lub usuwać wydarzenia, kontakty i przypomnienia, więc sprawdź każdy zapis, zanim go zatwierdzisz. To, co odczytują narzędzia, na przykład treść e-maili, trafia do dostawcy modelu agenta.",
   "marketplace.plugin.appleApps.app":
     "Mail, Kalendarz, Kontakty, Przypomnienia, Notatki, Wiadomości i Safari przez lokalny serwer mcp-icloud. Wymaga macOS i dostępu w Automatyzacji.",
   "marketplace.plugin.appleApps.prompt.unread": "Podsumuj moje dzisiejsze nieprzeczytane e-maile w Apple Mail.",

@@ -1,13 +1,13 @@
 {
   "id": "/",
-  "name": "OpenBot",
-  "short_name": "OpenBot",
+  "name": "LogiBricks Workspace",
+  "short_name": "LogiBricks",
   "description": "Run Codex and Claude side by side as persistent AI teammates, each with its own workspace, queue, and context.",
   "start_url": "/app",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#1a1a1a",
-  "theme_color": "#1a1a1a",
+  "background_color": "#151618",
+  "theme_color": "#151618",
   "icons": [
     {
       "src": "/icon-192x192.png",
@@ -20,6 +20,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

@@ -1,3 +1,4 @@
+import { PRODUCT_NAME } from "@openbot/brand/product-identity";
 /**
  * A loopback listener that takes the callback of a browser sign-in: the MCP grant listener of this
  * computer, and the listener of a sign-in that this computer relays to a joined server.
@@ -131,5 +132,5 @@ function isLoopbackHost(host: string | undefined): boolean {
  * authorization server reaches the markup.
  */
 function callbackPage(locale: string, message: string): string {
-  return `<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><title>OpenBot</title></head><body style="font-family:system-ui;padding:2rem"><p>${message}</p></body></html>`;
+  return `<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><title>${PRODUCT_NAME}</title></head><body style="font-family:system-ui;padding:2rem"><p>${message}</p></body></html>`;
 }
