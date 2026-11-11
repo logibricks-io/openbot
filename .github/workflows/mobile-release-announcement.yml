@@ -43,6 +43,7 @@ jobs:
   # No environment, so the schedule runs make no deployment records.
   detect:
     name: Find the posts that are due
+    if: github.repository == 'nightly-labs/openbot'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:

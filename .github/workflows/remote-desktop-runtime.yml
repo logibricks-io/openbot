@@ -354,7 +354,7 @@ jobs:
   publish:
     name: Publish immutable runtime prerelease
     needs: [prepare, build]
-    if: github.event_name != 'pull_request' && always() && needs.prepare.result == 'success' && needs.build.result == 'success'
+    if: github.repository == 'nightly-labs/openbot' && github.event_name != 'pull_request' && always() && needs.prepare.result == 'success' && needs.build.result == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
