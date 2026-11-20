@@ -19,7 +19,6 @@ import { englishSourceDisplay } from "./source-display-en";
 
 const catalogs = { en: englishSourceDisplay, ar, de, es, fr, he, it, ja, ko, nl, pl, pt, ru, tr, zh } as const;
 
-/** The source catalog of `locale`, or `undefined` while it is not loaded. See `app-catalogs.ts`. */
 export function sourceTranslation(locale: TranslatedLocale): PartialTranslation<typeof en> | undefined {
   return catalogs[locale];
 }

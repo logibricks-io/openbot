@@ -8,10 +8,14 @@ export const messages = {
     "LogiBricks Workspace nie może odczytać zapisanych tokenów na tym komputerze. Rozłącz obszar roboczy, a potem połącz go ponownie.",
   "messaging.help.relay_unavailable":
     "LogiBricks Workspace nie może odbierać zdarzeń Slack na tym komputerze. Zaloguj się, nadaj temu komputerowi nazwę w ustawieniach serwera i nie zamykaj LogiBricks Workspace.",
+  "messaging.help.not_linked":
+    "Ten obszar roboczy nie jest połączony z tym serwerem. Wybierz Połącz ponownie, aby go połączyć.",
   "messaging.discordHelp.invalid_token":
     "Discord nie akceptuje już LogiBricks Workspace na tym serwerze Discord. Mógł zostać usunięty. Połącz serwer Discord ponownie.",
   "messaging.discordHelp.secret_storage_unavailable":
     "LogiBricks Workspace nie może odczytać zapisanych tokenów na tym komputerze. Rozłącz serwer Discord, a potem połącz go ponownie.",
   "messaging.discordHelp.relay_unavailable":
     "LogiBricks Workspace nie może odbierać zdarzeń Discord na tym komputerze. Zaloguj się, nadaj temu komputerowi nazwę w ustawieniach serwera i nie zamykaj LogiBricks Workspace.",
+  "messaging.discordHelp.not_linked":
+    "Ten serwer Discord nie jest połączony z tym serwerem LogiBricks Workspace. Wybierz Połącz ponownie, aby go połączyć.",
 } as const satisfies PartialTranslation<typeof source>;

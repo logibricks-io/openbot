@@ -5,14 +5,10 @@ import { DOWNLOAD_PLATFORMS, detectDownloadPlatform } from "../../lib/download-p
 import { Button } from "../ui/button";
 
 export interface PluginOpenButtonsProps {
-  /** An `openbot://` link, built by a shared helper from contracts. */
   href: string;
   label: string;
-  /** The browser client's entry for the same item, built by a shared helper from contracts. */
   browserHref?: string;
-  /** What the download offer says after the app did not open. */
   downloadCopy: string;
-  /** The other labels, in the page's language. The plugin and shared agent pages are English and omit it. */
   text?: PluginOpenButtonsText;
 }
 
@@ -20,7 +16,6 @@ export interface PluginOpenButtonsText {
   browser: string;
   notOpened: string;
   dismiss: string;
-  /** The download button for one platform, such as "Download for macOS". */
   download: (platform: string) => string;
 }
 
@@ -31,7 +26,6 @@ const ENGLISH_TEXT: PluginOpenButtonsText = {
   download: (platform) => `Download for ${platform}`,
 };
 
-/** How long the app is given to take over before the page offers the download instead. */
 const DOWNLOAD_HINT_DELAY_MS = 1200;
 
 /**
@@ -85,16 +79,6 @@ export function PluginOpenButtons(props: PluginOpenButtonsProps) {
     }, DOWNLOAD_HINT_DELAY_MS);
   };
 
-  /**
-   * Opened as modal rather than with the markup's `open`, which is the non-modal dialog: no
-   * backdrop, no focus, and the page still reachable behind it. It waits a microtask because a
-   * `ref` runs before the element is in the document, and a detached dialog cannot be shown.
-   *
-   * The press-away is bound here rather than as `onClick`, because it is not a control: the
-   * backdrop is the dialog's own box, so a press outside the panel lands on the element itself.
-   * A keyboard closes this dialog with Escape and with `Not now`, both of which the element and
-   * the markup already carry.
-   */
   const openDialog = (element: HTMLDialogElement) => {
     dialog = element;
     element.addEventListener("click", (event) => {
@@ -105,8 +89,6 @@ export function PluginOpenButtons(props: PluginOpenButtonsProps) {
     });
   };
 
-  // The wrapper carries no class of its own: what it holds together is the button and the offer
-  // that follows it, and the spacing is the hero line's own.
   return (
     <div>
       <div class="plugin-actions-row">
@@ -123,8 +105,6 @@ export function PluginOpenButtons(props: PluginOpenButtonsProps) {
       </div>
 
       <Show when={showDownload()}>
-        {/* Out of this page's own boxes, because the header it stands in animates a transform, and
-            a transformed ancestor is what a modal dialog then centres itself in, not the window. */}
         <Portal>
           <dialog
             ref={openDialog}

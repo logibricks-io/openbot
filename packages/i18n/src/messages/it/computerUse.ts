@@ -22,6 +22,10 @@ export const messages = {
   "computerUse.ready.description":
     "LogiBricks Workspace può vedere le app di questo computer e usarle. Questo sistema non richiede altri permessi.",
   "computerUse.openSettingsFailed.title": "Impossibile aprire le Impostazioni di Sistema",
+  "computerUse.restartRequired.title": "Riavvio necessario",
+  "computerUse.restartRequired.description":
+    "macOS blocca ancora clic e digitazione. Se succede di nuovo dopo il riavvio, rimuovi LogiBricks Workspace da Accessibilità e aggiungilo di nuovo.",
+  "computerUse.restartRequired.action": "Riavvia LogiBricks Workspace",
   "computerUse.compact.title": "Attiva il Controllo del computer",
   "computerUse.compact.description": "Lascia che LogiBricks Workspace veda le app di questo computer e le usi.",
   "computerUse.granted": "Concesso",

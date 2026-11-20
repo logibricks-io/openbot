@@ -77,6 +77,9 @@ export const messages = {
   "sitePage.report.sentTitle": "Zgłoszenie wysłane",
   "sitePage.report.sentBody": "Dziękujemy. Otrzymaliśmy Twoje zgłoszenie.",
   "sitePage.report.home": "Przejdź do strony głównej",
+  "sitePage.pricing.title": "Cennik LogiBricks Workspace",
+  "sitePage.pricing.description":
+    "Hostowane serwery i licencja dla zespołów. LogiBricks Workspace jest darmowy do użytku osobistego na własnym komputerze.",
   "sitePage.pricing.imageAlt": "„Small team. Bright ideas.” Trzej agenci LogiBricks Workspace pod szklaną kopułą",
   "sitePage.pricing.heading": "Cennik",
   "sitePage.pricing.personal.title": "Użytek osobisty jest darmowy",
@@ -89,6 +92,11 @@ export const messages = {
   "sitePage.pricing.consent.statement": "Oświadczam, że akceptuję {policy}, {terms}.",
   "sitePage.pricing.consent.policy": "politykę prywatności",
   "sitePage.pricing.consent.terms": "regulamin i prawo odstąpienia od umowy",
+  "sitePage.pricing.consent.earlyStart":
+    "Żądam rozpoczęcia świadczenia usługi hostingu przed upływem 14-dniowego terminu na odstąpienie od umowy. Przyjmuję do wiadomości, że jeśli odstąpię od umowy przed pełnym wykonaniem usługi, będę musiał(a) zapłacić za usługi świadczone do chwili odstąpienia, a po pełnym wykonaniu usługi utracę prawo odstąpienia od umowy.",
+  "sitePage.teams.title": "LogiBricks Workspace dla zespołów",
+  "sitePage.teams.description":
+    "Uruchom LogiBricks Workspace na zarządzanej infrastrukturze albo pozwól nam zaprojektować wdrożenie dopasowane do Twojego zespołu, procesów i istniejących systemów.",
   "sitePage.teams.imageAlt":
     "„Big plans. Better together.” Dwóch agentów LogiBricks Workspace połączonych papierowym mostem",
   "sitePage.teams.hero.heading": "Wprowadź do firmy zespół {team} współpracowników AI",
@@ -137,6 +145,9 @@ export const messages = {
   "sitePage.teams.closing.heading": "Powiedz nam, co mają osiągnąć Twoi {accent}",
   "sitePage.teams.closing.accent": "współpracownicy AI",
   "sitePage.teams.closing.action": "Omów swoją konfigurację",
+  "sitePage.contact.title": "Kontakt z zespołem LogiBricks Workspace",
+  "sitePage.contact.description":
+    "Napisz do zespołu LogiBricks Workspace w sprawie wdrożenia na miarę, współpracy lub mediów. Każdą wiadomość czyta człowiek.",
   "sitePage.contact.imageAlt": "„Small team. Always on it.” Agenci LogiBricks Workspace wokół papierowej planety",
   "sitePage.contact.heading": "Porozmawiaj z zespołem",
   "sitePage.contact.intro": "Napisz, czego potrzebujesz. Każdą wiadomość czyta osoba z zespołu LogiBricks Workspace.",
@@ -227,6 +238,8 @@ export const messages = {
   "sitePage.landing.title": "LogiBricks Workspace: zespół agentów AI na twoim komputerze",
   "sitePage.landing.description":
     "Darmowa aplikacja na komputer, która uruchamia agentów AI jako zespół na twoim własnym komputerze, z planem ChatGPT, Claude, Gemini lub Grok, za który już płacisz, albo z twoim własnym modelem.",
+  "sitePage.landing.hero.new": "NOWOŚĆ",
+  "sitePage.landing.hero.availableOn": "Dostępne na",
   "sitePage.landing.hero.title": "Poznaj {name}",
   "sitePage.landing.hero.description":
     "Uruchamiaj {codex}, {claude}, {gemini}, {grok} i własne modele w jednym stałym obszarze roboczym. Agenci przekazują sobie pracę, używają narzędzi i współpracują z twoimi prawdziwymi współpracownikami. Za darmo do użytku osobistego.",
@@ -338,7 +351,12 @@ export const messages = {
   "sitePage.landing.faq.description": "Krótkie odpowiedzi o cenie, konfiguracji, dostawcach i twoich danych.",
   "sitePage.landing.faq.contact": "Zapytaj nas o coś innego",
   "sitePage.landing.faq.free.question": "Czy LogiBricks Workspace jest darmowy?",
+  "sitePage.landing.faq.free.answer":
+    "Tak, do użytku osobistego i innego niekomercyjnego. LogiBricks Workspace kosztuje 0 USD, bez zablokowanych funkcji. Płacisz tylko dostawcy AI, przez plan lub klucz API, który już masz. Użycie komercyjne wymaga licencji.",
   "sitePage.landing.faq.source.question": "Czy kod źródłowy LogiBricks Workspace jest otwarty?",
+  "sitePage.landing.faq.source.answer":
+    "Tak. Cały kod źródłowy jest otwarty na GitHubie, więc możesz sprawdzić, co robi LogiBricks Workspace. Możesz go zmieniać i uruchamiać za darmo do użytku niekomercyjnego, na przykład w projektach osobistych, nauce lub badaniach. Użycie komercyjne wymaga osobnej licencji. Licencja to PolyForm Noncommercial 1.0.0.",
+  "sitePage.landing.faq.source.link": "Zobacz kod źródłowy na GitHubie",
   "sitePage.landing.faq.plans.question": "Czy mogę użyć planu ChatGPT lub Claude?",
   "sitePage.landing.faq.plans.answer":
     "Tak. Codex loguje się planem ChatGPT, a Claude Code planem Claude. Gemini używa planu Google AI Pro lub Ultra. OpenCode ma darmowe modele, które nie wymagają konta.",
@@ -349,6 +367,8 @@ export const messages = {
   "sitePage.landing.faq.limit.answer":
     "Agent może przejść na model zapasowy u innego dostawcy, gdy jego plan osiągnie limit albo gdy dostawca jest przeciążony lub nie działa. Agent zachowuje czat i obszar roboczy, a notatka w czacie pokazuje zmianę.",
   "sitePage.landing.faq.start.question": "Jak zacząć?",
+  "sitePage.landing.faq.start.answer":
+    "Pobierz LogiBricks Workspace i połącz dostawcę. Potem opisz agenta, którego chcesz, w jednym poleceniu, sprawdź jego instrukcje i zapisz go. Możesz od razu wysłać mu pracę: wiadomości czekają w kolejce, aż agent będzie wolny.",
   "sitePage.landing.faq.data.question": "Gdzie trafiają moje dane?",
   "sitePage.landing.faq.data.answer":
     "Obszary robocze, rozmowy, załączniki i dane przeglądarki zostają na komputerze, na którym działa LogiBricks Workspace. Wybrany dostawca AI dostaje polecenia, które wysyłają mu twoi agenci, a strony otwierane przez agentów korzystają z sieci.",
@@ -356,6 +376,8 @@ export const messages = {
   "sitePage.landing.faq.computers.answer":
     "macOS 13 lub nowszy na Apple silicon lub Intelu, Windows 10 lub nowszy na x64 oraz Linux na x64 lub arm64 jako AppImage.",
   "sitePage.landing.faq.safety.question": "Czy pozwolenie agentom na pracę na moim komputerze jest bezpieczne?",
+  "sitePage.landing.faq.safety.answer":
+    "Agenci mogą czytać i zmieniać pliki, uruchamiać polecenia, korzystać z sieci i obsługiwać wbudowaną przeglądarkę bez pytania za każdym razem. Dawaj im tylko zadania, którym ufasz, i rób kopie zapasowe.",
   "sitePage.landing.faq.compare": "Porównaj OpenBot",
   "sitePage.landing.download.title": "Pobierz LogiBricks Workspace",
   "sitePage.landing.download.description":
@@ -365,6 +387,7 @@ export const messages = {
   "sitePage.landing.download.appStore": "Pobierz z App Store",
   "sitePage.landing.download.googlePlay": "Pobierz z Google Play",
   "sitePage.landing.download.pages": "Wymagania systemowe i instalacja:",
+  "sitePage.landing.download.apk": "Pobierz APK",
   "sitePage.site.download": "Pobierz",
   "sitePage.site.app": "Aplikacja",
   "sitePage.site.primaryNavigation": "Główna nawigacja",
@@ -431,6 +454,8 @@ export const messages = {
   "sitePage.site.footer.localModels": "Ollama i LM Studio",
   "sitePage.site.footer.allProviders": "Wszyscy dostawcy",
   "sitePage.site.footer.bestApps": "Najlepsze aplikacje z agentami AI",
+  "sitePage.site.footer.rights": "© {year} Synthetify Labs, wszelkie prawa zastrzeżone.",
+  "sitePage.site.footer.available": "Dostępne na macOS, Windows, Linux, iOS i Androida",
   "sitePage.site.footer.made": "Zrobione z {love} w Polsce",
   "sitePage.site.footer.love": "miłością",
 } as const satisfies PartialTranslation<typeof source>;

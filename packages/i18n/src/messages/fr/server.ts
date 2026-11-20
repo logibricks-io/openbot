@@ -48,6 +48,7 @@ export const messages = {
   "server.compatibility.updateHostTitle": "Mettez à jour LogiBricks Workspace sur {name}",
   "server.compatibility.unsafeDataTitle": "L’hôte a renvoyé des données non sûres",
   "server.compatibility.cannotConnectTitle": "Impossible de se connecter à {name}",
+  "server.compatibility.safeModeTitle": "{name} ne démarre pas",
   "server.compatibility.updateClientDescription":
     "Cette application prend en charge uniquement des protocoles plus anciens que ceux de l’hôte. Mettez à jour cette application, puis réessayez.",
   "server.compatibility.updateHostDescription":
@@ -117,6 +118,8 @@ export const messages = {
   "server.local.create": "Créer le serveur",
   "server.local.creating": "Création du serveur…",
   "server.local.createFailed": "Impossible de créer le serveur.",
+  "server.local.createFailedRetry":
+    "Un problème est survenu. Réessayez. Si le problème persiste, redémarrez LogiBricks Workspace.",
   "server.local.limitReached":
     "Vous pouvez avoir au plus {limit} serveurs sur cet ordinateur. Supprimez-en un pour en créer un autre.",
   "server.local.deleteConfirmTitle": "Supprimer {name} ?",
@@ -138,7 +141,7 @@ export const messages = {
   "server.install.offline": "{name} est hors ligne.",
   "server.install.expired": "Cette commande a expiré. Créez-en une nouvelle.",
   "server.install.agentPrompt":
-    'Installe LogiBricks Workspace sur ce serveur Linux et connecte-le à mon compte LogiBricks Workspace.\nExécute cette commande en root. Elle ne pose aucune question et prend quelques minutes :\n\n{command}\n\nElle se termine par la ligne "LogiBricks Workspace is connected to your account." et le code de sortie 0.\nLa commande fonctionne une fois, pendant 15 minutes. Ne l’enregistre nulle part.',
+    'Installe OpenBot sur ce serveur Linux et connecte-le à mon compte OpenBot.\nExécute cette commande en root. Elle ne pose aucune question et prend quelques minutes :\n\n{command}\n\nElle se termine par la ligne "OpenBot is connected to your account." et le code de sortie 0.\nLa commande fonctionne une fois, pendant 15 minutes. Ne l’enregistre nulle part.',
   "server.install.setUpWithAgent": "Configurer avec un agent",
   "server.install.sshAgentPrompt":
     "Connecte-toi en SSH à mon serveur Linux et installe LogiBricks Workspace dessus comme serveur.\n\nAdresse SSH (user@host) :",
@@ -152,9 +155,6 @@ export const messages = {
   "server.upgrade.description":
     "{server} n’a presque plus d’espace libre. Passez à un plan supérieur pour que vos agents continuent sans interruption.",
   "server.upgrade.used": "{used} sur {total} utilisés",
-  "server.upgrade.current": "{plan} (actuel)",
-  "server.upgrade.price": "Prix",
-  "server.upgrade.action": "Passer à {plan}",
   "server.hosted.progressTitle": "Configuration de {name}",
   "server.hosted.paymentTitle": "Terminez le paiement dans votre navigateur",
   "server.hosted.paymentDescription": "La configuration commence quand Stripe confirme le paiement.",
@@ -170,6 +170,7 @@ export const messages = {
   "server.hosted.detail.create.copy": "Copie de LogiBricks Workspace sur la machine",
   "server.hosted.detail.create.key": "Ajout d’une clé de connexion à usage unique",
   "server.hosted.detail.start.boot": "Mise sous tension de la machine",
+  "server.hosted.detail.start.restore": "Restauration des données",
   "server.hosted.detail.start.app": "Démarrage de LogiBricks Workspace",
   "server.hosted.detail.start.wait": "Attente de la réponse de LogiBricks Workspace",
   "server.hosted.detail.connect.signIn": "Connexion en votre nom",
@@ -260,9 +261,6 @@ export const messages = {
   "server.settings.membersDescription": "Publiez ce serveur, invitez des personnes et gérez l’accès.",
   "server.settings.desktopTitle": "Bureau distant",
   "server.settings.desktopDescription": "Configurez le bureau de ce serveur ou connectez-vous à celui-ci.",
-  "server.settings.mcpTitle": "MCP",
-  "server.settings.mcpDescription":
-    "Connectez des serveurs MCP et choisissez ceux que les agents de ce serveur peuvent utiliser.",
   "server.settings.storageTitle": "Stockage",
   "server.settings.storageDescription":
     "Voyez ce qu’LogiBricks Workspace conserve sur le disque de ce serveur et libérez de l’espace.",
@@ -308,10 +306,24 @@ export const messages = {
   "server.settings.copyFailedTitle": "Échec de la copie",
   "server.settings.copyFailed": "LogiBricks Workspace n’a pas pu copier cette valeur.",
   "server.settings.unavailableTitle": "Réglages du serveur indisponibles",
-  "server.settings.unsavedMcpChanges": "Modifications MCP non enregistrées",
   "server.settings.reset": "Réinitialiser",
   "server.settings.unsavedChanges": "Modifications non enregistrées",
   "server.settings.changesNotSaved": "Modifications non enregistrées",
+  "server.settings.group.agents": "Agents",
+  "server.settings.group.people": "Personnes",
+  "server.settings.group.server": "Serveur",
+  "server.settings.experimentalTitle": "Expérimental",
+  "server.settings.experimentalDescription": "Activez des fonctions qui ne sont pas encore terminées.",
+  "server.settings.experimentalFeatures": "Fonctions",
+  "server.settings.experimentalCrm": "CRM",
+  "server.settings.experimentalCrmDescription":
+    "Affiche la page CRM aux propriétaires et administrateurs, permet aux agents de lire le CRM et synchronise Stripe. Si vous le désactivez, les données restent.",
+  "server.settings.agentDefaultsTitle": "Valeurs par défaut des agents",
+  "server.settings.threadsCard": "Fils et fuseau horaire",
+  "server.settings.memoryTitle": "Mémoire",
+  "server.settings.memoryDescription": "Choisir ce que les agents de ce serveur retiennent et apprennent.",
+  "server.settings.memoriesCard": "Souvenirs",
+  "server.settings.learningCard": "Apprentissage",
   "server.settings.sections": "Sections des réglages du serveur",
   "server.settings.identity": "Identité",
   "server.settings.logo": "Logo du serveur",
@@ -324,6 +336,13 @@ export const messages = {
   "server.settings.editLogo": "Modifier le logo du serveur",
   "server.settings.addLogo": "Ajouter un logo au serveur",
   "server.settings.removeLogo": "Supprimer le logo du serveur",
+  "server.settings.appearance": "Forme et couleur",
+  "server.settings.appearanceShapes": "Formes du serveur",
+  "server.settings.appearanceShapeOption": "Forme {number}",
+  "server.settings.appearanceColors": "Couleur du serveur",
+  "server.settings.appearanceAutoColor": "Couleur de serveur automatique",
+  "server.settings.appearanceColorOption": "Couleur de serveur {color}",
+  "server.settings.appearanceReset": "Réinitialiser la forme et la couleur",
   "server.settings.access": "Accès",
   "server.companySignIn.desktopOnly":
     "Configurez l’authentification unique dans l’application de bureau LogiBricks Workspace.",
@@ -334,11 +353,24 @@ export const messages = {
   "server.settings.later": "Plus tard",
   "server.settings.setUp": "Configurer",
   "server.settings.agents": "Agents",
+  "server.settings.agentsDescription":
+    "Choisissez ce que les agents de ce serveur peuvent faire quand vous ne le définissez pas pour un agent.",
   "server.settings.timezone": "Fuseau horaire",
   "server.settings.timezoneDescription":
-    "Les nouvelles routines utilisent ce fuseau horaire quand le message n’indique pas celui de l’expéditeur.",
+    "Les nouvelles routines utilisent ce fuseau horaire quand le message n’indique pas celui de l’expéditeur. Sur un serveur, le navigateur l’utilise aussi après le prochain redémarrage.",
   "server.settings.timezoneAutomatic": "Automatique ({zone})",
   "server.settings.timezoneLoadFailed": "Impossible de charger le fuseau horaire du serveur.",
+  "server.settings.turnLimit": "Fils en même temps",
+  "server.settings.turnLimitDescription":
+    "Le nombre de fils d’agents qui peuvent s’exécuter en même temps sur ce serveur. Plus de fils utilisent plus de mémoire.",
+  "server.settings.turnLimitAutomatic": "Automatique ({count})",
+  "server.settings.turnLimitAutomaticUnlimited": "Automatique (sans limite)",
+  "server.settings.turnLimitUnlimited": "Sans limite",
+  "server.settings.turnLimitsLoadFailed": "Impossible de charger les limites de fils de ce serveur.",
+  "server.settings.agentTaskLimit": "Fils en parallèle par agent",
+  "server.settings.agentTaskLimitDescription":
+    "Le nombre de fils que chaque agent sans limite propre peut exécuter en même temps.",
+  "server.settings.agentTaskLimitDefault": "Par défaut ({count})",
   "server.settings.memoryLimit": "Souvenirs par agent",
   "server.settings.memoryLimitDescription": "Nombre de souvenirs que chaque agent de ce serveur peut conserver.",
   "server.settings.memoryLimitLoadFailed": "Impossible de charger la limite de souvenirs de ce serveur.",

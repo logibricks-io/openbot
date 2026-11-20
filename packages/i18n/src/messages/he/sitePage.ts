@@ -77,6 +77,8 @@ export const messages = {
   "sitePage.report.sentTitle": "הדיווח נשלח",
   "sitePage.report.sentBody": "תודה. קיבלנו את הדיווח שלך.",
   "sitePage.report.home": "מעבר לדף הבית",
+  "sitePage.pricing.title": "תמחור LogiBricks Workspace",
+  "sitePage.pricing.description": "שרתים מתארחים ורישיון לצוותים. LogiBricks Workspace חינמי לשימוש אישי במחשב שלך.",
   "sitePage.pricing.imageAlt": "צוות קטן. רעיונות מבריקים. שלושה סוכני LogiBricks Workspace מתחת לכיפת זכוכית",
   "sitePage.pricing.heading": "תמחור",
   "sitePage.pricing.personal.title": "שימוש אישי הוא חינמי",
@@ -89,6 +91,11 @@ export const messages = {
   "sitePage.pricing.consent.statement": "אני מצהיר/ה שאני מקבל/ת את {policy}, {terms}.",
   "sitePage.pricing.consent.policy": "מדיניות הפרטיות",
   "sitePage.pricing.consent.terms": "התנאים וזכות הביטול",
+  "sitePage.pricing.consent.earlyStart":
+    "אני מבקש/ת ששירות האחסון יתחיל לפני תום תקופת הביטול בת 14 הימים. ידוע לי שאם אבטל את החוזה לפני שהשירות בוצע במלואו, אצטרך לשלם על השירותים שניתנו עד מועד הביטול, ושלאחר שהשירות יבוצע במלואו, אאבד את זכותי לבטל את החוזה.",
+  "sitePage.teams.title": "LogiBricks Workspace לצוותים",
+  "sitePage.teams.description":
+    "אפשר להריץ את LogiBricks Workspace על תשתית מנוהלת, או לתת לנו לתכנן פריסה מותאמת סביב הצוות, תהליכי העבודה והמערכות הקיימות שלכם.",
   "sitePage.teams.imageAlt": "תוכניות גדולות. ביחד זה טוב יותר. שני סוכני LogiBricks Workspace שמחוברים בגשר מנייר",
   "sitePage.teams.hero.heading": "מביאים צוות של {team} עמיתי AI לחברה שלכם",
   "sitePage.teams.setups.heading": "בחרו את ההתקנה שמתאימה לצוות שלכם",
@@ -135,6 +142,9 @@ export const messages = {
   "sitePage.teams.closing.heading": "ספרו לנו מה אתם רוצים ש{accent} שלכם יהשיגו",
   "sitePage.teams.closing.accent": "עמיתי ה-AI",
   "sitePage.teams.closing.action": "נדבר על ההגדרה שלכם",
+  "sitePage.contact.title": "יצירת קשר עם צוות LogiBricks Workspace",
+  "sitePage.contact.description":
+    "אפשר לשלוח לצוות LogiBricks Workspace הודעה על הגדרה מותאמת, שותפות או עיתונות. אדם קורא כל הודעה.",
   "sitePage.contact.imageAlt": "צוות קטן. תמיד על זה. סוכני LogiBricks Workspace סביב כוכב לכת מנייר",
   "sitePage.contact.heading": "דברו עם הצוות",
   "sitePage.contact.intro": "ספרו לנו מה אתם צריכים. אדם מצוות LogiBricks Workspace קורא כל הודעה.",
@@ -224,6 +234,8 @@ export const messages = {
   "sitePage.landing.title": "LogiBricks Workspace: צוות של סוכני AI שרץ במחשב שלך",
   "sitePage.landing.description":
     "אפליקציית שולחן עבודה חינמית שמריצה סוכני AI כצוות במחשב שלך, עם תוכנית ChatGPT, Claude, Gemini או Grok שאתם כבר משלמים עליה, או עם מודל משלכם.",
+  "sitePage.landing.hero.new": "חדש",
+  "sitePage.landing.hero.availableOn": "זמין ב",
   "sitePage.landing.hero.title": "הכירו את {name}",
   "sitePage.landing.hero.description":
     "מריצים את {codex}, {claude}, {gemini}, {grok} ואת המודלים שלכם בסביבת עבודה מתמשכת אחת. סוכנים מעבירים עבודה זה לזה, משתמשים בכלים ומשתפים פעולה עם עמיתים אמיתיים. חינמי לשימוש אישי.",
@@ -334,7 +346,12 @@ export const messages = {
   "sitePage.landing.faq.description": "תשובות קצרות על מחיר, הגדרה, ספקים והנתונים שלכם.",
   "sitePage.landing.faq.contact": "שאלו אותנו משהו אחר",
   "sitePage.landing.faq.free.question": "האם LogiBricks Workspace חינמי?",
+  "sitePage.landing.faq.free.answer":
+    "כן, לשימוש אישי ולשימוש לא מסחרי אחר. LogiBricks Workspace עולה $0, בלי תכונות נעולות. משלמים רק לספק ה-AI, דרך התוכנית או מפתח ה-API שכבר יש לכם. שימוש מסחרי דורש רישיון.",
   "sitePage.landing.faq.source.question": "האם קוד המקור של LogiBricks Workspace פתוח?",
+  "sitePage.landing.faq.source.answer":
+    "כן. כל קוד המקור פתוח ב-GitHub, כך שאפשר לבדוק מה LogiBricks Workspace עושה. אפשר לשנות ולהריץ אותו בחינם לשימוש לא מסחרי, כמו פרויקטים אישיים, לימודים או מחקר. שימוש מסחרי דורש רישיון נפרד. הרישיון הוא PolyForm Noncommercial 1.0.0.",
+  "sitePage.landing.faq.source.link": "קוד המקור ב-GitHub",
   "sitePage.landing.faq.plans.question": "אפשר להשתמש בתוכנית ChatGPT או Claude שלי?",
   "sitePage.landing.faq.plans.answer":
     "כן. Codex מתחבר עם תוכנית ChatGPT שלכם, ו-Claude Code עם תוכנית Claude שלכם. Gemini משתמש בתוכנית Google AI Pro או Ultra. ל-OpenCode יש מודלים חינמיים שלא דורשים חשבון.",
@@ -345,6 +362,8 @@ export const messages = {
   "sitePage.landing.faq.limit.answer":
     "סוכן יכול לעבור למודל גיבוי אצל ספק אחר כשהתוכנית שלו מגיעה למגבלה, או כשהספק שלו עמוס או לא זמין. הוא שומר על הצ'אט וסביבת העבודה שלו, והערה בצ'אט מראה את המעבר.",
   "sitePage.landing.faq.start.question": "איך מתחילים?",
+  "sitePage.landing.faq.start.answer":
+    "מורידים את LogiBricks Workspace ומחברים ספק. אחר כך מתארים בהנחיה אחת את הסוכן שרוצים, בודקים את ההנחיות שלו ושומרים. אפשר לשלוח לו עבודה מיד: הודעות ממתינות בתור עד שהוא פנוי.",
   "sitePage.landing.faq.data.question": "לאן הנתונים שלי הולכים?",
   "sitePage.landing.faq.data.answer":
     "סביבות עבודה, שיחות, קבצים מצורפים ונתוני דפדפן נשארים במחשב שמריץ את LogiBricks Workspace. ספק ה-AI שבחרתם מקבל את ההנחיות שהסוכנים שלכם שולחים אליו, והדפים שהסוכנים פותחים משתמשים ברשת.",
@@ -352,6 +371,8 @@ export const messages = {
   "sitePage.landing.faq.computers.answer":
     "macOS 13 ומעלה על Apple silicon או Intel, Windows 10 ומעלה על x64, ו-Linux על x64 או arm64 כ-AppImage.",
   "sitePage.landing.faq.safety.question": "האם בטוח לתת לסוכנים לעבוד על המחשב שלי?",
+  "sitePage.landing.faq.safety.answer":
+    "סוכנים יכולים לקרוא ולשנות קבצים, להריץ פקודות, להשתמש ברשת ולשלוט בדפדפן המובנה בלי לשאול בכל פעם. יש לתת להם רק משימות שאתם סומכים עליהן, ולשמור גיבויים.",
   "sitePage.landing.faq.compare": "השוואת OpenBot",
   "sitePage.landing.download.title": "הורדת LogiBricks Workspace",
   "sitePage.landing.download.description":
@@ -361,6 +382,7 @@ export const messages = {
   "sitePage.landing.download.appStore": "הורדה מ-App Store",
   "sitePage.landing.download.googlePlay": "זמין ב-Google Play",
   "sitePage.landing.download.pages": "דרישות מערכת ושלבי התקנה:",
+  "sitePage.landing.download.apk": "הורדת APK",
   "sitePage.site.download": "הורדה",
   "sitePage.site.app": "אפליקציה",
   "sitePage.site.primaryNavigation": "ניווט ראשי",
@@ -427,6 +449,8 @@ export const messages = {
   "sitePage.site.footer.localModels": "Ollama ו-LM Studio",
   "sitePage.site.footer.allProviders": "כל הספקים",
   "sitePage.site.footer.bestApps": "אפליקציות סוכני ה-AI הטובות ביותר",
+  "sitePage.site.footer.rights": "© {year} Synthetify Labs, כל הזכויות שמורות.",
+  "sitePage.site.footer.available": "זמין ל-macOS, Windows, Linux, iOS ול-Android",
   "sitePage.site.footer.made": "נעשה ב{love} בפולין",
   "sitePage.site.footer.love": "אהבה",
 } as const satisfies PartialTranslation<typeof source>;

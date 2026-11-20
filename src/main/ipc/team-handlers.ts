@@ -1,6 +1,8 @@
 import { type HostStatus, LOCAL_SERVER_ID, type ServerSummary } from "@openbot/contracts/ipc";
+import { Effect } from "effect";
 import { runCauseEffect } from "../../backend/effect-boundary";
 import type { HostService } from "../host-service";
+import type { LocalServers } from "../local-servers/local-servers";
 import type { RemoteDesktopManager } from "../remote-desktop-manager";
 import type { RemoteServerManager } from "../remote-server-manager";
 import { agentRequest } from "./agent-inputs";
@@ -31,6 +33,7 @@ import { stringPayload } from "./validation";
 
 interface TeamIpcDependencies {
   host: HostService;
+  localServers: LocalServers | null;
   remoteDesktop: RemoteDesktopManager;
   remoteServers: RemoteServerManager;
   takePendingInvite: () => string | null;
@@ -38,6 +41,7 @@ interface TeamIpcDependencies {
 
 export function teamIpcHandlers({
   host,
+  localServers,
   remoteDesktop,
   remoteServers,
   takePendingInvite,
@@ -70,7 +74,11 @@ export function teamIpcHandlers({
       takePendingInvite: handler(takePendingInvite),
       login: payloadHandler(parseLoginServer, (request) => runCauseEffect(remoteServers.login(request))),
       retryConnection: payloadHandler(stringPayload("serverId"), (serverId) =>
-        runCauseEffect(remoteServers.retryConnection(serverId)),
+        runCauseEffect(
+          (localServers?.startStopped(serverId) ?? Effect.succeed(null)).pipe(
+            Effect.flatMap((started) => (started ? Effect.succeed(started) : remoteServers.retryConnection(serverId))),
+          ),
+        ),
       ),
       remove: payloadHandler(stringPayload("serverId"), (serverId) => runCauseEffect(remoteServers.remove(serverId))),
       getPresence: handler(() =>
@@ -214,6 +222,7 @@ export function withLocalHostSummary(servers: ServerSummary[], status: HostStatu
           ...server,
           name: status.serverName ?? "Local",
           logoUrl: status.logoUrl,
+          appearance: status.appearance,
           apiUrl: status.apiUrl,
           remoteDesktopAvailable: status.remoteDesktopReady,
           state: status.phase === "error" ? "error" : "online",

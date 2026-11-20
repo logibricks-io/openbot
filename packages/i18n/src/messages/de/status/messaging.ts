@@ -3,7 +3,7 @@ import type { messages as source } from "../../en/status/messaging";
 
 export const messages = {
   "status.messaging.working": "Wird bearbeitet…",
-  "status.messaging.queued": "Wartet: LogiBricks Workspace bearbeitet eine andere Anfrage. Die Antwort erscheint hier.",
+  "status.messaging.queued": "Wartet, bis eine frühere Anfrage fertig ist. Die Antwort erscheint hier.",
   "status.messaging.busy": "Zu viele Anfragen warten. Versuche es später erneut.",
   "status.messaging.failed":
     "LogiBricks Workspace konnte diese Anfrage nicht abschließen. Der LogiBricks Workspace-Host hat die Details.",
@@ -14,6 +14,7 @@ export const messages = {
   "status.messaging.stopped": "Gestoppt.",
   "status.messaging.stop": "Stoppen",
   "status.messaging.approvalTitle": "LogiBricks Workspace bittet um Genehmigung, um fortzufahren.",
+  "status.messaging.approvalTitleTeammate": "Teamkollege {agent} bittet um Genehmigung, um fortzufahren.",
   "status.messaging.approvalCommand": "Einen Befehl ausführen",
   "status.messaging.approvalFileChange": "Dateien ändern",
   "status.messaging.approvalPermissions": "Weitere Berechtigungen erhalten",
@@ -55,6 +56,10 @@ export const messages = {
     "👋 *LogiBricks Workspace ist verbunden*\n\nSchreib hier, um deine Agenten zu fragen. Der WhatsApp Orchestrator antwortet oder gibt die Arbeit an den passenden Agenten.\n\nSende *stop*, um eine Anfrage zu stoppen.",
   "status.messaging.whatsappWelcomeDedicated":
     "👋 *LogiBricks Workspace ist verbunden*\n\nDie Personen, die du in LogiBricks Workspace erlaubst, können dieser Nummer jetzt schreiben. Eine neue Person bekommt einen Code: Genehmige ihn in LogiBricks Workspace unter Anfragen.\n\nSende *stop*, um eine Anfrage zu stoppen.",
+  "status.messaging.whatsappOtherOpenBot":
+    "Ein anderer LogiBricks Workspace ist mit dieser WhatsApp-Nummer verknüpft, darum bekommst du vielleicht zwei Antworten. Öffne dazu in WhatsApp auf deinem Handy „Verknüpfte Geräte“ und melde den LogiBricks Workspace ab, den du nicht nutzt.",
+  "status.messaging.whatsappPaused":
+    "LogiBricks Workspace antwortet hier 10 Minuten lang nicht: In kurzer Zeit kamen zu viele Nachrichten. Wenn ein anderer LogiBricks Workspace mit dieser Nummer verknüpft ist, öffne in WhatsApp auf deinem Handy „Verknüpfte Geräte“ und melde den LogiBricks Workspace ab, den du nicht nutzt.",
   "status.messaging.whatsappOrchestratorName": "WhatsApp-Orchestrator",
   "status.messaging.whatsappOrchestratorTitle": "Antwortet in WhatsApp und fragt das Team",
 } as const satisfies PartialTranslation<typeof source>;

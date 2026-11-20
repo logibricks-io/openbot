@@ -15,11 +15,8 @@ import { LandingFooter } from "../landing/LandingFooter";
 import { SiteHeader } from "../landing/SiteHeader";
 import { copyBrandSvg, saveBrandPng, saveBrandZip } from "./brand-files";
 
-/** How long "Copied" stays on a copy button. */
 const COPIED_MS = 1600;
 
-// The /brand page: the mark on a lilac panel, then every logo file in three groups. Each logo is an
-// <img> of its served SVG file, so a right-click opens the browser's own image menu.
 export function BrandPage() {
   onSettled(() => landingAnalytics.start(document, window.location.hostname, BRAND_ROUTE));
 
@@ -62,7 +59,6 @@ function DownloadAllButton() {
     try {
       await saveBrandZip();
     } catch {
-      // The browser could not draw a file. Nothing is saved, and the button can try again.
     } finally {
       setBusy(false);
     }
@@ -175,7 +171,6 @@ function CopySvgButton(props: { asset: BrandAsset }) {
     try {
       await copyBrandSvg(props.asset);
     } catch {
-      // The clipboard is not allowed. The SVG button still saves the file.
       return;
     }
     setCopied(true);

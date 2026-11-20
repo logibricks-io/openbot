@@ -1,10 +1,9 @@
 import type { PartialTranslation } from "../../../message";
 import type { messages as source } from "../../en/status/messaging";
 
-// Not translated yet: the screen shows the English text.
 export const messages = {
   "status.messaging.working": "Уже работаю…",
-  "status.messaging.queued": "Ожидание: LogiBricks Workspace занят другим запросом. Ответ придёт сюда.",
+  "status.messaging.queued": "Ожидание: предыдущий запрос ещё выполняется. Ответ придёт сюда.",
   "status.messaging.busy": "В очереди слишком много запросов. Повторите попытку позже.",
   "status.messaging.failed":
     "LogiBricks Workspace не смог завершить этот запрос. Подробности — на хосте LogiBricks Workspace.",
@@ -15,6 +14,7 @@ export const messages = {
   "status.messaging.stopped": "Остановлено.",
   "status.messaging.stop": "Остановить",
   "status.messaging.approvalTitle": "LogiBricks Workspace просит подтверждения, чтобы продолжить.",
+  "status.messaging.approvalTitleTeammate": "Агент {agent} просит подтверждения, чтобы продолжить.",
   "status.messaging.approvalCommand": "Выполнить команду",
   "status.messaging.approvalFileChange": "Изменить файлы",
   "status.messaging.approvalPermissions": "Получить дополнительные разрешения",
@@ -55,6 +55,10 @@ export const messages = {
     "👋 *LogiBricks Workspace подключён*\n\nПишите сюда, чтобы обратиться к своим агентам. WhatsApp Orchestrator отвечает сам или передаёт работу нужному агенту.\n\nОтправьте *stop*, чтобы остановить запрос.",
   "status.messaging.whatsappWelcomeDedicated":
     "👋 *LogiBricks Workspace подключён*\n\nЛюди, которым вы разрешите в LogiBricks Workspace, теперь могут писать на этот номер. Новый человек получит код: одобрите его в LogiBricks Workspace в разделе «Запросы».\n\nОтправьте *stop*, чтобы остановить запрос.",
+  "status.messaging.whatsappOtherOpenBot":
+    "К этому номеру WhatsApp привязан ещё один LogiBricks Workspace, поэтому вы можете получать два ответа. Чтобы это исправить, откройте «Связанные устройства» в WhatsApp на телефоне и выйдите из LogiBricks Workspace, которым вы не пользуетесь.",
+  "status.messaging.whatsappPaused":
+    "LogiBricks Workspace перестал отвечать здесь на 10 минут: за короткое время пришло слишком много сообщений. Если к этому номеру привязан ещё один LogiBricks Workspace, откройте «Связанные устройства» в WhatsApp на телефоне и выйдите из LogiBricks Workspace, которым вы не пользуетесь.",
   "status.messaging.whatsappOrchestratorName": "Оркестратор WhatsApp",
   "status.messaging.whatsappOrchestratorTitle": "Отвечает в WhatsApp и обращается к команде",
 } as const satisfies PartialTranslation<typeof source>;

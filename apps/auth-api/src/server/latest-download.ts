@@ -1,21 +1,12 @@
 import { Effect, Schema } from "effect";
+import { androidApkRelease, androidApkVersion } from "../lib/android-apk";
 import { companyReleaseUrl } from "../lib/company-release";
 
 export type AvailableDownloadPlatform = "linux" | "macos" | "windows";
 
-/**
- * `latest-mac.yml` lists the Apple silicon and the Intel installer, so a macOS download also names
- * its architecture. electron-builder puts `arm64` in the Apple silicon asset name and no
- * architecture suffix that contains it in the Intel one. Linux has one manifest per architecture,
- * and Windows ships x64 only.
- */
 export type DownloadArchitecture = "arm64" | "x64";
 
 interface DownloadManifestConfig {
-  /**
-   * Compared against a lowercased asset name, so it must be lowercase itself. The Linux asset is
-   * published as `.AppImage`.
-   */
   extension: ".appimage" | ".dmg" | ".exe";
   manifest: "latest-linux-arm64.yml" | "latest-linux.yml" | "latest-mac.yml" | "latest.yml";
 }
@@ -39,10 +30,6 @@ export function isAvailableDownloadPlatform(value: string): value is AvailableDo
   return DOWNLOAD_PLATFORMS.some((platform) => platform === value);
 }
 
-/**
- * The architecture a `?arch=` value asks for. Most Macs are Apple silicon and most Linux computers
- * are x64, so anything else gets those. Windows has only the x64 installer.
- */
 export function downloadArchitecture(platform: AvailableDownloadPlatform, arch: string | null): DownloadArchitecture {
   if (platform === "macos") return arch === "x64" ? "x64" : "arm64";
   if (platform === "linux") return arch === "arm64" ? "arm64" : "x64";
@@ -83,6 +70,13 @@ function unavailableDownload(platform: AvailableDownloadPlatform, reason: string
   });
 }
 
+export function androidApkResponse(configuredReleaseUrl?: string): Response {
+  const base = companyReleaseUrl(configuredReleaseUrl);
+  const version = androidApkVersion();
+  if (!base || !version) return new Response("Not found", { status: 404 });
+  return redirect(`${base}/${androidApkRelease(version).asset}`);
+}
+
 class DownloadManifestError extends Schema.TaggedError<DownloadManifestError>()("DownloadManifestError", {}) {}
 
 const latestDownload = Effect.fn("LatestDownload.resolve")(function* (
@@ -106,7 +100,6 @@ const latestDownload = Effect.fn("LatestDownload.resolve")(function* (
     try: () => response.text(),
     catch: () => new DownloadManifestError({}),
   });
-  // Only the macOS manifest lists two architectures.
   const installer = findInstaller(manifest, config.extension, platform === "macos" ? architecture : undefined);
   if (!installer) return unavailableDownload(platform, `no ${config.extension} asset in the manifest`);
   return redirect(`${releasesBase}/${encodeURIComponent(installer)}`);

@@ -15,9 +15,18 @@ export const messages = {
   "menu.quitConfirmBody": "סוכנים ושגרות נעצרים עד שתפתח את LogiBricks Workspace שוב.",
   "menu.quitConfirm": "יציאה",
   "menu.quitHint": "יש להחזיק את ⌘Q או ללחוץ עליו פעמיים כדי לצאת",
+  "menu.closeWorkingTitle": {
+    one: "סוכן אחד עדיין עובד",
+    two: "שני סוכנים עדיין עובדים",
+    other: "{count} סוכנים עדיין עובדים",
+  },
+  "menu.closeWorkingBody":
+    "יציאה מ-LogiBricks Workspace עוצרת את הסוכנים. אפשר להשאיר אותו פועל כדי שיסיימו. כדי להציג שוב את החלון, יש לפתוח את LogiBricks Workspace.",
+  "menu.closeKeepRunning": "להמשיך לפעול",
   "menu.trayOpen": "פתיחת LogiBricks Workspace",
   "menu.trayQuit": "יציאה מ-LogiBricks Workspace",
   "menu.trayTooltip": "LogiBricks Workspace",
+  "menu.hideDynamicIsland": "הסתרת Dynamic Island",
   "menu.undo": "ביטול",
   "menu.redo": "ביצוע חוזר",
   "menu.cut": "גזירה",

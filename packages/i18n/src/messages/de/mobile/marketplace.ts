@@ -62,6 +62,7 @@ export const messages = {
   "mobile.marketplace.facts.accessSignIn": "Anmeldung",
   "mobile.marketplace.facts.accessLocal": "Dieser Computer",
   "mobile.marketplace.facts.accessNone": "Ohne Anmeldung",
+  "mobile.marketplace.facts.accessMac": "Nur Mac",
   "mobile.marketplace.permission.admin": "Nur Eigentümer und Administratoren können aus dem Marketplace installieren.",
   "mobile.marketplace.permission.unavailable":
     "Dieser Server ist offline, oder sein LogiBricks Workspace ist dafür zu alt. Aktualisiere LogiBricks Workspace auf dem Computer, der ihn ausführt.",
@@ -96,6 +97,7 @@ export const messages = {
   "mobile.marketplace.skill.doc": "SKILL.md",
   "mobile.marketplace.skill.examplePrompt": "Hilf mir, diese Fähigkeit zu nutzen.",
   "mobile.marketplace.app.add": "App hinzufügen",
+  "mobile.marketplace.app.addCustom": "Eigene hinzufügen",
   "mobile.marketplace.app.connect": "Verbinden",
   "mobile.marketplace.app.connectTitle": "{name} verbinden",
   "mobile.marketplace.app.keyIntro":
@@ -116,6 +118,8 @@ export const messages = {
   "mobile.marketplace.app.docs": "Schlüssel holen",
   "mobile.marketplace.app.local":
     "Diese App läuft auf dem Computer mit LogiBricks Workspace. Richte sie auf diesem Computer ein.",
+  "mobile.marketplace.app.needsMac":
+    "Diese App funktioniert nur auf einem Mac, auf dem LogiBricks Workspace läuft, und dieser Server ist kein Mac.",
   "mobile.marketplace.app.relayUnsupported":
     "Diese App verlangt eine Anmeldung im Browser. Aktualisiere LogiBricks Workspace auf dem Server oder verbinde die App auf dem Computer.",
   "mobile.marketplace.app.waiting": "Warten auf die Anmeldeseite…",

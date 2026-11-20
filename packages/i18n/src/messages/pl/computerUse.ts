@@ -20,6 +20,10 @@ export const messages = {
   "computerUse.ready.description":
     "LogiBricks Workspace widzi aplikacje na tym komputerze i może ich używać. Ten system nie wymaga dodatkowych uprawnień.",
   "computerUse.openSettingsFailed.title": "Nie udało się otworzyć Ustawień systemowych",
+  "computerUse.restartRequired.title": "Wymagane ponowne uruchomienie",
+  "computerUse.restartRequired.description":
+    "macOS nadal blokuje klikanie i pisanie. Jeśli to wróci po ponownym uruchomieniu, usuń LogiBricks Workspace z Dostępności i dodaj go ponownie.",
+  "computerUse.restartRequired.action": "Uruchom ponownie LogiBricks Workspace",
   "computerUse.compact.title": "Włącz Sterowanie komputerem",
   "computerUse.compact.description": "Pozwól LogiBricks Workspace widzieć aplikacje na tym komputerze i ich używać.",
   "computerUse.granted": "Przyznano",

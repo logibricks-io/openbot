@@ -1,16 +1,15 @@
 import { defineMessages } from "../../message";
 
 export const messages = defineMessages("startup", {
-  // The one native error box: the app could not start, so no renderer exists to show it.
   "startup.failedTitle": "LogiBricks Workspace couldn’t start",
   "startup.failedBody":
     "{message}\n\nYour local data was not reset or overwritten. See the troubleshooting guide for recovery steps.",
-  // Shown while OpenBot runs, when another program changed `app.asar`: the next start would fail with no message.
   "startup.archiveChangedTitle": "LogiBricks Workspace files were changed",
   "startup.archiveChangedBody":
     "Another program changed the LogiBricks Workspace file app.asar. LogiBricks Workspace runs now, but it will not open after you quit it.\n\nTo repair LogiBricks Workspace, install it again. Your local data stays.",
   "startup.archiveChangedDownload": "Download LogiBricks",
-  // An older OpenBot started over data that a newer one migrated: it installs the latest release.
+  "startup.filesDamagedBody":
+    "Some LogiBricks Workspace files are damaged or missing.\n\nTo repair LogiBricks Workspace, install it again. Your local data stays.",
   "startup.newerDataUpdatingTitle": "Updating LogiBricks Workspace",
   "startup.newerDataUpdatingBody":
     "A newer version of LogiBricks Workspace saved your data. LogiBricks Workspace installs the latest version and then opens again.\n\nYour local data was not reset or overwritten.",
@@ -20,4 +19,27 @@ export const messages = defineMessages("startup", {
   "startup.newerDataDownload": "Download LogiBricks Workspace",
   "startup.newerDataGuide": "Open guide",
   "startup.newerDataQuit": "Quit",
+  "startup.newerDataLoopTitle": "The latest LogiBricks Workspace did not open",
+  "startup.newerDataLoopBody":
+    "A newer version of LogiBricks Workspace saved your data, and this version ({version}) cannot open it. LogiBricks Workspace {loopVersion} stopped before it opened several times in a row, so it is not installed again.\n\nInstall a version newer than {loopVersion} when one is available. To get help, open the guide.\n\nYour local data was not reset or overwritten.",
+  "startup.newerDataReleases": "Show releases",
+  "startup.recoveryWindowTitle": "LogiBricks Workspace recovery",
+  "startup.recoveryTitle": "LogiBricks Workspace did not open",
+  "startup.recoveryBody": {
+    one: "LogiBricks Workspace {version} stopped before it opened, {count} time in a row. Your local data was not reset or overwritten.",
+    other:
+      "LogiBricks Workspace {version} stopped before it opened, {count} times in a row. Your local data was not reset or overwritten.",
+  },
+  "startup.recoveryHint":
+    "Try again, or install the last version that opened. To get help, export the diagnostics and send the file with your report.",
+  "startup.recoveryHintLatest":
+    "LogiBricks Workspace found no earlier version that can open your data. Try again, or install the latest version. To get help, export the diagnostics and send the file with your report.",
+  "startup.recoveryRetry": "Try again",
+  "startup.recoveryPreviousVersion": "Download previous version",
+  "startup.recoveryLatestVersion": "Download latest version",
+  "startup.recoveryExportDiagnostics": "Export diagnostics",
+  "startup.recoveryOpenDataFolder": "Open data folder",
+  "startup.recoveryQuit": "Quit",
+  "startup.recoveryDiagnosticsSaved": "The diagnostics file is saved.",
+  "startup.recoveryActionFailed": "LogiBricks Workspace could not do this action.",
 });

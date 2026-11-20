@@ -1,8 +1,3 @@
-// The route, date and meta of the /brand page. The logo files are in `brand-assets.ts`.
-//
-// No JSX here, for the same reason `teams-page.ts` holds none, and no logo data: analytics and the
-// sitemap import this module.
-
 export const BRAND_ROUTE = "/brand";
 
 /** The sitemap date of the page. Change it when the page or a file changes. */

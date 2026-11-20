@@ -48,6 +48,7 @@ export const messages = {
   "server.compatibility.updateHostTitle": "{name} üzerindeki LogiBricks Workspace'i güncelleyin",
   "server.compatibility.unsafeDataTitle": "Ana makine güvenli olmayan veri döndürdü",
   "server.compatibility.cannotConnectTitle": "{name} ile bağlantı kurulamıyor",
+  "server.compatibility.safeModeTitle": "{name} başlamıyor",
   "server.compatibility.updateClientDescription":
     "Bu uygulama yalnızca ana makineden daha eski protokolleri destekliyor. Bu uygulamayı güncelleyin, ardından tekrar deneyin.",
   "server.compatibility.updateHostDescription":
@@ -80,7 +81,6 @@ export const messages = {
   "server.join.account": "Hesap",
   "server.join.emailBound": "Bu davet yalnızca e-posta alıcısı için geçerlidir.",
   "server.join.unknownDate": "Bilinmiyor",
-  // Sunucu çubuğundaki artı düğmesinin açtığı iletişim kutusu. {price} "€20" gibi biçimlendirilmiş bir tutardır.
   "server.add.title": "LogiBricks Workspace'i harici bir sunucuda 7/24 çalıştırın",
   "server.add.description":
     "LogiBricks Workspace Sunucuları, bilgisayarınız kapalıyken bile ajanlarınızı ve rutinlerinizi çalışır durumda tutar. Altyapı ve bakımla biz ilgileniriz; sunucunuz teknik bir kurulum gerektirmeden kullanıma hazır olur.",
@@ -102,12 +102,9 @@ export const messages = {
   "server.add.license.includedTrial": "Dahil: {license}, {date} tarihine kadar ücretsiz",
   "server.add.billedMonthly": "Aylık faturalandırılır",
   "server.add.billedYearly": "Yıllık {price} faturalandırılır",
-  // {amount} "€120" gibi biçimlendirilmiş bir tutardır. Yıllık fiyatın ardından gelir.
   "server.add.yearlySaving": "{amount} tasarruf",
-  // Görsel olarak gizli. Yıllık faturalandırmada üzeri çizili aylık fiyattan önce gelir.
   "server.add.regularPrice": "Normal fiyat {price}",
   "server.add.choosePlan": "{plan} planını seç",
-  // Planların altındaki alt bilgi; planların karşılamadığı gereksinimler içindir.
   "server.add.custom.title": "Daha fazla güce veya özel bir çözüme mi ihtiyacınız var?",
   "server.add.custom.description":
     "Özel altyapı, ek depolama alanı veya iş akışınıza göre uyarlanmış özellikler edinin.",
@@ -121,6 +118,8 @@ export const messages = {
   "server.local.create": "Sunucu oluştur",
   "server.local.creating": "Sunucu oluşturuluyor…",
   "server.local.createFailed": "Sunucu oluşturulamadı.",
+  "server.local.createFailedRetry":
+    "Bir sorun oluştu. Tekrar deneyin. Yine başarısız olursa LogiBricks Workspace'u yeniden başlatın.",
   "server.local.limitReached":
     "Bu bilgisayarda en fazla {limit} sunucunuz olabilir. Yeni bir sunucu oluşturmak için birini silin.",
   "server.local.deleteConfirmTitle": "{name} silinsin mi?",
@@ -142,33 +141,26 @@ export const messages = {
   "server.install.offline": "{name} çevrimdışı.",
   "server.install.expired": "Bu komutun süresi doldu. Yeni bir komut oluşturun.",
   "server.install.agentPrompt":
-    'LogiBricks Workspace\'u bu Linux sunucuya kur ve LogiBricks Workspace hesabımda oturum aç.\nBu komutu root olarak çalıştır. Soru sormaz ve birkaç dakika sürer:\n\n{command}\n\n"LogiBricks Workspace is connected to your account." satırı ve 0 çıkış koduyla biter.\nKomut 15 dakika boyunca bir kez çalışır. Hiçbir yere kaydetme.',
+    'OpenBot\'u bu Linux sunucuya kur ve OpenBot hesabımda oturum aç.\nBu komutu root olarak çalıştır. Soru sormaz ve birkaç dakika sürer:\n\n{command}\n\n"OpenBot is connected to your account." satırı ve 0 çıkış koduyla biter.\nKomut 15 dakika boyunca bir kez çalışır. Hiçbir yere kaydetme.',
   "server.install.setUpWithAgent": "Bir ajanla kur",
   "server.install.sshAgentPrompt":
     "Linux sunucuma SSH ile bağlan ve LogiBricks Workspace'u sunucu olarak oraya kur.\n\nSSH adresi (user@host):",
-  // Hesap maksimum sayıda barındırılan sunucuya sahip olduğunda gösterilir. Planlar devre dışıdır.
   "server.add.limit.title": "Bu hesap maksimum sunucu sayısına ulaştı",
   "server.add.limit.description": {
     one: "Bir hesap en fazla {count} ücretli sunucuya sahip olabilir. Sunucu eklemek için önce birini silin.",
     other: "Bir hesap en fazla {count} ücretli sunucuya sahip olabilir. Sunucu eklemek için önce birini silin.",
   },
-  // Kullanıcının birini silebileceği, hesabın barındırılan sunucular listesini açar.
   "server.add.limit.manage": "Sunucuları yönet",
   "server.upgrade.title": "Ajanlarınızın alanı tükeniyor",
   "server.upgrade.description":
     "{server} üzerinde az boş alan kaldı. Ajanlarınızın kesintisiz çalışmaya devam etmesi için planınızı yükseltin.",
   "server.upgrade.used": "{total} alanın {used} kadarı kullanılıyor",
-  "server.upgrade.current": "{plan} (şu anki)",
-  "server.upgrade.price": "Fiyat",
-  "server.upgrade.action": "{plan} planına yükselt",
   "server.hosted.progressTitle": "{name} kuruluyor",
-  // Kurulum tarayıcıdaki Stripe sayfasında ilk ödemeyi bekler.
   "server.hosted.paymentTitle": "Ödemeyi tarayıcınızda tamamlayın",
   "server.hosted.paymentDescription": "Kurulum, Stripe ödemeyi onayladığında başlar.",
   "server.hosted.openPayment": "Ödeme sayfasını tekrar aç",
   "server.hosted.openingPayment": "Açılıyor…",
   "server.hosted.paymentFailed": "Ödeme sayfası açılamadı.",
-  // Yeni bir sunucunun adı. {number} bir sayıdır (örneğin 2).
   "server.hosted.defaultName": "Bulut sunucusu",
   "server.hosted.defaultNameNumbered": "Bulut sunucusu {number}",
   "server.hosted.step.create": "Makineyi oluştur",
@@ -178,6 +170,7 @@ export const messages = {
   "server.hosted.detail.create.copy": "LogiBricks Workspace makineye kopyalanıyor",
   "server.hosted.detail.create.key": "Tek seferlik oturum açma anahtarı ekleniyor",
   "server.hosted.detail.start.boot": "Makine açılıyor",
+  "server.hosted.detail.start.restore": "Veriler geri yükleniyor",
   "server.hosted.detail.start.app": "LogiBricks Workspace başlatılıyor",
   "server.hosted.detail.start.wait": "LogiBricks Workspace'in yanıt vermesi bekleniyor",
   "server.hosted.detail.connect.signIn": "Sizin adınıza oturum açılıyor",
@@ -267,9 +260,6 @@ export const messages = {
   "server.settings.membersDescription": "Bu sunucuyu yayımlayın, kişileri davet edin ve erişimi yönetin.",
   "server.settings.desktopTitle": "Uzak masaüstü",
   "server.settings.desktopDescription": "Bu sunucunun masaüstünü yapılandırın veya masaüstüne bağlanın.",
-  "server.settings.mcpTitle": "MCP",
-  "server.settings.mcpDescription":
-    "MCP sunucularını bağlayın ve bu sunucunun ajanlarının hangilerini kullanabileceğini seçin.",
   "server.settings.storageTitle": "Depolama",
   "server.settings.storageDescription":
     "LogiBricks Workspace'in bu sunucunun diskinde ne sakladığını ve boş alanı görün.",
@@ -312,10 +302,24 @@ export const messages = {
   "server.settings.copyFailedTitle": "Kopyalama başarısız oldu",
   "server.settings.copyFailed": "LogiBricks Workspace bu değeri kopyalayamadı.",
   "server.settings.unavailableTitle": "Sunucu ayarları kullanılamıyor",
-  "server.settings.unsavedMcpChanges": "Kaydedilmemiş MCP değişiklikleri",
   "server.settings.reset": "Sıfırla",
   "server.settings.unsavedChanges": "Kaydedilmemiş değişiklikler",
   "server.settings.changesNotSaved": "Değişiklikler kaydedilmedi",
+  "server.settings.group.agents": "Ajanlar",
+  "server.settings.group.people": "Kişiler",
+  "server.settings.group.server": "Sunucu",
+  "server.settings.experimentalTitle": "Deneysel",
+  "server.settings.experimentalDescription": "Henüz tamamlanmamış özellikleri açın.",
+  "server.settings.experimentalFeatures": "Özellikler",
+  "server.settings.experimentalCrm": "CRM",
+  "server.settings.experimentalCrmDescription":
+    "CRM sayfasını sahiplere ve yöneticilere gösterin, ajanların CRM'i okumasına izin verin ve Stripe'ı eşitleyin. Kapattığınızda veriler kalır.",
+  "server.settings.agentDefaultsTitle": "Ajan varsayılanları",
+  "server.settings.threadsCard": "Mesaj dizileri ve saat dilimi",
+  "server.settings.memoryTitle": "Bellek",
+  "server.settings.memoryDescription": "Bu sunucudaki ajanların neyi hatırlayıp öğreneceğini seçin.",
+  "server.settings.memoriesCard": "Anılar",
+  "server.settings.learningCard": "Öğrenme",
   "server.settings.sections": "Sunucu ayarları bölümleri",
   "server.settings.identity": "Kimlik",
   "server.settings.logo": "Sunucu logosu",
@@ -328,6 +332,13 @@ export const messages = {
   "server.settings.editLogo": "Sunucu logosunu düzenle",
   "server.settings.addLogo": "Sunucu logosu ekle",
   "server.settings.removeLogo": "Sunucu logosunu kaldır",
+  "server.settings.appearance": "Şekil ve renk",
+  "server.settings.appearanceShapes": "Sunucu şekilleri",
+  "server.settings.appearanceShapeOption": "Şekil {number}",
+  "server.settings.appearanceColors": "Sunucu rengi",
+  "server.settings.appearanceAutoColor": "Otomatik sunucu rengi",
+  "server.settings.appearanceColorOption": "{color} sunucu rengi",
+  "server.settings.appearanceReset": "Şekli ve rengi sıfırla",
   "server.settings.access": "Erişim",
   "server.companySignIn.desktopOnly": "Çoklu oturum açmayı LogiBricks Workspace masaüstü uygulamasında ayarlayın.",
   "server.settings.publish": "Bu sunucuyu yayımla",
@@ -337,11 +348,24 @@ export const messages = {
   "server.settings.later": "Daha sonra",
   "server.settings.setUp": "Ayarla",
   "server.settings.agents": "Ajanlar",
+  "server.settings.agentsDescription":
+    "Bir ajan için ayarlamadığınızda bu sunucudaki ajanların neler yapabileceğini seçin.",
   "server.settings.timezone": "Saat dilimi",
   "server.settings.timezoneDescription":
-    "Mesaj gönderenin saat dilimini belirtmediğinde yeni rutinler bu saat dilimini kullanır.",
+    "Mesaj gönderenin saat dilimini belirtmediğinde yeni rutinler bu saat dilimini kullanır. Bir sunucuda tarayıcı da bir sonraki yeniden başlatmadan sonra bunu kullanır.",
   "server.settings.timezoneAutomatic": "Otomatik ({zone})",
   "server.settings.timezoneLoadFailed": "Sunucunun saat dilimi yüklenemedi.",
+  "server.settings.turnLimit": "Aynı anda mesaj dizileri",
+  "server.settings.turnLimitDescription":
+    "Bu sunucuda aynı anda kaç ajan mesaj dizisinin çalışabileceği. Daha fazla dizi daha fazla bellek kullanır.",
+  "server.settings.turnLimitAutomatic": "Otomatik ({count})",
+  "server.settings.turnLimitAutomaticUnlimited": "Otomatik (sınırsız)",
+  "server.settings.turnLimitUnlimited": "Sınırsız",
+  "server.settings.turnLimitsLoadFailed": "Bu sunucunun mesaj dizisi sınırları yüklenemedi.",
+  "server.settings.agentTaskLimit": "Ajan başına paralel mesaj dizileri",
+  "server.settings.agentTaskLimitDescription":
+    "Kendi sınırı olmayan her ajanın aynı anda kaç mesaj dizisi çalıştırabileceği.",
+  "server.settings.agentTaskLimitDefault": "Varsayılan ({count})",
   "server.settings.memoryLimit": "Ajan başına bellek",
   "server.settings.memoryLimitDescription": "Bu sunucudaki her ajanın tutabileceği bellek sayısı.",
   "server.settings.memoryLimitLoadFailed": "Bu sunucunun bellek sınırı yüklenemedi.",
@@ -529,7 +553,6 @@ export const messages = {
   "server.settings.providersDescription": "Bu sunucuyu çalıştıran bilgisayarın yapay zeka sağlayıcılarını yönetin.",
   "server.settings.providersSwitchNote": "Yapay zeka sağlayıcılarını yönetmek için {name} sunucusuna geçin.",
   "server.settings.providersSwitch": "Bu sunucuya geç",
-  // Sunucu Ayarları > Güncellemeler: Katılınan bir sunucunun ana makinesinin OpenBot güncellemesi. {name} sunucudur.
   "server.settings.updatesTitle": "Güncellemeler",
   "server.settings.updatesDescription": "Bu sunucuyu çalıştıran bilgisayardaki LogiBricks Workspace'i güncelleyin.",
   "server.update.hostTitle": "{name} üzerinde LogiBricks Workspace",
@@ -537,7 +560,6 @@ export const messages = {
   "server.update.status.idle": "En son sürümü bulmak için güncellemeleri denetleyin.",
   "server.update.status.checking": "Güncellemeler denetleniyor…",
   "server.update.status.available": "{version} sürümü mevcut.",
-  // {progress} %42 gibi bir yüzdedir.
   "server.update.status.downloading": "{version} indiriliyor · {progress}",
   "server.update.status.downloadingUnknown": "{version} indiriliyor…",
   "server.update.status.ready": "{version} indirildi.",
@@ -590,7 +612,6 @@ export const messages = {
   "server.update.restarting": "Yeniden başlatılıyor…",
   "server.update.loadFailed": "{name} güncelleme durumu yüklenemedi.",
   "server.update.hostAction": "Ana makineyi güncelle",
-  // Güncelleme iletişim kutusu: indirme, yeniden başlatma ve sunucunun tekrar çevrim içi olması.
   "server.update.dialog.offerTitle": "{name} sunucusunu LogiBricks Workspace {version} sürümüne güncelle",
   "server.update.dialog.offerDescription":
     "{name}, LogiBricks Workspace {current} kullanıyor. Önce güncellemeyi indirir, ardından yeniden başlar.",
@@ -631,10 +652,8 @@ export const messages = {
   "server.update.dialog.cancelRestart": "Yeniden başlatmayı iptal et",
   "server.update.dialog.later": "Daha sonra",
   "server.update.dialog.hide": "Gizle",
-  // Kullanıcının gizlediği bir güncelleme iletişim kutusunun bildirimi.
   "server.update.dialog.hiddenTitle": "{name} için güncelleme",
   "server.update.dialog.show": "Göster",
-  // Yeniden başlatmanın beklediği işlemler, "{reasons} bekleniyor" içinde yer alır.
   "server.update.reason.agentTurn": "bir ajan turu",
   "server.update.reason.queuedDelivery": "kuyruktaki bir mesaj",
   "server.update.reason.drainTask": "arka plan ajan çalışması",
@@ -648,7 +667,6 @@ export const messages = {
   "server.update.reason.updateOperation": "başka bir güncelleme adımı",
   "server.update.reason.initialization": "LogiBricks Workspace'in başlatılması",
   "server.update.reason.other": "diğer çalışmalar",
-  // Katılınan bir sunucu bir güncellemeye yeniden başladığında her üyeye bir bildirim. {name} sunucudur.
   "server.restartNotice.waitingTitle": "{name}, bir güncellemeyi yüklemek için yeniden başlatılacak",
   "server.restartNotice.waitingVersionTitle":
     "{name}, LogiBricks Workspace {version} sürümünü yüklemek için yeniden başlatılacak",

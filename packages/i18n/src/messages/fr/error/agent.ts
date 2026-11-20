@@ -10,6 +10,22 @@ export const messages = {
     "Arguments de découverte d’outils non valides. Utilisez le schéma déclaré et un nom d’outil qualifié d’origine.",
   "error.agent.toolCallArgumentsNotObject":
     "L’outil ne s’est pas exécuté. Dans tool_call, arguments doit être un objet JSON, pas du texte. Renvoyez l’appel avec arguments sous forme d’objet.",
+  "error.agent.toolCallDiscoveryTool":
+    "L’outil ne s’est pas exécuté. tool_call ne peut pas exécuter openbot.tool_search ni openbot.tool_describe. Appelez-les directement avec les mêmes arguments.",
+  "error.agent.toolCallEnvelopeKeys":
+    "L’outil ne s’est pas exécuté. tool_call accepte seulement name et arguments. Mettez les arguments de l’outil dans arguments, sous forme d’objet, puis renvoyez l’appel.",
+  "error.agent.toolCallMissingName":
+    "L’outil ne s’est pas exécuté. Le tool_call n’a pas de name. Mettez dans name le nom qualifié que donne tool_search, par exemple openbot.history_read, et envoyez l’appel à nouveau.",
+  "error.agent.toolCallUnknownTool":
+    "L’outil ne s’est pas exécuté. tool_call n’a trouvé aucun outil avec ce nom. Utilisez le nom qualifié exact que donne tool_search, par exemple openbot_browser.snapshot.",
+  "error.agent.toolCallUnknownToolSuggest":
+    "L’outil ne s’est pas exécuté. tool_call n’a trouvé aucun outil avec ce nom. Le nom qualifié est peut-être {name}. Si c’est le cas, renvoyez l’appel avec ce nom.",
+  "error.agent.toolDescribeUnknownNames":
+    "tool_describe n’a trouvé aucun outil LogiBricks Workspace nommé {names}. Il décrit uniquement les outils LogiBricks Workspace et du navigateur que liste openbot.tool_search, pas les outils MCP.",
+  "error.agent.toolDescribeDiscoveryNames":
+    "Appelle {names} directement. tool_describe ne décrit pas les outils de recherche.",
+  "error.agent.routineScheduleArgumentsInvalid":
+    "La planification de la routine n’est pas valide : {detail} Corrigez la planification et réessayez. openbot.tool_describe donne le schéma.",
   "error.agent.approvalWhileDeleting": "Impossible d’accorder l’approbation pendant la suppression de l’agent.",
   "error.agent.accessLocalOnly": "L’accès à l’agent ne peut être modifié que sur l’ordinateur qui exécute l’agent.",
   "error.agent.duplicateCleanupFailed":
@@ -53,6 +69,8 @@ export const messages = {
   "error.agent.modelNotListed": "Le modèle « {model} » n’est pas disponible. Modèles disponibles : {models}.",
   "error.agent.providerNotListed":
     "Aucun modèle {provider} n’est disponible pour le moment. Appelez list_models pour voir les modèles disponibles.",
+  "error.agent.creatorModelNotListed":
+    "Votre modèle « {model} » n’est pas dans la liste des modèles pour le moment, donc le nouvel agent ne peut pas démarrer avec. Réessayez dans quelques secondes, ou indiquez dans provider et model un modèle que list_models affiche.",
   "error.agent.reasoningEffortUnsupported":
     "Le modèle « {model} » ne prend pas en charge l’effort de raisonnement « {effort} ». Efforts pris en charge : {efforts}.",
   "error.agent.reasoningEffortNotConfigurable":
@@ -90,8 +108,17 @@ export const messages = {
     "Le point de terminaison utilisé par cet agent a été supprimé. Choisissez un autre modèle pour lui.",
   "error.agent.turnStalled":
     "{provider} ne répond plus, donc LogiBricks Workspace a terminé ce tour. Renvoyez le message ou choisissez un autre modèle.",
+  "error.agent.promptCancelled": "{provider} a annulé ce message avant son début. Renvoyez le message.",
+  "error.agent.toolLoopStopped":
+    "{provider} a répété de nombreuses fois une étape en échec, donc LogiBricks Workspace a arrêté ce tour. Renvoyez le message ou choisissez un autre modèle.",
+  "error.agent.answerCutOff":
+    "L’agent s’est arrêté avant de terminer sa réponse, donc la réponse n’est pas complète. Renvoyez le message.",
   "error.agent.compactionConnectionLost":
     "La connexion s’est interrompue pendant que l’agent compactait son contexte, la tâche s’est donc arrêtée. Vérifiez votre connexion internet, puis envoyez un message pour continuer.",
+  "error.agent.compactionConnectionLostAddress":
+    "La connexion s’est interrompue pendant que l’agent compactait son contexte, la tâche s’est donc arrêtée. Vérifiez votre connexion internet et que {variable}, sous Variables dans les réglages de {provider}, est l’adresse API de votre service de modèles (souvent en /v1). Puis envoyez un message.",
+  "error.agent.compactionLoopStopped":
+    "{provider} a compacté le contexte encore et encore, et il restait chaque fois trop plein pour continuer : LogiBricks Workspace a donc arrêté ce tour. Désactivez les serveurs MCP ou l'utilisation de l'ordinateur dont cet agent n'a pas besoin, puis envoyez un message. Si vous ou l'agent avez changé le moment où {provider} compacte, annulez ce changement.",
   "error.agent.selectedGone": "L’agent sélectionné n’existe plus.",
   "error.agent.profileEndpointsChanged":
     "Les points de terminaison personnalisés ont changé pendant la génération. Réessayez.",
@@ -108,6 +135,10 @@ export const messages = {
   "error.agent.stopBeforeDelete": "Arrêtez l’agent et annulez ses messages en file d’attente avant de le supprimer.",
   "error.agent.deleteIncomplete":
     "Les données de l’agent n’ont pas pu être entièrement supprimées. Relancez la suppression de l’agent.",
+  "error.agent.deleteFolderInUse":
+    "Le travail d'un autre agent utilise encore le dossier de cet agent. Supprimez à nouveau cet agent quand ce travail se termine, ou après avoir redémarré LogiBricks Workspace.",
+  "error.agent.deleteWhenFolderFree":
+    "Le travail d'un autre agent utilise encore le dossier de cet agent. LogiBricks Workspace supprime cet agent quand ce travail se termine.",
   "error.agent.duplicationBusy": "Cet agent est déjà en cours de duplication.",
   "error.agent.waitBeforeDuplicate":
     "Attendez que l’agent ait terminé et videz sa file d’attente avant de le dupliquer.",
@@ -149,14 +180,21 @@ export const messages = {
     "Ce serveur manque de mémoire. Votre message attend dans la file et démarre quand la mémoire est libre.",
   "error.agent.workspaceOnlyToolMissing":
     "« Espace de travail uniquement » nécessite {tool}, qu’LogiBricks Workspace n’a pas trouvé. Installez-le, ou choisissez « Accès complet » dans les réglages de l’agent.",
+  "error.agent.codexSandboxUnavailable":
+    "« Espace de travail uniquement » nécessite le bac à sable de Codex, que Codex ne peut pas démarrer sur cet ordinateur : les commandes de l’agent échouent. Choisissez « Demander d’abord » ou « Accès complet » dans les réglages de l’agent.",
   "error.agent.claudeSandboxUnavailable":
     "« Espace de travail uniquement » nécessite le bac à sable de Claude, que Claude ne peut pas démarrer sur cet ordinateur : {reason}. Choisissez « Accès complet » ou un autre fournisseur dans les réglages de l’agent.",
+  "error.agent.claudeNoSandbox":
+    "Claude ne peut pas utiliser de bac à sable sur cet ordinateur, donc « Espace de travail uniquement » ne fonctionne pas avec lui. Choisissez « Accès complet » ou un autre fournisseur dans les réglages de l’agent.",
+  "error.agent.claudeSandboxBlocked":
+    "« Espace de travail uniquement » nécessite le bac à sable de Claude, que Claude ne peut pas démarrer sur cet ordinateur : les commandes de l’agent échouent. Choisissez « Accès complet » ou un autre fournisseur dans les réglages de l’agent.",
   "error.agent.screenCaptureOff":
     "La capture d’écran est désactivée pour cet agent. L’utilisateur peut activer Computer Use dans les réglages de l’agent.",
   "error.agent.screenCaptureUnavailable": "La capture d’écran n’est pas disponible sur cet ordinateur.",
   "error.agent.screenCaptureShared":
     "La capture d’écran ne fonctionne pas dans une conversation Slack, Discord ou Telegram, car d’autres personnes reçoivent ses fichiers.",
   "error.agent.screenCaptureDeclined": "L’utilisateur n’a pas autorisé cette capture d’écran. Rien n’a été capturé.",
+  "error.agent.mcpToolDeclined": "L’utilisateur n’a pas autorisé cet appel d’outil MCP. L’outil n’a pas été exécuté.",
   "error.agent.screenCaptureWindowMissing":
     "Cette fenêtre n’est pas ouverte. Appelez list_capture_sources pour obtenir les identifiants actuels des fenêtres.",
   "error.agent.screenCaptureDisplayMissing":
@@ -165,6 +203,8 @@ export const messages = {
     "La zone n’est pas entièrement dans un seul écran. Utilisez des points du bureau situés dans les limites d’un écran renvoyées par list_capture_sources.",
   "error.agent.screenCapturePermissionMissing":
     "LogiBricks Workspace n’a pas l’autorisation « Enregistrement de l’écran ». Demandez à l’utilisateur d’ouvrir Réglages Système > Confidentialité et sécurité > Enregistrement de l’écran et de l’audio du système, d’activer LogiBricks Workspace, puis de quitter et de rouvrir LogiBricks Workspace.",
+  "error.agent.screenCaptureListPermission":
+    "LogiBricks Workspace n’a pas encore l’autorisation « Enregistrement de l’écran » et ne peut donc pas lister les fenêtres. Pour capturer un écran, appelez capture_screen avec target screen. L’utilisateur approuve d’abord la capture, puis macOS peut lui demander l’autorisation.",
   "error.agent.screenCaptureEmptyWindows":
     "Windows a renvoyé une image vide. Demandez à l’utilisateur de déverrouiller l’ordinateur et de fermer le contenu protégé. Une stratégie de l’organisation peut aussi bloquer la capture d’écran.",
   "error.agent.screenCaptureFailed": "La capture d’écran a échoué. Réessayez.",

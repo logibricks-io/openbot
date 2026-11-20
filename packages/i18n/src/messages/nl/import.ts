@@ -156,7 +156,7 @@ export const messages = {
   "import.hermes.reason.duplicateSkill": "Een andere vaardigheid in dit profiel heeft dezelfde naam.",
   "import.hermes.reason.builtIn": "Deze horen bij Hermes. LogiBricks Workspace heeft eigen vaardigheden.",
   "import.hermes.reason.mcpOff":
-    "Wordt uitgeschakeld toegevoegd. Controleer het en zet het daarna aan in de MCP-instellingen.",
+    "Wordt uitgeschakeld toegevoegd. Controleer het en zet het daarna aan in Marktplaats, Apps.",
   "import.hermes.reason.mcpNameTaken": "Hier staat al een server met deze naam.",
   "import.hermes.reason.routineSchedule":
     "LogiBricks Workspace kan het schema niet uitvoeren, of het tijdstip is voorbij.",

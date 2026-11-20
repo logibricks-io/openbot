@@ -5,4 +5,8 @@ export const messages = {
   "window.localHostTitle": "LogiBricks Workspace: локальный хост",
   "window.localClientTitle": "LogiBricks Workspace: локальный клиент",
   "window.computerUsePermissionTitle": "Включите управление компьютером",
+  "window.rendererStoppedTitle": "LogiBricks Workspace перестал работать",
+  "window.rendererStoppedBody":
+    "Окно несколько раз останавливалось. Ваши чаты сохранены, а агенты продолжают работать.",
+  "window.rendererStoppedReload": "Перезагрузить",
 } as const satisfies PartialTranslation<typeof source>;

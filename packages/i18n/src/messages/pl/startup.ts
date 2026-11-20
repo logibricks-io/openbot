@@ -9,6 +9,8 @@ export const messages = {
   "startup.archiveChangedBody":
     "Inny program zmienił plik app.asar LogiBricks Workspace. LogiBricks Workspace działa teraz, ale nie uruchomi się po zamknięciu.\n\nAby naprawić LogiBricks Workspace, zainstaluj go ponownie. Twoje lokalne dane zostaną zachowane.",
   "startup.archiveChangedDownload": "Pobierz LogiBricks",
+  "startup.filesDamagedBody":
+    "Niektóre pliki LogiBricks Workspace są uszkodzone lub ich brakuje.\n\nAby naprawić LogiBricks Workspace, zainstaluj go ponownie. Twoje lokalne dane zostaną zachowane.",
   "startup.newerDataUpdatingTitle": "Aktualizowanie LogiBricks Workspace",
   "startup.newerDataUpdatingBody":
     "Nowsza wersja LogiBricks Workspace zapisała Twoje dane. LogiBricks Workspace instaluje najnowszą wersję, a potem uruchomi się ponownie.\n\nTwoje lokalne dane nie zostały zresetowane ani nadpisane.",
@@ -18,4 +20,29 @@ export const messages = {
   "startup.newerDataDownload": "Pobierz LogiBricks Workspace",
   "startup.newerDataGuide": "Otwórz przewodnik",
   "startup.newerDataQuit": "Zakończ",
+  "startup.newerDataLoopTitle": "Najnowszy LogiBricks Workspace się nie otworzył",
+  "startup.newerDataLoopBody":
+    "Nowsza wersja LogiBricks Workspace zapisała Twoje dane, a ta wersja ({version}) nie może ich otworzyć. LogiBricks Workspace {loopVersion} kilka razy z rzędu zatrzymał się przed otwarciem, więc nie zostanie zainstalowany ponownie.\n\nZainstaluj wersję nowszą niż {loopVersion}, gdy będzie dostępna. Aby uzyskać pomoc, otwórz przewodnik.\n\nTwoje lokalne dane nie zostały zresetowane ani nadpisane.",
+  "startup.newerDataReleases": "Pokaż wydania",
+  "startup.recoveryWindowTitle": "Odzyskiwanie LogiBricks Workspace",
+  "startup.recoveryTitle": "LogiBricks Workspace się nie otworzył",
+  "startup.recoveryBody": {
+    one: "LogiBricks Workspace {version} zatrzymał się przed otwarciem {count} raz z rzędu. Twoje lokalne dane nie zostały zresetowane ani nadpisane.",
+    few: "LogiBricks Workspace {version} zatrzymał się przed otwarciem {count} razy z rzędu. Twoje lokalne dane nie zostały zresetowane ani nadpisane.",
+    many: "LogiBricks Workspace {version} zatrzymał się przed otwarciem {count} razy z rzędu. Twoje lokalne dane nie zostały zresetowane ani nadpisane.",
+    other:
+      "LogiBricks Workspace {version} zatrzymał się przed otwarciem {count} razy z rzędu. Twoje lokalne dane nie zostały zresetowane ani nadpisane.",
+  },
+  "startup.recoveryHint":
+    "Spróbuj ponownie albo zainstaluj ostatnią wersję, która się otwierała. Aby uzyskać pomoc, wyeksportuj diagnostykę i wyślij plik ze zgłoszeniem.",
+  "startup.recoveryHintLatest":
+    "LogiBricks Workspace nie znalazł wcześniejszej wersji, która może otworzyć Twoje dane. Spróbuj ponownie albo zainstaluj najnowszą wersję. Aby uzyskać pomoc, wyeksportuj diagnostykę i wyślij plik ze zgłoszeniem.",
+  "startup.recoveryRetry": "Spróbuj ponownie",
+  "startup.recoveryPreviousVersion": "Pobierz poprzednią wersję",
+  "startup.recoveryLatestVersion": "Pobierz najnowszą wersję",
+  "startup.recoveryExportDiagnostics": "Eksportuj diagnostykę",
+  "startup.recoveryOpenDataFolder": "Otwórz folder danych",
+  "startup.recoveryQuit": "Zakończ",
+  "startup.recoveryDiagnosticsSaved": "Plik diagnostyki został zapisany.",
+  "startup.recoveryActionFailed": "LogiBricks Workspace nie mógł wykonać tej czynności.",
 } as const satisfies PartialTranslation<typeof source>;

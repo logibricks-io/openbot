@@ -2,7 +2,6 @@ import type { PartialTranslation } from "../../message";
 import type { messages as source } from "../en/computerUse";
 
 export const messages = {
-  // Computer Use settings, the permission help window, and the window highlight.
   "computerUse.permission.screenRecording.title": "Enregistrement de l’écran",
   "computerUse.permission.screenRecording.description": "Permet à LogiBricks Workspace de voir les fenêtres des apps.",
   "computerUse.permission.screenRecording.pane": "Enregistrement de l’écran et de l’audio du système",
@@ -21,6 +20,10 @@ export const messages = {
   "computerUse.ready.description":
     "LogiBricks Workspace peut voir les apps de cet ordinateur et interagir avec elles. Ce système ne demande aucune autorisation supplémentaire.",
   "computerUse.openSettingsFailed.title": "Impossible d’ouvrir Réglages Système",
+  "computerUse.restartRequired.title": "Redémarrage nécessaire",
+  "computerUse.restartRequired.description":
+    "macOS bloque toujours les clics et la saisie. Si cela revient après un redémarrage, retirez LogiBricks Workspace d’Accessibilité, puis ajoutez-le de nouveau.",
+  "computerUse.restartRequired.action": "Redémarrer LogiBricks Workspace",
   "computerUse.compact.title": "Activer Computer Use",
   "computerUse.compact.description":
     "Permettez à LogiBricks Workspace de voir les apps de cet ordinateur et d’interagir avec elles.",

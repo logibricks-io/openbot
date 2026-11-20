@@ -20,6 +20,10 @@ export const messages = {
   "computerUse.ready.description":
     "LogiBricks Workspace יכול לראות אפליקציות במחשב הזה ולפעול בהן. המערכת הזו אינה דורשת הרשאה נוספת.",
   "computerUse.openSettingsFailed.title": "לא ניתן היה לפתוח את System Settings",
+  "computerUse.restartRequired.title": "נדרשת הפעלה מחדש",
+  "computerUse.restartRequired.description":
+    "macOS עדיין חוסם לחיצות והקלדה. אם זה חוזר אחרי הפעלה מחדש, יש להסיר את LogiBricks Workspace מ״נגישות״ ולהוסיף אותו שוב.",
+  "computerUse.restartRequired.action": "הפעלה מחדש של LogiBricks Workspace",
   "computerUse.compact.title": "הפעלת שליטה במחשב",
   "computerUse.compact.description": "מאפשר ל-LogiBricks Workspace לראות אפליקציות במחשב הזה ולפעול בהן.",
   "computerUse.granted": "ניתנה",

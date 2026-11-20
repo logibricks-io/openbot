@@ -24,10 +24,6 @@ export function resolveAppIconPath(options: {
     : join(options.sourceRoot, "build", appIconFileName(options.variant, options.platform));
 }
 
-/**
- * The macOS menu bar icon. The `Template` suffix makes macOS draw it in the color of the menu bar,
- * and Electron loads the `@2x` file next to it.
- */
 export function resolveMenuBarIconPath(options: {
   isPackaged: boolean;
   resourcesPath: string;

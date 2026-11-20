@@ -89,6 +89,16 @@ export const messages = {
   "onboarding.choice.subscription": "Yapay zekâ aboneliğimi kullan",
   "onboarding.choice.subscriptionDetail": "ChatGPT, Claude veya Grok",
   "onboarding.choice.startFreeInstead": "Bunun yerine ücretsiz modeller",
+  "onboarding.existing.title": "Tekrar hoş geldiniz.",
+  "onboarding.existing.description":
+    "Hesabınız zaten LogiBricks Workspace kullanıyor. Burada devam etmek için bir sunucu açın.",
+  "onboarding.existing.open": "{name} sunucusunu aç",
+  "onboarding.existing.openDetail": "Ajanlarını ve sohbetlerini burada açar.",
+  "onboarding.existing.offlineDetail": "Şu anda çevrimdışı. Açıldığında açılır.",
+  "onboarding.existing.startNew": "Bu bilgisayarda yeniden başla",
+  "onboarding.existing.startNewDetail":
+    "Burada yeni bir ekip oluşturun. Sunucularınız ajanlarını ve sohbetlerini korur.",
+  "onboarding.existing.openFailed": "LogiBricks Workspace, {name} sunucusunu açamadı.",
   "onboarding.consent.notice": "Devam ederek {terms}’nı kabul etmiş ve {privacy}’nı okumuş olursunuz.",
   "onboarding.consent.analyticsTitle": "LogiBricks Workspace'i geliştirmemize yardım edin",
   "onboarding.consent.analyticsDetail": "Kullanımı hesabınızla paylaşın. Sohbetler ve dosyalar asla.",
@@ -105,7 +115,7 @@ export const messages = {
   "onboarding.action.connect": "Bağlan",
   "onboarding.action.open": "LogiBricks'i aç",
   "onboarding.action.next": "İleri",
-  "onboarding.server.title": "{server} sunucusunu ayarlayın",
+  "onboarding.server.title": "{server} sunucusuna hoş geldiniz",
   "onboarding.server.description":
     "LogiBricks Workspace bir yapay zeka aboneliği içermez. Bir ajan oluşturmadan önce kendi sağlayıcınızı bu sunucuya bağlayın.",
   "onboarding.server.label": "Bu sunucunun yapay zeka sağlayıcısını seçin",

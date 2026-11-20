@@ -8,7 +8,10 @@ export const messages = {
   "error.update.downloadStalled": "La descarga de la actualización dejó de responder. Inténtalo de nuevo.",
   "error.update.installFailed":
     "No se pudo instalar la actualización. Cierra y vuelve a abrir LogiBricks Workspace e inténtalo de nuevo.",
+  "error.update.notInstalled": "El último reinicio no instaló la actualización. Reinicia para intentarlo de nuevo.",
   "error.update.downloadFailed": "No se pudo descargar la actualización. Inténtalo de nuevo.",
+  "error.update.signatureNotConfirmed":
+    "LogiBricks Workspace no pudo verificar la actualización. Inténtalo de nuevo. Si el problema persiste, pide el instalador al administrador.",
   "error.update.checkFailed": "No se pudieron buscar actualizaciones. Inténtalo de nuevo.",
   "error.update.checkStalled": "La búsqueda de actualizaciones dejó de responder. Inténtalo de nuevo.",
   "error.update.checkOffline":
@@ -29,6 +32,10 @@ export const messages = {
     "No se pudieron verificar otras sesiones de LogiBricks Workspace. Inténtalo de nuevo antes de instalar.",
   "error.update.readOnlyLocation":
     "LogiBricks Workspace no puede instalar actualizaciones desde esta ubicación. Cierra LogiBricks Workspace. En Finder, arrastra LogiBricks Workspace a la carpeta Aplicaciones (si ya está allí, sácalo y vuelve a ponerlo). Después abre LogiBricks Workspace e instala la actualización de nuevo.",
+  "error.update.appImageMissing":
+    "LogiBricks Workspace no puede instalar la actualización porque su archivo AppImage se movió, se renombró o se reemplazó. Cierra LogiBricks Workspace y vuelve a abrir el archivo AppImage.",
+  "error.update.appImageReadOnly":
+    "LogiBricks Workspace no puede instalar actualizaciones en la carpeta de su archivo AppImage. Cierra LogiBricks Workspace, mueve el archivo AppImage a una carpeta de tu carpeta personal, ábrelo e instala la actualización de nuevo.",
   "error.update.remoteDisabled":
     "Las actualizaciones por parte de administradores del servidor están desactivadas en este equipo.",
   "error.update.restartStarted": "LogiBricks Workspace ya se está reiniciando para instalar la actualización.",

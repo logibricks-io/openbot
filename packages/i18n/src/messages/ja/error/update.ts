@@ -8,7 +8,11 @@ export const messages = {
   "error.update.downloadStalled": "アップデートのダウンロードが応答しなくなりました。もう一度お試しください。",
   "error.update.installFailed":
     "アップデートをインストールできませんでした。LogiBricks Workspace を終了してから開き直し、もう一度お試しください。",
+  "error.update.notInstalled":
+    "前回の再起動ではアップデートがインストールされませんでした。もう一度再起動してお試しください。",
   "error.update.downloadFailed": "アップデートをダウンロードできませんでした。もう一度お試しください。",
+  "error.update.signatureNotConfirmed":
+    "LogiBricks Workspace はアップデートを検証できませんでした。もう一度お試しください。問題が続く場合は、管理者にインストーラーを依頼してください。",
   "error.update.checkFailed": "アップデートを確認できませんでした。もう一度お試しください。",
   "error.update.checkStalled": "アップデートの確認が応答しなくなりました。もう一度お試しください。",
   "error.update.checkOffline":
@@ -29,6 +33,10 @@ export const messages = {
     "他の LogiBricks Workspace セッションを確認できませんでした。インストールする前にもう一度お試しください。",
   "error.update.readOnlyLocation":
     "この場所からは LogiBricks Workspace のアップデートをインストールできません。LogiBricks Workspace を終了してください。Finder で LogiBricks Workspace を「アプリケーション」フォルダにドラッグします（すでにそこにある場合は、一度外に出してから戻します）。その後 LogiBricks Workspace を開き、もう一度アップデートをインストールしてください。",
+  "error.update.appImageMissing":
+    "AppImage ファイルが移動、名前変更、または置き換えられたため、LogiBricks Workspace はアップデートをインストールできません。LogiBricks Workspace を終了してから、AppImage ファイルをもう一度開いてください。",
+  "error.update.appImageReadOnly":
+    "LogiBricks Workspace は AppImage ファイルのフォルダにアップデートをインストールできません。LogiBricks Workspace を終了し、AppImage ファイルをホームフォルダ内のフォルダに移動してから開き、もう一度アップデートをインストールしてください。",
   "error.update.remoteDisabled": "このコンピューターでは、サーバー管理者からのアップデートはオフになっています。",
   "error.update.restartStarted": "LogiBricks Workspace はアップデートをインストールするため、すでに再起動しています。",
   "error.update.alreadyRestarting": "LogiBricks Workspace はすでに再起動しています。",

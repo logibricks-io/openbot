@@ -2,18 +2,19 @@ import type { PartialTranslation } from "../../message";
 import type { messages as source } from "../en/messaging";
 
 export const messages = {
-  // What the user can do about a Slack workspace connection that stopped.
   "messaging.help.invalid_token":
     "Slack 已不再接受该工作区中的 LogiBricks Workspace，可能它被卸载了。请重新连接该工作区。",
   "messaging.help.secret_storage_unavailable":
     "LogiBricks Workspace 无法在这台电脑上读取已保存的令牌。请断开该工作区后重新连接。",
   "messaging.help.relay_unavailable":
     "LogiBricks Workspace 无法在这台电脑上接收 Slack 事件。请登录，在服务器设置中为这台电脑命名，并保持 LogiBricks Workspace 开着。",
-  // The same help for a Discord server connection.
+  "messaging.help.not_linked": "此工作区未关联到此服务器。选择“重新连接”进行关联。",
   "messaging.discordHelp.invalid_token":
     "Discord 已不再接受该 Discord 服务器中的 LogiBricks Workspace，可能已被移除。请重新连接该 Discord 服务器。",
   "messaging.discordHelp.secret_storage_unavailable":
     "LogiBricks Workspace 无法在这台电脑上读取已保存的令牌。请断开该 Discord 服务器后重新连接。",
   "messaging.discordHelp.relay_unavailable":
     "LogiBricks Workspace 无法在这台电脑上接收 Discord 事件。请登录，在服务器设置中为这台电脑命名，并保持 LogiBricks Workspace 开着。",
+  "messaging.discordHelp.not_linked":
+    "此 Discord 服务器未关联到此 LogiBricks Workspace 服务器。选择“重新连接”进行关联。",
 } as const satisfies PartialTranslation<typeof source>;

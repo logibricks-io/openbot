@@ -15,9 +15,17 @@ export const messages = {
   "menu.quitConfirmBody": "Os agentes e as rotinas param até você abrir o LogiBricks Workspace de novo.",
   "menu.quitConfirm": "Sair",
   "menu.quitHint": "Mantenha ⌘Q pressionado ou pressione duas vezes para sair",
+  "menu.closeWorkingTitle": {
+    one: "{count} agente ainda está trabalhando",
+    other: "{count} agentes ainda estão trabalhando",
+  },
+  "menu.closeWorkingBody":
+    "Se você sair do LogiBricks Workspace, os agentes param. Mantenha-o aberto para que terminem. Para mostrar a janela de novo, abra o LogiBricks Workspace.",
+  "menu.closeKeepRunning": "Continuar",
   "menu.trayOpen": "Abrir o LogiBricks",
   "menu.trayQuit": "Sair do LogiBricks",
   "menu.trayTooltip": "LogiBricks",
+  "menu.hideDynamicIsland": "Ocultar Dynamic Island",
   "menu.undo": "Desfazer",
   "menu.redo": "Refazer",
   "menu.cut": "Recortar",

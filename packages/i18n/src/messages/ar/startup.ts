@@ -9,6 +9,8 @@ export const messages = {
   "startup.archiveChangedBody":
     "غيّر برنامج آخر ملف LogiBricks Workspace المسمى app.asar. يعمل LogiBricks Workspace الآن، لكنه لن يفتح بعد إنهائه.\n\nلإصلاح LogiBricks Workspace، ثبّته من جديد. تبقى بياناتك المحلية.",
   "startup.archiveChangedDownload": "تنزيل LogiBricks",
+  "startup.filesDamagedBody":
+    "بعض ملفات LogiBricks Workspace تالفة أو مفقودة.\n\nلإصلاح LogiBricks Workspace، ثبّته من جديد. تبقى بياناتك المحلية.",
   "startup.newerDataUpdatingTitle": "جارٍ تحديث LogiBricks Workspace",
   "startup.newerDataUpdatingBody":
     "حفظ إصدار أحدث من LogiBricks Workspace بياناتك. يثبّت LogiBricks Workspace أحدث إصدار ثم يفتح مرة أخرى.\n\nلم تتم إعادة تعيين بياناتك المحلية أو الكتابة فوقها.",
@@ -18,4 +20,31 @@ export const messages = {
   "startup.newerDataDownload": "تنزيل LogiBricks Workspace",
   "startup.newerDataGuide": "فتح الدليل",
   "startup.newerDataQuit": "إنهاء",
+  "startup.newerDataLoopTitle": "لم يُفتح أحدث إصدار من LogiBricks Workspace",
+  "startup.newerDataLoopBody":
+    "حفظ إصدار أحدث من LogiBricks Workspace بياناتك، ولا يستطيع هذا الإصدار ({version}) فتحها. توقف LogiBricks Workspace {loopVersion} قبل أن يُفتح عدة مرات متتالية، لذلك لن يُثبَّت مرة أخرى.\n\nثبّت إصدارًا أحدث من {loopVersion} عندما يتوفر. للحصول على المساعدة، افتح الدليل.\n\nلم تتم إعادة تعيين بياناتك المحلية أو الكتابة فوقها.",
+  "startup.newerDataReleases": "عرض الإصدارات",
+  "startup.recoveryWindowTitle": "استرداد LogiBricks Workspace",
+  "startup.recoveryTitle": "لم يُفتح LogiBricks Workspace",
+  "startup.recoveryBody": {
+    zero: "توقف LogiBricks Workspace {version} قبل أن يُفتح {count} مرة متتالية. لم تتم إعادة تعيين بياناتك المحلية أو الكتابة فوقها.",
+    one: "توقف LogiBricks Workspace {version} قبل أن يُفتح مرة واحدة ({count}). لم تتم إعادة تعيين بياناتك المحلية أو الكتابة فوقها.",
+    two: "توقف LogiBricks Workspace {version} قبل أن يُفتح مرتين متتاليتين ({count}). لم تتم إعادة تعيين بياناتك المحلية أو الكتابة فوقها.",
+    few: "توقف LogiBricks Workspace {version} قبل أن يُفتح {count} مرات متتالية. لم تتم إعادة تعيين بياناتك المحلية أو الكتابة فوقها.",
+    many: "توقف LogiBricks Workspace {version} قبل أن يُفتح {count} مرة متتالية. لم تتم إعادة تعيين بياناتك المحلية أو الكتابة فوقها.",
+    other:
+      "توقف LogiBricks Workspace {version} قبل أن يُفتح {count} مرة متتالية. لم تتم إعادة تعيين بياناتك المحلية أو الكتابة فوقها.",
+  },
+  "startup.recoveryHint":
+    "أعد المحاولة، أو ثبّت آخر إصدار فُتح. للحصول على المساعدة، صدّر بيانات التشخيص وأرسل الملف مع بلاغك.",
+  "startup.recoveryHintLatest":
+    "لم يجد LogiBricks Workspace إصدارًا سابقًا يستطيع فتح بياناتك. أعد المحاولة، أو ثبّت أحدث إصدار. للحصول على المساعدة، صدّر بيانات التشخيص وأرسل الملف مع بلاغك.",
+  "startup.recoveryRetry": "إعادة المحاولة",
+  "startup.recoveryPreviousVersion": "تنزيل الإصدار السابق",
+  "startup.recoveryLatestVersion": "تنزيل أحدث إصدار",
+  "startup.recoveryExportDiagnostics": "تصدير التشخيص",
+  "startup.recoveryOpenDataFolder": "فتح مجلد البيانات",
+  "startup.recoveryQuit": "إنهاء",
+  "startup.recoveryDiagnosticsSaved": "تم حفظ ملف التشخيص.",
+  "startup.recoveryActionFailed": "تعذّر على LogiBricks Workspace تنفيذ هذا الإجراء.",
 } as const satisfies PartialTranslation<typeof source>;

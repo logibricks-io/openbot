@@ -3,19 +3,24 @@ import type { messages as source } from "../../en/error/mcp";
 
 export const messages = {
   "error.mcp.redirectByName": "Dit adres is niet bereikbaar via een naam.",
-  "error.mcp.redirectGetOnly": "Dit adres antwoordt alleen op GET.",
   "error.mcp.redirectNotSignIn": "Dit adres hoort niet bij een inlog.",
   "error.mcp.redirectRefused": "Het inloggen is geweigerd. Ga terug naar LogiBricks Workspace en probeer het opnieuw.",
   "error.mcp.redirectNoSignIn": "Er wacht geen inlog op dit adres. Misschien is de inlog afgelopen.",
   "error.mcp.redirectSignedIn": "LogiBricks Workspace is ingelogd. Je kunt dit venster sluiten.",
+  "error.mcp.redirectNotSaved": "Het inloggen is niet voltooid. Ga terug naar LogiBricks Workspace om te zien waarom.",
   "error.mcp.signInFileUnreadable": "Het MCP-inlogbestand is onleesbaar.",
   "error.mcp.signInFileTooLarge": "Het MCP-inlogbestand is te groot.",
   "error.mcp.unsupported": "Deze server ondersteunt geen MCP-servers.",
   "error.mcp.signInOnHost": "Inloggen bij een MCP-server werkt alleen in LogiBricks Workspace op de hostcomputer.",
+  "error.mcp.signInPageOnServer":
+    "Deze inlogpagina opent alleen op de server. Vraag een eigenaar of beheerder van de server om in te loggen.",
+  "error.mcp.signInPageOnServerSwitch":
+    "Deze inlogpagina opent alleen op de server. Wissel naar deze server en kies daarna opnieuw Inloggen.",
   "error.mcp.signInAppUnsupported": "Deze server ondersteunt geen inlogapps. Werk LogiBricks Workspace bij op de host.",
   "error.mcp.redirectRelayed":
     "LogiBricks Workspace heeft de inlog naar de server gestuurd. Je kunt dit venster sluiten.",
   "error.mcp.relayEnded": "Deze inlog is afgelopen. Start opnieuw.",
+  "error.mcp.signInLinkNotReady": "De aanmeldpagina is nog niet open. Probeer het zo opnieuw.",
   "error.mcp.relayNoState":
     "De inlogpagina van de server beschermt het terugkeeradres niet, dus LogiBricks Workspace opent hem niet op deze computer.",
   "error.mcp.relayAddressInvalid":

@@ -3,19 +3,24 @@ import type { messages as source } from "../../en/error/mcp";
 
 export const messages = {
   "error.mcp.redirectByName": "Этот адрес недоступен по имени.",
-  "error.mcp.redirectGetOnly": "Этот адрес отвечает только на GET.",
   "error.mcp.redirectNotSignIn": "Этот адрес не относится ко входу.",
   "error.mcp.redirectRefused": "Вход отклонён. Вернитесь в LogiBricks Workspace и повторите попытку.",
   "error.mcp.redirectNoSignIn": "Нет входа, который ждал бы этого. Возможно, он уже завершён.",
   "error.mcp.redirectSignedIn": "LogiBricks Workspace выполнил вход. Это окно можно закрыть.",
+  "error.mcp.redirectNotSaved": "Вход не завершён. Вернитесь в LogiBricks Workspace, чтобы узнать причину.",
   "error.mcp.signInFileUnreadable": "Файл входа MCP не читается.",
   "error.mcp.signInFileTooLarge": "Файл входа MCP слишком большой.",
   "error.mcp.unsupported": "Этот сервер не поддерживает серверы MCP.",
   "error.mcp.signInOnHost": "Войти в сервер MCP можно только в LogiBricks Workspace на компьютере-хосте.",
+  "error.mcp.signInPageOnServer":
+    "Эта страница входа открывается только на сервере. Попросите владельца или администратора сервера выполнить вход.",
+  "error.mcp.signInPageOnServerSwitch":
+    "Эта страница входа открывается только на сервере. Переключитесь на этот сервер, затем снова выберите «Войти».",
   "error.mcp.signInAppUnsupported":
     "Этот сервер не поддерживает приложения входа. Обновите LogiBricks Workspace на хосте.",
   "error.mcp.redirectRelayed": "LogiBricks Workspace отправил вход на сервер. Это окно можно закрыть.",
   "error.mcp.relayEnded": "Этот вход завершён. Начните его снова.",
+  "error.mcp.signInLinkNotReady": "Страница входа ещё не открыта. Повторите попытку через несколько секунд.",
   "error.mcp.relayNoState":
     "Страница входа сервера не защищает свой обратный адрес, поэтому LogiBricks Workspace не открывает её на этом компьютере.",
   "error.mcp.relayAddressInvalid":

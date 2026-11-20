@@ -8,7 +8,10 @@ export const messages = {
   "error.update.downloadStalled": "Загрузка обновления перестала отвечать. Повторите попытку.",
   "error.update.installFailed":
     "Не удалось установить обновление. Закройте и снова откройте LogiBricks Workspace, затем повторите попытку.",
+  "error.update.notInstalled": "Последний перезапуск не установил обновление. Перезапустите, чтобы повторить попытку.",
   "error.update.downloadFailed": "Не удалось загрузить обновление. Повторите попытку.",
+  "error.update.signatureNotConfirmed":
+    "LogiBricks Workspace не удалось проверить обновление. Повторите попытку. Если ошибка повторяется, запросите установщик у администратора.",
   "error.update.checkFailed": "Не удалось проверить обновления. Повторите попытку.",
   "error.update.checkStalled": "Проверка обновлений перестала отвечать. Повторите попытку.",
   "error.update.checkOffline":
@@ -28,6 +31,10 @@ export const messages = {
     "Не удалось проверить другие сессии LogiBricks Workspace. Повторите попытку перед установкой.",
   "error.update.readOnlyLocation":
     "LogiBricks Workspace не может устанавливать обновления из этого места. Закройте LogiBricks Workspace. В Finder перетащите LogiBricks Workspace в папку «Программы» (если он уже там, перетащите его наружу и обратно). Затем откройте LogiBricks Workspace и установите обновление снова.",
+  "error.update.appImageMissing":
+    "LogiBricks Workspace не может установить обновление, потому что его файл AppImage был перемещён, переименован или заменён. Закройте LogiBricks Workspace, затем снова откройте файл AppImage.",
+  "error.update.appImageReadOnly":
+    "LogiBricks Workspace не может устанавливать обновления в папку своего файла AppImage. Закройте LogiBricks Workspace, переместите файл AppImage в папку внутри домашней папки, затем откройте его и снова установите обновление.",
   "error.update.remoteDisabled": "Обновления от администраторов сервера отключены на этом компьютере.",
   "error.update.restartStarted": "LogiBricks Workspace уже перезапускается для установки обновления.",
   "error.update.alreadyRestarting": "LogiBricks Workspace уже перезапускается.",

@@ -1,8 +1,10 @@
 import { type MobilePlatformLogoVariant, PlatformLogo, type PlatformLogoVariant } from "@openbot/brand";
+import type { JSX } from "@solidjs/web";
 import { Link } from "@tanstack/solid-router";
 import { For, Show } from "solid-js";
 import { createCompanyReleaseAvailability } from "../../lib/company-release-availability";
 import { DOWNLOAD_PLATFORM_ORDER, DOWNLOAD_PLATFORMS } from "../../lib/download-platforms";
+import { OPENBOT_ALTERNATE_DOWNLOAD_LINKS } from "../../lib/landing-links";
 import { MOBILE_APP_ORDER, MOBILE_APPS } from "../../lib/mobile-apps";
 import { createLandingReveal } from "./createLandingReveal";
 import { LandingIcon } from "./LandingIcon";
@@ -10,6 +12,7 @@ import { useLandingText } from "./LandingText";
 
 interface DownloadCardContentProps {
   action?: string;
+  actions?: JSX.Element;
   description: string;
   platform: PlatformLogoVariant | MobilePlatformLogoVariant;
   status: string;
@@ -26,11 +29,18 @@ function DownloadCardContent(props: DownloadCardContentProps) {
       <div class="landing-download-card-copy">
         <h3>{props.title}</h3>
         <p>{props.description}</p>
-        <Show when={props.action}>
-          <span class="landing-download-action">
-            {props.action}
-            <LandingIcon name="arrow-up-right" class="landing-download-arrow" />
-          </span>
+        <Show
+          when={props.actions}
+          fallback={
+            <Show when={props.action}>
+              <span class="landing-download-action">
+                {props.action}
+                <LandingIcon name="arrow-up-right" class="landing-download-arrow" />
+              </span>
+            </Show>
+          }
+        >
+          {(actions) => <div class="landing-download-actions">{actions()}</div>}
         </Show>
       </div>
     </>
@@ -57,9 +67,8 @@ export function DownloadSection() {
         </header>
 
         <div class="landing-download-grid">
-          <a
+          <div
             class="landing-download-card"
-            href={available() ? macos.href : undefined}
             aria-disabled={!available() ? "true" : undefined}
             data-download-platform="macos"
             data-state={available() ? "available" : "unavailable"}
@@ -70,9 +79,25 @@ export function DownloadSection() {
               status={available() ? text().available : text().unpublished}
               title={macos.label}
               description={macos.description}
-              action={available() ? text().desktop.macos : undefined}
+              actions={
+                available() && (
+                  <>
+                    <a class="landing-download-action landing-download-card-link" href={macos.href}>
+                      {text().desktop.macos}
+                      <LandingIcon name="arrow-up-right" class="landing-download-arrow" />
+                    </a>
+                    <a
+                      class="landing-download-action landing-download-action-alternate"
+                      href={OPENBOT_ALTERNATE_DOWNLOAD_LINKS.macos}
+                    >
+                      {text().intelMac}
+                      <LandingIcon name="download" class="landing-download-action-icon" />
+                    </a>
+                  </>
+                )
+              }
             />
-          </a>
+          </div>
 
           <a
             class="landing-download-card"
@@ -91,8 +116,6 @@ export function DownloadSection() {
             />
           </a>
 
-          {/* The hero selector already offers Linux and /download/linux/latest resolves an AppImage, so the
-              card is the same link the other two are. A non-clickable card here contradicted both. */}
           <a
             class="landing-download-card"
             href={available() ? linux.href : undefined}
@@ -135,9 +158,6 @@ export function DownloadSection() {
           </For>
         </div>
 
-        {/* The cards start the download, so the pages that explain each installer get their own
-            links. They are also how a crawler finds those pages from the home page. The phone apps
-            are a separate group after a rule, as their cards are a separate row. */}
         <p class="landing-download-pages">
           {text().pages}
           <For each={DOWNLOAD_PLATFORM_ORDER}>

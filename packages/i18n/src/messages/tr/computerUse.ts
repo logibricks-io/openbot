@@ -21,6 +21,10 @@ export const messages = {
   "computerUse.ready.description":
     "LogiBricks Workspace bu bilgisayardaki uygulamaları görebilir ve onlarla etkileşime girebilir. Bu sistem fazladan izin istemez.",
   "computerUse.openSettingsFailed.title": "Sistem Ayarları açılamadı",
+  "computerUse.restartRequired.title": "Yeniden başlatma gerekli",
+  "computerUse.restartRequired.description":
+    "macOS hâlâ tıklamayı ve yazmayı engelliyor. Yeniden başlattıktan sonra yine olursa LogiBricks Workspace'u Erişilebilirlik'ten kaldırıp yeniden ekleyin.",
+  "computerUse.restartRequired.action": "LogiBricks Workspace'u yeniden başlat",
   "computerUse.compact.title": "Bilgisayar Kullanımını etkinleştir",
   "computerUse.compact.description":
     "LogiBricks Workspace'in bu bilgisayardaki uygulamaları görmesine ve etkileşime girmesine izin verin.",

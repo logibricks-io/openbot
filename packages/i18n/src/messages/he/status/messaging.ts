@@ -3,7 +3,7 @@ import type { messages as source } from "../../en/status/messaging";
 
 export const messages = {
   "status.messaging.working": "עובד על זה…",
-  "status.messaging.queued": "בהמתנה: LogiBricks Workspace עובד על בקשה אחרת. התשובה תגיע לכאן.",
+  "status.messaging.queued": "בהמתנה לסיום בקשה קודמת. התשובה תגיע לכאן.",
   "status.messaging.busy": "יותר מדי בקשות ממתינות. אפשר לנסות שוב מאוחר יותר.",
   "status.messaging.failed":
     "LogiBricks Workspace לא הצליח לסיים את הבקשה הזו. הפרטים נמצאים במארח LogiBricks Workspace.",
@@ -13,6 +13,7 @@ export const messages = {
   "status.messaging.stopped": "נעצר.",
   "status.messaging.stop": "עצירה",
   "status.messaging.approvalTitle": "LogiBricks Workspace מבקש אישור כדי להמשיך.",
+  "status.messaging.approvalTitleTeammate": "חבר הצוות {agent} מבקש אישור כדי להמשיך.",
   "status.messaging.approvalCommand": "הרצת פקודה",
   "status.messaging.approvalFileChange": "שינוי קבצים",
   "status.messaging.approvalPermissions": "קבלת הרשאות נוספות",
@@ -53,6 +54,10 @@ export const messages = {
     "👋 *LogiBricks Workspace מחובר*\n\nאפשר לכתוב כאן כדי לשאול את הסוכנים. WhatsApp Orchestrator עונה, או מעביר את העבודה לסוכן המתאים.\n\nיש לשלוח *stop* כדי לעצור בקשה.",
   "status.messaging.whatsappWelcomeDedicated":
     "👋 *LogiBricks Workspace מחובר*\n\nהאנשים שאישרת ב-LogiBricks Workspace יכולים עכשיו לכתוב למספר הזה. אדם חדש מקבל קוד: יש לאשר אותו ב-LogiBricks Workspace תחת בקשות.\n\nיש לשלוח *stop* כדי לעצור בקשה.",
+  "status.messaging.whatsappOtherOpenBot":
+    "LogiBricks Workspace נוסף מקושר למספר הוואטסאפ הזה, ולכן ייתכן שיתקבלו שתי תשובות. כדי לתקן זאת, יש לפתוח את 'מכשירים מקושרים' בוואטסאפ בטלפון ולהתנתק מה-LogiBricks Workspace שאינו בשימוש.",
+  "status.messaging.whatsappPaused":
+    "LogiBricks Workspace הפסיק לענות כאן למשך 10 דקות: הגיעו יותר מדי הודעות בזמן קצר. אם LogiBricks Workspace נוסף מקושר למספר הזה, יש לפתוח את 'מכשירים מקושרים' בוואטסאפ בטלפון ולהתנתק מה-LogiBricks Workspace שאינו בשימוש.",
   "status.messaging.whatsappOrchestratorName": "WhatsApp Orchestrator",
   "status.messaging.whatsappOrchestratorTitle": "עונה ב-WhatsApp ושואל את הצוות",
 } as const satisfies PartialTranslation<typeof source>;

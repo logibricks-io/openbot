@@ -27,5 +27,9 @@ export const messages = {
   "common.download": "ダウンロード",
   "common.removing": "削除中…",
   "common.sending": "送信中…",
+  "common.scrollLeft": "左へスクロール",
+  "common.scrollRight": "右へスクロール",
+  "common.scrollUp": "上へスクロール",
+  "common.scrollDown": "下へスクロール",
   "common.productName": "LogiBricks Workspace",
 } as const satisfies PartialTranslation<typeof source>;

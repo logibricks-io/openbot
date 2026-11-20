@@ -1,8 +1,3 @@
-// No Vite-only import belongs in this file. `vite.config.ts` reads it, through the
-// news artwork generator, while plain Node loads the config, and Node cannot
-// resolve an `?url` specifier. That is why the font asset arrives as an argument
-// from the root route instead of as an import here.
-
 import { faqStructuredData, type LandingQuestion } from "./landing-faq";
 
 /** Legacy upstream origin for archived content and unchanged released callbacks. Current page metadata uses its serving origin. */
@@ -24,7 +19,6 @@ export const OPENBOT_SOCIAL_IMAGE_META = [
   { property: "og:image:alt", content: OPENBOT_SOCIAL_IMAGE_ALT },
 ] as const;
 
-/** The site's card in the shape of `pageSocialImageMeta`, for a page that can have either. */
 export const OPENBOT_SOCIAL_IMAGE_TAGS = {
   openGraph: OPENBOT_SOCIAL_IMAGE_META,
   twitter: [
@@ -33,9 +27,7 @@ export const OPENBOT_SOCIAL_IMAGE_TAGS = {
   ],
 } as const;
 
-/** A page's own social card: a 1600x900 JPEG in `public/social/`, the size of the site's card. */
 export interface PageSocialImage {
-  /** The path from the site root, for example `/social/teams.jpg`. */
   path: string;
   alt: string;
   type?: "image/png" | "image/jpeg";
@@ -60,10 +52,6 @@ export function openBotSocialImageMeta(siteUrl: string) {
 /** The card of the terms, the privacy policy and the DPA. */
 export const OPENBOT_LEGAL_SOCIAL_IMAGE = COMPANY_SOCIAL_IMAGE;
 
-/**
- * The Open Graph and X tags of a page's own social card. The image URL uses the site that
- * serves the page, so a pull-request preview names an image that it has.
- */
 export function pageSocialImageMeta(image: PageSocialImage, siteUrl: string) {
   const url = new URL(image.path, siteUrl).toString();
   return {
@@ -86,11 +74,8 @@ export function siteUrlForPage(pageUrl: URL): string {
   return `${pageUrl.origin}/`;
 }
 
-/** What the app's structured data names and that this file can not import: see the note at the top. */
 export interface OpenBotApplicationFacts {
-  /** The version of the newest release. */
   version: string;
-  /** An absolute URL of a picture of the app. */
   screenshot: string;
 }
 
@@ -117,14 +102,6 @@ export const OPENBOT_SECURITY_HEADERS = {
   "X-Frame-Options": "SAMEORIGIN",
 } as const;
 
-/**
- * @param interLatinFont The hashed URL of Inter's upright latin range, the one font
- * file this site downloads. It is reached through two levels of CSS `@import`, so a
- * browser only learns of it after the stylesheet has parsed. That is late enough
- * that the first paint uses a fallback face and every line of text moves when Inter
- * replaces it. The caller passes the same hashed asset the `@font-face` rule asks
- * for, so the preload below is that request and not a second one.
- */
 export function openBotRootHead(interLatinFont: string) {
   return {
     meta: [
@@ -156,15 +133,12 @@ export function openBotRootHead(interLatinFont: string) {
 /** The home page's own social card. Other pages without a card of their own keep the site's card. */
 const OPENBOT_HOME_SOCIAL_IMAGE = COMPANY_SOCIAL_IMAGE;
 
-/** The text and the address of the home page in one language. */
 export interface HomePageHead {
   title: string;
   description: string;
   questions: readonly LandingQuestion[];
-  /** The path of this language's home page, such as `/`, `/pl` or `/pt`. */
   path: string;
   openGraphLocale: string;
-  /** The home page in each language, for `hreflang` links. The first is also `x-default`. */
   alternates: readonly { hreflang: string; path: string }[];
 }
 

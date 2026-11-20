@@ -326,6 +326,7 @@ export const messages = {
     "لا يستطيع LogiBricks Workspace على {host} استقبال رسائل Telegram. على {host}، سجّل الدخول، وأعطِ الخادم اسمًا في إعدادات الخادم، وأبقِ LogiBricks Workspace مفتوحًا.",
   "connector.telegram.helpError":
     "لا يستطيع LogiBricks Workspace الوصول إلى هذه الدردشة. أعد الربط، أو اقطع اتصال الدردشة.",
+  "connector.telegram.helpNotLinked": 'هذه الدردشة غير مرتبطة بهذا الخادم. اختر "إعادة الربط" لربطها.',
   "connector.telegram.retryAt": "طلب Telegram من LogiBricks Workspace الانتظار. سيحاول مرة أخرى في {time}.",
   "connector.telegram.pause": "إيقاف مؤقت",
   "connector.telegram.resume": "استئناف",
@@ -418,6 +419,8 @@ export const messages = {
   "connector.whatsapp.helpLoggedOutHost": "أزال WhatsApp هذا الخادم من الأجهزة المرتبطة. اربط الرقم مرة أخرى.",
   "connector.whatsapp.helpError":
     "لا يستطيع LogiBricks Workspace الوصول إلى WhatsApp على هذا الرقم. أعد الربط، أو اقطع اتصال الرقم.",
+  "connector.whatsapp.helpKeysUnreadable":
+    "لا يستطيع LogiBricks Workspace قراءة المفاتيح المحفوظة لهذا الرقم. اربط الرقم مرة أخرى.",
   "connector.whatsapp.retryAt": "طلب WhatsApp من LogiBricks Workspace الانتظار. سيحاول مرة أخرى في {time}.",
   "connector.whatsapp.pause": "إيقاف مؤقت",
   "connector.whatsapp.resume": "استئناف",
@@ -432,7 +435,13 @@ export const messages = {
   "connector.whatsapp.rowAction": "{action}: {name}",
   "connector.whatsapp.ownNumber": "رقم شخصي",
   "connector.whatsapp.ownNumberDescription":
-    "يمكن فقط لدردشة «مراسلة نفسك» والأشخاص الذين تسمح لهم المراسلة. أوقف هذا الخيار لرقم مخصص لـ LogiBricks Workspace فقط.",
+    "يمكن فقط لدردشة «مراسلة نفسك» والأشخاص الذين تسمح لهم المراسلة. لا يتلقى الآخرون أي رد. عند إيقافه، يرد LogiBricks Workspace على الأشخاص غير المعروفين برمز.",
+  "connector.whatsapp.workingMessage": "رسالة «جارٍ العمل على ذلك…»",
+  "connector.whatsapp.workingMessageDescription":
+    "يرسلها LogiBricks Workspace أثناء عمل الوكيل، ثم يستبدلها بالإجابة. ويرسل أيضًا رسالة انتظار عندما ينتظر طلبٌ طلبًا سابقًا. أوقفها لإرسال الإجابة فقط.",
+  "connector.whatsapp.statusReactions": "تفاعلات الحالة",
+  "connector.whatsapp.statusReactionsDescription":
+    "يتفاعل LogiBricks Workspace بـ 👀 عند وصول رسالة، وبـ ✅ عندما تصبح الإجابة جاهزة. أوقفها لعدم إرسال أي تفاعلات.",
   "connector.whatsapp.orchestratorTitle": "WhatsApp Orchestrator",
   "connector.whatsapp.orchestratorDescription":
     "يستقبل هذا الوكيل الرسائل الموجّهة إلى LogiBricks Workspace من كل أرقامك المرتبطة. يجيب بنفسه عن الرسائل القصيرة، ويسند الأعمال الأخرى إلى الوكيل المناسب، ويجيب في WhatsApp.",
@@ -447,9 +456,10 @@ export const messages = {
   "connector.whatsapp.kindLabel": "الرقم",
   "connector.whatsapp.kindPersonal": "رقمي الشخصي",
   "connector.whatsapp.kindPersonalDescription":
-    "يجيب LogiBricks Workspace فقط عن دردشة «مراسلة نفسك» والأشخاص الذين تسمح لهم.",
+    "يجيب LogiBricks Workspace فقط عن دردشة «مراسلة نفسك» والأشخاص الذين تسمح لهم. لا يتلقى الآخرون أي رد.",
   "connector.whatsapp.kindDedicated": "رقم مخصص لـ LogiBricks Workspace فقط",
-  "connector.whatsapp.kindDedicatedDescription": "يحصل الأشخاص غير المعروفين على رمز ليعطوه لك. توافق عليهم هنا.",
+  "connector.whatsapp.kindDedicatedDescription":
+    "يرد LogiBricks Workspace من هذا الرقم على كل شخص غير معروف برمز ليعطيه لك. توافق عليهم هنا.",
   "connector.whatsapp.methodLabel": "طريقة الربط",
   "connector.whatsapp.methodQr": "رمز QR",
   "connector.whatsapp.methodCode": "رمز الإقران",
@@ -510,7 +520,8 @@ export const messages = {
   "connector.whatsapp.contactNameDescription": "اختياري. إذا تُرك فارغًا، تعرض القائمة رقم الهاتف.",
   "connector.whatsapp.add": "إضافة",
   "connector.whatsapp.groupTitle": "إضافة مجموعة",
-  "connector.whatsapp.groupDescription": "يمكن للأشخاص في هذه المجموعة إسناد أعمال إلى وكلائك.",
+  "connector.whatsapp.groupDescription":
+    "يمكن للأشخاص في هذه المجموعة إسناد أعمال إلى وكلائك عندما يذكرون الرقم أو يردّون على رسائله.",
   "connector.whatsapp.groupSearch": "بحث في المجموعات",
   "connector.whatsapp.groupsLoading": "جارٍ قراءة المجموعات…",
   "connector.whatsapp.groupsLoadFailed": "تعذّرت قراءة المجموعات على LogiBricks Workspace",
@@ -669,8 +680,9 @@ export const messages = {
   "connector.protonPass.expiredDescription":
     "لا يستطيع الوكلاء تسجيل الدخول ببيانات الدخول المشتركة حتى تسجّل الدخول مرة أخرى.",
   "connector.protonPass.reconnect": "إعادة الاتصال",
-  "connector.protonPass.planTitle": "يحتاج Proton Pass إلى خطة مدفوعة",
-  "connector.protonPass.planDescription": "تعمل Proton Pass CLI مع خطة Proton مدفوعة فقط. غيّر خطتك، ثم اتصل مرة أخرى.",
+  "connector.protonPass.planTitle": "يحتاج Proton Pass إلى خطة تتضمن Pass Plus",
+  "connector.protonPass.planDescription":
+    "تحتاج Proton Pass CLI إلى خطة Proton تتضمن Pass Plus. لا تتضمنها الخطط المدفوعة الأخرى، مثل Mail Plus. غيّر خطتك، ثم اتصل مرة أخرى.",
   "connector.protonPass.vaultTitle": "الخزنة المشتركة",
   "connector.protonPass.vaultDescription":
     "يستطيع الوكلاء تسجيل الدخول ببيانات الدخول في هذه الخزنة. انقل بيانات دخول إليها لمشاركتها.",

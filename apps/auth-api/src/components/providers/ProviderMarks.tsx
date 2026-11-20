@@ -21,7 +21,6 @@ export function ProviderMarks(props: { page: Pick<ProviderPage, "provider" | "na
       <span class="compare-vs">runs</span>
       <span class="compare-mark">
         <span class="compare-mark-logo provider-mark-frame">
-          {/* A model server of your own has no logo, so it gets the chip icon that its plan card shows. */}
           {props.page.provider === "custom" ? (
             <LandingIcon name="cpu" class="provider-mark-logo provider-mark-custom" />
           ) : (

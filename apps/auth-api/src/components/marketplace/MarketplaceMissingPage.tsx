@@ -8,7 +8,6 @@ import type { MarketplaceMissingText } from "./marketplace-page-text";
 
 export type MarketplaceMissingData = Pick<PageText<MarketplaceMissingText>, "lang" | "text">;
 
-/** The data a listing route throws with `notFound`. A not-found error from anywhere else has none. */
 export function isMarketplaceMissingData(value: unknown): value is MarketplaceMissingData {
   if (typeof value !== "object" || value === null || !("text" in value) || !("lang" in value)) return false;
   const text = value.text;

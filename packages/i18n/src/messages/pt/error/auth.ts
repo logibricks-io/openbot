@@ -4,6 +4,8 @@ import type { messages as source } from "../../en/error/auth";
 export const messages = {
   "error.auth.serviceUnavailable":
     "O LogiBricks Workspace não conseguiu acessar o serviço de contas. Verifique se a API está em execução e tente novamente.",
+  "error.auth.sessionTimeout":
+    "O LogiBricks Workspace não respondeu a tempo. Verifique sua conexão com a internet e tente novamente.",
   "error.auth.networkBlocked":
     "Um firewall ou proxy desta rede impediu o LogiBricks Workspace de acessar {host}. Peça ao administrador da rede para permitir {host} e tente novamente.",
   "error.auth.signInFirst": "Entre no LogiBricks Workspace primeiro.",

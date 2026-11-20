@@ -62,6 +62,7 @@ export const messages = {
   "mobile.marketplace.facts.accessSignIn": "Вход",
   "mobile.marketplace.facts.accessLocal": "Этот компьютер",
   "mobile.marketplace.facts.accessNone": "Без входа",
+  "mobile.marketplace.facts.accessMac": "Только Mac",
   "mobile.marketplace.permission.admin": "Устанавливать из каталога могут только владельцы и администраторы.",
   "mobile.marketplace.permission.unavailable":
     "Этот сервер не в сети, или его версия LogiBricks Workspace слишком старая для этого. Обновите LogiBricks Workspace на компьютере, где он работает.",
@@ -95,6 +96,7 @@ export const messages = {
   "mobile.marketplace.skill.doc": "SKILL.md",
   "mobile.marketplace.skill.examplePrompt": "Помогите мне использовать этот навык.",
   "mobile.marketplace.app.add": "Добавить",
+  "mobile.marketplace.app.addCustom": "Добавить своё",
   "mobile.marketplace.app.connect": "Подключить",
   "mobile.marketplace.app.connectTitle": "Подключить {name}",
   "mobile.marketplace.app.keyIntro":
@@ -115,6 +117,8 @@ export const messages = {
   "mobile.marketplace.app.docs": "Получить ключ",
   "mobile.marketplace.app.local":
     "Это приложение работает на компьютере с LogiBricks Workspace. Настройте его на этом компьютере.",
+  "mobile.marketplace.app.needsMac":
+    "Это приложение работает только на Mac, где запущен LogiBricks Workspace, а этот сервер — не Mac.",
   "mobile.marketplace.app.relayUnsupported":
     "Этому приложению нужен вход в браузере. Обновите LogiBricks Workspace на сервере или подключите приложение на компьютере.",
   "mobile.marketplace.app.waiting": "Ожидание страницы входа…",

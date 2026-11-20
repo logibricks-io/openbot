@@ -1,7 +1,6 @@
 import { defineMessages } from "../../message";
 
 export const messages = defineMessages("computerUse", {
-  // Computer Use settings, the permission help window, and the window highlight.
   "computerUse.permission.screenRecording.title": "Screen Recording",
   "computerUse.permission.screenRecording.description": "Lets LogiBricks Workspace see app windows.",
   "computerUse.permission.screenRecording.pane": "Screen & System Audio Recording",
@@ -20,6 +19,10 @@ export const messages = defineMessages("computerUse", {
   "computerUse.ready.description":
     "LogiBricks Workspace can see and interact with apps on this computer. This system asks for no extra permission.",
   "computerUse.openSettingsFailed.title": "Couldn’t open System Settings",
+  "computerUse.restartRequired.title": "Restart needed",
+  "computerUse.restartRequired.description":
+    "macOS still blocks clicks and typing. If this comes back after a restart, remove LogiBricks Workspace from Accessibility and add it again.",
+  "computerUse.restartRequired.action": "Restart LogiBricks Workspace",
   "computerUse.compact.title": "Enable Computer Use",
   "computerUse.compact.description": "Let LogiBricks Workspace see and interact with apps on this computer.",
   "computerUse.granted": "Granted",

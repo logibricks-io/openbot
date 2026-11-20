@@ -2,21 +2,31 @@ import { createFileRoute, Outlet, useMatch } from "@tanstack/solid-router";
 import { Show } from "solid-js";
 import { PricingPage } from "../components/pricing/PricingPage";
 
-// The pricing page at `/pricing`, `/pl/pricing` and `/pt/pricing`. Each child route loads the text of its
-// language, and this layout shows the page, so a change of language changes only the text.
+const PAGE_ROUTES = [
+  "/_pricing/pricing",
+  "/_pricing/ar/pricing",
+  "/_pricing/de/pricing",
+  "/_pricing/es/pricing",
+  "/_pricing/fr/pricing",
+  "/_pricing/he/pricing",
+  "/_pricing/it/pricing",
+  "/_pricing/ja/pricing",
+  "/_pricing/ko/pricing",
+  "/_pricing/nl/pricing",
+  "/_pricing/pl/pricing",
+  "/_pricing/pt/pricing",
+  "/_pricing/ru/pricing",
+  "/_pricing/tr/pricing",
+  "/_pricing/zh/pricing",
+] as const;
+
 export const Route = createFileRoute("/_pricing")({
   component: PricingLayout,
 });
 
 function PricingLayout() {
-  const english = useMatch({ from: "/_pricing/pricing", shouldThrow: false, select: (match) => match.loaderData });
-  const polish = useMatch({ from: "/_pricing/pl/pricing", shouldThrow: false, select: (match) => match.loaderData });
-  const portuguese = useMatch({
-    from: "/_pricing/pt/pricing",
-    shouldThrow: false,
-    select: (match) => match.loaderData,
-  });
-  const page = () => english() ?? polish() ?? portuguese();
+  const pages = PAGE_ROUTES.map((from) => useMatch({ from, shouldThrow: false, select: (match) => match.loaderData }));
+  const page = () => pages.map((match) => match()).find((data) => data !== undefined);
   return (
     <>
       <Show when={page()}>{(data) => <PricingPage lang={data().lang} text={data().text} />}</Show>

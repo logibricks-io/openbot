@@ -2,11 +2,8 @@ import type { PartialTranslation } from "../../../message";
 import type { messages as source } from "../../en/status/messaging";
 
 export const messages = {
-  // Text that OpenBot posts in a Slack conversation. Slack users read it. It names no agent: in
-  // Slack, every answer comes from OpenBot.
   "status.messaging.working": "Üzerinde çalışılıyor…",
-  "status.messaging.queued":
-    "Bekleniyor: LogiBricks Workspace başka bir istek üzerinde çalışıyor. Yanıt buraya gelecek.",
+  "status.messaging.queued": "Bekleniyor: önceki bir istek henüz bitmedi. Yanıt buraya gelecek.",
   "status.messaging.busy": "Çok fazla istek bekliyor. Daha sonra tekrar deneyin.",
   "status.messaging.failed":
     "LogiBricks Workspace bu isteği tamamlayamadı. Ayrıntılar LogiBricks Workspace ana makinesinde mevcuttur.",
@@ -17,6 +14,7 @@ export const messages = {
   "status.messaging.stopped": "Durduruldu.",
   "status.messaging.stop": "Durdur",
   "status.messaging.approvalTitle": "LogiBricks Workspace devam etmek için onay istiyor.",
+  "status.messaging.approvalTitleTeammate": "Ekip arkadaşı {agent} devam etmek için onay istiyor.",
   "status.messaging.approvalCommand": "Bir komut çalıştır",
   "status.messaging.approvalFileChange": "Dosyaları değiştir",
   "status.messaging.approvalPermissions": "Daha fazla izin al",
@@ -30,17 +28,13 @@ export const messages = {
     "Bunu yalnızca {user} yapabilir. LogiBricks Workspace ana makinesi de yanıt verebilir.",
   "status.messaging.hostOnly": "Bu isteği yalnızca LogiBricks Workspace ana makinesi yanıtlayabilir.",
   "status.messaging.filesSkipped": "Bazı dosyalar gönderilmedi: {names}.",
-  // The name and title of the agent that OpenBot adds to answer in Slack. The user can rename it.
   "status.messaging.orchestratorName": "Slack Düzenleyicisi",
   "status.messaging.orchestratorTitle": "Slack'te yanıt verir ve ekibe sorar",
-  // The same texts for Discord. Discord users read the first one.
   "status.messaging.discordNoAgent":
     "Henüz burada yanıt verebilecek bir ajan yok. LogiBricks Workspace'te Discord Düzenleyicisini ekleyin.",
   "status.messaging.discordOrchestratorName": "Discord Düzenleyicisi",
   "status.messaging.discordOrchestratorTitle": "Discord'da yanıt verir ve ekibe sorar",
-  // The sidebar section that OpenBot puts the Slack Orchestrator in. The user can rename it.
   "status.messaging.integrationsSection": "Entegrasyonlar",
-  // The page a development Slack install ends on.
   "status.messaging.signInReceived": "LogiBricks Workspace Slack kurulumunu aldı. Bu sekmeyi kapatabilirsiniz.",
   "status.messaging.signInUnknown":
     "LogiBricks Workspace bu Slack kurulumunu başlatmadı. LogiBricks Workspace içinde tekrar başlatın.",
@@ -62,6 +56,10 @@ export const messages = {
     "👋 *LogiBricks Workspace bağlandı*\n\nAjanlarına sormak için buraya yaz. WhatsApp Orchestrator yanıtlar ya da işi doğru ajana verir.\n\nBir isteği durdurmak için *stop* gönder.",
   "status.messaging.whatsappWelcomeDedicated":
     "👋 *LogiBricks Workspace bağlandı*\n\nLogiBricks Workspace'te izin verdiğin kişiler artık bu numaraya yazabilir. Yeni bir kişi bir kod alır: LogiBricks Workspace'te İstekler altında onayla.\n\nBir isteği durdurmak için *stop* gönder.",
+  "status.messaging.whatsappOtherOpenBot":
+    "Bu WhatsApp numarasına başka bir LogiBricks Workspace da bağlı, bu yüzden iki yanıt alabilirsin. Düzeltmek için telefonundaki WhatsApp'ta Bağlı cihazlar'ı aç ve kullanmadığın LogiBricks Workspace'tan çıkış yap.",
+  "status.messaging.whatsappPaused":
+    "LogiBricks Workspace burada 10 dakika yanıt vermeyi durdurdu: kısa sürede çok fazla mesaj geldi. Bu numaraya başka bir LogiBricks Workspace da bağlıysa telefonundaki WhatsApp'ta Bağlı cihazlar'ı aç ve kullanmadığın LogiBricks Workspace'tan çıkış yap.",
   "status.messaging.whatsappOrchestratorName": "WhatsApp Düzenleyicisi",
   "status.messaging.whatsappOrchestratorTitle": "WhatsApp'ta yanıt verir ve ekibe sorar",
 } as const satisfies PartialTranslation<typeof source>;

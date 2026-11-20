@@ -2,14 +2,16 @@ import type { PartialTranslation } from "../../../message";
 import type { messages as source } from "../../en/error/update";
 
 export const messages = {
-  // Kullanıcının okuduğu güncelleyici durumu.
   "error.update.unsupported": "Güncellemeler yüklü masaüstü derlemelerinde kullanılabilir.",
   "error.update.notReady": "Bir güncelleme yüklenmeye hazır değil.",
   "error.update.restartFailed": "LogiBricks Workspace güncellemeyi yüklemek için yeniden başlatılamadı.",
   "error.update.downloadStalled": "Güncelleme indirmesi yanıt vermeyi durdurdu. Tekrar deneyin.",
   "error.update.installFailed":
     "Güncelleme yüklenemedi. LogiBricks Workspace'ten çıkıp yeniden açın, ardından tekrar deneyin.",
+  "error.update.notInstalled": "Son yeniden başlatma güncellemeyi yüklemedi. Tekrar denemek için yeniden başlatın.",
   "error.update.downloadFailed": "Güncelleme indirilemedi. Tekrar deneyin.",
+  "error.update.signatureNotConfirmed":
+    "LogiBricks Workspace güncellemeyi doğrulayamadı. Tekrar deneyin. Sorun devam ederse yükleyiciyi yöneticinizden isteyin.",
   "error.update.checkFailed": "Güncellemeler denetlenemedi. Tekrar deneyin.",
   "error.update.checkStalled": "Güncelleme denetimi yanıt vermeyi durdurdu. Tekrar deneyin.",
   "error.update.checkOffline":
@@ -29,7 +31,10 @@ export const messages = {
     "Diğer LogiBricks Workspace oturumları doğrulanamadı. Yüklemeden önce tekrar deneyin.",
   "error.update.readOnlyLocation":
     "LogiBricks Workspace bu konumdan güncelleme yükleyemez. LogiBricks Workspace'tan çıkın. Finder'da LogiBricks Workspace'u Uygulamalar klasörüne sürükleyin (zaten oradaysa dışarı sürükleyip geri koyun). Ardından LogiBricks Workspace'u açın ve güncellemeyi yeniden yükleyin.",
-  // Katılınan bir sunucunun yöneticisi bunları ana makineden okur.
+  "error.update.appImageMissing":
+    "AppImage dosyası taşındığı, yeniden adlandırıldığı veya değiştirildiği için LogiBricks Workspace güncellemeyi yükleyemiyor. LogiBricks Workspace'tan çıkın, sonra AppImage dosyasını yeniden açın.",
+  "error.update.appImageReadOnly":
+    "LogiBricks Workspace, AppImage dosyasının bulunduğu klasöre güncelleme yükleyemiyor. LogiBricks Workspace'tan çıkın, AppImage dosyasını ana klasörünüzdeki bir klasöre taşıyın, sonra dosyayı açıp güncellemeyi yeniden yükleyin.",
   "error.update.remoteDisabled": "Sunucu yöneticilerinden gelen güncellemeler bu bilgisayarda kapalı.",
   "error.update.restartStarted": "LogiBricks Workspace, güncellemeyi yüklemek için zaten yeniden başlatılıyor.",
   "error.update.alreadyRestarting": "LogiBricks Workspace zaten yeniden başlatılıyor.",

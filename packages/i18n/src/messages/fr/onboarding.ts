@@ -91,6 +91,16 @@ export const messages = {
   "onboarding.choice.subscription": "Utiliser mon abonnement IA",
   "onboarding.choice.subscriptionDetail": "ChatGPT, Claude ou Grok",
   "onboarding.choice.startFreeInstead": "Plutôt les modèles gratuits",
+  "onboarding.existing.title": "Bon retour.",
+  "onboarding.existing.description":
+    "Votre compte utilise déjà LogiBricks Workspace. Ouvrez un serveur pour continuer ici.",
+  "onboarding.existing.open": "Ouvrir {name}",
+  "onboarding.existing.openDetail": "Ouvre ses agents et ses conversations ici.",
+  "onboarding.existing.offlineDetail": "Hors ligne pour le moment. Il s’ouvre quand il est allumé.",
+  "onboarding.existing.startNew": "Recommencer sur cet ordinateur",
+  "onboarding.existing.startNewDetail":
+    "Créez une nouvelle équipe ici. Vos serveurs gardent leurs agents et leurs conversations.",
+  "onboarding.existing.openFailed": "LogiBricks Workspace n’a pas pu ouvrir {name}.",
   "onboarding.consent.notice": "En continuant, vous acceptez les {terms} et prenez connaissance de la {privacy}.",
   "onboarding.consent.analyticsTitle": "Aidez-nous à améliorer LogiBricks Workspace",
   "onboarding.consent.analyticsDetail": "Partagez l’usage avec votre compte. Jamais vos chats ni fichiers.",
@@ -107,7 +117,7 @@ export const messages = {
   "onboarding.action.connect": "Connecter",
   "onboarding.action.open": "Ouvrir LogiBricks",
   "onboarding.action.next": "Suivant",
-  "onboarding.server.title": "Configurer {server}",
+  "onboarding.server.title": "Bienvenue sur {server}",
   "onboarding.server.description":
     "LogiBricks Workspace n’inclut pas d’abonnement d’IA. Connectez votre propre fournisseur à ce serveur avant de créer un agent.",
   "onboarding.server.label": "Choisissez le fournisseur d’IA de ce serveur",

@@ -49,7 +49,6 @@ export function ShareCard(props: { agent: MarketplaceAgentSummary }): JSX.Elemen
   );
 }
 
-/** The browser draws the avatar after hydration, as on the agent page. */
 function CardAvatar(props: { agent: MarketplaceAgentSummary }): JSX.Element {
   const [mounted, setMounted] = createSignal(false);
   onSettled(() => {
@@ -71,8 +70,6 @@ function CardAvatar(props: { agent: MarketplaceAgentSummary }): JSX.Element {
     </span>
   );
 }
-
-/* The frames: close copies of how each app shows a link with a large image, not screenshots of them. */
 
 export function XFrame(props: { agent: MarketplaceAgentSummary }): JSX.Element {
   return (

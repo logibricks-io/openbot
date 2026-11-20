@@ -8,7 +8,11 @@ export const messages = {
   "error.update.downloadStalled": "Der Download der Aktualisierung reagiert nicht mehr. Versuche es erneut.",
   "error.update.installFailed":
     "Die Aktualisierung konnte nicht installiert werden. Beende und öffne LogiBricks Workspace erneut und versuche es noch einmal.",
+  "error.update.notInstalled":
+    "Beim letzten Neustart wurde die Aktualisierung nicht installiert. Starte neu, um es noch einmal zu versuchen.",
   "error.update.downloadFailed": "Die Aktualisierung konnte nicht heruntergeladen werden. Versuche es erneut.",
+  "error.update.signatureNotConfirmed":
+    "LogiBricks Workspace konnte die Aktualisierung nicht prüfen. Versuche es erneut. Wenn der Fehler bleibt, bitte deinen Administrator um das Installationsprogramm.",
   "error.update.checkFailed": "Es konnte nicht nach Aktualisierungen gesucht werden. Versuche es erneut.",
   "error.update.checkStalled": "Die Suche nach Aktualisierungen reagiert nicht mehr. Versuche es erneut.",
   "error.update.checkOffline":
@@ -29,6 +33,10 @@ export const messages = {
     "Andere LogiBricks Workspace-Sitzungen konnten nicht überprüft werden. Versuche es vor der Installation erneut.",
   "error.update.readOnlyLocation":
     "LogiBricks Workspace kann von diesem Ort aus keine Aktualisierungen installieren. Beende LogiBricks Workspace. Ziehe LogiBricks Workspace im Finder in den Ordner „Programme“ (wenn es schon dort ist, ziehe es heraus und wieder hinein). Öffne LogiBricks Workspace dann und installiere die Aktualisierung erneut.",
+  "error.update.appImageMissing":
+    "LogiBricks Workspace kann das Update nicht installieren, weil seine AppImage-Datei verschoben, umbenannt oder ersetzt wurde. Beende LogiBricks Workspace und öffne die AppImage-Datei dann erneut.",
+  "error.update.appImageReadOnly":
+    "LogiBricks Workspace kann im Ordner seiner AppImage-Datei keine Updates installieren. Beende LogiBricks Workspace, verschiebe die AppImage-Datei in einen Ordner in deinem Home-Ordner, öffne sie dann und installiere das Update erneut.",
   "error.update.remoteDisabled": "Aktualisierungen durch Serveradministratoren sind auf diesem Computer deaktiviert.",
   "error.update.restartStarted": "LogiBricks Workspace startet bereits zur Installation der Aktualisierung neu.",
   "error.update.alreadyRestarting": "LogiBricks Workspace startet bereits neu.",

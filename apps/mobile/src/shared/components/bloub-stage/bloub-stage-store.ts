@@ -8,7 +8,7 @@ type BloubShape = { kind: "cover" } | { kind: "header"; bottom: number } | { kin
  * The stage state. `frame` and `found` show the scanner guide; all other states retain
  * the unchanged brand mark.
  */
-export type BloubMood = "idle" | "think" | "happy" | "frame" | "found";
+export type BloubMood = "idle" | "think" | "down" | "sad" | "cry" | "meh" | "happy" | "joy" | "frame" | "found";
 
 interface BloubCaption {
   /** A title under the mark. Without one, the text is a status line at the bottom of the screen. */

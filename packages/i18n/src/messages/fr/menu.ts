@@ -2,8 +2,6 @@ import type { PartialTranslation } from "../../message";
 import type { messages as source } from "../en/menu";
 
 export const messages = {
-  // The native application menu. Electron localizes its own `role:` entries from the operating
-  // system, so only the custom items are here.
   "menu.stopAllAgents": "Arrêter tous les agents",
   "menu.checkForUpdates": "Rechercher des mises à jour…",
   "menu.preferences": "Réglages…",
@@ -18,9 +16,14 @@ export const messages = {
     "Les agents et les routines s’arrêtent jusqu’à la prochaine ouverture de LogiBricks Workspace.",
   "menu.quitConfirm": "Quitter",
   "menu.quitHint": "Maintenez ⌘Q ou appuyez deux fois pour quitter",
+  "menu.closeWorkingTitle": { one: "{count} agent travaille encore", other: "{count} agents travaillent encore" },
+  "menu.closeWorkingBody":
+    "Si vous quittez LogiBricks Workspace, les agents s’arrêtent. Laissez-le tourner pour qu’ils terminent. Pour revoir la fenêtre, ouvrez LogiBricks Workspace.",
+  "menu.closeKeepRunning": "Continuer",
   "menu.trayOpen": "Ouvrir LogiBricks",
   "menu.trayQuit": "Quitter LogiBricks",
   "menu.trayTooltip": "LogiBricks",
+  "menu.hideDynamicIsland": "Masquer Dynamic Island",
   "menu.undo": "Annuler",
   "menu.redo": "Rétablir",
   "menu.cut": "Couper",

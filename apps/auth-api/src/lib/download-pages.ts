@@ -13,31 +13,23 @@ import { OPENBOT_SOFTWARE_APPLICATION } from "./software-application";
 /** The sitemap date of the pages. Change it when their text changes. */
 export const DOWNLOAD_PAGES_UPDATED_AT = "2026-11-04";
 
-/** A system with its own page: a desktop installer or a phone app. */
 export type DownloadPagePlatform = DownloadPlatform | MobilePlatform;
 
-/** The desktop systems first, then the phone apps, as the hub and the landing page list them. */
 export const DOWNLOAD_PAGE_ORDER: readonly DownloadPagePlatform[] = [...DOWNLOAD_PLATFORM_ORDER, ...MOBILE_APP_ORDER];
 
 export interface DownloadInstaller {
-  /** The button text where the system is not on screen, such as a list of every installer. */
   label: string;
-  /** The button text inside a card or panel that already names the system. */
   shortLabel: string;
-  /** Which computer the file is for, for a reader who has to choose between two. */
   detail: string;
   href: string;
-  /** A store page on another site, which opens in a new tab. */
   external?: boolean;
 }
 
-/** One line of the spec sheet: what the computer needs, or what the download is. */
 interface DownloadSpec {
   label: string;
   value: string;
 }
 
-/** One instruction. `code` is a command to copy, shown under the text. */
 export interface DownloadStep {
   text: string;
   code?: string;
@@ -50,7 +42,6 @@ interface DownloadPageSection {
 
 export interface DownloadPageContent {
   platform: DownloadPagePlatform;
-  /** The name a reader uses for the system, which the headings and the breadcrumb show. */
   name: string;
   title: string;
   description: string;
@@ -59,11 +50,9 @@ export interface DownloadPageContent {
   installers: readonly DownloadInstaller[];
   specs: readonly DownloadSpec[];
   installSteps: readonly DownloadStep[];
-  /** Optional steps for one situation, such as a distribution that needs a security profile. */
   extraSections: readonly DownloadPageSection[];
   notes: readonly string[];
   faq: readonly LandingQuestion[];
-  /** schema.org `operatingSystem` for this page's installer. */
   operatingSystem: string;
 }
 

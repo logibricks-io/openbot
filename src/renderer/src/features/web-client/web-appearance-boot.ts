@@ -1,4 +1,3 @@
-/** The key under which this browser keeps the web client's theme. */
 export const WEB_APPEARANCE_STORAGE_KEY = "openbot.web.appearance";
 
 /**

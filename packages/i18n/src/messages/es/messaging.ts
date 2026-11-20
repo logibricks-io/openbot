@@ -8,10 +8,14 @@ export const messages = {
     "LogiBricks Workspace no puede leer los tokens guardados en este equipo. Desconecta el espacio de trabajo y vuelve a conectarlo.",
   "messaging.help.relay_unavailable":
     "LogiBricks Workspace no puede recibir eventos de Slack en este equipo. Inicia sesión, asigna un nombre a este equipo en los ajustes del servidor y mantén LogiBricks Workspace abierto.",
+  "messaging.help.not_linked":
+    "Este espacio de trabajo no está vinculado a este servidor. Selecciona Reconectar para vincularlo.",
   "messaging.discordHelp.invalid_token":
     "Discord ya no acepta LogiBricks Workspace en este servidor de Discord. Puede que se haya eliminado. Conecta el servidor de Discord de nuevo.",
   "messaging.discordHelp.secret_storage_unavailable":
     "LogiBricks Workspace no puede leer los tokens guardados en este equipo. Desconecta el servidor de Discord y vuelve a conectarlo.",
   "messaging.discordHelp.relay_unavailable":
     "LogiBricks Workspace no puede recibir eventos de Discord en este equipo. Inicia sesión, asigna un nombre a este equipo en los ajustes del servidor y mantén LogiBricks Workspace abierto.",
+  "messaging.discordHelp.not_linked":
+    "Este servidor de Discord no está vinculado a este servidor de LogiBricks Workspace. Selecciona Reconectar para vincularlo.",
 } as const satisfies PartialTranslation<typeof source>;
